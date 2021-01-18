@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.html",
   "scripts": {
-    "source": "postcss src/pre_compiled_styles.css -o dist/css/styles-src.css",
-    "purged": "cross-env NODE_ENV=production postcss src/pre_compiled_styles.css -o dist/css/styles-purged.css",
-    "minify": "postcss dist/css/styles-purged.css > dist/css/styles-mini.css",
+    "source": "postcss src/pre-compiled-styles.css -o dist/css/styles.src.css",
+    "purged": "cross-env NODE_ENV=production postcss src/pre-compiled-styles.css -o dist/css/styles.purged.css",
+    "minify": "postcss dist/css/styles.purged.css > dist/css/styles.mini.css",
     "mini": "npm run purged && npm run minify",
     "all": "npm run source && npm run purged && npm run minify"
   },
@@ -17,6 +17,7 @@
     "cssnano": "^4.1.10",
     "postcss": "^8.2.4",
     "postcss-cli": "^8.3.1",
+    "postcss-discard-comments": "^4.0.2",
     "postcss-focus-visible": "^5.0.0",
     "postcss-import": "^14.0.0",
     "tailwindcss": "^2.0.2",
@@ -24,9 +25,11 @@
     "tailwindcss-interaction-variants": "^5.0.0"
   },
   "dependencies": {
+    "alertifyjs": "^1.13.1",
     "autoprefixer": "^10.1.0",
     "free-jqgrid": "^4.15.5",
     "mmenu-js": "^8.5.20",
-    "select2": "^4.1.0-beta.1"
+    "select2": "^4.1.0-beta.1",
+    "tippy.js": "^6.2.7"
   }
 }

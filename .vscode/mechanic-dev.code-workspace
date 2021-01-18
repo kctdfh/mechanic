@@ -13,7 +13,8 @@
 			"stylelint.vscode-stylelint",
         	"bradlc.vscode-tailwindcss",
         	"heybourn.headwind",
-        	"exodiusstudios.comment-anchors"
+			"exodiusstudios.comment-anchors",
+			"ritwickdey.liveserver"
 		]
 	}
 }

@@ -5,9 +5,7 @@ module.exports = {
     require("tailwindcss"),
     require("postcss-focus-visible"),
     require("autoprefixer"),
-    require('cssnano')({
-      preset: 'default',
-  }),
+    require("postcss-discard-comments")({removeAll:true}),
+    require('cssnano')({preset: 'default',}),
   ],
 };
- 

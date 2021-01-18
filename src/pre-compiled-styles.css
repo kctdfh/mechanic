@@ -24,6 +24,8 @@
 @import "feather-font-icons.css";
 @import "select2/dist/css/select2.css";
 @import "mmenu-js/dist/mmenu.css";
+@import "tippy.js/dist/tippy.css";
+@import "alertifyjs/build/css/alertify.css";
 
 /* Custom free-jqGrid themes */
 @import "free-jqGrid-themes.css";
