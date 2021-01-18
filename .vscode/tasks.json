@@ -6,14 +6,14 @@
 			"script": "source",
 			"group": "build",
 			"problemMatcher": [],
-			"label": "Build Source",
+			"label": "Source",
 			"detail": "Build full CSS from the pre-compiled styles",
 		},
 		{
 			"type": "npm",
 			"script": "purged",
 			"problemMatcher": [],
-			"label": "Build Purged",
+			"label": "Purged",
 			"detail": "Build purged CSS from the pre-compiled styles",
 			"group": "build"
 		},
@@ -21,7 +21,7 @@
 			"type": "npm",
 			"script": "mini",
 			"problemMatcher": [],
-			"label": "Build Mini",
+			"label": "Mini",
 			"detail": "Build purged and minify it",
 			"group": "build"
 		},
@@ -30,7 +30,7 @@
 			"script": "all",
 			"problemMatcher": [],
 			"label": "Build Everything",
-			"detail": "Build source, purged, minified",
+			"detail": "Build source, then purge it, then minifi it",
 			"group": "build"
 		}
 	]
