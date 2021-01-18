@@ -22,7 +22,7 @@ Build tasks are also available in VS Code. Press `Cmd/cntr + shift + b` to see t
 |Name  |Function  |
 |---------|---------|
 |Tailwind Docs     |Easy access to specific parts of Tailwind docs.         |
-|Stylelint     |Takes over CSS validation and respects Tailwind directives so that Tailwind CSS files don't throw errors.         |
+|Stylelint     |Takes over CSS validation and respects Tailwind directives so that Tailwind CSS files don't throw errors. Make sure to set `css.validate` to false in settings        |
 |VSCode Tailwind CSS     |Auto-complete suggestions based on all available Tailwind classes in accordance to the root `tailwind.config.js` (essential).         |
 |Headwind     |Sorts the Tailwind class list on save. Keeps the class orders consistent (essential).         |
 |Comment Anchors     |Easy navigation to sub-segments of large documents based on anchors        |
