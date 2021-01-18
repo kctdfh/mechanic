@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="headers&footers" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../dist/css/styles-mini.css" />
+
+    <script>
+      function openMenu() {
+        document.getElementById("buttonDropdown").classList.toggle("hidden");
+      }
+    </script>
+  </head>
+
+  <body>
+    <div
+      id="outerDiv"
+      class="bg-yellow-50 inline-flex flex-col items-center w-screen p-5 space-y-5"
+    >
+      <div class="relative flex flex-col items-start">
+        <button onClick="openMenu()" class="btn-large-primary">
+          Button
+          <i class="btnicon-right-large feather-chevron-down"></i>
+        </button>
+        <div
+          id="buttonDropdown"
+          class="absolute z-50 flex flex-col hidden w-40 py-2 mt-10 space-y-2 bg-white shadow"
+        >
+          <a
+            href="#"
+            class="group align-end h-7 hover:bg-gray-25 inline-flex w-full px-4 py-1 space-x-3"
+          >
+            <div class="flex items-center h-full">
+              <i
+                class="group-hover:text-blue-850 align-center feather-plus text-gray-300"
+              ></i>
+            </div>
+            <p
+              class="group-hover:text-blue-850 align-center text-md w-44 h-full text-black"
+            >
+              Add
+            </p>
+          </a>
+
+          <a
+            href="#"
+            class="group align-end h-7 hover:bg-red-50 inline-flex w-full px-4 py-1 space-x-3"
+          >
+            <div class="flex items-center h-full">
+              <i
+                class="align-center group-hover:text-red-750 feather-trash text-gray-300"
+              ></i>
+            </div>
+            <p
+              class="align-center group-hover:text-red-750 text-md w-44 h-full text-black"
+            >
+              Delete
+            </p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

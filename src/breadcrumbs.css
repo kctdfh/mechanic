@@ -1,0 +1,23 @@
+.crumb-home {
+    @apply btn mr-2.5;
+}
+
+.crumb-chevron {
+    @apply text-md px-1 text-gray-300;
+  }
+  
+.crumbs {
+    @apply justify-items-start inline-flex items-center w-full h-full;
+}
+
+.crumbs-short {
+    @apply crumbs relative;
+}
+  
+.last-crumb {
+    @apply text-gray-200 pointer-events-none !important;
+}
+
+.crumbs>.btn-small-ghost {
+    @apply font-normal !important;
+}

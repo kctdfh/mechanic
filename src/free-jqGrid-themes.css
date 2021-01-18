@@ -1,0 +1,165 @@
+/* Common */
+
+.tableOverlay {
+  @apply opacity-30 bg-gray-200;
+}
+
+.loadingState {
+  @apply text-yellow-900 bg-yellow-100;
+}
+
+.simpleFocusRing {
+  @apply focus:ring-1 focus:ring-inset focus:ring-blue-500;
+}
+
+.simpleDataField {
+  @apply hover:border-blue-250 border border-gray-100 rounded;
+  @apply simpleFocusRing;
+}
+
+.row-theme {
+  @apply text-sm border-gray-100 !important;
+}
+
+/* Large 
+*/
+
+.large-filter-operators {
+  @apply hover:text-blue-750 text-base;
+}
+
+/* row height through vertical padding */
+
+.large-row-num {
+  @apply bg-gray-50; 
+  @apply py-2 !important;
+}
+
+/* Header with column names */
+
+.largeTable .ui-jqgrid-labels > .columnHeader {
+  @apply text-md font-normal hover:font-semibold py-3.5 hover:bg-blue-50 border-0.5 border-opacity-100 border-solid border-gray-100 !important;
+}
+
+/* Header search toolbar */
+.largeTable .ui-search-toolbar > .columnHeader {
+  @apply text-md font-normal py-3.5 border-0.5 border-opacity-100 border-solid border-gray-100 !important;
+}
+
+/* .ui-jqgrid-labels > .columnHeaderLarge {
+    @apply text-md font-normal hover:font-semibold !py-3.5 hover:bg-blue-50 border-0.5 border-opacity-100 border-solid border-gray-100 !important;
+}
+
+.ui-search-toolbar > .columnHeaderLarge {
+    @apply text-md font-normal py-3.5 border-0.5 border-opacity-100 border-solid border-gray-100 !important;
+} */
+
+tr.selectedState {
+  @apply bg-blue-50;
+}
+
+tr.selectedState.hoverState {
+  @apply bg-blue-50;
+}
+
+tr.hoverState {
+  @apply bg-gray-25;
+}
+
+.soptclass.hoverState {
+  @apply text-blue-500;
+}
+
+.disabledState {
+  @apply text-gray-200;
+  pointer-events: none;
+}
+
+tr.disabledState {
+  @apply bg-gray-50 text-gray-300 !important;
+  pointer-events: none;
+}
+
+tr.disabledState.hoverState {
+  @apply bg-gray-50 text-gray-300 !important;
+  pointer-events: none;
+}
+
+.errorState {
+  @apply text-red-900;
+  pointer-events: none;
+}
+
+tr.errorState {
+  @apply bg-red-50 text-red-150 !important;
+  pointer-events: none;
+}
+
+tr.errorState.hoverState {
+  @apply bg-red-50 text-red-150 !important;
+  pointer-events: none;
+}
+
+.ui-pager-control > .disabledState {
+  @apply text-gray-200 cursor-not-allowed;
+}
+
+/* takes out default search toolbar top border so we can set it with a theme-specific colHeader class assignment */
+.ui-jqgrid .ui-jqgrid-hdiv .ui-search-toolbar {
+  @apply border-t-0;
+}
+
+/* Tailwind pre-flight applies global border defaults - we disable that so that we can style the gridRow border */
+/* .jqgrow *,
+::before,
+::after {
+  border-color: inherit;
+} */
+
+/* button borders introduce unpredictable behavior when set globally */
+.ui-jqgrid .ui-pg-button:not(.ui-state-hover),
+.ui-jqgrid-jquery-ui
+  .jqgrow
+  .ui-jqgrid-actions
+  .ui-pg-div:not(.ui-state-hover) {
+  @apply border-0;
+}
+
+/* makes the column label tex wrapper a flex */
+.ui-jqgrid .ui-jqgrid-htable .ui-jqgrid-labels th div {
+  overflow: hidden;
+  position: relative;
+  height: auto;
+  margin: 2px 2px;
+  @apply justify-items-center flex flex-row items-center content-center justify-center;
+}
+
+/* column header icon wrapper renders icons in one line */
+.ui-jqgrid .s-ico {
+  position: relative;
+  width: auto;
+  height: auto;
+  display: flex;
+  vertical-align: middle;
+  margin: 0.1em;
+}
+
+.large-pager-wrapper {
+  @apply largePager py-2 px-1.5 text-sm border border-solid border-gray-100 !important;
+}
+
+.large-pager-btn {
+  @apply border-0 text-md mx-1 my-0 hover:text-blue-500 !important;
+}
+
+.large-nav-btn {
+  @apply mx-1 hover:text-blue-500 !important;
+}
+
+.largePager .ui-separator {
+  @apply h-3.5 w-px mx-2 bg-gray-100 border-0 !important;
+}
+
+.largePager .ui-pg-selbox {
+  @apply ml-2 !important;
+}

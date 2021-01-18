@@ -1,0 +1,32 @@
+{
+  "name": "tailwind-default",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "source": "postcss src/pre_compiled_styles.css -o dist/css/styles-src.css",
+    "purged": "cross-env NODE_ENV=production postcss src/pre_compiled_styles.css -o dist/css/styles-purged.css",
+    "minify": "postcss dist/css/styles-purged.css > dist/css/styles-mini.css",
+    "mini": "npm run purged && npm run minify",
+    "all": "npm run source && npm run purged && npm run minify"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "cssnano": "^4.1.10",
+    "postcss": "^8.2.4",
+    "postcss-cli": "^8.3.1",
+    "postcss-focus-visible": "^5.0.0",
+    "postcss-import": "^14.0.0",
+    "tailwindcss": "^2.0.2",
+    "tailwindcss-important": "^1.0.0",
+    "tailwindcss-interaction-variants": "^5.0.0"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.1.0",
+    "free-jqgrid": "^4.15.5",
+    "mmenu-js": "^8.5.20",
+    "select2": "^4.1.0-beta.1"
+  }
+}

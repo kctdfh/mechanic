@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="page_headers&footers" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+    <link rel="stylesheet" href="../dist/css/styles-mini.css" />
+
+
+
+</head>
+
+<body>
+    <div id="outerDiv" class="bg-blue-50 space-y-7 inline-flex flex-col items-center justify-center w-screen p-5">
+        <!-- with label -->
+        <div class="flex flex-row space-x-4">
+            <div class="flex flex-col items-center space-y-4">
+                <div class="title">lg (40px)</div>
+                <!-- no placeholder no clear single default -->
+                <div class="w-70">
+                    <select data-theme="lg" class="_dropdown">
+                        <option value="AL">Alabama</option>
+                        <option value="AL">Abkhama</option>
+                        <option value="AL">Alyhama</option>
+                        <option value="WY">Wyoming</option>
+                    </select>
+                </div>
+                <!-- no placeholder no clear single disabled -->
+                <div class="w-70">
+                    <select data-theme="lg" class="_dropdown" disabled>
+                        <option value="AL">Alabama</option>
+                        <option value="AL">Abkhama</option>
+                        <option value="AL">Alyhama</option>
+                        <option value="WY">Wyoming</option>
+                    </select>
+                </div>
+                <!-- no placeholder no clear multi default -->
+                <div class="w-70">
+                    <select data-theme="lg" class="_dropdown" multiple="multiple">
+                        <option value="AL">Alabama</option>
+                        <option value="WY">Wyoming</option>
+                        <option value="WY">vaxming</option>
+                        <option value="WY">xvsming</option>
+                        <option value="WY">tetming</option>
+                        <option value="WY">yhfming</option>
+                        <option value="WY">dcfbshx</option>
+                    </select>
+                </div>
+                <!-- no placeholder no clear multi disabled -->
+                <div class="w-70">
+                    <select data-theme="lg" class="_dropdown" multiple="multiple" disabled>
+                        <option value="AL">Alabama</option>
+                        <option value="WY">Wyoming</option>
+                        <option value="WY">vaxming</option>
+                        <option value="WY">xvsming</option>
+                        <option value="WY">tetming</option>
+                        <option value="WY">yhfming</option>
+                        <option value="WY">dcfbshx</option>
+                    </select>
+                </div>
+                <!-- with placeholder with clear single default -->
+                <div class="w-70">
+                    <select data-theme="lg" data-placeholder="Select one option..." data-multiple="false"
+                        data-allow-clear="true" class="_dropdown">
+                        <option></option><!-- Needed to show X image to clear the select -->
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                        <option value="4">Option 4</option>
+                        <option value="5">Option 5</option>
+                    </select>
+                </div>
+                <!-- with placeholder with clear single disabled -->
+                <div class="w-70">
+                    <select data-theme="lg" data-placeholder="Option unavailable" data-multiple="false"
+                        data-allow-clear="true" class="_dropdown" disabled>
+                        <option></option><!-- Needed to show X image to clear the select -->
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                        <option value="4">Option 4</option>
+                        <option value="5">Option 5</option>
+                    </select>
+                </div>
+                <!-- with placeholder with clear multi default -->
+                <div class="w-70">
+                    <select data-theme="lg" data-allow-clear="true" data-placeholder="Select provinces of residence..."
+                        multiple="multiple" class="_dropdown">
+                        <option value="AL">Alabama</option>
+                        <option value="WY">Wyoming</option>
+                        <option value="WY">vaxming</option>
+                        <option value="WY">xvsming</option>
+                        <option value="WY">tetming</option>
+                        <option value="WY">yhfming</option>
+                        <option value="WY">dcfbshx</option>
+                    </select>
+                </div>
+                <!-- with placeholder with clear multi disabled -->
+                <div class="w-70">
+                    <select data-theme="lg" data-allow-clear="true" data-placeholder="Options unavailable"
+                        multiple="multiple" class="_dropdown" disabled>
+                        <option value="AL">Alabama</option>
+                        <option value="WY">Wyoming</option>
+                        <option value="WY">vaxming</option>
+                        <option value="WY">xvsming</option>
+                        <option value="WY">tetming</option>
+                        <option value="WY">yhfming</option>
+                        <option value="WY">dcfbshx</option>
+                    </select>
+                </div>
+            </div>
+            <div class="flex flex-col items-center space-y-4">
+                <div class="title">md (32px)</div>
+                <!-- no placeholder no clear single default -->
+                <div class="w-70">
+                    <select data-theme="md" class="_dropdown">
+                        <option value="AL">Alabama</option>
+                        <option value="AL">Abkhama</option>
+                        <option value="AL">Alyhama</option>
+                        <option value="WY">Wyoming</option>
+                    </select>
+                </div>
+                <!-- no placeholder no clear single disabled -->
+                <div class="w-70">
+                    <select data-theme="md" class="_dropdown" disabled>
+                        <option value="AL">Alabama</option>
+                        <option value="AL">Abkhama</option>
+                        <option value="AL">Alyhama</option>
+                        <option value="WY">Wyoming</option>
+                    </select>
+                </div>
+                <!-- no placeholder no clear multi default -->
+                <div class="w-70">
+                    <select data-theme="md" class="_dropdown" multiple="multiple">
+                        <option value="AL">Alabama</option>
+                        <option value="WY">Wyoming</option>
+                        <option value="WY">vaxming</option>
+                        <option value="WY">xvsming</option>
+                        <option value="WY">tetming</option>
+                        <option value="WY">yhfming</option>
+                        <option value="WY">dcfbshx</option>
+                    </select>
+                </div>
+                <!-- no placeholder no clear multi disabled -->
+                <div class="w-70">
+                    <select data-theme="md" class="_dropdown" multiple="multiple" disabled>
+                        <option value="AL">Alabama</option>
+                        <option value="WY">Wyoming</option>
+                        <option value="WY">vaxming</option>
+                        <option value="WY">xvsming</option>
+                        <option value="WY">tetming</option>
+                        <option value="WY">yhfming</option>
+                        <option value="WY">dcfbshx</option>
+                    </select>
+                </div>
+                <!-- with placeholder with clear single default -->
+                <div class="w-70">
+                    <select data-theme="md" data-placeholder="Select one option..." data-multiple="false"
+                        data-allow-clear="true" class="_dropdown">
+                        <option></option><!-- Needed to show X image to clear the select -->
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                        <option value="4">Option 4</option>
+                        <option value="5">Option 5</option>
+                    </select>
+                </div>
+                <!-- with placeholder with clear single disabled -->
+                <div class="w-70">
+                    <select data-theme="md" data-placeholder="Option unavailable" data-multiple="false"
+                        data-allow-clear="true" class="_dropdown" disabled>
+                        <option></option><!-- Needed to show X image to clear the select -->
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                        <option value="4">Option 4</option>
+                        <option value="5">Option 5</option>
+                    </select>
+                </div>
+                <!-- with placeholder with clear multi default -->
+                <div class="w-70">
+                    <select data-theme="md" data-allow-clear="true" data-placeholder="Select provinces of residence..."
+                        multiple="multiple" class="_dropdown">
+                        <option value="AL">Alabama</option>
+                        <option value="WY">Wyoming</option>
+                        <option value="WY">vaxming</option>
+                        <option value="WY">xvsming</option>
+                        <option value="WY">tetming</option>
+                        <option value="WY">yhfming</option>
+                        <option value="WY">dcfbshx</option>
+                    </select>
+                </div>
+                <!-- with placeholder with clear multi disabled -->
+                <div class="w-70">
+                    <select data-theme="md" data-allow-clear="true" data-placeholder="Options unavailable"
+                        multiple="multiple" class="_dropdown" disabled>
+                        <option value="AL">Alabama</option>
+                        <option value="WY">Wyoming</option>
+                        <option value="WY">vaxming</option>
+                        <option value="WY">xvsming</option>
+                        <option value="WY">tetming</option>
+                        <option value="WY">yhfming</option>
+                        <option value="WY">dcfbshx</option>
+                    </select>
+                </div>
+            </div>
+            <div class="flex flex-col items-center space-y-4">
+                <div class="title">sm (24px)</div>
+                <!-- no placeholder no clear single default -->
+                <div class="w-70">
+                    <select data-theme="lg" class="_dropdown">
+                        <option value="AL">Alabama</option>
+                        <option value="AL">Abkhama</option>
+                        <option value="AL">Alyhama</option>
+                        <option value="WY">Wyoming</option>
+                    </select>
+                </div>
+                <!-- no placeholder no clear single disabled -->
+                <div class="w-70">
+                    <select data-theme="lg" class="_dropdown" disabled>
+                        <option value="AL">Alabama</option>
+                        <option value="AL">Abkhama</option>
+                        <option value="AL">Alyhama</option>
+                        <option value="WY">Wyoming</option>
+                    </select>
+                </div>
+                <!-- no placeholder no clear multi default -->
+                <div class="w-70">
+                    <select data-theme="lg" class="_dropdown" multiple="multiple">
+                        <option value="AL">Alabama</option>
+                        <option value="WY">Wyoming</option>
+                        <option value="WY">vaxming</option>
+                        <option value="WY">xvsming</option>
+                        <option value="WY">tetming</option>
+                        <option value="WY">yhfming</option>
+                        <option value="WY">dcfbshx</option>
+                    </select>
+                </div>
+                <!-- no placeholder no clear multi disabled -->
+                <div class="w-70">
+                    <select data-theme="lg" class="_dropdown" multiple="multiple" disabled>
+                        <option value="AL">Alabama</option>
+                        <option value="WY">Wyoming</option>
+                        <option value="WY">vaxming</option>
+                        <option value="WY">xvsming</option>
+                        <option value="WY">tetming</option>
+                        <option value="WY">yhfming</option>
+                        <option value="WY">dcfbshx</option>
+                    </select>
+                </div>
+                <!-- with placeholder with clear single default -->
+                <div class="w-70">
+                    <select data-theme="lg" data-placeholder="Select one option..." data-multiple="false"
+                        data-allow-clear="true" class="_dropdown">
+                        <option></option><!-- Needed to show X image to clear the select -->
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                        <option value="4">Option 4</option>
+                        <option value="5">Option 5</option>
+                    </select>
+                </div>
+                <!-- with placeholder with clear single disabled -->
+                <div class="w-70">
+                    <select data-theme="lg" data-placeholder="Option unavailable" data-multiple="false"
+                        data-allow-clear="true" class="_dropdown" disabled>
+                        <option></option><!-- Needed to show X image to clear the select -->
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                        <option value="4">Option 4</option>
+                        <option value="5">Option 5</option>
+                    </select>
+                </div>
+                <!-- with placeholder with clear multi default -->
+                <div class="w-70">
+                    <select data-theme="lg" data-allow-clear="true" data-placeholder="Select provinces of residence..."
+                        multiple="multiple" class="_dropdown">
+                        <option value="AL">Alabama</option>
+                        <option value="WY">Wyoming</option>
+                        <option value="WY">vaxming</option>
+                        <option value="WY">xvsming</option>
+                        <option value="WY">tetming</option>
+                        <option value="WY">yhfming</option>
+                        <option value="WY">dcfbshx</option>
+                    </select>
+                </div>
+                <!-- with placeholder with clear multi disabled -->
+                <div class="w-70">
+                    <select data-theme="lg" data-allow-clear="true" data-placeholder="Options unavailable"
+                        multiple="multiple" class="_dropdown" disabled>
+                        <option value="AL">Alabama</option>
+                        <option value="WY">Wyoming</option>
+                        <option value="WY">vaxming</option>
+                        <option value="WY">xvsming</option>
+                        <option value="WY">tetming</option>
+                        <option value="WY">yhfming</option>
+                        <option value="WY">dcfbshx</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="flex flex-row space-x-4">
+            <!-- without label -->
+            <div class="flex flex-col items-center space-y-4">
+                <div class="title">lg (40px)</div>
+                <!-- no placeholder no clear single default -->
+                <div class="flex flex-col space-y-1">
+                    <label for="inputId" class="text-md text-black">Select an option</label>
+                    <div class="w-70">
+                        <select data-theme="lg" class="_dropdown">
+                            <option value="AL">Alabama</option>
+                            <option value="AL">Abkhama</option>
+                            <option value="AL">Alyhama</option>
+                            <option value="WY">Wyoming</option>
+                        </select>
+                    </div>
+                    <p class="mt-1 text-sm text-red-600">Description</p>
+                </div>
+                <!-- no placeholder no clear single disabled -->
+                <div class="flex flex-col space-y-1">
+                    <label for="inputId" class="text-md text-black">Select an option</label>
+                    <div class="w-70">
+                        <select data-theme="lg" class="_dropdown" disabled>
+                            <option value="AL">Alabama</option>
+                            <option value="AL">Abkhama</option>
+                            <option value="AL">Alyhama</option>
+                            <option value="WY">Wyoming</option>
+                        </select>
+                    </div>
+                    <p class="mt-1 text-sm text-red-600">Description</p>
+                    </label>
+                </div>
+                <!-- no placeholder no clear multi default -->
+                <div class="w-70">
+                    <select data-theme="lg" class="_dropdown" multiple="multiple">
+                        <option value="AL">Alabama</option>
+                        <option value="WY">Wyoming</option>
+                        <option value="WY">vaxming</option>
+                        <option value="WY">xvsming</option>
+                        <option value="WY">tetming</option>
+                        <option value="WY">yhfming</option>
+                        <option value="WY">dcfbshx</option>
+                    </select>
+                </div>
+                <!-- no placeholder no clear multi disabled -->
+                <div class="w-70">
+                    <select data-theme="lg" class="_dropdown" multiple="multiple" disabled>
+                        <option value="AL">Alabama</option>
+                        <option value="WY">Wyoming</option>
+                        <option value="WY">vaxming</option>
+                        <option value="WY">xvsming</option>
+                        <option value="WY">tetming</option>
+                        <option value="WY">yhfming</option>
+                        <option value="WY">dcfbshx</option>
+                    </select>
+                </div>
+                <!-- with placeholder with clear single default -->
+                <div class="w-70">
+                    <select data-theme="lg" data-placeholder="Select one option..." data-multiple="false"
+                        data-allow-clear="true" class="_dropdown">
+                        <option></option><!-- Needed to show X image to clear the select -->
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                        <option value="4">Option 4</option>
+                        <option value="5">Option 5</option>
+                    </select>
+                </div>
+                <!-- with placeholder with clear single disabled -->
+                <div class="w-70">
+                    <select data-theme="lg" data-placeholder="Option unavailable" data-multiple="false"
+                        data-allow-clear="true" class="_dropdown" disabled>
+                        <option></option><!-- Needed to show X image to clear the select -->
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                        <option value="4">Option 4</option>
+                        <option value="5">Option 5</option>
+                    </select>
+                </div>
+                <!-- with placeholder with clear multi default -->
+                <div class="w-70">
+                    <select data-theme="lg" data-allow-clear="true" data-placeholder="Select provinces of residence..."
+                        multiple="multiple" class="_dropdown">
+                        <option value="AL">Alabama</option>
+                        <option value="WY">Wyoming</option>
+                        <option value="WY">vaxming</option>
+                        <option value="WY">xvsming</option>
+                        <option value="WY">tetming</option>
+                        <option value="WY">yhfming</option>
+                        <option value="WY">dcfbshx</option>
+                    </select>
+                </div>
+                <!-- with placeholder with clear multi disabled -->
+                <div class="w-70">
+                    <select data-theme="lg" data-allow-clear="true" data-placeholder="Options unavailable"
+                        multiple="multiple" class="_dropdown" disabled>
+                        <option value="AL">Alabama</option>
+                        <option value="WY">Wyoming</option>
+                        <option value="WY">vaxming</option>
+                        <option value="WY">xvsming</option>
+                        <option value="WY">tetming</option>
+                        <option value="WY">yhfming</option>
+                        <option value="WY">dcfbshx</option>
+                    </select>
+                </div>
+            </div>
+            <div class="flex flex-col items-center space-y-4">
+                <div class="title">md (32px)</div>
+                <!-- no placeholder no clear single default -->
+                <div class="w-70">
+                    <select data-theme="md" class="_dropdown">
+                        <option value="AL">Alabama</option>
+                        <option value="AL">Abkhama</option>
+                        <option value="AL">Alyhama</option>
+                        <option value="WY">Wyoming</option>
+                    </select>
+                </div>
+                <!-- no placeholder no clear single disabled -->
+                <div class="w-70">
+                    <select data-theme="md" class="_dropdown" disabled>
+                        <option value="AL">Alabama</option>
+                        <option value="AL">Abkhama</option>
+                        <option value="AL">Alyhama</option>
+                        <option value="WY">Wyoming</option>
+                    </select>
+                </div>
+                <!-- no placeholder no clear multi default -->
+                <div class="w-70">
+                    <select data-theme="md" class="_dropdown" multiple="multiple">
+                        <option value="AL">Alabama</option>
+                        <option value="WY">Wyoming</option>
+                        <option value="WY">vaxming</option>
+                        <option value="WY">xvsming</option>
+                        <option value="WY">tetming</option>
+                        <option value="WY">yhfming</option>
+                        <option value="WY">dcfbshx</option>
+                    </select>
+                </div>
+                <!-- no placeholder no clear multi disabled -->
+                <div class="w-70">
+                    <select data-theme="md" class="_dropdown" multiple="multiple" disabled>
+                        <option value="AL">Alabama</option>
+                        <option value="WY">Wyoming</option>
+                        <option value="WY">vaxming</option>
+                        <option value="WY">xvsming</option>
+                        <option value="WY">tetming</option>
+                        <option value="WY">yhfming</option>
+                        <option value="WY">dcfbshx</option>
+                    </select>
+                </div>
+                <!-- with placeholder with clear single default -->
+                <div class="w-70">
+                    <select data-theme="md" data-placeholder="Select one option..." data-multiple="false"
+                        data-allow-clear="true" class="_dropdown">
+                        <option></option><!-- Needed to show X image to clear the select -->
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                        <option value="4">Option 4</option>
+                        <option value="5">Option 5</option>
+                    </select>
+                </div>
+                <!-- with placeholder with clear single disabled -->
+                <div class="w-70">
+                    <select data-theme="md" data-placeholder="Option unavailable" data-multiple="false"
+                        data-allow-clear="true" class="_dropdown" disabled>
+                        <option></option><!-- Needed to show X image to clear the select -->
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                        <option value="4">Option 4</option>
+                        <option value="5">Option 5</option>
+                    </select>
+                </div>
+                <!-- with placeholder with clear multi default -->
+                <div class="w-70">
+                    <select data-theme="md" data-allow-clear="true" data-placeholder="Select provinces of residence..."
+                        multiple="multiple" class="_dropdown">
+                        <option value="AL">Alabama</option>
+                        <option value="WY">Wyoming</option>
+                        <option value="WY">vaxming</option>
+                        <option value="WY">xvsming</option>
+                        <option value="WY">tetming</option>
+                        <option value="WY">yhfming</option>
+                        <option value="WY">dcfbshx</option>
+                    </select>
+                </div>
+                <!-- with placeholder with clear multi disabled -->
+                <div class="w-70">
+                    <select data-theme="md" data-allow-clear="true" data-placeholder="Options unavailable"
+                        multiple="multiple" class="_dropdown" disabled>
+                        <option value="AL">Alabama</option>
+                        <option value="WY">Wyoming</option>
+                        <option value="WY">vaxming</option>
+                        <option value="WY">xvsming</option>
+                        <option value="WY">tetming</option>
+                        <option value="WY">yhfming</option>
+                        <option value="WY">dcfbshx</option>
+                    </select>
+                </div>
+            </div>
+            <div class="flex flex-col items-center space-y-4">
+                <div class="title">sm (24px)</div>
+                <!-- no placeholder no clear single default -->
+                <div class="w-70">
+                    <select data-theme="lg" class="_dropdown">
+                        <option value="AL">Alabama</option>
+                        <option value="AL">Abkhama</option>
+                        <option value="AL">Alyhama</option>
+                        <option value="WY">Wyoming</option>
+                    </select>
+                </div>
+                <!-- no placeholder no clear single disabled -->
+                <div class="w-70">
+                    <select data-theme="lg" class="_dropdown" disabled>
+                        <option value="AL">Alabama</option>
+                        <option value="AL">Abkhama</option>
+                        <option value="AL">Alyhama</option>
+                        <option value="WY">Wyoming</option>
+                    </select>
+                </div>
+                <!-- no placeholder no clear multi default -->
+                <div class="w-70">
+                    <select data-theme="lg" class="_dropdown" multiple="multiple">
+                        <option value="AL">Alabama</option>
+                        <option value="WY">Wyoming</option>
+                        <option value="WY">vaxming</option>
+                        <option value="WY">xvsming</option>
+                        <option value="WY">tetming</option>
+                        <option value="WY">yhfming</option>
+                        <option value="WY">dcfbshx</option>
+                    </select>
+                </div>
+                <!-- no placeholder no clear multi disabled -->
+                <div class="w-70">
+                    <select data-theme="lg" class="_dropdown" multiple="multiple" disabled>
+                        <option value="AL">Alabama</option>
+                        <option value="WY">Wyoming</option>
+                        <option value="WY">vaxming</option>
+                        <option value="WY">xvsming</option>
+                        <option value="WY">tetming</option>
+                        <option value="WY">yhfming</option>
+                        <option value="WY">dcfbshx</option>
+                    </select>
+                </div>
+                <!-- with placeholder with clear single default -->
+                <div class="w-70">
+                    <select data-theme="lg" data-placeholder="Select one option..." data-multiple="false"
+                        data-allow-clear="true" class="_dropdown">
+                        <option></option><!-- Needed to show X image to clear the select -->
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                        <option value="4">Option 4</option>
+                        <option value="5">Option 5</option>
+                    </select>
+                </div>
+                <!-- with placeholder with clear single disabled -->
+                <div class="w-70">
+                    <select data-theme="lg" data-placeholder="Option unavailable" data-multiple="false"
+                        data-allow-clear="true" class="_dropdown" disabled>
+                        <option></option><!-- Needed to show X image to clear the select -->
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                        <option value="4">Option 4</option>
+                        <option value="5">Option 5</option>
+                    </select>
+                </div>
+                <!-- with placeholder with clear multi default -->
+                <div class="w-70">
+                    <select data-theme="lg" data-allow-clear="true" data-placeholder="Select provinces of residence..."
+                        multiple="multiple" class="_dropdown">
+                        <option value="AL">Alabama</option>
+                        <option value="WY">Wyoming</option>
+                        <option value="WY">vaxming</option>
+                        <option value="WY">xvsming</option>
+                        <option value="WY">tetming</option>
+                        <option value="WY">yhfming</option>
+                        <option value="WY">dcfbshx</option>
+                    </select>
+                </div>
+                <!-- with placeholder with clear multi disabled -->
+                <div class="w-70">
+                    <select data-theme="lg" data-allow-clear="true" data-placeholder="Options unavailable"
+                        multiple="multiple" class="_dropdown" disabled>
+                        <option value="AL">Alabama</option>
+                        <option value="WY">Wyoming</option>
+                        <option value="WY">vaxming</option>
+                        <option value="WY">xvsming</option>
+                        <option value="WY">tetming</option>
+                        <option value="WY">yhfming</option>
+                        <option value="WY">dcfbshx</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $('._dropdown').select2({});
+    </script>
+</body>

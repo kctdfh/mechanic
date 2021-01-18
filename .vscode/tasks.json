@@ -1,0 +1,37 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "npm",
+			"script": "source",
+			"group": "build",
+			"problemMatcher": [],
+			"label": "Build Source",
+			"detail": "Build full CSS from the pre-compiled styles",
+		},
+		{
+			"type": "npm",
+			"script": "purged",
+			"problemMatcher": [],
+			"label": "Build Purged",
+			"detail": "Build purged CSS from the pre-compiled styles",
+			"group": "build"
+		},
+		{
+			"type": "npm",
+			"script": "mini",
+			"problemMatcher": [],
+			"label": "Build Mini",
+			"detail": "Build purged and minify it",
+			"group": "build"
+		},
+		{
+			"type": "npm",
+			"script": "all",
+			"problemMatcher": [],
+			"label": "Build Everything",
+			"detail": "Build source, purged, minified",
+			"group": "build"
+		}
+	]
+}

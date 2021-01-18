@@ -1,0 +1,37 @@
+/* Tailwind imports from node_modules */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+/* [Important] Change URLs */
+@import "fonts.css";
+@import "paths.css";
+
+/* Components */
+@import "basics.css";
+@import "buttons.css";
+@import "text-inputs.css";
+@import "number-input.css";
+@import "radio-checkbox.css";
+@import "labels.css";
+@import "status.css";
+@import "breadcrumbs.css";
+
+/* Frameworks */
+
+/* Base CSS from node_modules */
+@import "free-jqgrid/css/ui.jqgrid.css";
+@import "feather-font-icons.css";
+@import "select2/dist/css/select2.css";
+@import "mmenu-js/dist/mmenu.css";
+
+/* Custom free-jqGrid themes */
+@import "free-jqGrid-themes.css";
+@import "custom-jQuery-ui.css";
+
+/* Custom Select2 themes */
+@import "select2-lg.css";
+@import "select2-md.css";
+
+/* Custom Mmenu.js themes */
+@import "menu.css";

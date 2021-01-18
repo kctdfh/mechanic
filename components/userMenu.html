@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="User Menu" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../dist/css/styles-mini.css" />
+
+    <script>
+      function openMenu() {
+        document.getElementById("userDropdown").classList.toggle("hidden");
+      }
+    </script>
+  </head>
+
+  <body>
+    <div id="outerDiv" class="inline-flex flex-col items-end w-screen p-5">
+      <div
+        onClick="openMenu()"
+        class="group inline-flex items-center h-16 px-6 py-3 space-x-4 cursor-pointer"
+      >
+        <div class="justify-items-start inline-flex flex-col space-y-1">
+          <p
+            class="group-hover:text-blue-850 text-md font-semibold text-right text-black"
+          >
+            Jane Doe
+          </p>
+          <p
+            class="group-hover:text-blue-850 text-sm leading-none text-right text-gray-500"
+          >
+            Admin
+          </p>
+        </div>
+        <div class="w-10 h-10 overflow-hidden rounded-full">
+          <img
+            src="../dist/assets/avatar.jpg"
+            alt="user avatar"
+            class="object-cover w-full h-full"
+          />
+        </div>
+      </div>
+      <div
+        id="userDropdown"
+        class="w-55 relative z-50 flex flex-col hidden py-2 space-y-2 bg-white shadow"
+      >
+        <a
+          href="#"
+          class="group align-end h-7 hover:bg-gray-25 inline-flex w-full px-4 py-1 space-x-3"
+        >
+          <div class="flex items-center h-full">
+            <i
+              class="group-hover:text-blue-850 align-center feather-info text-gray-300"
+            ></i>
+          </div>
+          <p
+            class="group-hover:text-blue-850 align-center text-md w-44 h-full text-black"
+          >
+            Help
+          </p>
+        </a>
+
+        <a
+          href="#"
+          class="group align-end h-7 hover:bg-gray-25 inline-flex w-full px-4 py-1 space-x-3"
+        >
+          <div class="flex items-center h-full">
+            <i
+              class="align-center group-hover:text-blue-850 feather-log-out text-gray-300"
+            ></i>
+          </div>
+          <p
+            class="align-center group-hover:text-blue-850 text-md w-44 h-full text-black"
+          >
+            Log out
+          </p>
+        </a>
+      </div>
+    </div>
+  </body>
+</html>
