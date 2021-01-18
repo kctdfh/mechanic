@@ -4,36 +4,37 @@
 @import "tailwindcss/utilities";
 
 /* [Important] Change URLs */
-@import "fonts.css";
-@import "paths.css";
+@import "imports/fonts.css";
+@import "imports/paths.css";
 
 /* Components */
-@import "basics.css";
-@import "buttons.css";
-@import "text-inputs.css";
-@import "number-input.css";
-@import "radio-checkbox.css";
-@import "labels.css";
-@import "status.css";
-@import "breadcrumbs.css";
+@import "imports/basics.css";
+@import "imports/buttons.css";
+@import "imports/text-inputs.css";
+@import "imports/number-input.css";
+@import "imports/radio-checkbox.css";
+@import "imports/labels.css";
+@import "imports/status.css";
+@import "imports/breadcrumbs.css";
 
 /* Frameworks */
 
 /* Base CSS from node_modules */
 @import "free-jqgrid/css/ui.jqgrid.css";
-@import "feather-font-icons.css";
+@import "imports/feather-font-icons.css";
 @import "select2/dist/css/select2.css";
 @import "mmenu-js/dist/mmenu.css";
 @import "tippy.js/dist/tippy.css";
 @import "alertifyjs/build/css/alertify.css";
 
 /* Custom free-jqGrid themes */
-@import "free-jqGrid-themes.css";
-@import "custom-jQuery-ui.css";
+@import "imports/free-jqGrid-themes.css";
+@import "imports/custom-jQuery-ui.css";
 
 /* Custom Select2 themes */
-@import "select2-lg.css";
-@import "select2-md.css";
+@import "imports/select2-lg.css";
+@import "imports/select2-md.css";
+@import "imports/select2_sm.css";
 
 /* Custom Mmenu.js themes */
-@import "menu.css";
+@import "imports/menu.css";

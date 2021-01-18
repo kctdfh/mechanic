@@ -210,7 +210,7 @@
                 <div class="title">sm (24px)</div>
                 <!-- no placeholder no clear single default -->
                 <div class="w-70">
-                    <select data-theme="lg" class="_dropdown">
+                    <select data-theme="sm" class="_dropdown">
                         <option value="AL">Alabama</option>
                         <option value="AL">Abkhama</option>
                         <option value="AL">Alyhama</option>
@@ -219,7 +219,7 @@
                 </div>
                 <!-- no placeholder no clear single disabled -->
                 <div class="w-70">
-                    <select data-theme="lg" class="_dropdown" disabled>
+                    <select data-theme="sm" class="_dropdown" disabled>
                         <option value="AL">Alabama</option>
                         <option value="AL">Abkhama</option>
                         <option value="AL">Alyhama</option>
@@ -228,7 +228,7 @@
                 </div>
                 <!-- no placeholder no clear multi default -->
                 <div class="w-70">
-                    <select data-theme="lg" class="_dropdown" multiple="multiple">
+                    <select data-theme="sm" class="_dropdown" multiple="multiple">
                         <option value="AL">Alabama</option>
                         <option value="WY">Wyoming</option>
                         <option value="WY">vaxming</option>
@@ -240,7 +240,7 @@
                 </div>
                 <!-- no placeholder no clear multi disabled -->
                 <div class="w-70">
-                    <select data-theme="lg" class="_dropdown" multiple="multiple" disabled>
+                    <select data-theme="sm" class="_dropdown" multiple="multiple" disabled>
                         <option value="AL">Alabama</option>
                         <option value="WY">Wyoming</option>
                         <option value="WY">vaxming</option>
@@ -252,7 +252,7 @@
                 </div>
                 <!-- with placeholder with clear single default -->
                 <div class="w-70">
-                    <select data-theme="lg" data-placeholder="Select one option..." data-multiple="false"
+                    <select data-theme="sm" data-placeholder="Select one option..." data-multiple="false"
                         data-allow-clear="true" class="_dropdown">
                         <option></option><!-- Needed to show X image to clear the select -->
                         <option value="1">Option 1</option>
@@ -264,7 +264,7 @@
                 </div>
                 <!-- with placeholder with clear single disabled -->
                 <div class="w-70">
-                    <select data-theme="lg" data-placeholder="Option unavailable" data-multiple="false"
+                    <select data-theme="sm" data-placeholder="Option unavailable" data-multiple="false"
                         data-allow-clear="true" class="_dropdown" disabled>
                         <option></option><!-- Needed to show X image to clear the select -->
                         <option value="1">Option 1</option>
@@ -276,7 +276,7 @@
                 </div>
                 <!-- with placeholder with clear multi default -->
                 <div class="w-70">
-                    <select data-theme="lg" data-allow-clear="true" data-placeholder="Select provinces of residence..."
+                    <select data-theme="sm" data-allow-clear="true" data-placeholder="Select provinces of residence..."
                         multiple="multiple" class="_dropdown">
                         <option value="AL">Alabama</option>
                         <option value="WY">Wyoming</option>
@@ -289,7 +289,7 @@
                 </div>
                 <!-- with placeholder with clear multi disabled -->
                 <div class="w-70">
-                    <select data-theme="lg" data-allow-clear="true" data-placeholder="Options unavailable"
+                    <select data-theme="sm" data-allow-clear="true" data-placeholder="Options unavailable"
                         multiple="multiple" class="_dropdown" disabled>
                         <option value="AL">Alabama</option>
                         <option value="WY">Wyoming</option>
@@ -302,8 +302,8 @@
                 </div>
             </div>
         </div>
+        <!-- without label -->
         <div class="flex flex-row space-x-4">
-            <!-- without label -->
             <div class="flex flex-col items-center space-y-4">
                 <div class="title">lg (40px)</div>
                 <!-- no placeholder no clear single default -->
@@ -334,268 +334,356 @@
                     </label>
                 </div>
                 <!-- no placeholder no clear multi default -->
-                <div class="w-70">
-                    <select data-theme="lg" class="_dropdown" multiple="multiple">
-                        <option value="AL">Alabama</option>
-                        <option value="WY">Wyoming</option>
-                        <option value="WY">vaxming</option>
-                        <option value="WY">xvsming</option>
-                        <option value="WY">tetming</option>
-                        <option value="WY">yhfming</option>
-                        <option value="WY">dcfbshx</option>
-                    </select>
+                <div class="flex flex-col space-y-1">
+                    <label for="inputId" class="text-md text-black">Enter your name</label>
+                    <div class="w-70">
+                        <select data-theme="lg" class="_dropdown" multiple="multiple">
+                            <option value="AL">Alabama</option>
+                            <option value="WY">Wyoming</option>
+                            <option value="WY">vaxming</option>
+                            <option value="WY">xvsming</option>
+                            <option value="WY">tetming</option>
+                            <option value="WY">yhfming</option>
+                            <option value="WY">dcfbshx</option>
+                        </select>
+                    </div>
+                    <p class="mt-1 text-sm text-red-600">Description</p>
                 </div>
                 <!-- no placeholder no clear multi disabled -->
-                <div class="w-70">
-                    <select data-theme="lg" class="_dropdown" multiple="multiple" disabled>
-                        <option value="AL">Alabama</option>
-                        <option value="WY">Wyoming</option>
-                        <option value="WY">vaxming</option>
-                        <option value="WY">xvsming</option>
-                        <option value="WY">tetming</option>
-                        <option value="WY">yhfming</option>
-                        <option value="WY">dcfbshx</option>
-                    </select>
+                <div class="flex flex-col space-y-1">
+                    <label for="inputId" class="text-md text-black">Enter your name</label>
+                    <div class="w-70">
+                        <select data-theme="lg" class="_dropdown" multiple="multiple" disabled>
+                            <option value="AL">Alabama</option>
+                            <option value="WY">Wyoming</option>
+                            <option value="WY">vaxming</option>
+                            <option value="WY">xvsming</option>
+                            <option value="WY">tetming</option>
+                            <option value="WY">yhfming</option>
+                            <option value="WY">dcfbshx</option>
+                        </select>
+                    </div>
+                    <p class="mt-1 text-sm text-red-600">Description</p>
                 </div>
                 <!-- with placeholder with clear single default -->
-                <div class="w-70">
-                    <select data-theme="lg" data-placeholder="Select one option..." data-multiple="false"
-                        data-allow-clear="true" class="_dropdown">
-                        <option></option><!-- Needed to show X image to clear the select -->
-                        <option value="1">Option 1</option>
-                        <option value="2">Option 2</option>
-                        <option value="3">Option 3</option>
-                        <option value="4">Option 4</option>
-                        <option value="5">Option 5</option>
-                    </select>
+                <div class="flex flex-col space-y-1">
+                    <label for="inputId" class="text-md text-black">Enter your name</label>
+                    <div class="w-70">
+                        <select data-theme="lg" data-placeholder="Select one option..." data-multiple="false"
+                            data-allow-clear="true" class="_dropdown">
+                            <option></option><!-- Needed to show X image to clear the select -->
+                            <option value="1">Option 1</option>
+                            <option value="2">Option 2</option>
+                            <option value="3">Option 3</option>
+                            <option value="4">Option 4</option>
+                            <option value="5">Option 5</option>
+                        </select>
+                    </div>
+                    <p class="mt-1 text-sm text-red-600">Description</p>
                 </div>
                 <!-- with placeholder with clear single disabled -->
-                <div class="w-70">
-                    <select data-theme="lg" data-placeholder="Option unavailable" data-multiple="false"
-                        data-allow-clear="true" class="_dropdown" disabled>
-                        <option></option><!-- Needed to show X image to clear the select -->
-                        <option value="1">Option 1</option>
-                        <option value="2">Option 2</option>
-                        <option value="3">Option 3</option>
-                        <option value="4">Option 4</option>
-                        <option value="5">Option 5</option>
-                    </select>
+                <div class="flex flex-col space-y-1">
+                    <label for="inputId" class="text-md text-black">Enter your name</label>
+                    <div class="w-70">
+                        <select data-theme="lg" data-placeholder="Option unavailable" data-multiple="false"
+                            data-allow-clear="true" class="_dropdown" disabled>
+                            <option></option><!-- Needed to show X image to clear the select -->
+                            <option value="1">Option 1</option>
+                            <option value="2">Option 2</option>
+                            <option value="3">Option 3</option>
+                            <option value="4">Option 4</option>
+                            <option value="5">Option 5</option>
+                        </select>
+                    </div>
+                    <p class="mt-1 text-sm text-red-600">Description</p>
                 </div>
                 <!-- with placeholder with clear multi default -->
-                <div class="w-70">
-                    <select data-theme="lg" data-allow-clear="true" data-placeholder="Select provinces of residence..."
-                        multiple="multiple" class="_dropdown">
-                        <option value="AL">Alabama</option>
-                        <option value="WY">Wyoming</option>
-                        <option value="WY">vaxming</option>
-                        <option value="WY">xvsming</option>
-                        <option value="WY">tetming</option>
-                        <option value="WY">yhfming</option>
-                        <option value="WY">dcfbshx</option>
-                    </select>
+                <div class="flex flex-col space-y-1">
+                    <label for="inputId" class="text-md text-black">Enter your name</label>
+                    <div class="w-70">
+                        <select data-theme="lg" data-allow-clear="true"
+                            data-placeholder="Select provinces of residence..." multiple="multiple" class="_dropdown">
+                            <option value="AL">Alabama</option>
+                            <option value="WY">Wyoming</option>
+                            <option value="WY">vaxming</option>
+                            <option value="WY">xvsming</option>
+                            <option value="WY">tetming</option>
+                            <option value="WY">yhfming</option>
+                            <option value="WY">dcfbshx</option>
+                        </select>
+                    </div>
+                    <p class="mt-1 text-sm text-red-600">Description</p>
                 </div>
                 <!-- with placeholder with clear multi disabled -->
-                <div class="w-70">
-                    <select data-theme="lg" data-allow-clear="true" data-placeholder="Options unavailable"
-                        multiple="multiple" class="_dropdown" disabled>
-                        <option value="AL">Alabama</option>
-                        <option value="WY">Wyoming</option>
-                        <option value="WY">vaxming</option>
-                        <option value="WY">xvsming</option>
-                        <option value="WY">tetming</option>
-                        <option value="WY">yhfming</option>
-                        <option value="WY">dcfbshx</option>
-                    </select>
+                <div class="flex flex-col space-y-1">
+                    <label for="inputId" class="text-md text-black">Enter your name</label>
+                    <div class="w-70">
+                        <select data-theme="lg" data-allow-clear="true" data-placeholder="Options unavailable"
+                            multiple="multiple" class="_dropdown" disabled>
+                            <option value="AL">Alabama</option>
+                            <option value="WY">Wyoming</option>
+                            <option value="WY">vaxming</option>
+                            <option value="WY">xvsming</option>
+                            <option value="WY">tetming</option>
+                            <option value="WY">yhfming</option>
+                            <option value="WY">dcfbshx</option>
+                        </select>
+                    </div>
+                    <p class="mt-1 text-sm text-red-600">Description</p>
                 </div>
             </div>
             <div class="flex flex-col items-center space-y-4">
                 <div class="title">md (32px)</div>
                 <!-- no placeholder no clear single default -->
-                <div class="w-70">
-                    <select data-theme="md" class="_dropdown">
-                        <option value="AL">Alabama</option>
-                        <option value="AL">Abkhama</option>
-                        <option value="AL">Alyhama</option>
-                        <option value="WY">Wyoming</option>
-                    </select>
+                <div class="flex flex-col space-y-1">
+                    <label for="inputId" class="text-md text-black">Enter your name</label>
+                    <div class="w-70">
+                        <select data-theme="md" class="_dropdown">
+                            <option value="AL">Alabama</option>
+                            <option value="AL">Abkhama</option>
+                            <option value="AL">Alyhama</option>
+                            <option value="WY">Wyoming</option>
+                        </select>
+                    </div>
+                    <p class="mt-1 text-sm text-red-600">Description</p>
                 </div>
                 <!-- no placeholder no clear single disabled -->
-                <div class="w-70">
-                    <select data-theme="md" class="_dropdown" disabled>
-                        <option value="AL">Alabama</option>
-                        <option value="AL">Abkhama</option>
-                        <option value="AL">Alyhama</option>
-                        <option value="WY">Wyoming</option>
-                    </select>
+                <div class="flex flex-col space-y-1">
+                    <label for="inputId" class="text-md text-black">Enter your name</label>
+                    <div class="w-70">
+                        <select data-theme="md" class="_dropdown" disabled>
+                            <option value="AL">Alabama</option>
+                            <option value="AL">Abkhama</option>
+                            <option value="AL">Alyhama</option>
+                            <option value="WY">Wyoming</option>
+                        </select>
+                    </div>
+                    <p class="mt-1 text-sm text-red-600">Description</p>
                 </div>
                 <!-- no placeholder no clear multi default -->
-                <div class="w-70">
-                    <select data-theme="md" class="_dropdown" multiple="multiple">
-                        <option value="AL">Alabama</option>
-                        <option value="WY">Wyoming</option>
-                        <option value="WY">vaxming</option>
-                        <option value="WY">xvsming</option>
-                        <option value="WY">tetming</option>
-                        <option value="WY">yhfming</option>
-                        <option value="WY">dcfbshx</option>
-                    </select>
+                <div class="flex flex-col space-y-1">
+                    <label for="inputId" class="text-md text-black">Enter your name</label>
+                    <div class="w-70">
+                        <select data-theme="md" class="_dropdown" multiple="multiple">
+                            <option value="AL">Alabama</option>
+                            <option value="WY">Wyoming</option>
+                            <option value="WY">vaxming</option>
+                            <option value="WY">xvsming</option>
+                            <option value="WY">tetming</option>
+                            <option value="WY">yhfming</option>
+                            <option value="WY">dcfbshx</option>
+                        </select>
+                    </div>
+                    <p class="mt-1 text-sm text-red-600">Description</p>
                 </div>
                 <!-- no placeholder no clear multi disabled -->
-                <div class="w-70">
-                    <select data-theme="md" class="_dropdown" multiple="multiple" disabled>
-                        <option value="AL">Alabama</option>
-                        <option value="WY">Wyoming</option>
-                        <option value="WY">vaxming</option>
-                        <option value="WY">xvsming</option>
-                        <option value="WY">tetming</option>
-                        <option value="WY">yhfming</option>
-                        <option value="WY">dcfbshx</option>
-                    </select>
+                <div class="flex flex-col space-y-1">
+                    <label for="inputId" class="text-md text-black">Enter your name</label>
+                    <div class="w-70">
+                        <select data-theme="md" class="_dropdown" multiple="multiple" disabled>
+                            <option value="AL">Alabama</option>
+                            <option value="WY">Wyoming</option>
+                            <option value="WY">vaxming</option>
+                            <option value="WY">xvsming</option>
+                            <option value="WY">tetming</option>
+                            <option value="WY">yhfming</option>
+                            <option value="WY">dcfbshx</option>
+                        </select>
+                    </div>
+                    <p class="mt-1 text-sm text-red-600">Description</p>
                 </div>
                 <!-- with placeholder with clear single default -->
-                <div class="w-70">
-                    <select data-theme="md" data-placeholder="Select one option..." data-multiple="false"
-                        data-allow-clear="true" class="_dropdown">
-                        <option></option><!-- Needed to show X image to clear the select -->
-                        <option value="1">Option 1</option>
-                        <option value="2">Option 2</option>
-                        <option value="3">Option 3</option>
-                        <option value="4">Option 4</option>
-                        <option value="5">Option 5</option>
-                    </select>
+                <div class="flex flex-col space-y-1">
+                    <label for="inputId" class="text-md text-black">Enter your name</label>
+                    <div class="w-70">
+                        <select data-theme="md" data-placeholder="Select one option..." data-multiple="false"
+                            data-allow-clear="true" class="_dropdown">
+                            <option></option><!-- Needed to show X image to clear the select -->
+                            <option value="1">Option 1</option>
+                            <option value="2">Option 2</option>
+                            <option value="3">Option 3</option>
+                            <option value="4">Option 4</option>
+                            <option value="5">Option 5</option>
+                        </select>
+                    </div>
+                    <p class="mt-1 text-sm text-red-600">Description</p>
                 </div>
                 <!-- with placeholder with clear single disabled -->
-                <div class="w-70">
-                    <select data-theme="md" data-placeholder="Option unavailable" data-multiple="false"
-                        data-allow-clear="true" class="_dropdown" disabled>
-                        <option></option><!-- Needed to show X image to clear the select -->
-                        <option value="1">Option 1</option>
-                        <option value="2">Option 2</option>
-                        <option value="3">Option 3</option>
-                        <option value="4">Option 4</option>
-                        <option value="5">Option 5</option>
-                    </select>
+                <div class="flex flex-col space-y-1">
+                    <label for="inputId" class="text-md text-black">Enter your name</label>
+                    <div class="w-70">
+                        <select data-theme="md" data-placeholder="Option unavailable" data-multiple="false"
+                            data-allow-clear="true" class="_dropdown" disabled>
+                            <option></option><!-- Needed to show X image to clear the select -->
+                            <option value="1">Option 1</option>
+                            <option value="2">Option 2</option>
+                            <option value="3">Option 3</option>
+                            <option value="4">Option 4</option>
+                            <option value="5">Option 5</option>
+                        </select>
+                    </div>
+                    <p class="mt-1 text-sm text-red-600">Description</p>
                 </div>
                 <!-- with placeholder with clear multi default -->
-                <div class="w-70">
-                    <select data-theme="md" data-allow-clear="true" data-placeholder="Select provinces of residence..."
-                        multiple="multiple" class="_dropdown">
-                        <option value="AL">Alabama</option>
-                        <option value="WY">Wyoming</option>
-                        <option value="WY">vaxming</option>
-                        <option value="WY">xvsming</option>
-                        <option value="WY">tetming</option>
-                        <option value="WY">yhfming</option>
-                        <option value="WY">dcfbshx</option>
-                    </select>
+                <div class="flex flex-col space-y-1">
+                    <label for="inputId" class="text-md text-black">Enter your name</label>
+                    <div class="w-70">
+                        <select data-theme="md" data-allow-clear="true"
+                            data-placeholder="Select provinces of residence..." multiple="multiple" class="_dropdown">
+                            <option value="AL">Alabama</option>
+                            <option value="WY">Wyoming</option>
+                            <option value="WY">vaxming</option>
+                            <option value="WY">xvsming</option>
+                            <option value="WY">tetming</option>
+                            <option value="WY">yhfming</option>
+                            <option value="WY">dcfbshx</option>
+                        </select>
+                    </div>
+                    <p class="mt-1 text-sm text-red-600">Description</p>
                 </div>
                 <!-- with placeholder with clear multi disabled -->
-                <div class="w-70">
-                    <select data-theme="md" data-allow-clear="true" data-placeholder="Options unavailable"
-                        multiple="multiple" class="_dropdown" disabled>
-                        <option value="AL">Alabama</option>
-                        <option value="WY">Wyoming</option>
-                        <option value="WY">vaxming</option>
-                        <option value="WY">xvsming</option>
-                        <option value="WY">tetming</option>
-                        <option value="WY">yhfming</option>
-                        <option value="WY">dcfbshx</option>
-                    </select>
+                <div class="flex flex-col space-y-1">
+                    <label for="inputId" class="text-md text-black">Enter your name</label>
+                    <div class="w-70">
+                        <select data-theme="md" data-allow-clear="true" data-placeholder="Options unavailable"
+                            multiple="multiple" class="_dropdown" disabled>
+                            <option value="AL">Alabama</option>
+                            <option value="WY">Wyoming</option>
+                            <option value="WY">vaxming</option>
+                            <option value="WY">xvsming</option>
+                            <option value="WY">tetming</option>
+                            <option value="WY">yhfming</option>
+                            <option value="WY">dcfbshx</option>
+                        </select>
+                    </div>
+                    <p class="mt-1 text-sm text-red-600">Description</p>
                 </div>
             </div>
             <div class="flex flex-col items-center space-y-4">
                 <div class="title">sm (24px)</div>
                 <!-- no placeholder no clear single default -->
-                <div class="w-70">
-                    <select data-theme="lg" class="_dropdown">
-                        <option value="AL">Alabama</option>
-                        <option value="AL">Abkhama</option>
-                        <option value="AL">Alyhama</option>
-                        <option value="WY">Wyoming</option>
-                    </select>
+                <div class="flex flex-col space-y-1">
+                    <label for="inputId" class="text-md text-black">Enter your name</label>
+                    <div class="w-70">
+                        <select data-theme="sm" class="_dropdown">
+                            <option value="AL">Alabama</option>
+                            <option value="AL">Abkhama</option>
+                            <option value="AL">Alyhama</option>
+                            <option value="WY">Wyoming</option>
+                        </select>
+                    </div>
+                    <p class="mt-1 text-sm text-red-600">Description</p>
                 </div>
                 <!-- no placeholder no clear single disabled -->
-                <div class="w-70">
-                    <select data-theme="lg" class="_dropdown" disabled>
-                        <option value="AL">Alabama</option>
-                        <option value="AL">Abkhama</option>
-                        <option value="AL">Alyhama</option>
-                        <option value="WY">Wyoming</option>
-                    </select>
+                <div class="flex flex-col space-y-1">
+                    <label for="inputId" class="text-md text-black">Enter your name</label>
+                    <div class="w-70">
+                        <select data-theme="sm" class="_dropdown" disabled>
+                            <option value="AL">Alabama</option>
+                            <option value="AL">Abkhama</option>
+                            <option value="AL">Alyhama</option>
+                            <option value="WY">Wyoming</option>
+                        </select>
+                    </div>
+                    <p class="mt-1 text-sm text-red-600">Description</p>
                 </div>
                 <!-- no placeholder no clear multi default -->
-                <div class="w-70">
-                    <select data-theme="lg" class="_dropdown" multiple="multiple">
-                        <option value="AL">Alabama</option>
-                        <option value="WY">Wyoming</option>
-                        <option value="WY">vaxming</option>
-                        <option value="WY">xvsming</option>
-                        <option value="WY">tetming</option>
-                        <option value="WY">yhfming</option>
-                        <option value="WY">dcfbshx</option>
-                    </select>
+                <div class="flex flex-col space-y-1">
+                    <label for="inputId" class="text-md text-black">Enter your name</label>
+                    <div class="w-70">
+                        <select data-theme="sm" class="_dropdown" multiple="multiple">
+                            <option value="AL">Alabama</option>
+                            <option value="WY">Wyoming</option>
+                            <option value="WY">vaxming</option>
+                            <option value="WY">xvsming</option>
+                            <option value="WY">tetming</option>
+                            <option value="WY">yhfming</option>
+                            <option value="WY">dcfbshx</option>
+                        </select>
+                    </div>
+                    <p class="mt-1 text-sm text-red-600">Description</p>
                 </div>
                 <!-- no placeholder no clear multi disabled -->
-                <div class="w-70">
-                    <select data-theme="lg" class="_dropdown" multiple="multiple" disabled>
-                        <option value="AL">Alabama</option>
-                        <option value="WY">Wyoming</option>
-                        <option value="WY">vaxming</option>
-                        <option value="WY">xvsming</option>
-                        <option value="WY">tetming</option>
-                        <option value="WY">yhfming</option>
-                        <option value="WY">dcfbshx</option>
-                    </select>
+                <div class="flex flex-col space-y-1">
+                    <label for="inputId" class="text-md text-black">Enter your name</label>
+                    <div class="w-70">
+                        <select data-theme="sm" class="_dropdown" multiple="multiple" disabled>
+                            <option value="AL">Alabama</option>
+                            <option value="WY">Wyoming</option>
+                            <option value="WY">vaxming</option>
+                            <option value="WY">xvsming</option>
+                            <option value="WY">tetming</option>
+                            <option value="WY">yhfming</option>
+                            <option value="WY">dcfbshx</option>
+                        </select>
+                    </div>
+                    <p class="mt-1 text-sm text-red-600">Description</p>
                 </div>
                 <!-- with placeholder with clear single default -->
-                <div class="w-70">
-                    <select data-theme="lg" data-placeholder="Select one option..." data-multiple="false"
-                        data-allow-clear="true" class="_dropdown">
-                        <option></option><!-- Needed to show X image to clear the select -->
-                        <option value="1">Option 1</option>
-                        <option value="2">Option 2</option>
-                        <option value="3">Option 3</option>
-                        <option value="4">Option 4</option>
-                        <option value="5">Option 5</option>
-                    </select>
+                <div class="flex flex-col space-y-1">
+                    <label for="inputId" class="text-md text-black">Enter your name</label>
+                    <div class="w-70">
+                        <select data-theme="sm" data-placeholder="Select one option..." data-multiple="false"
+                            data-allow-clear="true" class="_dropdown">
+                            <option></option><!-- Needed to show X image to clear the select -->
+                            <option value="1">Option 1</option>
+                            <option value="2">Option 2</option>
+                            <option value="3">Option 3</option>
+                            <option value="4">Option 4</option>
+                            <option value="5">Option 5</option>
+                        </select>
+                    </div>
+                    <p class="mt-1 text-sm text-red-600">Description</p>
                 </div>
                 <!-- with placeholder with clear single disabled -->
-                <div class="w-70">
-                    <select data-theme="lg" data-placeholder="Option unavailable" data-multiple="false"
-                        data-allow-clear="true" class="_dropdown" disabled>
-                        <option></option><!-- Needed to show X image to clear the select -->
-                        <option value="1">Option 1</option>
-                        <option value="2">Option 2</option>
-                        <option value="3">Option 3</option>
-                        <option value="4">Option 4</option>
-                        <option value="5">Option 5</option>
-                    </select>
+                <div class="flex flex-col space-y-1">
+                    <label for="inputId" class="text-md text-black">Enter your name</label>
+                    <div class="w-70">
+                        <select data-theme="sm" data-placeholder="Option unavailable" data-multiple="false"
+                            data-allow-clear="true" class="_dropdown" disabled>
+                            <option></option><!-- Needed to show X image to clear the select -->
+                            <option value="1">Option 1</option>
+                            <option value="2">Option 2</option>
+                            <option value="3">Option 3</option>
+                            <option value="4">Option 4</option>
+                            <option value="5">Option 5</option>
+                        </select>
+                    </div>
+                    <p class="mt-1 text-sm text-red-600">Description</p>
                 </div>
                 <!-- with placeholder with clear multi default -->
-                <div class="w-70">
-                    <select data-theme="lg" data-allow-clear="true" data-placeholder="Select provinces of residence..."
-                        multiple="multiple" class="_dropdown">
-                        <option value="AL">Alabama</option>
-                        <option value="WY">Wyoming</option>
-                        <option value="WY">vaxming</option>
-                        <option value="WY">xvsming</option>
-                        <option value="WY">tetming</option>
-                        <option value="WY">yhfming</option>
-                        <option value="WY">dcfbshx</option>
-                    </select>
+                <div class="flex flex-col space-y-1">
+                    <label for="inputId" class="text-md text-black">Enter your name</label>
+                    <div class="w-70">
+                        <select data-theme="sm" data-allow-clear="true"
+                            data-placeholder="Select provinces of residence..." multiple="multiple" class="_dropdown">
+                            <option value="AL">Alabama</option>
+                            <option value="WY">Wyoming</option>
+                            <option value="WY">vaxming</option>
+                            <option value="WY">xvsming</option>
+                            <option value="WY">tetming</option>
+                            <option value="WY">yhfming</option>
+                            <option value="WY">dcfbshx</option>
+                        </select>
+                    </div>
+                    <p class="mt-1 text-sm text-red-600">Description</p>
                 </div>
                 <!-- with placeholder with clear multi disabled -->
-                <div class="w-70">
-                    <select data-theme="lg" data-allow-clear="true" data-placeholder="Options unavailable"
-                        multiple="multiple" class="_dropdown" disabled>
-                        <option value="AL">Alabama</option>
-                        <option value="WY">Wyoming</option>
-                        <option value="WY">vaxming</option>
-                        <option value="WY">xvsming</option>
-                        <option value="WY">tetming</option>
-                        <option value="WY">yhfming</option>
-                        <option value="WY">dcfbshx</option>
-                    </select>
+                <div class="flex flex-col space-y-1">
+                    <label for="inputId" class="text-md text-black">Enter your name</label>
+                    <div class="w-70">
+                        <select data-theme="sm" data-allow-clear="true" data-placeholder="Options unavailable"
+                            multiple="multiple" class="_dropdown" disabled>
+                            <option value="AL">Alabama</option>
+                            <option value="WY">Wyoming</option>
+                            <option value="WY">vaxming</option>
+                            <option value="WY">xvsming</option>
+                            <option value="WY">tetming</option>
+                            <option value="WY">yhfming</option>
+                            <option value="WY">dcfbshx</option>
+                        </select>
+                    </div>
+                    <p class="mt-1 text-sm text-red-600">Description</p>
                 </div>
             </div>
         </div>

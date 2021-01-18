@@ -1,0 +1,47 @@
+.input-text-large {
+  @apply rounded-0.5 h-10 text-base pl-3.5 text-black placeholder-gray-300 bg-white border border-gray-100 hover:bg-gray-25 focus-visible:outline-none focus:border-blue-250 disabled:placeholder-gray-200 disabled:bg-gray-50 disabled:border-gray-100 disabled:cursor-not-allowed;
+}
+
+.input-icon-large {
+  @apply rounded-0.5 h-10 pl-10 text-base text-black placeholder-gray-300 bg-white border border-gray-100 hover:bg-gray-25 focus-visible:outline-none focus:border-blue-250 disabled:placeholder-gray-200 disabled:bg-gray-50 disabled:border-gray-100 disabled:cursor-not-allowed;
+}
+
+.input-text-error-large {
+  @apply rounded-0.5 h-10 text-base pl-3.5 text-black placeholder-gray-300 bg-white border border-red-600 hover:bg-gray-25 focus-visible:outline-none disabled:placeholder-gray-200 disabled:bg-gray-50 disabled:border-gray-100 disabled:cursor-not-allowed;
+}
+
+.input-icon-error-large {
+  @apply rounded-0.5 h-10 pl-10 text-base text-black placeholder-gray-300 bg-white border border-red-600 hover:bg-gray-25 focus-visible:outline-none disabled:placeholder-gray-200 disabled:bg-gray-50 disabled:border-gray-100 disabled:cursor-not-allowed;
+}
+
+.input-text-middle {
+  @apply rounded-0.5 h-8 pl-3 text-black placeholder-gray-300 bg-white border border-gray-100 text-md hover:bg-gray-25 focus-visible:outline-none focus:border-blue-250 disabled:placeholder-gray-200 disabled:bg-gray-50 disabled:border-gray-100 disabled:cursor-not-allowed;
+}
+
+.input-icon-middle {
+  @apply rounded-0.5 h-8 pl-8 text-black placeholder-gray-300 bg-white border border-gray-100 text-md hover:bg-gray-25 focus-visible:outline-none focus:border-blue-250 disabled:placeholder-gray-200 disabled:bg-gray-50 disabled:border-gray-100 disabled:cursor-not-allowed;
+}
+
+.input-text-error-middle {
+  @apply rounded-0.5 h-8 pl-3 text-black placeholder-gray-300 bg-white border border-red-600 text-md hover:bg-gray-25 focus-visible:outline-none disabled:placeholder-gray-200 disabled:bg-gray-50 disabled:border-gray-100 disabled:cursor-not-allowed;
+}
+
+.input-icon-error-middle {
+  @apply rounded-0.5 h-8 pl-8 text-black placeholder-gray-300 bg-white border border-red-600 text-md hover:bg-gray-25 focus-visible:outline-none disabled:placeholder-gray-200 disabled:bg-gray-50 disabled:border-gray-100 disabled:cursor-not-allowed;
+}
+
+.input-text-small {
+  @apply rounded-0.5 h-6 pl-2 text-sm text-black placeholder-gray-300 bg-white border border-gray-100 hover:bg-gray-25 focus-visible:outline-none focus:border-blue-250 disabled:placeholder-gray-200 disabled:bg-gray-50 disabled:border-gray-100 disabled:cursor-not-allowed;
+}
+
+.input-icon-small {
+  @apply rounded-0.5 h-6 pl-6 text-sm text-black placeholder-gray-300 bg-white border border-gray-100 hover:bg-gray-25 focus-visible:outline-none focus:border-blue-250 disabled:placeholder-gray-200 disabled:bg-gray-50 disabled:border-gray-100 disabled:cursor-not-allowed;
+}
+
+.input-text-error-small {
+  @apply rounded-0.5 h-6 pl-2 text-sm text-black placeholder-gray-300 bg-white border border-red-600 hover:bg-gray-25 focus-visible:outline-none disabled:placeholder-gray-200 disabled:bg-gray-50 disabled:border-gray-100 disabled:cursor-not-allowed;
+}
+
+.input-icon-error-small {
+  @apply rounded-0.5 h-6 pl-6 text-sm text-black placeholder-gray-300 bg-white border border-red-600 hover:bg-gray-25 focus-visible:outline-none disabled:placeholder-gray-200 disabled:bg-gray-50 disabled:border-gray-100 disabled:cursor-not-allowed;
+}

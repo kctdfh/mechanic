@@ -6,6 +6,6 @@ module.exports = {
     require("postcss-focus-visible"),
     require("autoprefixer"),
     require("postcss-discard-comments")({removeAll:true}),
-    require('cssnano')({preset: 'default',}),
+    require('cssnano')({preset: 'default',})
   ],
 };

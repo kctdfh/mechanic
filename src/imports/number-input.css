@@ -1,0 +1,131 @@
+.input-number-wrapper {
+  @apply focus-within:border-blue-250 disabled:border-gray-100 disabled:cursor-not-allowed hover:border-blue-250 flex flex-row border border-gray-100;
+}
+
+.input-number-wrapper-error {
+  @apply focus-within:border-blue-250 disabled:border-gray-100 disabled:cursor-not-allowed hover:border-blue-250 flex flex-row border border-red-600;
+}
+
+.input-number {
+  @apply group-hover:bg-gray-25 group-disabled:bg-gray-50 focus-visible:outline-none group-disabled:placeholder-gray-200 group-disabled:cursor-not-allowed focus:bg-white text-center text-black placeholder-gray-300 bg-white border-0;
+}
+
+.increment-right {
+  @apply !leading-0 text-black bg-white border-l border-gray-100 disabled:cursor-not-allowed hover:text-blue-250 hover:border-l hover:border-blue-250 focus:bg-blue-50 active:bg-blue-50 active:text-blue-650 active:border active:border-blue-650 focus:outline-none focus-visible:outline-black group-disabled:border-gray-100 group-disabled:border-l group-disabled:bg-gray-50 group-disabled:text-gray-200 group-disabled:pointer-events-none;
+}
+
+.increment-left {
+  @apply !leading-0 text-black bg-white border-r border-gray-100 disabled:cursor-not-allowed hover:text-blue-250 hover:border-r hover:border-blue-250 focus:bg-blue-50 active:bg-blue-50 active:text-blue-650 active:border active:border-blue-650 focus:outline-none focus-visible:outline-black group-disabled:border-gray-100 group-disabled:border-r group-disabled:bg-gray-50 group-disabled:text-gray-200 group-disabled:pointer-events-none;
+}
+
+.increment-right-large {
+  @apply w-10 h-10 text-base;
+  @apply increment-right;
+}
+
+.increment-left-large {
+  @apply w-10 h-10 text-base;
+  @apply increment-left;
+}
+
+.increment-right-middle {
+  @apply text-md w-8 h-8;
+  @apply increment-right;
+}
+
+.increment-left-middle {
+  @apply text-md w-8 h-8;
+  @apply increment-left;
+}
+
+.increment-right-small {
+  @apply w-6 h-6 text-sm;
+  @apply increment-right;
+}
+
+.increment-left-small {
+  @apply w-6 h-6 text-sm;
+  @apply increment-left;
+}
+
+
+.increment-right-error {
+  @apply !leading-0 text-black bg-white border-l border-red-600 disabled:cursor-not-allowed hover:text-blue-250 hover:border-l hover:border-blue-250 focus:bg-blue-50 active:bg-blue-50 active:text-blue-650 active:border active:border-blue-650 focus:outline-none focus-visible:outline-black group-disabled:border-gray-100 group-disabled:border-l group-disabled:bg-gray-50 group-disabled:text-gray-200 group-disabled:pointer-events-none;
+}
+
+.increment-left-error {
+  @apply !leading-0 text-black bg-white border-r border-red-600 disabled:cursor-not-allowed hover:text-blue-250 hover:border-r hover:border-blue-250 focus:bg-blue-50 active:bg-blue-50 active:text-blue-650 active:border active:border-blue-650 focus:outline-none focus-visible:outline-black group-disabled:border-gray-100 group-disabled:border-r group-disabled:bg-gray-50 group-disabled:text-gray-200 group-disabled:pointer-events-none;
+}
+
+.increment-right-large-error {
+  @apply w-10 h-10 text-base;
+  @apply increment-right-error;
+}
+
+.increment-left-large-error {
+  @apply w-10 h-10 text-base;
+  @apply increment-left-error;
+}
+
+.increment-right-middle-error {
+  @apply text-md w-8 h-8;
+  @apply increment-right-error;
+}
+
+.increment-left-middle-error {
+  @apply text-md w-8 h-8;
+  @apply increment-left-error;
+}
+
+.increment-right-small-error {
+  @apply w-6 h-6 text-sm;
+  @apply increment-right-error;
+}
+
+.increment-left-small-error {
+  @apply w-6 h-6 text-sm;
+  @apply increment-left-error;
+}
+
+
+.input-number-large {
+  @apply h-10 text-base;
+  @apply input-number;
+}
+
+.input-number-middle {
+  @apply text-md h-8;
+  @apply input-number;
+}
+
+.input-number-small {
+  @apply h-6 text-sm;
+  @apply input-number;
+}
+
+fieldset.group:disabled.input-number-wrapper input.group-disabled\:bg-gray-50 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(243, 244, 244, var(--tw-bg-opacity)) !important;
+}
+
+fieldset.input-number-wrapper > button.hover\:border-r-blue-250:hover {
+  --tw-text-opacity: 1;
+  border-color: rgba(123, 191, 255, var(--tw-border-opacity)) !important;
+}
+
+fieldset.input-number-wrapper > button.hover\:border-l-blue-250:hover {
+  --tw-text-opacity: 1;
+  border-color: rgba(123, 191, 255, var(--tw-border-opacity)) !important;
+}
+
+/* remove default incriment for Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* remove default incriment for Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}

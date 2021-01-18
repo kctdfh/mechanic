@@ -1,11 +1,10 @@
-const plugin = require("tailwindcss/plugin");
-
+// tailwind.config.js
 module.exports = {
   purge: {
     content: [
       './components/*.html',
       './dist/*.js'],
-    defaultExtractor: content =>  content.match(/[A-Za-z0-9-_:!\/]+/g) || [],
+    defaultExtractor: content =>  content.match(/[A-Za-z0-9-_:!\/]+/g) || []
   },
   darkMode: false,
   theme: {
@@ -312,6 +311,8 @@ module.exports = {
       },
       lineHeight: {
         0: 0,
+        lg: "2.25rem",
+        md: "1.875rem"
       },
       boxShadow: {
         "border-r": "inset -1px 0px 0px #DBDEDF",
@@ -407,6 +408,7 @@ module.exports = {
   },
   plugins: [
     require("tailwindcss-interaction-variants"),
-    require("tailwindcss-important")()
+    require("tailwindcss-important")(),
+    require("@tailwindcss/typography")
   ],
 };

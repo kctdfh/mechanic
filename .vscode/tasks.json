@@ -32,6 +32,14 @@
 			"label": "Build Everything",
 			"detail": "Build source, then purge it, then minifi it",
 			"group": "build"
+		},
+		{
+			"type": "npm",
+			"script": "minify",
+			"problemMatcher": [],
+			"label": "Minify purged",
+			"detail": "Minifies the available purged stylesheet",
+			"group": "test"
 		}
 	]
 }

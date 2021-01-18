@@ -1,0 +1,7 @@
+forminput > input[type="checkbox"]:disabled + label {
+  @apply text-gray-200;
+}
+
+.radiocheck {
+  @apply my-auto w-4 h-4 rounded-0.5 border-gray-200 border checked:bg-blue-500 checked:border-transparent hover:ring-1 hover:ring-blue-500 disabled:ring-0;
+}
