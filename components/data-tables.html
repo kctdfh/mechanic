@@ -1,41 +1,43 @@
 <!DOCTYPE html>
-    <html lang="en">
 
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="Data Tables" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../dist/css/styles-mini.css" />
 
-        <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/redmond/jquery-ui.css">
-        <link rel="stylesheet" href="http://www.ok-soft-gmbh.com/jqGrid/OK/jqGrid/css/ui.jqgrid.css">
-        <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <style>
+      html,
+      body {
+        font-size: 16px;
+      }
+    </style>
 
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
 
-        <link href="css/feather.css" rel="stylesheet">
-        <link href="css/styles.css" rel="stylesheet">
-        <link href="css/gridtheme.css" rel="stylesheet">
+    <script>
+      $.jgrid = $.jgrid || {};
+      $.jgrid.no_legacy_api = true;
+      $.jgrid.useJSON = true;
+    </script>
 
-        <script src="js/feather.js"></script>
+    <script src="../dist/js/jquery.jqgrid.src.js"></script>
+    <script src="../dist/js/demotables.js"></script>
+  </head>
 
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-        <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
-        <script>
-                $.jgrid = $.jgrid || {};
-                $.jgrid.no_legacy_api = true;
-                $.jgrid.useJSON = true;
-        </script>
-        
-        <script src="js/jquery.jqgrid.min.js"></script>
-        <script src="js/demotables.js"></script>
-
-
-    </head>
-
-    <body>
-        <div id="outerDiv">
-            <table id="list"></table>
-        </div>
-
-    </body>
-
-    </html>
+  <body>
+    <div id="outerDiv" class="flex flex-col space-y-2">
+      <div>
+        <table id="large"></table>
+      </div>
+      <div>
+        <table id="middle"></table>
+      </div>
+      <div>
+        <table id="small"></table>
+      </div>
+    </div>
+  </body>
+</html>
