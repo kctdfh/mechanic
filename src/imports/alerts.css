@@ -1,0 +1,19 @@
+.alert-icon {
+  @apply text-md my-auto;  
+}
+
+.icon-yellow {
+  @apply text-yellow-600;
+}
+
+.icon-blue {
+  @apply text-blue-500;
+}
+
+.icon-red {
+  @apply text-red-600;
+}
+
+.icon-green {
+  @apply text-green-400;
+}

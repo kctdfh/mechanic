@@ -31,7 +31,9 @@
     "alertifyjs": "^1.13.1",
     "autoprefixer": "^10.1.0",
     "free-jqgrid": "^4.15.5",
+    "intro.js": "^3.2.1",
     "mmenu-js": "^8.5.20",
+    "notifyjs-browser": "^0.4.2",
     "select2": "^4.1.0-beta.1",
     "tippy.js": "^6.2.7"
   }

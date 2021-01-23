@@ -2,6 +2,14 @@
   @apply hover:text-blue-500 focus:outline-none focus-visible:outline-black focus-visible:text-blue-500 active:text-blue-750 disabled:cursor-not-allowed disabled:text-gray-200 leading-0 text-base text-black bg-transparent border-0 rounded-full;
 }
 
+.btn.pagination {
+  @apply text-md hover:text-blue-500 hover:border-blue-250 hover:bg-white focus:outline-none focus-visible:outline-black focus-visible:bg-blue-50 focus-visible:border-blue-250 focus-visible:text-blue-500 active:bg-blue-50 active:text-blue-750 active:border-blue-650 disabled:cursor-not-allowed disabled:border disabled:border-gray-100 disabled:bg-white disabled:text-gray-200 leading-0 inline-flex flex-col items-center justify-center w-8 h-8 text-black bg-white border border-gray-100 rounded-full;
+}
+
+.btn.pagination.active {
+  @apply text-md focus:outline-none focus-visible:outline-black leading-0 inline-flex flex-col items-center justify-center w-8 h-8 text-white bg-blue-500 rounded-full cursor-not-allowed;
+}
+
 .btnicon-left-large {
   @apply mr-3 leading-0 !important;
 }
