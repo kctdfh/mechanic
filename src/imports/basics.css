@@ -6,19 +6,10 @@
   @apply w-full h-px bg-gray-100;
 }
 
-.tab-btn-active {
-  @apply focus-visible:outline-black text-md hover:text-blue-500 disabled:text-gray-200 h-full text-blue-500;
+.scrollbar-regular {
+  @apply scrollbar hover:scrollbar-thumb-gray-400 scrollbar-thumb-gray-200 scrollbar-thumb-rounded-full scrollbar-track-gray-50; 
 }
 
-.tab-btn {
-  @apply focus-visible:outline-black text-md hover:text-blue-500 disabled:text-gray-200 h-full text-black;
+.scrollbar-small {
+  @apply scrollbar-thin hover:scrollbar-thumb-gray-400 scrollbar-thumb-gray-200 scrollbar-thumb-rounded-full scrollbar-track-gray-50;
 }
-
-.tab-border {
-  @apply h-border absolute bottom-0 w-full bg-blue-500 rounded-t-full;
-}
-
-.tab-btn-wrapper {
-  @apply relative inline-flex flex-col items-center justify-center;
-}
-

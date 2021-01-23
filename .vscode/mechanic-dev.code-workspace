@@ -5,7 +5,8 @@
 		}
 	],
 	"settings": {
-		"css.validate": false
+		"css.validate": false,
+		"headwind.prependCustomClasses": true
 	},
 	"extensions": {
 		"recommendations": [

@@ -9,6 +9,8 @@
 
 /* Components */
 @import "imports/basics.css";
+@import "imports/tabs.css";
+@import "imports/avatar.css";
 @import "imports/buttons.css";
 @import "imports/text-inputs.css";
 @import "imports/number-input.css";
