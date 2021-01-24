@@ -1,15 +1,30 @@
-.tab-btn-active {
-  @apply text-md hover:text-blue-500 disabled:text-gray-200 focus-standard h-full text-blue-500;
+/* (div.flex.flex-row.space-x-2>(i.feather-edit-2.tab-icon+*{$#}+i.feather-check.tab-icon))+div.tab-border
+*/
+
+.active .tab-btn {
+  @apply text-md group-hover:text-blue-500 group-disabled:text-gray-200 focus-standard h-full text-blue-500;
 }
 
 .tab-btn {
-  @apply text-md hover:text-blue-500 disabled:text-gray-200 focus-standard h-full text-black;
+  @apply text-md group-hover:text-blue-500 disabled:text-gray-200 focus-standard h-full text-black;
+}
+
+.active .tab-border {
+  @apply bg-blue-500;
 }
 
 .tab-border {
-  @apply h-border absolute bottom-0 w-full bg-blue-500 rounded-t-full;
+  @apply h-border absolute bottom-0 w-full bg-transparent rounded-t-full;
 }
 
 .tab-btn-wrapper {
   @apply relative inline-flex flex-col items-center justify-center;
+}
+
+.tab-icon {
+  @apply text-md group-hover:text-blue-500 my-auto; 
+}
+
+.active .tab-icon {
+  @apply text-blue-500
 }

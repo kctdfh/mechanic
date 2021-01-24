@@ -101,15 +101,29 @@
         <div class="shadow-border-b min-h-md relative w-full bg-white">
           <div class="absolute top-0 flex flex-row justify-between w-full h-full px-4 align-middle">
             <div class="flex justify-start h-full space-x-4">
-              <div class="tab-btn-wrapper">
-                <button class="tab-btn-active">Today</button>
-                <div class="tab-border"></div>
+              <div class="tab-btn-wrapper group active">
+                <div class="flex flex-row space-x-2">
+                  <i class="feather-cloud tab-icon"></i>
+                  <button class="tab-btn">Today</button>
+                </div>
+                <div class="tab-border">
+                </div>
               </div>
-              <div class="tab-btn-wrapper">
-                <button class="tab-btn">Tomorrow</button>
+              <div class="tab-btn-wrapper group">
+                <div class="flex flex-row space-x-2">
+                  <i class="feather-cloud-lightning tab-icon"></i>
+                  <button class="tab-btn">Tomorrow</button>
+                </div>
+                <div class="tab-border">
+                </div>
               </div>
-              <div class="tab-btn-wrapper">
-                <button class="tab-btn">Friday</button>
+              <div class="tab-btn-wrapper group">
+                <div class="flex flex-row space-x-2">
+                  <i class="feather-cloud-snow tab-icon"></i>
+                  <button class="tab-btn">Friday</button>
+                </div>
+                <div class="tab-border">
+                </div>
               </div>
               <button class="btn-large-ghost-icon feather-more-horizontal my-auto"></button>
             </div>
