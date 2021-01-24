@@ -279,6 +279,15 @@ module.exports = {
       xl: ["1.375rem", "2.25rem"], // 22px
     },
     extend: {
+      typography: {
+        DEFAULT: {
+          css: {
+            "code::before": {content: ''},
+            "code::after": {content: ''},
+            a: {color: "#2595FF"},
+          },
+        },
+      },
       inset: {
         '-full':'-100%'
       },

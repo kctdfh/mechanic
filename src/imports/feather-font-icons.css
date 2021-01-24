@@ -10,6 +10,8 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
+@layer utilities {
+
 .feather-activity:before {
 	content: "\e900";
 }
@@ -807,4 +809,6 @@
 }
 .feather-zoom-out:before {
 	content: "\ea09";
+}
+
 }
