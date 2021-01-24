@@ -1,16 +1,15 @@
 .tab-btn-active {
-    @apply focus-visible:outline-black text-md hover:text-blue-500 disabled:text-gray-200 h-full text-blue-500;
-  }
-  
-  .tab-btn {
-    @apply focus-visible:outline-black text-md hover:text-blue-500 disabled:text-gray-200 h-full text-black;
-  }
-  
-  .tab-border {
-    @apply h-border absolute bottom-0 w-full bg-blue-500 rounded-t-full;
-  }
-  
-  .tab-btn-wrapper {
-    @apply relative inline-flex flex-col items-center justify-center;
-  }
-  
+  @apply text-md hover:text-blue-500 disabled:text-gray-200 focus-standard h-full text-blue-500;
+}
+
+.tab-btn {
+  @apply text-md hover:text-blue-500 disabled:text-gray-200 focus-standard h-full text-black;
+}
+
+.tab-border {
+  @apply h-border absolute bottom-0 w-full bg-blue-500 rounded-t-full;
+}
+
+.tab-btn-wrapper {
+  @apply relative inline-flex flex-col items-center justify-center;
+}

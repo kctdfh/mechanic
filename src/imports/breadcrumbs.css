@@ -14,10 +14,12 @@
     @apply crumbs relative;
 }
   
-.last-crumb {
-    @apply text-gray-200 pointer-events-none !important;
+.crumb {
+    @apply h-6 py-1 px-2 text-sm font-semibold inline-flex flex-row items-center justify-center border-0 rounded-0.5 text-black bg-transparent hover:text-blue-500  focus-visible:text-blue-350 active:text-blue-750 disabled:cursor-not-allowed disabled:text-gray-200;
+    @apply focus-standard;
+    @apply last:text-gray-200 last:pointer-events-none;
 }
 
-.crumbs>.btn-small-ghost {
+.crumbs>.crumb {
     @apply font-normal !important;
 }

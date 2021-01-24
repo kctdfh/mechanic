@@ -411,11 +411,12 @@ module.exports = {
       ],
       ringColor: ["hover", "group-hover", "disabled"],
       ringWidth: ["hover", "group-hover", "disabled", "group-disabled"],
-      outline: ["focus-visible","focus"],
-      cursor: ["disabled", "group-disabled"],
+      outline: ["focus-visible","focus","last"],
+      cursor: ["disabled", "group-disabled","last"],
       placeholderColor: ["group-disabled", "disabled"],
       pointerEvents: ["group-disabled", "important"],
-      boxShadow: ["active", "focus-within"]
+      boxShadow: ["active", "focus-within"],
+      pointerEvents: ["last","group-disabled"]
     },
   },
   plugins: [

@@ -13,3 +13,7 @@
 .scrollbar-small {
   @apply scrollbar-thin hover:scrollbar-thumb-gray-400 scrollbar-thumb-gray-200 scrollbar-thumb-rounded-full scrollbar-track-gray-50;
 }
+
+.focus-standard {
+  @apply focus:outline-none focus-visible:outline-black;
+}
