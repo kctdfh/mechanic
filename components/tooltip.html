@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>tooltip</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../dist/css/styles.mini.css" />
+</head>
+
+<body class="bg-yellow-50">
+    <div class="inline-flex flex-col items-center w-full p-40 space-y-5">
+    <div class="flex flex-row space-x-5">
+        <button id="button" data-tippy-placement="top" data-tippy-content="Tooltip above" class="btn-large-tertiary">Top</button>
+        <button data-tippy-placement="bottom" data-tippy-content="Tooltip bellow" class="btn-large-tertiary">Bottom</button>
+    </div>
+    <div class="flex flex-row space-x-5">
+        <button data-tippy-placement="right" data-tippy-content="Tooltop right" class="btn-large-tertiary">Right</button>
+        <button data-tippy-placement="left" data-tippy-content="Tooltip left" class="btn-large-tertiary">Left</button>
+    </div>
+    <div class="flex flex-row space-x-5">
+        <button data-tippy-placement="auto" data-tippy-content="Auto placement" class="btn-large-tertiary">Auto</button>
+        <span data-tippy-placement="auto" data-tippy-content="Wrap the disabled content in a span">
+            <button disabled class="btn-large-tertiary">Disabled</button>
+        </span>
+    </div>
+    </div>
+<script src="../dist/js/popper.js"></script>
+<script src="../dist/js/tippy-bundle.umd.js"></script>
+<script>
+    tippy('[data-tippy-content]');
+</script>
+</body>

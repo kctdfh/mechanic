@@ -28,6 +28,7 @@
     "tailwindcss-interaction-variants": "^5.0.0"
   },
   "dependencies": {
+    "@popperjs/core": "^2.6.0",
     "alertifyjs": "^1.13.1",
     "autoprefixer": "^10.1.0",
     "free-jqgrid": "^4.15.5",
