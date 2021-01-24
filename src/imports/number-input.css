@@ -1,21 +1,22 @@
 .input-number-wrapper {
-  @apply focus-within:border-blue-250 disabled:border-gray-100 disabled:cursor-not-allowed hover:border-blue-250 flex flex-row border border-gray-100;
+  @apply focus-within:border-blue-250 rounded-0.5 disabled:border-gray-100 disabled:cursor-not-allowed hover:border-blue-250 flex flex-row border border-gray-100;
 }
 
-.input-number-wrapper-error {
+.error.input-number-wrapper, .error .input-number-wrapper {
   @apply focus-within:border-blue-250 disabled:border-gray-100 disabled:cursor-not-allowed hover:border-blue-250 flex flex-row border border-red-600;
 }
+
 
 .input-number {
   @apply group-hover:bg-gray-25 group-disabled:bg-gray-50 focus-visible:outline-none group-disabled:placeholder-gray-200 group-disabled:cursor-not-allowed focus:bg-white text-center text-black placeholder-gray-300 bg-white border-0;
 }
 
 .increment-right {
-  @apply !leading-0 text-black bg-white border-l border-gray-100 disabled:cursor-not-allowed hover:text-blue-250 hover:border-l hover:border-blue-250 focus:bg-blue-50 active:bg-blue-50 active:text-blue-650 active:border active:border-blue-650 focus:outline-none focus-visible:outline-black group-disabled:border-gray-100 group-disabled:border-l group-disabled:bg-gray-50 group-disabled:text-gray-200 group-disabled:pointer-events-none;
+  @apply !leading-0 rounded-r-0.5 text-black bg-white border-l border-gray-100 disabled:cursor-not-allowed hover:text-blue-250 hover:border-l hover:border-blue-250 focus:bg-blue-50 active:bg-blue-50 active:text-blue-650 active:border active:border-blue-650 focus-standard group-disabled:border-gray-100 group-disabled:border-l group-disabled:bg-gray-50 group-disabled:text-gray-200 group-disabled:pointer-events-none;
 }
 
 .increment-left {
-  @apply !leading-0 text-black bg-white border-r border-gray-100 disabled:cursor-not-allowed hover:text-blue-250 hover:border-r hover:border-blue-250 focus:bg-blue-50 active:bg-blue-50 active:text-blue-650 active:border active:border-blue-650 focus:outline-none focus-visible:outline-black group-disabled:border-gray-100 group-disabled:border-r group-disabled:bg-gray-50 group-disabled:text-gray-200 group-disabled:pointer-events-none;
+  @apply !leading-0 rounded-l-0.5 text-black bg-white border-r border-gray-100 disabled:cursor-not-allowed hover:text-blue-250 hover:border-r hover:border-blue-250 focus:bg-blue-50 active:bg-blue-50 active:text-blue-650 active:border active:border-blue-650 focus-standard group-disabled:border-gray-100 group-disabled:border-r group-disabled:bg-gray-50 group-disabled:text-gray-200 group-disabled:pointer-events-none;
 }
 
 .increment-right-large {
@@ -49,42 +50,42 @@
 }
 
 
-.increment-right-error {
-  @apply !leading-0 text-black bg-white border-l border-red-600 disabled:cursor-not-allowed hover:text-blue-250 hover:border-l hover:border-blue-250 focus:bg-blue-50 active:bg-blue-50 active:text-blue-650 active:border active:border-blue-650 focus:outline-none focus-visible:outline-black group-disabled:border-gray-100 group-disabled:border-l group-disabled:bg-gray-50 group-disabled:text-gray-200 group-disabled:pointer-events-none;
+.error .increment-right {
+  @apply !leading-0 text-black bg-white border-l border-red-600 disabled:cursor-not-allowed hover:text-blue-250 hover:border-l hover:border-blue-250 focus:bg-blue-50 active:bg-blue-50 active:text-blue-650 active:border active:border-blue-650 focus-standard group-disabled:border-gray-100 group-disabled:border-l group-disabled:bg-gray-50 group-disabled:text-gray-200 group-disabled:pointer-events-none;
 }
 
-.increment-left-error {
-  @apply !leading-0 text-black bg-white border-r border-red-600 disabled:cursor-not-allowed hover:text-blue-250 hover:border-r hover:border-blue-250 focus:bg-blue-50 active:bg-blue-50 active:text-blue-650 active:border active:border-blue-650 focus:outline-none focus-visible:outline-black group-disabled:border-gray-100 group-disabled:border-r group-disabled:bg-gray-50 group-disabled:text-gray-200 group-disabled:pointer-events-none;
+.error .increment-left {
+  @apply !leading-0 text-black bg-white border-r border-red-600 disabled:cursor-not-allowed hover:text-blue-250 hover:border-r hover:border-blue-250 focus:bg-blue-50 active:bg-blue-50 active:text-blue-650 active:border active:border-blue-650 focus-standard group-disabled:border-gray-100 group-disabled:border-r group-disabled:bg-gray-50 group-disabled:text-gray-200 group-disabled:pointer-events-none;
 }
 
-.increment-right-large-error {
+.error .increment-right-large {
   @apply w-10 h-10 text-base;
-  @apply increment-right-error;
+  @apply border-gray-100;
 }
 
-.increment-left-large-error {
+.error .increment-left-large {
   @apply w-10 h-10 text-base;
-  @apply increment-left-error;
+  @apply border-gray-100;
 }
 
-.increment-right-middle-error {
+.error .increment-right-middle {
   @apply text-md w-8 h-8;
-  @apply increment-right-error;
+  @apply border-gray-100;
 }
 
-.increment-left-middle-error {
+.error .increment-left-middle {
   @apply text-md w-8 h-8;
-  @apply increment-left-error;
+  @apply border-gray-100;
 }
 
-.increment-right-small-error {
+.error .increment-right-small {
   @apply w-6 h-6 text-sm;
-  @apply increment-right-error;
+  @apply border-gray-100;
 }
 
-.increment-left-small-error {
+.error .increment-left-small {
   @apply w-6 h-6 text-sm;
-  @apply increment-left-error;
+  @apply border-gray-100;
 }
 
 
@@ -101,6 +102,14 @@
 .input-number-small {
   @apply h-6 text-sm;
   @apply input-number;
+}
+
+.field-description {
+  @apply mt-1 text-sm text-gray-500;
+}
+
+.error .field-description {
+  @apply text-red-600;
 }
 
 fieldset.group:disabled.input-number-wrapper input.group-disabled\:bg-gray-50 {

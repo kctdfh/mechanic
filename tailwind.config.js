@@ -425,7 +425,7 @@ module.exports = {
       placeholderColor: ["group-disabled", "disabled"],
       pointerEvents: ["group-disabled", "important"],
       boxShadow: ["active", "focus-within"],
-      pointerEvents: ["last","group-disabled"]
+      pointerEvents: ["last","group-disabled","disabled"]
     },
   },
   plugins: [
