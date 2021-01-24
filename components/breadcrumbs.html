@@ -12,6 +12,7 @@
   /* ANCHOR - Toggle summary dropdown */ 
     function openMenu() {
       document.getElementById("moreDropdown").classList.toggle("hidden");
+      document.getElementById("moreDropdown").classList.toggle("flex");
     }
   </script>
 </head>
@@ -45,7 +46,7 @@
         <i class="crumb-chevron feather-chevron-right"></i>
         <div>
           <button onClick="openMenu()" class="btn-small-ghost-icon feather-more-horizontal"></button>
-          <div id="moreDropdown" class="absolute z-50 flex flex-col hidden w-auto py-2 space-y-2 bg-white shadow-md">
+          <div id="moreDropdown" class="absolute z-50 flex-col hidden w-auto py-2 space-y-2 bg-white shadow-md">
             <a href="#" class="group align-end h-7 hover:bg-gray-25 inline-flex w-full px-4 py-1 space-x-3">
               <span class="hover:text-blue-850 align-center text-md h-full text-black">
                 Third Page
