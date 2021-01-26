@@ -16,7 +16,9 @@ The following scripts are available:
 
 Build tasks are also available in VS Code. Press `Cmd/cntr + shift + b` to see the list and run them.
 
-2. Open the Workspace file in `.vscode` and apply the settings/ install the extentions. Extentions do the following:
+2. Run `npm run config` to see a visual representation of the Tailwind CSS config file. This allows you to reference the class names easier, see their rem to pixel conversion, and copy style names by clicking on them.
+
+3. Open the Workspace file in `.vscode` and apply the settings/ install the extentions. Extentions do the following:
 
 
 |Name  |Function  |

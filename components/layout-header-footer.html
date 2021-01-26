@@ -231,6 +231,17 @@
         <!-- Pagionation Footer -->
         <div class="shadow-border-t flow-row flex justify-between w-full h-16 px-6 py-4 bg-white">
             <div class="flex flex-row justify-start space-x-2">
+                <div class="w-30 my-auto">
+                        <select data-theme="sm" data-placeholder="Page" data-multiple="false"
+                            data-allow-clear="false" class="_dropdown" data-minimum-results-for-search="Infinity">
+                            <option></option><!-- Needed to show placeholder -->
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                </div>
                 <button class="btn-middle-ghost-icon feather-rewind" disabled></button>
                 <button class="btn-middle-ghost-icon feather-chevron-left" disabled></button>
                 <div class="flex flex-row space-x-2">
@@ -242,6 +253,20 @@
                 </div>
                 <button class="btn-middle-ghost-icon feather-chevron-right"></button>
                 <button class="btn-middle-ghost-icon feather-fast-forward"></button>
+                <span class="text-md my-auto text-gray-700">21-31 of 80</span>
+                <div class="w-35 my-auto">
+                    <select data-theme="sm" data-placeholder="Per page" data-multiple="false"
+                        data-allow-clear="false" class="_dropdown" data-minimum-results-for-search="Infinity">
+                        <option></option><!-- Needed to show placeholder -->
+                        <option value="1">10</option>
+                        <option value="2">20</option>
+                        <option value="3">30</option>
+                        <option value="4">40</option>
+                        <option value="5">60</option>
+                        <option value="5">70</option>
+                        <option value="5">80</option>
+                    </select>
+            </div>
             </div>
             <span class="text-md my-auto text-gray-700">00 items</span>
             <div class="flex flex-row justify-end h-full space-x-4">

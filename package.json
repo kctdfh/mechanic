@@ -9,7 +9,7 @@
     "minify": "postcss dist/css/styles.purged.css > dist/css/styles.mini.css",
     "mini": "npm run purged && npm run minify",
     "config-export": "tailwind-config-viewer export ./config",
-    "all": "npm run source && npm run purged && npm run minify && npm run config-export",
+    "all": "npm run source && npm run purged && npm run minify",
     "config": "tailwind-config-viewer -o"
   },
   "author": "",
