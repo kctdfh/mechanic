@@ -8,7 +8,9 @@
     "purged": "cross-env NODE_ENV=production postcss src/pre-compiled-styles.css -o dist/css/styles.purged.css",
     "minify": "postcss dist/css/styles.purged.css > dist/css/styles.mini.css",
     "mini": "npm run purged && npm run minify",
-    "all": "npm run source && npm run purged && npm run minify"
+    "config-export": "tailwind-config-viewer export ./config",
+    "all": "npm run source && npm run purged && npm run minify && npm run config-export",
+    "config": "tailwind-config-viewer -o"
   },
   "author": "",
   "license": "ISC",
@@ -22,6 +24,7 @@
     "postcss-discard-comments": "^4.0.2",
     "postcss-focus-visible": "^5.0.0",
     "postcss-import": "^14.0.0",
+    "tailwind-config-viewer": "^1.5.0",
     "tailwind-scrollbar": "^1.2.2",
     "tailwindcss": "^2.0.2",
     "tailwindcss-important": "^1.0.0",

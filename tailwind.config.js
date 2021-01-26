@@ -8,6 +8,9 @@ module.exports = {
   },
   darkMode: false,
   theme: {
+    configViewer: {
+      typographyExample: "The five boxing wizards jump quickly."
+    },
     colors: {
       transparent: "transparent",
       white: "#ffffff",
@@ -335,9 +338,11 @@ module.exports = {
       },
       boxShadow: {
         "border-r": "inset -1px 0px 0px #DBDEDF",
-        "border-l": "1px 0px 0px #DBDEDF",
+        "border-l": "inset 1px 0px 0px #DBDEDF",
         "border-t": "inset 0px 1px 0px #DBDEDF",
         "border-b": "inset 0px -1px 0px #DBDEDF",
+        "border-x": "inset -1px 0px 0px #DBDEDF, inset 1px 0px 0px #DBDEDF",
+        "border-y": "inset 0px 1px 0px #DBDEDF, inset 0px -1px 0px #DBDEDF",
         "segment-r": "inset -1px 1px 0px #DBDEDF, inset -1px -1px 0px #DBDEDF",
         "segment-l": "inset 1px 1px 0px #DBDEDF, inset 1px -1px 0px #DBDEDF",
         "segment-t": "inset -1px 0px 0px #DBDEDF, inset 1px 0px 0px #DBDEDF, inset 0px 1px 0px #DBDEDF",
@@ -424,7 +429,7 @@ module.exports = {
       cursor: ["disabled", "group-disabled","last"],
       placeholderColor: ["group-disabled", "disabled"],
       pointerEvents: ["group-disabled", "important"],
-      boxShadow: ["active", "focus-within"],
+      boxShadow: ["active", "focus-within","last","first"],
       pointerEvents: ["last","group-disabled","disabled"]
     },
   },

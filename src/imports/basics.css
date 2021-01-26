@@ -17,3 +17,7 @@
 .focus-standard {
   @apply focus:outline-none focus-visible:outline-black;
 }
+
+.shadow-border {
+  @apply w-full h-px bg-gray-100;
+}
