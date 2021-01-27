@@ -1,0 +1,3 @@
+.contents.group.active .row {
+    @apply bg-blue-50 hover:bg-blue-100;
+}

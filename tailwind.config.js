@@ -280,8 +280,27 @@ module.exports = {
       base: ["1rem", "1.5rem"], // 16px
       lg: ["1.25rem", "1.75rem"], // 20px
       xl: ["1.375rem", "2.25rem"], // 22px
+    
     },
     extend: {
+      zIndex: {
+        '1':1,
+        '2':2,
+        '3':3,
+        '4':4,
+        '5':5,
+        '6':6,
+        '7':7,
+        '8':8,
+        '9':9,
+        '10':10
+      },
+      gridTemplateColumns: {
+        'input':'3.25rem auto auto auto'
+      },
+      gridTemplateRows: {
+        'input':'1.8rem auto'
+      },
       typography: {
         DEFAULT: {
           css: {
@@ -357,6 +376,7 @@ module.exports = {
   variants: {
     scrollbar: ['rounded'],
     extend: {
+      display: ['group-hover'],
       textColor: [
         "visited",
         "group-disabled",
