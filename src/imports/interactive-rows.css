@@ -1,0 +1,11 @@
+.row-wrapper {
+    @apply bg-white hover:bg-gray-50 py-4 pl-8.5 pr-4.5 shadow-border-b w-full;
+}
+
+.row-title {
+    @apply my-auto font-semibold justify-self-start;
+}
+
+.row-wrapper.active {
+    @apply bg-blue-50 hover:bg-blue-100;
+}

@@ -31,8 +31,10 @@
   },
   "dependencies": {
     "@popperjs/core": "^2.6.0",
+    "a11y-dialog": "^5.4.3",
     "alertifyjs": "^1.13.1",
     "autoprefixer": "^10.1.0",
+    "flatpickr": "^4.6.9",
     "free-jqgrid": "^4.15.5",
     "intro.js": "^3.2.1",
     "mmenu-js": "^8.5.20",

@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 
 <html>
-
-<head>
+  <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>drawer</title>
@@ -11,176 +10,222 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
     <script src="../dist/js/drawer.js"></script>
-</head>
+  </head>
 
-<body class="bg-yellow-50">
-    <button class="_open-drawer btn-large-primary m-20">Open Drawer</button>
-    <div id="dark-overlay" class="_close-drawer fixed inset-0 z-20 hidden w-full h-full bg-black opacity-0"></div>
-    <div id="drawer"
-        class="-right-full fixed inset-y-0 z-50 flex flex-col float-right w-1/2 overflow-hidden transition-transform duration-200 ease-in-out bg-white shadow-2xl">
-        <div class="min-h-lg shadow-border-b inline-flex items-center w-full py-1 pl-4 pr-2 bg-white">
-            <div class="inline-flex items-center justify-between w-full h-full">
-                <p class="flex-grow text-base font-semibold text-black">
-                    Drawer
-                </p>
-                <button class="_close-drawer feather-x btn-large-ghost-icon"></button>
-            </div>
+  <body class="bg-yellow-50">
+    <button class="m-20 _open-drawer btn-large-primary">Open Drawer</button>
+    <div
+      id="dark-overlay"
+      class="fixed inset-0 z-30 hidden w-full h-full bg-black opacity-0 _close-drawer"
+    ></div>
+    <div
+      id="drawer"
+      class="fixed inset-y-0 z-50 flex flex-col float-right w-1/2 overflow-hidden transition-transform duration-200 ease-in-out bg-white shadow-2xl -right-full"
+    >
+      <div
+        class="inline-flex items-center w-full py-1 pl-4 pr-2 bg-white min-h-lg shadow-border-b"
+      >
+        <div class="inline-flex items-center justify-between w-full h-full">
+          <p class="flex-grow text-base font-semibold text-black">Drawer</p>
+          <button class="_close-drawer feather-x btn-large-ghost-icon"></button>
         </div>
-        <div class="shadow-border-b h-14 inline-flex justify-center w-full bg-white">
-            <div class="flex flex-row h-full">
-                <div class="flex justify-start space-x-6">
-                    <div id="tab-1" class="tab-btn-wrapper group active">
-                        <div class="flex flex-row space-x-2">
-                            <button class="tab-btn">User Manual</button>
-                        </div>
-                        <div class="tab-border">
-                        </div>
-                    </div>
-                    <div id="tab-2" class="tab-btn-wrapper group">
-                        <div class="flex flex-row space-x-2">
-                            <button class="tab-btn">Company Policy</button>
-                        </div>
-                        <div class="tab-border">
-                        </div>
-                    </div>
-                </div>
+      </div>
+      <div
+        class="inline-flex justify-center w-full bg-white shadow-border-b h-14"
+      >
+        <div class="flex flex-row h-full">
+          <div class="flex justify-start space-x-6">
+            <div id="tab-1" class="tab-btn-wrapper group active">
+              <div class="flex flex-row space-x-2">
+                <button class="tab-btn">User Manual</button>
+              </div>
+              <div class="tab-border"></div>
             </div>
+            <div id="tab-2" class="tab-btn-wrapper group">
+              <div class="flex flex-row space-x-2">
+                <button class="tab-btn">Company Policy</button>
+              </div>
+              <div class="tab-border"></div>
+            </div>
+          </div>
         </div>
-        <div id="drawer-content" class="scrollbar-regular w-full h-full p-6 overflow-x-hidden overflow-y-scroll">
-            <article class="max-w-none prose">
-                <p>Pass your markdown here and the <code>prose</code> utility class will render it correctly! the
-                    <code>prose</code> class applies all the sizing and padding information to its child elements based
-                    on their tag so you don't have to worry about different text appearing differently depending on the
-                    elements you have on your markdown. Useful
-                    for when you&#39;re calling a database for your wiki articles. Just remember to use a server side
-                    function to render the markdown to HTML before injecting it into this <code>article</code> tag</p>
-                <hr>
-                <h1 id="h1-heading">h1 Heading</h1>
-                <h2 id="h2-heading">h2 Heading</h2>
-                <h3 id="h3-heading">h3 Heading</h3>
-                <h4 id="h4-heading">h4 Heading</h4>
-                <h5 id="h5-heading">h5 Heading</h5>
-                <h6 id="h6-heading">h6 Heading</h6>
-                <h2 id="horizontal-rules">Horizontal Rules</h2>
-                <hr>
-                <hr>
-                <hr>
-                <h2 id="emphasis">Emphasis</h2>
-                <p><strong>This is bold text</strong></p>
-                <p><strong>This is bold text</strong></p>
-                <p><em>This is italic text</em></p>
-                <p><em>This is italic text</em></p>
-                <p><del>Strikethrough</del></p>
-                <h2 id="blockquotes">Blockquotes</h2>
-                <blockquote>
-                    <p>Blockquotes can also be nested...</p>
-                    <blockquote>
-                        <p>...by using additional greater-than signs right next to each other...</p>
-                        <blockquote>
-                            <p>...or with spaces between arrows.</p>
-                        </blockquote>
-                    </blockquote>
-                </blockquote>
-                <h2 id="lists">Lists</h2>
-                <p>Unordered</p>
-                <ul>
-                    <li>Create a list by starting a line with <code>+</code>, <code>-</code>, or <code>*</code></li>
-                    <li>Sub-lists are made by indenting 2 spaces:<ul>
-                            <li>Marker character change forces new list start:<ul>
-                                    <li>Ac tristique libero volutpat at</li>
-                                    <li>Facilisis in pretium nisl aliquet</li>
-                                    <li>Nulla volutpat aliquam velit</li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>Very easy!</li>
-                </ul>
-                <p>Ordered</p>
-                <ol>
-                    <li>Lorem ipsum dolor sit amet</li>
-                    <li>Consectetur adipiscing elit</li>
-                    <li>Integer molestie lorem at massa</li>
-                </ol>
-                <h2 id="code">Code</h2>
-                <p>Inline <code>code</code></p>
-                <p>Indented code</p>
-                <pre><code><span class="hljs-comment">// Some comments</span>
+      </div>
+      <div
+        id="drawer-content"
+        class="w-full h-full p-6 overflow-x-hidden overflow-y-scroll scrollbar-regular"
+      >
+        <article class="prose max-w-none">
+          <p>
+            Pass your markdown here and the <code>prose</code> utility class
+            will render it correctly! the <code>prose</code> class applies all
+            the sizing and padding information to its child elements based on
+            their tag so you don't have to worry about different text appearing
+            differently depending on the elements you have on your markdown.
+            Useful for when you&#39;re calling a database for your wiki
+            articles. Just remember to use a server side function to render the
+            markdown to HTML before injecting it into this
+            <code>article</code> tag
+          </p>
+          <hr />
+          <h1 id="h1-heading">h1 Heading</h1>
+          <h2 id="h2-heading">h2 Heading</h2>
+          <h3 id="h3-heading">h3 Heading</h3>
+          <h4 id="h4-heading">h4 Heading</h4>
+          <h5 id="h5-heading">h5 Heading</h5>
+          <h6 id="h6-heading">h6 Heading</h6>
+          <h2 id="horizontal-rules">Horizontal Rules</h2>
+          <hr />
+          <hr />
+          <hr />
+          <h2 id="emphasis">Emphasis</h2>
+          <p><strong>This is bold text</strong></p>
+          <p><strong>This is bold text</strong></p>
+          <p><em>This is italic text</em></p>
+          <p><em>This is italic text</em></p>
+          <p><del>Strikethrough</del></p>
+          <h2 id="blockquotes">Blockquotes</h2>
+          <blockquote>
+            <p>Blockquotes can also be nested...</p>
+            <blockquote>
+              <p>
+                ...by using additional greater-than signs right next to each
+                other...
+              </p>
+              <blockquote>
+                <p>...or with spaces between arrows.</p>
+              </blockquote>
+            </blockquote>
+          </blockquote>
+          <h2 id="lists">Lists</h2>
+          <p>Unordered</p>
+          <ul>
+            <li>
+              Create a list by starting a line with <code>+</code>,
+              <code>-</code>, or <code>*</code>
+            </li>
+            <li>
+              Sub-lists are made by indenting 2 spaces:
+              <ul>
+                <li>
+                  Marker character change forces new list start:
+                  <ul>
+                    <li>Ac tristique libero volutpat at</li>
+                    <li>Facilisis in pretium nisl aliquet</li>
+                    <li>Nulla volutpat aliquam velit</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>Very easy!</li>
+          </ul>
+          <p>Ordered</p>
+          <ol>
+            <li>Lorem ipsum dolor sit amet</li>
+            <li>Consectetur adipiscing elit</li>
+            <li>Integer molestie lorem at massa</li>
+          </ol>
+          <h2 id="code">Code</h2>
+          <p>Inline <code>code</code></p>
+          <p>Indented code</p>
+          <pre><code><span class="hljs-comment">// Some comments</span>
 line <span class="hljs-number">1</span> <span class="hljs-keyword">of</span> <span class="hljs-keyword">code</span>
 line <span class="hljs-number">2</span> <span class="hljs-keyword">of</span> <span class="hljs-keyword">code</span>
 line <span class="hljs-number">3</span> <span class="hljs-keyword">of</span> <span class="hljs-keyword">code</span>
 </code></pre>
-                <p>Block code &quot;fences&quot;</p>
-                <pre><code><span class="hljs-function"><span class="hljs-title">Sample</span></span> text here...
+          <p>Block code &quot;fences&quot;</p>
+          <pre><code><span class="hljs-function"><span class="hljs-title">Sample</span></span> text here...
 </code></pre>
-                <p>Syntax highlighting</p>
-                <pre><code class="lang-js"><span class="hljs-keyword">var</span> foo = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">bar</span>) </span>{
+          <p>Syntax highlighting</p>
+          <pre><code class="lang-js"><span class="hljs-keyword">var</span> foo = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">bar</span>) </span>{
   <span class="hljs-keyword">return</span> bar++;
 };
 
 <span class="hljs-built_in">console</span>.log(foo(<span class="hljs-number">5</span>));
 </code></pre>
-                <h2 id="tables">Tables</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Option</th>
-                            <th>Description</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>data</td>
-                            <td>path to data files to supply the data that will be passed into templates.</td>
-                        </tr>
-                        <tr>
-                            <td>engine</td>
-                            <td>engine to be used for processing templates. Handlebars is the default.</td>
-                        </tr>
-                        <tr>
-                            <td>ext</td>
-                            <td>extension to be used for dest files.</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <p>Right aligned columns</p>
-                <table>
-                    <thead>
-                        <tr>
-                            <th style="text-align:right">Option</th>
-                            <th style="text-align:right">Description</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td style="text-align:right">data</td>
-                            <td style="text-align:right">path to data files to supply the data that will be passed into
-                                templates.</td>
-                        </tr>
-                        <tr>
-                            <td style="text-align:right">engine</td>
-                            <td style="text-align:right">engine to be used for processing templates. Handlebars is the
-                                default.</td>
-                        </tr>
-                        <tr>
-                            <td style="text-align:right">ext</td>
-                            <td style="text-align:right">extension to be used for dest files.</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <h2 id="links">Links</h2>
-                <p><a href="http://google.com">link text</a></p>
-                <p><a href="http://google.com" title="Leads to google">link with title</a></p>
-                <h2 id="images">Images</h2>
-                <p><img src="https://octodex.github.com/images/dojocat.jpg" alt="Alt text" title="The Dojocat"></p>
-
-            </article>
+          <h2 id="tables">Tables</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Option</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>data</td>
+                <td>
+                  path to data files to supply the data that will be passed into
+                  templates.
+                </td>
+              </tr>
+              <tr>
+                <td>engine</td>
+                <td>
+                  engine to be used for processing templates. Handlebars is the
+                  default.
+                </td>
+              </tr>
+              <tr>
+                <td>ext</td>
+                <td>extension to be used for dest files.</td>
+              </tr>
+            </tbody>
+          </table>
+          <p>Right aligned columns</p>
+          <table>
+            <thead>
+              <tr>
+                <th style="text-align: right">Option</th>
+                <th style="text-align: right">Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="text-align: right">data</td>
+                <td style="text-align: right">
+                  path to data files to supply the data that will be passed into
+                  templates.
+                </td>
+              </tr>
+              <tr>
+                <td style="text-align: right">engine</td>
+                <td style="text-align: right">
+                  engine to be used for processing templates. Handlebars is the
+                  default.
+                </td>
+              </tr>
+              <tr>
+                <td style="text-align: right">ext</td>
+                <td style="text-align: right">
+                  extension to be used for dest files.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <h2 id="links">Links</h2>
+          <p><a href="http://google.com">link text</a></p>
+          <p>
+            <a href="http://google.com" title="Leads to google"
+              >link with title</a
+            >
+          </p>
+          <h2 id="images">Images</h2>
+          <p>
+            <img
+              src="https://octodex.github.com/images/dojocat.jpg"
+              alt="Alt text"
+              title="The Dojocat"
+            />
+          </p>
+        </article>
+      </div>
+      <div class="relative w-full bg-white min-h-lg shadow-border-t">
+        <div
+          class="absolute right-0 flex flex-row justify-end h-full p-4 space-x-4"
+        >
+          <button class="_close-drawer btn-middle-primary">Close</button>
         </div>
-        <div class="min-h-lg shadow-border-t relative w-full bg-white">
-            <div class="absolute right-0 flex flex-row justify-end h-full p-4 space-x-4">
-                <button class="_close-drawer btn-middle-primary">Close</button>
-            </div>
-        </div>
-
+      </div>
     </div>
-</body>
+  </body>
+</html>

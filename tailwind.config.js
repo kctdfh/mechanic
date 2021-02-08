@@ -293,10 +293,14 @@ module.exports = {
         '7':7,
         '8':8,
         '9':9,
-        '10':10
+        '10':10,
+        '30':30,
+        '49':49
       },
       gridTemplateColumns: {
-        'input':'3.25rem auto auto auto'
+        'input':'3.25rem auto auto auto',
+        'sys': '11.875rem auto 6.875rem',
+        'row': '3.25rem 11.875rem auto 6.875rem'
       },
       gridTemplateRows: {
         'input':'1.8rem auto'

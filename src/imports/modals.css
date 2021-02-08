@@ -1,0 +1,74 @@
+.basic-modal i {
+    @apply text-black;
+}
+
+.info-modal i {
+    @apply text-blue-500;
+}
+
+.warning-modal i {
+    @apply text-yellow-600;
+}
+
+.error-modal i {
+    @apply text-red-600;
+}
+
+.success-modal i {
+    @apply text-green-400;
+}
+
+[data-a11y-dialog-native] > .dialog-overlay {
+    @apply hidden;
+}
+
+dialog[open] {
+    @apply block;
+}
+
+.dialog-container[aria-hidden="true"] {
+    @apply hidden;
+}
+
+.dialog-overlay {
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.66);
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.66);
+}
+
+.dialog-content {
+    z-index: 3;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    margin: 0;
+}
+
+@keyframes fade-in {
+    from { opacity: 0;  }
+    to { opacity: 1;  }
+}
+  
+@keyframes appear {
+    from { transform: translate(-50%, -40%); opacity: 0; }
+    to { transform: translate(-50%, -50%); opacity: 1; }
+}
+  
+.dialog-container:not([aria-hidden='true']) > .dialog-overlay {
+    animation: fade-in 200ms 1 both;
+}
+  
+.dialog-container:not([aria-hidden='true']) > .dialog-content {
+    animation: appear 400ms 150ms 1 both;
+}
