@@ -1,10 +1,15 @@
 // tailwind.config.js
+const plugin = require('tailwindcss/plugin')
+
 module.exports = {
   purge: {
     content: [
       './components/*.html',
       './dist/*.js'],
-    defaultExtractor: content =>  content.match(/[A-Za-z0-9-_:!\/]+/g) || []
+    defaultExtractor: content =>  content.match(/[A-Za-z0-9-_:!\/]+/g) || [],
+    options: {
+      safelist: [/readonly$/]
+    }
   },
   darkMode: false,
   theme: {
@@ -410,6 +415,7 @@ module.exports = {
         "group-focus-visible",
         "group-active",
         "group-visited",
+        "readonly"
       ],
       padding: ["important"],
       minHeight: ["important"],
@@ -456,13 +462,20 @@ module.exports = {
       placeholderColor: ["group-disabled", "disabled"],
       pointerEvents: ["group-disabled", "important"],
       boxShadow: ["active", "focus-within","last","first"],
-      pointerEvents: ["last","group-disabled","disabled"]
+      pointerEvents: ["last","group-disabled","disabled","readonly"]
     },
   },
   plugins: [
     require("tailwindcss-interaction-variants"),
     require("tailwindcss-important")(),
     require("@tailwindcss/typography"),
-    require('tailwind-scrollbar')
+    require('tailwind-scrollbar'),
+    plugin(function({ addVariant, e }) {
+      addVariant('readonly', ({ modifySelectors, separator }) => {
+        modifySelectors(({ className }) => {
+          return `.${e(`readonly${separator}${className}`)}:read-only`
+        })
+      })
+    })
   ],
 };
