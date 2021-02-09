@@ -1,60 +1,499 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width minimum-scale=1.0 maximum-scale=1.0 user-scalable=no" />
-    <title>layout-menu</title>
-    <link type="text/css" rel="stylesheet" href="../dist/css/styles.mini.css" />
 
-  </head>
-  <body>
-    <div class="mytop-header Fixed">
-      
-    </div>
-    <div id="page">
-      <div class="header Fixed">
-        <span id="hamburger" class="Sticky">
-        <a href="#menu" class="mburger mburger--collapse">
-        <b></b>
-        <b></b>
-        <b></b>
-        </a>
-        </span>
-        <div class="header-right">
-          <ul>
-            <li>
-              <a href="#!" onclick="myFunction()"><i class="feather-search"></i></a>
-              <form class="hdr-frm" id="hdr-frm">
-                <button type="submit" class="hdr-submit"><i class="feather-search"></i></button>
-                <input type="text" name="header-search" placeholder="Search Part">
-              </form>
-            </li>
-            <li><a href="#!"><i class="feather-info"></i></a></li>
-            <li><a href="#!"><i class="feather-message-square"></i></a></li>
-          </ul>
-          <script>
-            function myFunction() {
-               var element = document.getElementById("hdr-frm");
-               element.classList.toggle("hdr-frm-style");
-            }
-          </script>
-          <style type="text/css">
-            .hdr-frm-style{
-            display: none;
-            }
-          </style>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width minimum-scale=1.0 maximum-scale=1.0 user-scalable=no" />
+  <title>layout-menu</title>
+  <link type="text/css" rel="stylesheet" href="../dist/css/styles.mini.css" />
+  <link type="text/css" rel="stylesheet" href="../src/imports/menu.css" />
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+  <script src="../dist/js/drawer.js"></script>
+</head>
+
+<body>
+  <div id="page" class="relative">
+    <div id="headers" class="relative">
+      <div id="session-header"
+        class="box-border fixed top-0 z-50 flex justify-between w-full h-16 px-6 py-4 bg-white transform-none shadow-border-b">
+        <div class="h-8 my-auto">
+          <img class="h-full" src="../dist/assets/pdexlogo.png" alt="Pricedex Logo">
+        </div>
+        <div class="h-8 my-auto">
+          <img class="h-full" src="../dist/assets/clientlogo.png" alt="Audi Logo">
+        </div>
+        <div class="relative flex flex-col items-end">
+          <div onClick="openMenu()" class="inline-flex items-center space-x-4 cursor-pointer group">
+            <div class="inline-flex flex-col space-y-1 justify-items-start">
+              <p class="text-sm font-semibold text-right text-black group-hover:text-blue-850">
+                Jane Doe
+              </p>
+              <p class="leading-none text-right text-gray-500 text-xsm group-hover:text-blue-850">
+                Admin
+              </p>
+            </div>
+            <div class="w-8 h-8 overflow-hidden rounded-full">
+              <img src="../dist/assets/avatar.jpg" alt="user avatar" class="object-cover w-full h-full" />
+            </div>
+          </div>
+          <div id="userDropdown" class="absolute flex-col hidden py-2 space-y-2 bg-white shadow z-100 w-55 top-10">
+            <a href="#" class="inline-flex w-full px-4 py-1 space-x-3 group align-end h-7 hover:bg-gray-25">
+              <div class="flex items-center h-full">
+                <i class="text-gray-300 group-hover:text-blue-850 align-center feather-info"></i>
+              </div>
+              <p class="h-full text-black group-hover:text-blue-850 align-center text-md w-44">
+                Help
+              </p>
+            </a>
+            <a href="#" class="inline-flex w-full px-4 py-1 space-x-3 group align-end h-7 hover:bg-gray-25">
+              <div class="flex items-center h-full">
+                <i class="text-gray-300 align-center group-hover:text-blue-850 feather-log-out"></i>
+              </div>
+              <p class="h-full text-black align-center group-hover:text-blue-850 text-md w-44">
+                Log out
+              </p>
+            </a>
+          </div>
         </div>
       </div>
-      <div class="content" style="padding: 30px 70px 30px 25px;">
-        <p>
-          <!-- Start writing codes from here -->
-          <strong>Main body content goes to here.</strong><br />
-          Continue writing codes from here. <br>
-          <p style="padding: 400px 0">body content</p>
-          <p style="padding: 400px 0">body content</p>
-        </p>
+      <div id="system-header" class="fixed left-0 inline-flex w-full px-6 py-2 bg-white z-49 top-16 shadow-border-b h-14">
+        <a href="#menu" class="self-center mburger mburger--collapse">
+          <b></b>
+          <b></b>
+          <b></b>
+        </a>
+        <div class="self-center crumbs">
+          <button class="crumb-home feather-home"></button>
+          <i class="crumb-chevron feather-chevron-right"></i>
+          <button class="crumb">First Page</button>
+          <i class="crumb-chevron feather-chevron-right"></i>
+          <button class="crumb">Second Page</button>
+          <i class="crumb-chevron feather-chevron-right"></i>
+          <button class="crumb">Third Page</button>
+          <i class="crumb-chevron feather-chevron-right"></i>
+          <button class="crumb">Fourth Page</button>
+          <i class="crumb-chevron feather-chevron-right"></i>
+          <button class="crumb">Fifth Page</button>
+        </div>
+        <div class="self-center h-8 justify-self-end">
+          <div class="flex flex-row justify-end h-full space-x-3">
+            <div class="relative h-8">
+              <span class="absolute inset-y-0 left-0 flex items-center pl-3">
+                <i class="!leading-0 text-gray-200 text-md feather-search">
+                </i>
+              </span>
+              <input type="text" id="search_part" class="input-icon-middle w-50" placeholder="Search part">
+            </div>
+            <button class="btn-middle-secondary-icon feather-search"></button>
+            <div class="divider-h"></div>
+            <button class="btn-middle-secondary-icon feather-help-circle"></button>
+            <div class="divider-h"></div>
+            <button class="_open-drawer btn-middle-secondary-icon feather-book-open"></button>
+            <div class="divider-h"></div>
+            <button class="btn-middle-secondary-icon feather-message-square"></button>
+          </div>
+        </div>
+      </div>
+      <div id="page-header" class="fixed inline-flex justify-between w-full bg-white z-49 h-14 top-30 shadow-border-b">
+        <div class="flex flex-row h-full">
+          <p class="self-center flex-shrink-0 px-6 py-4 text-lg">Page Name</p>
+          <div class="flex justify-start space-x-4">
+            <div id="tab-1" class="tab-btn-wrapper group active">
+              <div class="flex flex-row space-x-2">
+                <button class="tab-btn">Tab Active</button>
+              </div>
+              <div class="tab-border">
+              </div>
+            </div>
+            <div id="tab-2" class="tab-btn-wrapper group">
+              <div class="flex flex-row space-x-2">
+                <button class="tab-btn">Tab 2</button>
+              </div>
+              <div class="tab-border">
+              </div>
+            </div>
+            <div id="tab-3" class="tab-btn-wrapper group">
+              <div class="flex flex-row space-x-2">
+                <button class="tab-btn">Tab 3</button>
+              </div>
+              <div class="tab-border">
+              </div>
+            </div>
+            <button class="my-auto btn-large-ghost-icon feather-more-horizontal"></button>
+          </div>
+        </div>
+        <div class="flex flex-row h-8 px-6 my-auto space-x-4">
+          <div class="w-70">
+            <select data-theme="md" data-placeholder="Select one option..." data-multiple="false"
+              data-allow-clear="true" class="_dropdown">
+              <option></option><!-- Needed to show X image to clear the select -->
+              <option value="1">Option 1</option>
+              <option value="2">Option 2</option>
+              <option value="3">Option 3</option>
+              <option value="4">Option 4</option>
+              <option value="5">Option 5</option>
+            </select>
+          </div>
+          <div class="divider-h"></div>
+          <div class="relative h-8">
+            <span class="absolute inset-y-0 left-0 flex items-center pl-3">
+              <i class="!leading-0 text-gray-200 text-md feather-search">
+              </i>
+            </span>
+            <input type="text" id="input" class="w-40 input-icon-middle" placeholder="Search">
+          </div>
+          <div class="divider-h"></div>
+          <button class="btn-middle-tertiary">Button</button>
+        </div>
+      </div>
+      <div id="page-header" class="fixed inline-flex justify-center w-full bg-white z-49 top-44 shadow-border-b h-14">
+        <div class="flex flex-row h-full">
+          <div class="flex justify-start space-x-6">
+            <div id="tab-1" class="tab-btn-wrapper group">
+              <div class="flex flex-row space-x-2">
+                <button class="tab-btn">First Step</button>
+              </div>
+              <div class="tab-border">
+              </div>
+            </div>
+            <i class="my-auto text-lg text-gray-300 feather-chevron-right"></i>
+            <div id="tab-2" class="tab-btn-wrapper group active">
+              <div class="flex flex-row space-x-2">
+                <button class="tab-btn">Second Step</button>
+              </div>
+              <div class="tab-border">
+              </div>
+            </div>
+            <i class="my-auto text-lg text-gray-300 feather-chevron-right"></i>
+            <div id="tab-3" class="tab-btn-wrapper group">
+              <div class="flex flex-row space-x-2">
+                <button class="tab-btn" disabled>Third Step</button>
+              </div>
+              <div class="tab-border">
+              </div>
+            </div>
+            <i class="my-auto text-lg text-gray-300 feather-chevron-right"></i>
+            <div id="tab-3" class="tab-btn-wrapper group">
+              <button class="tab-btn" disabled>Last Step</button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+    <div id="content" class="fixed w-full p-6 overflow-scroll scrollbar-regular bottom-16">
+      <p>Mollit aliquip nisi sint adipisicing non enim sit proident pariatur. Anim nostrud commodo irure Lorem
+        exercitation occaecat. Quis dolore sit velit esse aliquip aute.
+        </br>
+        </br>
+        Proident in veniam laboris consectetur laborum enim excepteur excepteur quis. Voluptate non amet reprehenderit
+        elit laboris exercitation enim deserunt incididunt duis exercitation tempor. Commodo nostrud id reprehenderit
+        laborum duis cupidatat minim do id exercitation elit dolor. Magna ipsum sit officia ipsum minim. Eiusmod
+        adipisicing nulla anim ut elit ex tempor proident sunt quis. Adipisicing anim aute ad fugiat et officia irure
+        sint id.
+        </br>
+        </br>
+        Nisi incididunt nulla enim consectetur. Incididunt Lorem est magna ad non tempor do pariatur qui anim ullamco.
+        Laborum ex qui cupidatat ipsum ea irure esse id enim ullamco exercitation incididunt nulla. Lorem cupidatat amet
+        ipsum adipisicing anim ullamco Lorem consequat fugiat velit. Enim esse veniam excepteur minim velit ad commodo
+        quis nulla. Dolore anim minim consequat consectetur dolore ea nostrud et sint excepteur. Eu ea dolore culpa ea
+        nisi magna ut tempor in ea magna.
+        </br>
+        </br>
+        Aliquip non enim nisi ex proident velit. Minim laboris magna quis do minim commodo anim incididunt excepteur
+        adipisicing sint irure irure id. Exercitation cupidatat non exercitation irure eiusmod ex est adipisicing esse.
+        Consequat aute culpa elit laborum quis ipsum Lorem est do nisi consectetur officia dolor magna. Dolore labore id
+        aliquip est ullamco excepteur nulla minim nulla eiusmod aute sunt. Aliquip veniam non Lorem cupidatat incididunt
+        dolore magna sit sint voluptate incididunt.
+        </br>
+        </br>
+        Cupidatat fugiat nostrud eu pariatur Lorem ex officia dolor. Do quis deserunt do Lorem eiusmod ut ad veniam
+        cupidatat qui id eu. Officia esse veniam proident mollit. Veniam adipisicing fugiat sint culpa consectetur dolor
+        id dolor. Labore eu dolor in sunt aute ullamco deserunt velit pariatur elit amet ut fugiat. Commodo consectetur
+        minim magna excepteur occaecat amet eu.
+        </br>
+        </br>
+        Labore officia aliqua deserunt aliquip culpa exercitation aute ullamco. Velit excepteur voluptate est esse
+        dolore ullamco sit. Cillum ea pariatur laborum ex laboris irure eiusmod culpa cillum duis elit veniam excepteur
+        esse. Deserunt consequat magna magna adipisicing elit ipsum esse culpa pariatur ad qui ea nulla magna.
+        </br>
+        </br>
+        Dolor voluptate amet aliqua non sunt ad incididunt ex anim et fugiat ex. Cillum labore ipsum aliquip nostrud
+        minim eiusmod Lorem eu excepteur. Aute pariatur proident sint veniam culpa nisi eiusmod ex fugiat minim fugiat
+        consectetur. Dolore nisi aliquip Lorem magna velit id reprehenderit ex quis. Aliquip non Lorem excepteur
+        consequat ullamco pariatur cillum mollit proident duis reprehenderit qui. Eu eiusmod Lorem velit ipsum labore.
+        </br>
+        </br>
+        Laborum non cupidatat irure veniam ex voluptate et ipsum eu. Esse duis labore ullamco magna commodo non do
+        reprehenderit do voluptate. Incididunt velit reprehenderit cupidatat ut anim id tempor id proident.
+        </br>
+        </br>
+        Lorem Lorem velit aliquip labore sint enim consequat sunt dolor minim officia velit. Do occaecat reprehenderit
+        anim eiusmod fugiat esse eu incididunt Lorem. Labore dolor cupidatat laboris dolor anim fugiat duis.
+        </br>
+        </br>
+        Proident ea sint ullamco ut enim id eiusmod dolor. Et excepteur cillum irure sit minim magna excepteur cillum
+        elit ut minim officia irure. Sit labore duis ipsum cupidatat.
+      </p>
+      <p>Mollit aliquip nisi sint adipisicing non enim sit proident pariatur. Anim nostrud commodo irure Lorem
+        exercitation occaecat. Quis dolore sit velit esse aliquip aute.
+        </br>
+        </br>
+        Proident in veniam laboris consectetur laborum enim excepteur excepteur quis. Voluptate non amet reprehenderit
+        elit laboris exercitation enim deserunt incididunt duis exercitation tempor. Commodo nostrud id reprehenderit
+        laborum duis cupidatat minim do id exercitation elit dolor. Magna ipsum sit officia ipsum minim. Eiusmod
+        adipisicing nulla anim ut elit ex tempor proident sunt quis. Adipisicing anim aute ad fugiat et officia irure
+        sint id.
+        </br>
+        </br>
+        Nisi incididunt nulla enim consectetur. Incididunt Lorem est magna ad non tempor do pariatur qui anim ullamco.
+        Laborum ex qui cupidatat ipsum ea irure esse id enim ullamco exercitation incididunt nulla. Lorem cupidatat amet
+        ipsum adipisicing anim ullamco Lorem consequat fugiat velit. Enim esse veniam excepteur minim velit ad commodo
+        quis nulla. Dolore anim minim consequat consectetur dolore ea nostrud et sint excepteur. Eu ea dolore culpa ea
+        nisi magna ut tempor in ea magna.
+        </br>
+        </br>
+        Aliquip non enim nisi ex proident velit. Minim laboris magna quis do minim commodo anim incididunt excepteur
+        adipisicing sint irure irure id. Exercitation cupidatat non exercitation irure eiusmod ex est adipisicing esse.
+        Consequat aute culpa elit laborum quis ipsum Lorem est do nisi consectetur officia dolor magna. Dolore labore id
+        aliquip est ullamco excepteur nulla minim nulla eiusmod aute sunt. Aliquip veniam non Lorem cupidatat incididunt
+        dolore magna sit sint voluptate incididunt.
+        </br>
+        </br>
+        Cupidatat fugiat nostrud eu pariatur Lorem ex officia dolor. Do quis deserunt do Lorem eiusmod ut ad veniam
+        cupidatat qui id eu. Officia esse veniam proident mollit. Veniam adipisicing fugiat sint culpa consectetur dolor
+        id dolor. Labore eu dolor in sunt aute ullamco deserunt velit pariatur elit amet ut fugiat. Commodo consectetur
+        minim magna excepteur occaecat amet eu.
+        </br>
+        </br>
+        Labore officia aliqua deserunt aliquip culpa exercitation aute ullamco. Velit excepteur voluptate est esse
+        dolore ullamco sit. Cillum ea pariatur laborum ex laboris irure eiusmod culpa cillum duis elit veniam excepteur
+        esse. Deserunt consequat magna magna adipisicing elit ipsum esse culpa pariatur ad qui ea nulla magna.
+        </br>
+        </br>
+        Dolor voluptate amet aliqua non sunt ad incididunt ex anim et fugiat ex. Cillum labore ipsum aliquip nostrud
+        minim eiusmod Lorem eu excepteur. Aute pariatur proident sint veniam culpa nisi eiusmod ex fugiat minim fugiat
+        consectetur. Dolore nisi aliquip Lorem magna velit id reprehenderit ex quis. Aliquip non Lorem excepteur
+        consequat ullamco pariatur cillum mollit proident duis reprehenderit qui. Eu eiusmod Lorem velit ipsum labore.
+        </br>
+        </br>
+        Laborum non cupidatat irure veniam ex voluptate et ipsum eu. Esse duis labore ullamco magna commodo non do
+        reprehenderit do voluptate. Incididunt velit reprehenderit cupidatat ut anim id tempor id proident.
+        </br>
+        </br>
+        Lorem Lorem velit aliquip labore sint enim consequat sunt dolor minim officia velit. Do occaecat reprehenderit
+        anim eiusmod fugiat esse eu incididunt Lorem. Labore dolor cupidatat laboris dolor anim fugiat duis.
+        </br>
+        </br>
+        Proident ea sint ullamco ut enim id eiusmod dolor. Et excepteur cillum irure sit minim magna excepteur cillum
+        elit ut minim officia irure. Sit labore duis ipsum cupidatat.
+      </p>
+    </div>
+    <div class="fixed bottom-0 flex justify-end w-full h-16 px-6 py-4 bg-white shadow-border-t flow-row">
+      <div class="flex flex-row justify-end h-full space-x-4">
+        <button class="btn-middle-tertiary">Edit</button>
+        <div class="divider-h"></div>
+        <button class="btn-middle-tertiary">Cancel</button>
+        <div class="divider-h"></div>
+        <button class="btn-middle-primary">Apply</button>
+      </div>
+    </div>
+    <!-- ANCHOR drawer begins -->
+    <div id="dark-overlay" class="fixed inset-0 z-50 hidden w-screen h-screen bg-black opacity-0 _close-drawer"></div>
+    <div id="drawer"
+      class="fixed inset-y-0 flex flex-col float-right w-1/2 overflow-hidden transition-transform duration-200 ease-in-out bg-white shadow-2xl z-51 -right-full">
+      <div class="inline-flex items-center w-full py-1 pl-4 pr-2 bg-white min-h-lg shadow-border-b">
+        <div class="inline-flex items-center justify-between w-full h-full">
+          <p class="flex-grow text-base font-semibold text-black">Drawer</p>
+          <button class="_close-drawer feather-x btn-large-ghost-icon"></button>
+        </div>
+      </div>
+      <div class="inline-flex justify-center w-full bg-white shadow-border-b h-14">
+        <div class="flex flex-row h-full">
+          <div class="flex justify-start space-x-6">
+            <div id="tab-1" class="tab-btn-wrapper group active">
+              <div class="flex flex-row space-x-2">
+                <button class="tab-btn">User Manual</button>
+              </div>
+              <div class="tab-border"></div>
+            </div>
+            <div id="tab-2" class="tab-btn-wrapper group">
+              <div class="flex flex-row space-x-2">
+                <button class="tab-btn">Company Policy</button>
+              </div>
+              <div class="tab-border"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="drawer-content" class="w-full h-full p-6 overflow-x-hidden overflow-y-scroll scrollbar-regular">
+        <article class="prose max-w-none">
+          <p>
+            Pass your markdown here and the <code>prose</code> utility class
+            will render it correctly! the <code>prose</code> class applies all
+            the sizing and padding information to its child elements based on
+            their tag so you don't have to worry about different text appearing
+            differently depending on the elements you have on your markdown.
+            Useful for when you&#39;re calling a database for your wiki
+            articles. Just remember to use a server side function to render the
+            markdown to HTML before injecting it into this
+            <code>article</code> tag
+          </p>
+          <hr />
+          <h1 id="h1-heading">h1 Heading</h1>
+          <h2 id="h2-heading">h2 Heading</h2>
+          <h3 id="h3-heading">h3 Heading</h3>
+          <h4 id="h4-heading">h4 Heading</h4>
+          <h5 id="h5-heading">h5 Heading</h5>
+          <h6 id="h6-heading">h6 Heading</h6>
+          <h2 id="horizontal-rules">Horizontal Rules</h2>
+          <hr />
+          <hr />
+          <hr />
+          <h2 id="emphasis">Emphasis</h2>
+          <p><strong>This is bold text</strong></p>
+          <p><strong>This is bold text</strong></p>
+          <p><em>This is italic text</em></p>
+          <p><em>This is italic text</em></p>
+          <p><del>Strikethrough</del></p>
+          <h2 id="blockquotes">Blockquotes</h2>
+          <blockquote>
+            <p>Blockquotes can also be nested...</p>
+            <blockquote>
+              <p>
+                ...by using additional greater-than signs right next to each
+                other...
+              </p>
+              <blockquote>
+                <p>...or with spaces between arrows.</p>
+              </blockquote>
+            </blockquote>
+          </blockquote>
+          <h2 id="lists">Lists</h2>
+          <p>Unordered</p>
+          <ul>
+            <li>
+              Create a list by starting a line with <code>+</code>,
+              <code>-</code>, or <code>*</code>
+            </li>
+            <li>
+              Sub-lists are made by indenting 2 spaces:
+              <ul>
+                <li>
+                  Marker character change forces new list start:
+                  <ul>
+                    <li>Ac tristique libero volutpat at</li>
+                    <li>Facilisis in pretium nisl aliquet</li>
+                    <li>Nulla volutpat aliquam velit</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>Very easy!</li>
+          </ul>
+          <p>Ordered</p>
+          <ol>
+            <li>Lorem ipsum dolor sit amet</li>
+            <li>Consectetur adipiscing elit</li>
+            <li>Integer molestie lorem at massa</li>
+          </ol>
+          <h2 id="code">Code</h2>
+          <p>Inline <code>code</code></p>
+          <p>Indented code</p>
+          <pre><code><span class="hljs-comment">// Some comments</span>
+line <span class="hljs-number">1</span> <span class="hljs-keyword">of</span> <span class="hljs-keyword">code</span>
+line <span class="hljs-number">2</span> <span class="hljs-keyword">of</span> <span class="hljs-keyword">code</span>
+line <span class="hljs-number">3</span> <span class="hljs-keyword">of</span> <span class="hljs-keyword">code</span>
+</code></pre>
+          <p>Block code &quot;fences&quot;</p>
+          <pre><code><span class="hljs-function"><span class="hljs-title">Sample</span></span> text here...
+</code></pre>
+          <p>Syntax highlighting</p>
+          <pre><code class="lang-js"><span class="hljs-keyword">var</span> foo = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">bar</span>) </span>{
+<span class="hljs-keyword">return</span> bar++;
+};
+
+<span class="hljs-built_in">console</span>.log(foo(<span class="hljs-number">5</span>));
+</code></pre>
+          <h2 id="tables">Tables</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Option</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>data</td>
+                <td>
+                  path to data files to supply the data that will be passed into
+                  templates.
+                </td>
+              </tr>
+              <tr>
+                <td>engine</td>
+                <td>
+                  engine to be used for processing templates. Handlebars is the
+                  default.
+                </td>
+              </tr>
+              <tr>
+                <td>ext</td>
+                <td>extension to be used for dest files.</td>
+              </tr>
+            </tbody>
+          </table>
+          <p>Right aligned columns</p>
+          <table>
+            <thead>
+              <tr>
+                <th style="text-align: right">Option</th>
+                <th style="text-align: right">Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="text-align: right">data</td>
+                <td style="text-align: right">
+                  path to data files to supply the data that will be passed into
+                  templates.
+                </td>
+              </tr>
+              <tr>
+                <td style="text-align: right">engine</td>
+                <td style="text-align: right">
+                  engine to be used for processing templates. Handlebars is the
+                  default.
+                </td>
+              </tr>
+              <tr>
+                <td style="text-align: right">ext</td>
+                <td style="text-align: right">
+                  extension to be used for dest files.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <h2 id="links">Links</h2>
+          <p><a href="http://google.com">link text</a></p>
+          <p>
+            <a href="http://google.com" title="Leads to google">link with title</a>
+          </p>
+          <h2 id="images">Images</h2>
+          <p>
+            <img src="https://octodex.github.com/images/dojocat.jpg" alt="Alt text" title="The Dojocat" />
+          </p>
+        </article>
+      </div>
+      <div class="relative w-full bg-white min-h-lg shadow-border-t">
+        <div class="absolute right-0 flex flex-row justify-end h-full p-4 space-x-4">
+          <button class="_close-drawer btn-middle-primary">Close</button>
+        </div>
+      </div>
+    </div>
+    <!-- ANCHOR drawer ends -->
     <nav id="menu">
       <ul class="listview-icons">
         <li>
@@ -166,7 +605,7 @@
                 <li><a href="#!">VMRS Attribute Values</a></li>
               </ul>
             </li>
-            <li><a href="#!">Create New  Catalog</a></li>
+            <li><a href="#!">Create New Catalog</a></li>
             <li><a href="#!">Manage Catalog Labels</a></li>
             <li><a href="#!">VMRS Not Used in Catalog</a></li>
             <li>
@@ -423,26 +862,82 @@
         </li>
       </ul>
     </nav>
-    <!-- mmenu scripts -->
-    <script src="../node_modules/mmenu-js/dist/mmenu.polyfills.js"></script>
-    <script src="../node_modules/mmenu-js/dist/mmenu.js"></script>
-    <script>
-      new Mmenu(document.querySelector("#menu"), {
-          extensions: { all: ["theme-white", "pagedim-black"], "(max-width: 767px)": ["fx-menu-slide"] },
-          counters: !0,
-          iconPanels: { add: !0, hideDivider: !0, hideNavbar: !0, visible: "first" },
-          navbar: { title: "Menu" },
-          navbars: [{ position: "top", content: ["searchfield"] }, { position: "top" }],
-          searchfield: {
-              panel: {
-                  add: '!0',
-                  splash: "<p>What are you looking for?<br />Type the menu name you are looking for.</p>",
-              },
-          },
-          setSelected: { hover: !0, parent: !0 },
-          sidebar: { collapsed: { use: 768, hideNavbar: !0, hideDivider: !0 }, expanded: { use: 10440, initial: "remember" } },
-      });
-    </script>
-  </body>
-</html>
+  </div>
+  <!-- mmenu scripts -->
+  <script src="../node_modules/mmenu-js/dist/mmenu.polyfills.js"></script>
+  <script src="../node_modules/mmenu-js/dist/mmenu.js"></script>
+  <script>
+    new Mmenu(document.querySelector("#menu"), {
+      extensions: {
+        all: ["theme-white", "pagedim-black"],
+        "(max-width: 767px)": ["fx-menu-slide"]
+      },
+      counters: !0,
+      iconPanels: {
+        add: !0,
+        hideDivider: !0,
+        hideNavbar: !0,
+        visible: "first"
+      },
+      navbar: {
+        title: "Menu"
+      },
+      navbars: [{
+        position: "top",
+        content: ["searchfield"]
+      }, {
+        position: "top"
+      }],
+      searchfield: {
+        panel: {
+          add: '!0',
+          splash: "<p>What are you looking for?<br />Type the menu name you are looking for.</p>",
+        },
+      },
+      setSelected: {
+        hover: !0,
+        parent: !0
+      },
+      sidebar: {
+        collapsed: {
+          use: 768,
+          hideNavbar: !0,
+          hideDivider: !0
+        },
+        expanded: {
+          use: 10440,
+          initial: "remember"
+        }
+      },
+    });
+  </script>
+  <!-- <script>
+    $('body').prepend("<div id='dark-overlay' class='fixed inset-0 hidden w-screen h-screen bg-black opacity-0 z-49 _close-drawer'></div>")
+  </script> -->
+  <script>
+    var allHeights = 0;
+    $("#headers").children().each(function () {
+      var paddingTpx = $(this).css('padding-top');
+      var paddingT = Number(paddingTpx.slice(0, -2));
+      var paddingBpx = $(this).css('padding-bottom');
+      var paddingB = Number(paddingBpx.slice(0, -2));
+      var realHeight = $(this).height() + paddingT + paddingB;
+      allHeights += realHeight;
+    });
+    const content = $("#content");
+    content.css({
+      top: allHeights
+    });
+  </script>
+  <script>
+    function openMenu() {
+      document.getElementById("userDropdown").classList.toggle("hidden");
+      document.getElementById("userDropdown").classList.toggle("flex");
+    }
+  </script>
+  <script>
+    $('._dropdown').select2({});
+  </script>
+</body>
 
+</html>

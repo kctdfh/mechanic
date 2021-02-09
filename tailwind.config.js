@@ -295,7 +295,9 @@ module.exports = {
         '9':9,
         '10':10,
         '30':30,
-        '49':49
+        '49':49,
+        '51':51,
+        '100':100
       },
       gridTemplateColumns: {
         'input':'3.25rem auto auto auto',
