@@ -462,7 +462,7 @@ module.exports = {
       placeholderColor: ["group-disabled", "disabled"],
       pointerEvents: ["group-disabled", "important"],
       boxShadow: ["active", "focus-within","last","first"],
-      pointerEvents: ["last","group-disabled","disabled","readonly"]
+      pointerEvents: ["disabled","hover","last","group-disabled","readonly"]
     },
   },
   plugins: [

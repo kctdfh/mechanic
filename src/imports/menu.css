@@ -32,8 +32,11 @@ nav:not(.mm-menu) {
 	border-bottom: 1px solid #e1e1e1;
 	border-left: 1px solid #e1e1e1;
 }
-#page{
+/* #page{
 	border-left: 1px solid #e1e1e1;
+} */
+#content{
+	background-color: #F9FAFA;
 }
 span#hamburger {
 	width: 45px;
@@ -84,13 +87,35 @@ span#hamburger {
 
 
 
+.mm-searchfield__cancel.mm-searchfield__cancel-active {
+	margin-right: 1.5rem;
+	margin-left: 0px;
+	padding: 0px !important;
+}
 
+.mm-searchfield__input {
+	padding-left: 1.5rem !important;
+	padding-right: 1.5rem !important;
+}
+
+.mm-navbar__title {
+	height: 53px !important;
+}
+
+.mm-listitem, .mm-panel_iconpanel-first i {
+	line-height: 32px !important;
+}
+
+.listview-icons.mm-listview {
+	height: 3.5rem !important; 
+}
 
 #menu{
-	padding-top: 68px;
+	padding-top: 78px;
 }
+
 #page{
-	background: #f9fafa;
+	background: transparent;
 	margin-top: 0;
 }
 .mm-wrapper_sidebar-collapsed .mm-slideout {
@@ -133,9 +158,23 @@ ul.listview-icons{
 	font-weight: normal;
 	font-size: 14px;
 	line-height: 20px;
-	color: #5C656C;
-	background-color: #F3F4F4;
+	color: transparent;
+	background-color: white;
+	height: 34px !important;
 }
+
+.mm-divider::before {
+	background: white;
+}
+
+/* .mm-slideout {
+	z-index: 9 !important;
+} */
+
+.mm-wrapper_background .mm-page {
+    background: transparent !important
+}
+
 .mm-listitem {
 	font-family: Open Sans;
 	font-style: normal;
@@ -214,7 +253,7 @@ height: 50px;
 	width: 24px !important;
 	left: 0 !important;
 }
-#page .header span a {
+/* #page .header span a {
 	width: 24px;
 	height: 24px;
 	padding: 0;
@@ -222,7 +261,7 @@ height: 50px;
 	position: absolute;
 	top: 17.5px;
 	left: 24px;
-}
+} */
 .mm-wrapper_opening [class*="mm-menu_pagedim"].mm-menu_opened ~ .mm-wrapper__blocker {
 	opacity: 0;
 }
@@ -355,10 +394,10 @@ height: 50px;
  --mb-button-size:24px;
  --mb-bar-width:.5;
  --mb-bar-height:2px;
- --mb-bar-spacing:8px;
+ --mb-bar-spacing:6px;
  --mb-cross-timeout:0.2s;
  background:0 0;
- margin-right: 48px;
+ margin-right: 1.5rem;
  border:none;
  border-radius:0;
  color:inherit;
@@ -366,6 +405,7 @@ height: 50px;
  position:relative;
  box-sizing:border-box;
  height:var(--mb-button-size);
+ width: 50px;
  line-height:var(--mb-button-size);
  vertical-align:middle;
  appearance:none;

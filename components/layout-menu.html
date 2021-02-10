@@ -6,18 +6,17 @@
   <meta name="viewport" content="width=device-width minimum-scale=1.0 maximum-scale=1.0 user-scalable=no" />
   <title>layout-menu</title>
   <link type="text/css" rel="stylesheet" href="../dist/css/styles.mini.css" />
-  <link type="text/css" rel="stylesheet" href="../src/imports/menu.css" />
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+  <script src="../dist/js/select2.full.js"></script>
+  <script src="../dist/js/mmenu.polyfills.js"></script>
+  <script src="../dist/js/mmenu.js"></script>
   <script src="../dist/js/drawer.js"></script>
 </head>
 
 <body>
-  <div id="page" class="relative">
-    <div id="headers" class="relative">
-      <div id="session-header"
-        class="box-border fixed top-0 z-50 flex justify-between w-full h-16 px-6 py-4 bg-white transform-none shadow-border-b">
+  <header id="session-header"
+      class="shadow-border-b z-1 absolute top-0 left-0 flex justify-between w-full h-16 px-6 py-4 bg-white">
+      <div id="header-overlay" class="_close-drawer absolute inset-0 hidden w-full h-full bg-black opacity-0"></div>
         <div class="h-8 my-auto">
           <img class="h-full" src="../dist/assets/pdexlogo.png" alt="Pricedex Logo">
         </div>
@@ -25,12 +24,12 @@
           <img class="h-full" src="../dist/assets/clientlogo.png" alt="Audi Logo">
         </div>
         <div class="relative flex flex-col items-end">
-          <div onClick="openMenu()" class="inline-flex items-center space-x-4 cursor-pointer group">
-            <div class="inline-flex flex-col space-y-1 justify-items-start">
-              <p class="text-sm font-semibold text-right text-black group-hover:text-blue-850">
+          <div onClick="openMenu()" class="group inline-flex items-center space-x-4 cursor-pointer">
+            <div class="justify-items-start inline-flex flex-col space-y-1">
+              <p class="group-hover:text-blue-850 text-sm font-semibold text-right text-black">
                 Jane Doe
               </p>
-              <p class="leading-none text-right text-gray-500 text-xsm group-hover:text-blue-850">
+              <p class="text-xsm group-hover:text-blue-850 leading-none text-right text-gray-500">
                 Admin
               </p>
             </div>
@@ -38,33 +37,36 @@
               <img src="../dist/assets/avatar.jpg" alt="user avatar" class="object-cover w-full h-full" />
             </div>
           </div>
-          <div id="userDropdown" class="absolute flex-col hidden py-2 space-y-2 bg-white shadow z-100 w-55 top-10">
-            <a href="#" class="inline-flex w-full px-4 py-1 space-x-3 group align-end h-7 hover:bg-gray-25">
+          <div id="userDropdown" class="z-100 w-55 top-10 absolute flex-col hidden py-2 space-y-2 bg-white shadow">
+            <a href="#" class="group align-end h-7 hover:bg-gray-25 inline-flex w-full px-4 py-1 space-x-3">
               <div class="flex items-center h-full">
-                <i class="text-gray-300 group-hover:text-blue-850 align-center feather-info"></i>
+                <i class="group-hover:text-blue-850 align-center feather-info text-gray-300"></i>
               </div>
-              <p class="h-full text-black group-hover:text-blue-850 align-center text-md w-44">
+              <p class="group-hover:text-blue-850 align-center text-md w-44 h-full text-black">
                 Help
               </p>
             </a>
-            <a href="#" class="inline-flex w-full px-4 py-1 space-x-3 group align-end h-7 hover:bg-gray-25">
+            <a href="#" class="group align-end h-7 hover:bg-gray-25 inline-flex w-full px-4 py-1 space-x-3">
               <div class="flex items-center h-full">
-                <i class="text-gray-300 align-center group-hover:text-blue-850 feather-log-out"></i>
+                <i class="align-center group-hover:text-blue-850 feather-log-out text-gray-300"></i>
               </div>
-              <p class="h-full text-black align-center group-hover:text-blue-850 text-md w-44">
+              <p class="align-center group-hover:text-blue-850 text-md w-44 h-full text-black">
                 Log out
               </p>
             </a>
           </div>
         </div>
-      </div>
-      <div id="system-header" class="fixed left-0 inline-flex w-full px-6 py-2 bg-white z-49 top-16 shadow-border-b h-14">
-        <a href="#menu" class="self-center mburger mburger--collapse">
+  </header>
+  <div id="page" class="absolute z-0">
+    <div id="headers">
+      <div id="system-header"
+        class="top-16 shadow-border-b h-14 fixed left-0 inline-flex w-full px-6 py-2 bg-white border-l border-gray-100">
+        <a href="#menu" class="mburger mburger--collapse self-center">
           <b></b>
           <b></b>
           <b></b>
         </a>
-        <div class="self-center crumbs">
+        <div class="crumbs self-center">
           <button class="crumb-home feather-home"></button>
           <i class="crumb-chevron feather-chevron-right"></i>
           <button class="crumb">First Page</button>
@@ -77,7 +79,7 @@
           <i class="crumb-chevron feather-chevron-right"></i>
           <button class="crumb">Fifth Page</button>
         </div>
-        <div class="self-center h-8 justify-self-end">
+        <div class="justify-self-end self-center h-8">
           <div class="flex flex-row justify-end h-full space-x-3">
             <div class="relative h-8">
               <span class="absolute inset-y-0 left-0 flex items-center pl-3">
@@ -88,7 +90,8 @@
             </div>
             <button class="btn-middle-secondary-icon feather-search"></button>
             <div class="divider-h"></div>
-            <button class="btn-middle-secondary-icon feather-help-circle"></button>
+            <button class="btn-middle-secondary-icon feather-help-circle">
+            </button>
             <div class="divider-h"></div>
             <button class="_open-drawer btn-middle-secondary-icon feather-book-open"></button>
             <div class="divider-h"></div>
@@ -96,7 +99,7 @@
           </div>
         </div>
       </div>
-      <div id="page-header" class="fixed inline-flex justify-between w-full bg-white z-49 h-14 top-30 shadow-border-b">
+      <div id="page-header" class="h-14 top-30 shadow-border-b fixed inline-flex justify-between w-full bg-white border-l border-gray-100">
         <div class="flex flex-row h-full">
           <p class="self-center flex-shrink-0 px-6 py-4 text-lg">Page Name</p>
           <div class="flex justify-start space-x-4">
@@ -121,7 +124,7 @@
               <div class="tab-border">
               </div>
             </div>
-            <button class="my-auto btn-large-ghost-icon feather-more-horizontal"></button>
+            <button class="btn-large-ghost-icon feather-more-horizontal my-auto"></button>
           </div>
         </div>
         <div class="flex flex-row h-8 px-6 my-auto space-x-4">
@@ -142,13 +145,14 @@
               <i class="!leading-0 text-gray-200 text-md feather-search">
               </i>
             </span>
-            <input type="text" id="input" class="w-40 input-icon-middle" placeholder="Search">
+            <input type="text" id="input" class="input-icon-middle w-40" placeholder="Search">
           </div>
           <div class="divider-h"></div>
           <button class="btn-middle-tertiary">Button</button>
         </div>
       </div>
-      <div id="progress-header" class="fixed inline-flex justify-center w-full bg-white z-49 top-44 shadow-border-b h-14">
+      <div id="progress-header"
+        class="top-44 shadow-border-b h-14 fixed inline-flex justify-center w-full bg-white border-l border-gray-100">
         <div class="flex flex-row h-full">
           <div class="flex justify-start space-x-6">
             <div id="tab-1" class="tab-btn-wrapper group">
@@ -158,7 +162,7 @@
               <div class="tab-border">
               </div>
             </div>
-            <i class="my-auto text-lg text-gray-300 feather-chevron-right"></i>
+            <i class="feather-chevron-right my-auto text-lg text-gray-300"></i>
             <div id="tab-2" class="tab-btn-wrapper group active">
               <div class="flex flex-row space-x-2">
                 <button class="tab-btn">Second Step</button>
@@ -166,7 +170,7 @@
               <div class="tab-border">
               </div>
             </div>
-            <i class="my-auto text-lg text-gray-300 feather-chevron-right"></i>
+            <i class="feather-chevron-right my-auto text-lg text-gray-300"></i>
             <div id="tab-3" class="tab-btn-wrapper group">
               <div class="flex flex-row space-x-2">
                 <button class="tab-btn" disabled>Third Step</button>
@@ -174,7 +178,7 @@
               <div class="tab-border">
               </div>
             </div>
-            <i class="my-auto text-lg text-gray-300 feather-chevron-right"></i>
+            <i class="feather-chevron-right my-auto text-lg text-gray-300"></i>
             <div id="tab-3" class="tab-btn-wrapper group">
               <button class="tab-btn" disabled>Last Step</button>
             </div>
@@ -182,7 +186,7 @@
         </div>
       </div>
     </div>
-    <div id="content" class="fixed w-full p-6 overflow-scroll scrollbar-regular bottom-16">
+    <div id="content" class="scrollbar-regular bottom-16 fixed w-full p-6 overflow-scroll border-l border-gray-100">
       <p>Mollit aliquip nisi sint adipisicing non enim sit proident pariatur. Anim nostrud commodo irure Lorem
         exercitation occaecat. Quis dolore sit velit esse aliquip aute.
         </br>
@@ -290,7 +294,7 @@
         elit ut minim officia irure. Sit labore duis ipsum cupidatat.
       </p>
     </div>
-    <div class="fixed bottom-0 flex justify-end w-full h-16 px-6 py-4 bg-white shadow-border-t flow-row">
+    <div class="shadow-border-t flow-row fixed bottom-0 flex justify-end w-full h-16 px-6 py-4 bg-white border-l border-gray-100">
       <div class="flex flex-row justify-end h-full space-x-4">
         <button class="btn-middle-tertiary">Edit</button>
         <div class="divider-h"></div>
@@ -300,16 +304,17 @@
       </div>
     </div>
     <!-- ANCHOR drawer begins -->
-    <div id="dark-overlay" class="fixed inset-0 z-50 hidden w-screen h-screen bg-black opacity-0 _close-drawer"></div>
+    <div id="dark-overlay" class="_close-drawer z-100 absolute inset-0 hidden w-screen h-screen bg-black opacity-0">
+    </div>
     <div id="drawer"
-      class="fixed inset-y-0 flex flex-col float-right w-1/2 overflow-hidden transition-transform duration-200 ease-in-out bg-white shadow-2xl z-51 -right-full">
-      <div class="inline-flex items-center w-full py-1 pl-4 pr-2 bg-white min-h-lg shadow-border-b">
+      class="-right-full z-100 absolute inset-y-0 flex flex-col float-right w-1/2 overflow-hidden transition-transform duration-200 ease-in-out bg-white shadow-2xl">
+      <div class="shadow-border-b inline-flex items-center w-full h-16 py-1 pl-4 pr-2 bg-white">
         <div class="inline-flex items-center justify-between w-full h-full">
           <p class="flex-grow text-base font-semibold text-black">Drawer</p>
           <button class="_close-drawer feather-x btn-large-ghost-icon"></button>
         </div>
       </div>
-      <div class="inline-flex justify-center w-full bg-white shadow-border-b h-14">
+      <div class="shadow-border-b h-14 inline-flex justify-center w-full bg-white">
         <div class="flex flex-row h-full">
           <div class="flex justify-start space-x-6">
             <div id="tab-1" class="tab-btn-wrapper group active">
@@ -327,8 +332,8 @@
           </div>
         </div>
       </div>
-      <div id="drawer-content" class="w-full h-full p-6 overflow-x-hidden overflow-y-scroll scrollbar-regular">
-        <article class="prose max-w-none">
+      <div id="drawer-content" class="scrollbar-regular w-full p-6 overflow-x-hidden overflow-y-scroll">
+        <article class="max-w-none prose">
           <p>
             Pass your markdown here and the <code>prose</code> utility class
             will render it correctly! the <code>prose</code> class applies all
@@ -402,20 +407,20 @@
           <p>Inline <code>code</code></p>
           <p>Indented code</p>
           <pre><code><span class="hljs-comment">// Some comments</span>
-line <span class="hljs-number">1</span> <span class="hljs-keyword">of</span> <span class="hljs-keyword">code</span>
-line <span class="hljs-number">2</span> <span class="hljs-keyword">of</span> <span class="hljs-keyword">code</span>
-line <span class="hljs-number">3</span> <span class="hljs-keyword">of</span> <span class="hljs-keyword">code</span>
-</code></pre>
+   line <span class="hljs-number">1</span> <span class="hljs-keyword">of</span> <span class="hljs-keyword">code</span>
+   line <span class="hljs-number">2</span> <span class="hljs-keyword">of</span> <span class="hljs-keyword">code</span>
+   line <span class="hljs-number">3</span> <span class="hljs-keyword">of</span> <span class="hljs-keyword">code</span>
+   </code></pre>
           <p>Block code &quot;fences&quot;</p>
           <pre><code><span class="hljs-function"><span class="hljs-title">Sample</span></span> text here...
-</code></pre>
+   </code></pre>
           <p>Syntax highlighting</p>
           <pre><code class="lang-js"><span class="hljs-keyword">var</span> foo = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">bar</span>) </span>{
-<span class="hljs-keyword">return</span> bar++;
-};
-
-<span class="hljs-built_in">console</span>.log(foo(<span class="hljs-number">5</span>));
-</code></pre>
+   <span class="hljs-keyword">return</span> bar++;
+   };
+   
+   <span class="hljs-built_in">console</span>.log(foo(<span class="hljs-number">5</span>));
+   </code></pre>
           <h2 id="tables">Tables</h2>
           <table>
             <thead>
@@ -487,7 +492,7 @@ line <span class="hljs-number">3</span> <span class="hljs-keyword">of</span> <sp
           </p>
         </article>
       </div>
-      <div class="relative w-full bg-white min-h-lg shadow-border-t">
+      <div class="min-h-lg shadow-border-t relative w-full bg-white">
         <div class="absolute right-0 flex flex-row justify-end h-full p-4 space-x-4">
           <button class="_close-drawer btn-middle-primary">Close</button>
         </div>
@@ -541,7 +546,7 @@ line <span class="hljs-number">3</span> <span class="hljs-keyword">of</span> <sp
             <li><a href="#!">Manage Synonyms</a></li>
           </ul>
         </li>
-        <li class="Divider">Primary Options</li>
+        <li class="Divider"></li>
         <li>
           <span><i class="feather-box"></i>Parts</span>
           <ul>
@@ -863,81 +868,86 @@ line <span class="hljs-number">3</span> <span class="hljs-keyword">of</span> <sp
       </ul>
     </nav>
   </div>
-  <!-- mmenu scripts -->
-  <script src="../node_modules/mmenu-js/dist/mmenu.polyfills.js"></script>
-  <script src="../node_modules/mmenu-js/dist/mmenu.js"></script>
-  <script>
-    new Mmenu(document.querySelector("#menu"), {
-      extensions: {
-        all: ["theme-white", "pagedim-black"],
-        "(max-width: 767px)": ["fx-menu-slide"]
-      },
-      counters: !0,
-      iconPanels: {
-        add: !0,
-        hideDivider: !0,
-        hideNavbar: !0,
-        visible: "first"
-      },
-      navbar: {
-        title: "Menu"
-      },
-      navbars: [{
-        position: "top",
-        content: ["searchfield"]
-      }, {
-        position: "top"
-      }],
-      searchfield: {
-        panel: {
-          add: '!0',
-          splash: "<p>What are you looking for?<br />Type the menu name you are looking for.</p>",
-        },
-      },
-      setSelected: {
-        hover: !0,
-        parent: !0
-      },
-      sidebar: {
-        collapsed: {
-          use: 768,
+    <script>
+      new Mmenu(document.querySelector("#menu"), {
+        extensions: [
+          "theme-white",
+          "pagedim-black",
+        ],
+        counters: !0,
+        iconPanels: {
+          add: !0,
+          hideDivider: !0,
           hideNavbar: !0,
-          hideDivider: !0
+          visible: "first"
         },
-        expanded: {
-          use: 10440,
-          initial: "remember"
-        }
-      },
-    });
-  </script>
-  <!-- <script>
-    $('body').prepend("<div id='dark-overlay' class='fixed inset-0 hidden w-screen h-screen bg-black opacity-0 z-49 _close-drawer'></div>")
-  </script> -->
-  <script>
-    var allHeights = 0;
-    $("#headers").children().each(function () {
-      var paddingTpx = $(this).css('padding-top');
+        navbar: {
+          title: "Menu"
+        },
+        navbars: [{
+          position: "top",
+          content: ["searchfield"]
+        }, {
+          position: "top"
+        }],
+        searchfield: {
+          panel: {
+            add: '!0',
+            splash: "<p>What are you looking for?<br />Type the menu name you are looking for.</p>",
+          },
+        },
+        setSelected: {
+          hover: !0,
+          parent: !0
+        },
+        sidebar: {
+          collapsed: {
+            use: 768,
+            hideNavbar: !0,
+            hideDivider: !0
+          },
+          expanded: {
+            use: 10440,
+            initial: "remember"
+          }
+        },
+      });
+    </script>
+    <script>
+      var allHeights = 0;
+
+      var fixedHeader = $("#session-header");
+
+      var paddingTpx = fixedHeader.css('padding-top');
       var paddingT = Number(paddingTpx.slice(0, -2));
-      var paddingBpx = $(this).css('padding-bottom');
+      var paddingBpx = fixedHeader.css('padding-bottom');
       var paddingB = Number(paddingBpx.slice(0, -2));
-      var realHeight = $(this).height() + paddingT + paddingB;
+      var realHeight = fixedHeader.height() + paddingT + paddingB;
       allHeights += realHeight;
-    });
-    const content = $("#content");
-    content.css({
-      top: allHeights
-    });
-  </script>
-  <script>
-    function openMenu() {
-      document.getElementById("userDropdown").classList.toggle("hidden");
-      document.getElementById("userDropdown").classList.toggle("flex");
-    }
-  </script>
-  <script>
-    $('._dropdown').select2({});
-  </script>
+
+      $("#headers").children().each(function () {
+        var paddingTpx = $(this).css('padding-top');
+        var paddingT = Number(paddingTpx.slice(0, -2));
+        var paddingBpx = $(this).css('padding-bottom');
+        var paddingB = Number(paddingBpx.slice(0, -2));
+        var realHeight = $(this).height() + paddingT + paddingB;
+        allHeights += realHeight;
+      });
+
+      const content = $("#content");
+      content.css({
+        top: allHeights
+      });
+    </script>
+    <script>
+      function openMenu() {
+        document.getElementById("userDropdown").classList.toggle("hidden");
+        document.getElementById("userDropdown").classList.toggle("flex");
+      }
+    </script>
+    <script>
+      $('._dropdown').select2({});
+    </script>
 </body>
 
 </html>
