@@ -59,11 +59,11 @@ tr.selectedState {
 }
 
 tr.selectedState.hoverState {
-  @apply bg-blue-50;
+  @apply bg-blue-50 !important;
 }
 
 tr.hoverState {
-  @apply bg-gray-25;
+  @apply bg-gray-25 !important;
 }
 
 .soptclass.hoverState {
@@ -162,4 +162,43 @@ tr.errorState.hoverState {
 
 .largePager .ui-pg-selbox {
   @apply ml-2 !important;
+}
+
+.ui-jqgrid tr.jqgroup>td:not(.ui-sgcollapsed):not(.sgexpanded):not(.td_cbox), .ui-jqgrid tr.jqgrow>td:not(.ui-sgcollapsed):not(.sgexpanded):not(.td_cbox) {
+  @apply px-1.5 !important;
+}
+
+/* Subgrid */
+
+.largeTable .ui-subgrid .ui-th-column {
+  @apply text-sm font-normal hover:font-semibold py-2.5 hover:bg-blue-50 font-sans !important;
+}
+
+.ui-widget-content.jqgrow.ui-row-ltr {
+  @apply font-sans text-black;
+  @apply row-theme;
+}
+
+.ui-widget-content.jqgrow.ui-row-ltr.ui-state-highlight {
+  @apply bg-blue-50 !important;
+}
+
+tbody > tr.ui-widget-content.ui-subgrid.ui-row-ltr > td.ui-widget-content.subgrid-cell {
+  @apply flex flex-row h-full;
+}
+
+.ui-jqgrid .ui-row-ltr.ui-subgrid>.subgrid-cell>span {
+  @apply self-center mx-auto;
+}
+
+.ui-subgrid .ui-jqgrid-jquery-ui.ui-widget.ui-widget-content.ui-corner-all.ui-jqgrid {
+  @apply border-0 !important;
+}
+
+.ui-subgrid .ui-widget-content.jqgrow.ui-row-ltr{
+  @apply h-8 !important;
+}
+
+.ui-subgrid .ui-state-default, .ui-subgrid .ui-widget-content .ui-state-default {
+  @apply bg-gray-50 text-black !important;
 }

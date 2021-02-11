@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>data-tables</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../dist/css/styles.mini.css" />
+    <link rel="stylesheet" href="../src/imports/new-menu.css" />
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="../dist/js/jquery-ui.js"></script>
+
+    <script>
+      $.jgrid = $.jgrid || {};
+      $.jgrid.no_legacy_api = true;
+      $.jgrid.useJSON = true;
+    </script>
+
+    <script src="../dist/js/jquery.jqgrid.src.js"></script>
+    <script src="../dist/js/demotables-subgrid.js"></script>
+  </head>
+
+  <body>
+    <div id="outerDiv" class="flex flex-col space-y-2">
+      <div>
+        <table id="jqGrid"></table>
+      </div>
+    </div>
+    <script>
+      $(window).on("load", function() {
+      loadJqGrid();
+      loadSubGrid();
+      });
+  </script>
+  </body>
+</html>

@@ -284,8 +284,15 @@ module.exports = {
       md: ["0.875rem", "1.25rem"], // 14px
       base: ["1rem", "1.5rem"], // 16px
       lg: ["1.25rem", "1.75rem"], // 20px
-      xl: ["1.375rem", "2.25rem"], // 22px
-    
+      xl: ["1.375rem", "2.25rem"] // 22px
+    },
+    fontWeight: {
+      light: 300,
+      normal: 400,
+      regular: 400,
+      semibold: 600,
+      bold: 700,
+      extrabold: 800
     },
     extend: {
       zIndex: {

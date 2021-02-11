@@ -594,8 +594,8 @@
 					common: "",
 					plus: "feather-plus",
 					minus: "feather-minus",
-					openLtr: "feather-corner-left-down",
-					openRtl: "feather-corner-right-down"
+					openLtr: "feather-arrow-up",
+					openRtl: "feather-arrow-up"
 				},
 				grouping: {
 					common: "",
@@ -19099,7 +19099,8 @@
 						var $th, i,	subgridTableClasses = getSubgridStyle("legacyTable", "ui-jqgrid-legacy-subgrid" +
 								(p.altRows === true && $(ts).jqGrid("isBootstrapGuiStyle") ? " table-striped" : "")),
 							$table = $("<table" +
-								(subgridTableClasses ? " style='width:1px' role='presentation' class='" + subgridTableClasses + "'" : "") +
+							// ANCHOR removed inline "style='width:1px'" from subgridTableClasses to line up the rows with columns
+								(subgridTableClasses ? "role='presentation' class='" + subgridTableClasses + "'" : "") +
 								"><thead></thead><tbody></tbody></table>"),
 							$tr = $("<tr></tr>");
 

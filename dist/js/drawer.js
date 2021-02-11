@@ -7,11 +7,12 @@ $(document).on('click', '._close-drawer', function () {
     });
     $("#drawer").animate({
         right:'-100%'
-    }, 600)});
+    }, 600);
+    setTimeout(function(){ $("#session-header").css("z-index","2"); }, 650);    
+});
     
-    
-
 $(document).on('click', '._open-drawer', function () {
+    $("#session-header").css("z-index","1");
     $("#dark-overlay").removeClass("hidden").fadeTo(400, 0.3).css("margin-left","-55px");
     $("#drawer").animate({
         right:0
