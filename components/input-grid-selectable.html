@@ -13,15 +13,17 @@
 </head>
 
 <body>
-    <div id="outerDiv" class="inline-flex flex-col items-center justify-center w-screen p-5 bg-yellow-50 space-y-7">
-        <!-- ANCHOR Large inputs -->
-        <div class="grid items-center grid-cols-input grid-rows-input justify-items-start">
-            <label class="col-start-2 row-start-1 row-end-1 pl-4 text-md">First field</label>
-            <label class="col-start-3 row-start-1 row-end-1 pl-4 text-md">Second field</label>
-            <label class="col-start-4 row-start-1 row-end-1 pl-4 text-md">Third field</label>
+    <div id="outerDiv" class="bg-yellow-50 space-y-7 inline-flex flex-col items-center justify-center w-screen p-5">
+        <!-- SECTION Large -->
+        <div class="grid-cols-input grid-rows-input justify-items-start grid items-center">
+            <!-- ANCHOR Labels -->
+            <label class="text-md col-start-2 row-start-1 row-end-1 pl-4">First field</label>
+            <label class="text-md col-start-3 row-start-1 row-end-1 pl-4">Second field</label>
+            <label class="text-md col-start-4 row-start-1 row-end-1 pl-4">Third field</label>
+            <!-- ANCHOR Rows -->
             <div id="1" class="contents group">
                 <input type="checkbox" name="row-1"
-                    class="col-start-1 row-start-2 radiocheck z-2 justify-self-center _checkbox"></input>
+                    class="radiocheck z-2 justify-self-center _checkbox col-start-1 row-start-2"></input>
                 <div class="my-2.5 z-2 col-start-2 row-start-2 px-4 border-l border-gray-100">
                     <div class="w-55">
                         <select data-theme="lg" data-allow-clear="true"
@@ -53,12 +55,12 @@
                 <div class="my-2.5 z-2 col-start-4 row-start-2 px-4 border-l border-gray-100">
                     <input type="text" placeholder="Enter name" class="w-50 input-text-large"></input>
                 </div>
-                <div class="w-full h-full col-start-1 col-end-5 row-span-1 row-start-2 z-1 group-hover:bg-gray-50 row">
+                <div class="z-1 group-hover:bg-gray-50 row w-full h-full col-start-1 col-end-5 row-span-1 row-start-2">
                 </div>
             </div>
             <div id="2" class="contents group">
                 <input type="checkbox" name="row-1"
-                    class="col-start-1 row-start-3 radiocheck z-2 justify-self-center _checkbox"></input>
+                    class="radiocheck z-2 justify-self-center _checkbox col-start-1 row-start-3"></input>
                 <div class="my-2.5 z-2 col-start-2 row-start-3 px-4 border-l border-gray-100">
                     <div class="w-55">
                         <select data-theme="lg" data-allow-clear="true"
@@ -90,12 +92,12 @@
                 <div class="my-2.5 z-2 col-start-4 row-start-3 px-4 border-l border-gray-100">
                     <input type="text" placeholder="Enter name" class="w-50 input-text-large"></input>
                 </div>
-                <div class="w-full h-full col-start-1 col-end-5 row-span-1 row-start-3 z-1 group-hover:bg-gray-50 row">
+                <div class="z-1 group-hover:bg-gray-50 row w-full h-full col-start-1 col-end-5 row-span-1 row-start-3">
                 </div>
             </div>
             <div id="3" class="contents group">
                 <input type="checkbox" name="row-1"
-                    class="col-start-1 row-start-4 radiocheck z-2 justify-self-center _checkbox"></input>
+                    class="radiocheck z-2 justify-self-center _checkbox col-start-1 row-start-4"></input>
                 <div class="my-2.5 z-2 col-start-2 row-start-4 px-4 border-l border-gray-100">
                     <div class="w-55">
                         <select data-theme="lg" data-allow-clear="true"
@@ -127,18 +129,22 @@
                 <div class="my-2.5 z-2 col-start-4 row-start-4 px-4 border-l border-gray-100">
                     <input type="text" placeholder="Enter name" class="w-50 input-text-large"></input>
                 </div>
-                <div class="w-full h-full col-start-1 col-end-5 row-span-1 row-start-4 z-1 group-hover:bg-gray-50 row">
+                <div class="z-1 group-hover:bg-gray-50 row w-full h-full col-start-1 col-end-5 row-span-1 row-start-4">
                 </div>
             </div>
         </div>
-        <!-- ANCHOR Medium inputs -->
-        <div class="grid items-center grid-cols-input grid-rows-input justify-items-start">
-            <label class="col-start-2 row-start-1 row-end-1 pl-4 text-md">First field</label>
-            <label class="col-start-3 row-start-1 row-end-1 pl-4 text-md">Second field</label>
-            <label class="col-start-4 row-start-1 row-end-1 pl-4 text-md">Third field</label>
+        <!-- !SECTION Large ends -->
+
+        <!-- SECTION Medium -->
+        <div class="grid-cols-input grid-rows-input justify-items-start grid items-center">
+            <!-- ANCHOR Labels -->
+            <label class="text-md col-start-2 row-start-1 row-end-1 pl-4">First field</label>
+            <label class="text-md col-start-3 row-start-1 row-end-1 pl-4">Second field</label>
+            <label class="text-md col-start-4 row-start-1 row-end-1 pl-4">Third field</label>
+            <!-- ANCHOR Rows -->
             <div id="1" class="contents group">
                 <input type="checkbox" name="row-1"
-                    class="col-start-1 row-start-2 radiocheck z-2 justify-self-center _checkbox"></input>
+                    class="radiocheck z-2 justify-self-center _checkbox col-start-1 row-start-2"></input>
                 <div class="my-2 z-2 col-start-2 row-start-2 px-3.5 border-l border-gray-100">
                     <div class="w-55">
                         <select data-theme="md" data-allow-clear="true"
@@ -170,12 +176,12 @@
                 <div class="my-2 z-2 col-start-4 row-start-2 px-3.5 border-l border-gray-100">
                     <input type="text" placeholder="Enter name" class="w-50 input-text-middle"></input>
                 </div>
-                <div class="w-full h-full col-start-1 col-end-5 row-span-1 row-start-2 z-1 group-hover:bg-gray-50 row">
+                <div class="z-1 group-hover:bg-gray-50 row w-full h-full col-start-1 col-end-5 row-span-1 row-start-2">
                 </div>
             </div>
             <div id="2" class="contents group">
                 <input type="checkbox" name="row-1"
-                    class="col-start-1 row-start-3 radiocheck z-2 justify-self-center _checkbox"></input>
+                    class="radiocheck z-2 justify-self-center _checkbox col-start-1 row-start-3"></input>
                 <div class="my-2 z-2 col-start-2 row-start-3 px-3.5 border-l border-gray-100">
                     <div class="w-55">
                         <select data-theme="md" data-allow-clear="true"
@@ -207,12 +213,12 @@
                 <div class="my-2 z-2 col-start-4 row-start-3 px-3.5 border-l border-gray-100">
                     <input type="text" placeholder="Enter name" class="w-50 input-text-middle"></input>
                 </div>
-                <div class="w-full h-full col-start-1 col-end-5 row-span-1 row-start-3 z-1 group-hover:bg-gray-50 row">
+                <div class="z-1 group-hover:bg-gray-50 row w-full h-full col-start-1 col-end-5 row-span-1 row-start-3">
                 </div>
             </div>
             <div id="3" class="contents group">
                 <input type="checkbox" name="row-1"
-                    class="col-start-1 row-start-4 radiocheck z-2 justify-self-center _checkbox"></input>
+                    class="radiocheck z-2 justify-self-center _checkbox col-start-1 row-start-4"></input>
                 <div class="my-2 z-2 col-start-2 row-start-4 px-3.5 border-l border-gray-100">
                     <div class="w-55">
                         <select data-theme="md" data-allow-clear="true"
@@ -244,18 +250,22 @@
                 <div class="my-2 z-2 col-start-4 row-start-4 px-3.5 border-l border-gray-100">
                     <input type="text" placeholder="Enter name" class="w-50 input-text-middle"></input>
                 </div>
-                <div class="w-full h-full col-start-1 col-end-5 row-span-1 row-start-4 z-1 group-hover:bg-gray-50 row">
+                <div class="z-1 group-hover:bg-gray-50 row w-full h-full col-start-1 col-end-5 row-span-1 row-start-4">
                 </div>
             </div>
         </div>
-        <!-- ANCHOR Small inputs -->
-        <div class="grid items-center grid-cols-input grid-rows-input justify-items-start">
-            <label class="col-start-2 row-start-1 row-end-1 pl-4 text-md">First field</label>
-            <label class="col-start-3 row-start-1 row-end-1 pl-4 text-md">Second field</label>
-            <label class="col-start-4 row-start-1 row-end-1 pl-4 text-md">Third field</label>
+        <!-- !SECTION Medium ends -->
+
+        <!-- SECTION Small -->
+        <div class="grid-cols-input grid-rows-input justify-items-start grid items-center">
+            <!-- ANCHOR Labels -->
+            <label class="text-md col-start-2 row-start-1 row-end-1 pl-4">First field</label>
+            <label class="text-md col-start-3 row-start-1 row-end-1 pl-4">Second field</label>
+            <label class="text-md col-start-4 row-start-1 row-end-1 pl-4">Third field</label>
+            <!-- ANCHOR Rows -->
             <div id="1" class="contents group">
                     <input type="checkbox" name="row-1"
-                        class="col-start-1 row-start-2 radiocheck z-2 justify-self-center _checkbox"></input>
+                        class="radiocheck z-2 justify-self-center _checkbox col-start-1 row-start-2"></input>
                     <div class="my-1.5 z-2 col-start-2 row-start-2 px-3.5 border-l border-gray-100">
                         <div class="w-55">
                             <select data-theme="sm" data-allow-clear="true"
@@ -287,12 +297,12 @@
                     <div class="my-1.5 z-2 col-start-4 row-start-2 px-3.5 border-l border-gray-100">
                         <input type="text" placeholder="Enter name" class="w-50 input-text-small"></input>
                     </div>
-                <div class="w-full h-full col-start-1 col-end-5 row-span-1 row-start-2 z-1 group-hover:bg-gray-50 row">
+                <div class="z-1 group-hover:bg-gray-50 row w-full h-full col-start-1 col-end-5 row-span-1 row-start-2">
                 </div>
             </div>
             <div id="2" class="contents group">
                 <input type="checkbox" name="row-1"
-                    class="col-start-1 row-start-3 radiocheck z-2 justify-self-center _checkbox"></input>
+                    class="radiocheck z-2 justify-self-center _checkbox col-start-1 row-start-3"></input>
                 <div class="my-1.5 z-2 col-start-2 row-start-3 px-3.5 border-l border-gray-100">
                     <div class="w-55">
                         <select data-theme="sm" data-allow-clear="true"
@@ -324,12 +334,12 @@
                 <div class="my-1.5 z-2 col-start-4 row-start-3 px-3.5 border-l border-gray-100">
                     <input type="text" placeholder="Enter name" class="w-50 input-text-small"></input>
                 </div>
-                <div class="w-full h-full col-start-1 col-end-5 row-span-1 row-start-3 z-1 group-hover:bg-gray-50 row">
+                <div class="z-1 group-hover:bg-gray-50 row w-full h-full col-start-1 col-end-5 row-span-1 row-start-3">
                 </div>
             </div>
             <div id="3" class="contents group">
                 <input type="checkbox" name="row-1"
-                    class="col-start-1 row-start-4 radiocheck z-2 justify-self-center _checkbox"></input>
+                    class="radiocheck z-2 justify-self-center _checkbox col-start-1 row-start-4"></input>
                 <div class="my-1.5 z-2 col-start-2 row-start-4 px-3.5 border-l border-gray-100">
                     <div class="w-55">
                         <select data-theme="sm" data-allow-clear="true"
@@ -361,10 +371,12 @@
                 <div class="my-1.5 z-2 col-start-4 row-start-4 px-3.5 border-l border-gray-100">
                     <input type="text" placeholder="Enter name" class="w-50 input-text-small"></input>
                 </div>
-                <div class="w-full h-full col-start-1 col-end-5 row-span-1 row-start-4 z-1 group-hover:bg-gray-50 row">
+                <div class="z-1 group-hover:bg-gray-50 row w-full h-full col-start-1 col-end-5 row-span-1 row-start-4">
                 </div>
             </div>
         </div>
+        <!-- !SECTION Small ends -->        
+
     </div>
     <script>
         $('._dropdown').select2({});

@@ -1,0 +1,23 @@
+.label-middle {
+  @apply py-0.5 rounded-full px-2 text-md text-white;
+}
+
+.label-small {
+  @apply py-0.5 rounded-full px-1.5 text-sm text-white;
+}
+
+.status-middle {
+  @apply text-md flex flex-row space-x-1 py-0.5 px-2 rounded-0.5 items-center;
+}
+
+.status-small {
+  @apply text-sm flex flex-row space-x-1 py-1 px-1.5 rounded-0.5 items-center;
+}
+
+.dot-indicator {
+  @apply w-2 h-2 border border-white rounded-full;
+}
+
+.dot-indicator-small {
+  @apply w-1.5 h-1.5 border border-white rounded-full;
+}

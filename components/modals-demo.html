@@ -6,13 +6,13 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>modals-demo</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
         <script src="../dist/js/a11y-dialog.js"></script>
         <link rel="stylesheet" href="../dist/css/styles.mini.css" />
     </head>
     <body>
         <div id="main" style="width: 800px;" class="mx-auto">
             <div class="grid grid-cols-2 gap-5 m-5">
+                <!-- ANCHOR Trigger buttons -->
                 <button data-a11y-dialog-show="basic-dialog" id="basic-modal" class="justify-self-center btn-large-tertiary">Basic Modal</button>
                 <button data-a11y-dialog-show="info-dialog" id="info-modal" class="justify-self-center btn-large-tertiary">Info Modal</button>
                 <button data-a11y-dialog-show="warning-dialog" id="warning-modal" class="justify-self-center btn-large-tertiary">Warning Modal</button>
@@ -21,136 +21,148 @@
                 <button data-a11y-dialog-show="simple-dialog" id="simple-modal" class="justify-self-center btn-large-tertiary">Simple Modal</button>
             </div>
         </div>
+
+        <!-- SECTION Modal templates -->
+
+        <!-- ANCHOR Basic -->
         <div class="dialog-container" id="basic-dialog" aria-hidden="true">
             <div class="dialog-overlay" tabindex="-1" data-a11y-dialog-hide></div>
             <div role="dialog" aria-labelledby="dialog-title">
-                <div role="document" class="flex flex-col w-1/4 bg-white shadow-xl dialog-content basic-modal">
+                <div role="document" class="dialog-content basic-modal flex flex-col w-1/4 bg-white shadow-xl">
                     <div class="flex flex-row py-6 pr-6">
                         <div class="h-full">
-                            <i class="px-6 text-xl feather-at-sign"></i>
+                            <i class="feather-at-sign px-6 text-xl"></i>
                         </div>
                         <div class="w-full">
                             <p class="mb-4 text-base font-semibold">Header</p>
                             <p>Ut consequat minim exercitation aliqua aute commodo et ut in minim.</p>
                         </div>
                     </div>
-                    <div class="flex flex-row justify-end h-16 px-6 shadow-border-t">
+                    <div class="shadow-border-t flex flex-row justify-end h-16 px-6">
                         <div class="flex flex-row justify-end h-full space-x-4">
-                            <button data-a11y-dialog-hide class="my-auto btn-middle-ghost">Dismiss</button>
-                            <button class="my-auto btn-middle-primary">Confirm</button>
+                            <button data-a11y-dialog-hide class="btn-middle-ghost my-auto">Dismiss</button>
+                            <button class="btn-middle-primary my-auto">Confirm</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <!-- ANCHOR Info -->
         <div class="dialog-container" id="info-dialog" aria-hidden="true">
             <div class="dialog-overlay" tabindex="-1" data-a11y-dialog-hide></div>
             <div role="dialog" aria-labelledby="dialog-title">
-                <div role="document" class="flex flex-col w-1/4 bg-white shadow-xl dialog-content info-modal">
+                <div role="document" class="dialog-content info-modal flex flex-col w-1/4 bg-white shadow-xl">
                     <div class="flex flex-row py-6 pr-6">
                         <div class="h-full">
-                            <i class="px-6 text-xl feather-at-sign"></i>
+                            <i class="feather-at-sign px-6 text-xl"></i>
                         </div>
                         <div class="w-full">
                             <p class="mb-4 text-base font-semibold">Header</p>
                             <p>Ut consequat minim exercitation aliqua aute commodo et ut in minim.</p>
                         </div>
                     </div>
-                    <div class="flex flex-row justify-end h-16 px-6 shadow-border-t">
+                    <div class="shadow-border-t flex flex-row justify-end h-16 px-6">
                         <div class="flex flex-row justify-end h-full space-x-4">
-                            <button data-a11y-dialog-hide class="my-auto btn-middle-ghost">Dismiss</button>
-                            <button class="my-auto btn-middle-primary">Confirm</button>
+                            <button data-a11y-dialog-hide class="btn-middle-ghost my-auto">Dismiss</button>
+                            <button class="btn-middle-primary my-auto">Confirm</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <!-- ANCHOR Warning -->
         <div class="dialog-container" id="warning-dialog" aria-hidden="true">
             <div class="dialog-overlay" tabindex="-1" data-a11y-dialog-hide></div>
             <div role="dialog" aria-labelledby="dialog-title">
-                <div role="document" class="flex flex-col w-1/4 bg-white shadow-xl dialog-content warning-modal">
+                <div role="document" class="dialog-content warning-modal flex flex-col w-1/4 bg-white shadow-xl">
                     <div class="flex flex-row py-6 pr-6">
                         <div class="h-full">
-                            <i class="px-6 text-xl feather-at-sign"></i>
+                            <i class="feather-at-sign px-6 text-xl"></i>
                         </div>
                         <div class="w-full">
                             <p class="mb-4 text-base font-semibold">Header</p>
                             <p>Ut consequat minim exercitation aliqua aute commodo et ut in minim.</p>
                         </div>
                     </div>
-                    <div class="flex flex-row justify-end h-16 px-6 shadow-border-t">
+                    <div class="shadow-border-t flex flex-row justify-end h-16 px-6">
                         <div class="flex flex-row justify-end h-full space-x-4">
-                            <button data-a11y-dialog-hide class="my-auto btn-middle-ghost">Dismiss</button>
-                            <button class="my-auto btn-middle-primary">Confirm</button>
+                            <button data-a11y-dialog-hide class="btn-middle-ghost my-auto">Dismiss</button>
+                            <button class="btn-middle-primary my-auto">Confirm</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <!-- ANCHOR Error -->
         <div class="dialog-container" id="error-dialog" aria-hidden="true">
             <div class="dialog-overlay" tabindex="-1" data-a11y-dialog-hide></div>
             <div role="dialog" aria-labelledby="dialog-title">
-                <div role="document" class="flex flex-col w-1/4 bg-white shadow-xl dialog-content error-modal">
+                <div role="document" class="dialog-content error-modal flex flex-col w-1/4 bg-white shadow-xl">
                     <div class="flex flex-row py-6 pr-6">
                         <div class="h-full">
-                            <i class="px-6 text-xl feather-at-sign"></i>
+                            <i class="feather-at-sign px-6 text-xl"></i>
                         </div>
                         <div class="w-full">
                             <p class="mb-4 text-base font-semibold">Header</p>
                             <p>Ut consequat minim exercitation aliqua aute commodo et ut in minim.</p>
                         </div>
                     </div>
-                    <div class="flex flex-row justify-end h-16 px-6 shadow-border-t">
+                    <div class="shadow-border-t flex flex-row justify-end h-16 px-6">
                         <div class="flex flex-row justify-end h-full space-x-4">
-                            <button data-a11y-dialog-hide class="my-auto btn-middle-ghost">Dismiss</button>
-                            <button class="my-auto btn-middle-primary">Confirm</button>
+                            <button data-a11y-dialog-hide class="btn-middle-ghost my-auto">Dismiss</button>
+                            <button class="btn-middle-primary my-auto">Confirm</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <!-- ANCHOR Success -->
         <div class="dialog-container" id="success-dialog" aria-hidden="true">
             <div class="dialog-overlay" tabindex="-1" data-a11y-dialog-hide></div>
             <div role="dialog" aria-labelledby="dialog-title">
-                <div role="document" class="flex flex-col w-1/4 bg-white shadow-xl dialog-content success-modal">
+                <div role="document" class="dialog-content success-modal flex flex-col w-1/4 bg-white shadow-xl">
                     <div class="flex flex-row py-6 pr-6">
                         <div class="h-full">
-                            <i class="px-6 text-xl feather-at-sign"></i>
+                            <i class="feather-at-sign px-6 text-xl"></i>
                         </div>
                         <div class="w-full">
                             <p class="mb-4 text-base font-semibold">Header</p>
                             <p>Ut consequat minim exercitation aliqua aute commodo et ut in minim.</p>
                         </div>
                     </div>
-                    <div class="flex flex-row justify-end h-16 px-6 shadow-border-t">
+                    <div class="shadow-border-t flex flex-row justify-end h-16 px-6">
                         <div class="flex flex-row justify-end h-full space-x-4">
-                            <button data-a11y-dialog-hide class="my-auto btn-middle-ghost">Dismiss</button>
-                            <button class="my-auto btn-middle-primary">Confirm</button>
+                            <button data-a11y-dialog-hide class="btn-middle-ghost my-auto">Dismiss</button>
+                            <button class="btn-middle-primary my-auto">Confirm</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <!-- ANCHOR Simple -->
         <div class="dialog-container" id="simple-dialog" aria-hidden="true">
             <div class="dialog-overlay" tabindex="-1" data-a11y-dialog-hide></div>
             <div role="dialog" aria-labelledby="dialog-title">
-                <div role="document" class="flex flex-col w-1/2 bg-white shadow-xl dialog-content">
-                    <div class="flex flex-row justify-between px-6 min-h-md shadow-border-b">
+                <div role="document" class="dialog-content flex flex-col w-1/2 bg-white shadow-xl">
+                    <div class="min-h-md shadow-border-b flex flex-row justify-between px-6">
                         <p class="my-auto text-base font-semibold">Header</p>
-                        <button data-a11y-dialog-hide class="my-auto btn-large-ghost-icon feather-x"></button>
+                        <button data-a11y-dialog-hide class="btn-large-ghost-icon feather-x my-auto"></button>
                     </div>
-                    <div class="px-6 py-4 shadow-border-b">
+                    <div class="shadow-border-b px-6 py-4">
                         <p>Ut consequat minim exercitation aliqua aute commodo et ut in minim. Voluptate labore do qui non nostrud culpa cupidatat laborum fugiat nisi mollit enim ipsum. Pariatur est culpa eu non est labore officia occaecat. Nostrud qui nulla consectetur anim sit consequat in irure ea ullamco dolor cillum reprehenderit occaecat. Est tempor aliqua ad ex sint proident reprehenderit reprehenderit officia anim. Ut commodo aliquip excepteur irure non occaecat incididunt Lorem. Mollit veniam veniam ut aliqua voluptate consectetur magna sit.</p>
                     </div>
                     <div class="flex flex-row justify-end h-16 px-6">
                         <div class="flex flex-row justify-end h-full space-x-4">
-                            <button data-a11y-dialog-hide class="my-auto btn-middle-ghost">Dismiss</button>
-                            <button class="my-auto btn-middle-primary">Confirm</button>
+                            <button data-a11y-dialog-hide class="btn-middle-ghost my-auto">Dismiss</button>
+                            <button class="btn-middle-primary my-auto">Confirm</button>
                         </div>
                     </div>
                 </div>
             </div>
-            </div>
+        </div>
+
+        <!-- !SECTION Modal templates end -->
+
         <script>
             
             const basic = document.getElementById('basic-dialog');

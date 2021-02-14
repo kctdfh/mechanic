@@ -13,48 +13,54 @@
 <body>
     <div id="outerDiv" class="bg-yellow-50 inline-flex flex-col items-center w-screen p-5 space-y-5">
         
-        <!-- Default -->
+        <!-- SECTION No label -->
         <div class="flex flex-row space-x-5">
-            <!-- large -->
+
+            <!-- SECTION large -->
             <div class="flex flex-col space-y-4">
-                <!-- large number input set default no label -->
+
+                <!-- ANCHOR Default -->
                 <fieldset class="input-number-wrapper group">
                     <button id="increment" class="increment-left-large feather-plus"></button>
                     <input class="w-30 input-number-large" type="number" placeholder="Your age"></input>
                     <button id="decrement" class="increment-right-large feather-minus"></button>
                 </fieldset>
     
-                <!-- large number input set disabled no label -->
+                <!-- ANCHOR Read-only -->
                 <fieldset class="input-number-wrapper group" disabled>
                     <button id="increment" class="increment-left-large feather-plus"></button>
                     <input class="w-30 input-number-large" type="number" placeholder="Your age"></input>
                     <button id="decrement" class="increment-right-large feather-minus"></button>
                 </fieldset>
 
+                <!-- ANCHOR Error -->
                 <fieldset class="input-number-wrapper group error">
                     <button id="increment" class="increment-left-large feather-plus"></button>
                     <input class="w-30 input-number-large" type="number" placeholder="Your age"></input>
                     <button id="decrement" class="increment-right-large feather-minus"></button>
                 </fieldset>
+
             </div>
-            <!-- Middle -->
+            <!-- !SECTION large ends -->
+
+            <!-- SECTION Middle -->
             <div class="flex flex-col space-y-4">
     
-                <!-- middle number input set default no label -->
+                <!-- ANCHOR Default -->
                 <fieldset class="input-number-wrapper group">
                     <button id="increment" class="increment-left-middle feather-plus"></button>
                     <input class="w-26 input-number-middle" type="number" placeholder="Your age"></input>
                     <button id="decrement" class="increment-right-middle feather-minus"></button>
                 </fieldset>
     
-                <!-- middle number input set disabled no label -->
+                <!-- ANCHOR Read-only -->
                 <fieldset class="input-number-wrapper group" disabled>
                     <button id="increment" class="increment-left-middle feather-plus"></button>
                     <input class="w-26 input-number-middle" type="number" placeholder="Your age"></input>
                     <button id="decrement" class="increment-right-middle feather-minus"></button>
                 </fieldset>
 
-                 <!-- middle number input set default no label error -->
+                <!-- ANCHOR Error -->
                  <fieldset class="input-number-wrapper group error">
                     <button id="increment" class="increment-left-middle feather-plus"></button>
                     <input class="w-26 input-number-middle" type="number" placeholder="Your age"></input>
@@ -62,24 +68,26 @@
                 </fieldset>
                 
             </div>
-            <!-- Small -->
+            <!-- !SECTION Middle ends -->
+
+            <!-- SECTION Small -->
             <div class="flex flex-col space-y-4">
     
-                <!-- small number input set default no label -->
+                <!-- ANCHOR Default -->
                 <fieldset class="input-number-wrapper group">
                     <button id="increment" class="increment-left-small feather-plus"></button>
                     <input class="input-number-small w-20" type="number" placeholder="Your age"></input>
                     <button id="decrement" class="increment-right-small feather-minus"></button>
                 </fieldset>
     
-                <!-- small number input set disabled no label -->
+                <!-- ANCHOR Read-only -->
                 <fieldset class="input-number-wrapper group" disabled>
                     <button id="increment" class="increment-left-small feather-plus"></button>
                     <input class="input-number-small w-20" type="number" placeholder="Your age"></input>
                     <button id="decrement" class="increment-right-small feather-minus"></button>
                 </fieldset>
 
-                 <!-- small number input set default no label error -->
+                <!-- ANCHOR Error -->
                  <fieldset class="input-number-wrapper group error">
                     <button id="increment" class="increment-left-small feather-plus"></button>
                     <input class="input-number-small w-20" type="number" placeholder="Your age"></input>
@@ -87,14 +95,18 @@
                 </fieldset>
                 
             </div>
+            <!-- !SECTION Small ends -->
+
         </div>
+        <!-- !SECTION No label ends -->
 
-        <!-- Default         -->
+        <!-- SECTION Labeled -->
         <div class="flex flex-row space-x-5">
-            <!-- large -->
+
+            <!-- SECTION large -->
             <div class="flex flex-col space-y-4">
     
-                <!-- large number input set default with label -->
+                <!-- ANCHOR Default -->
                 <div class="flex flex-col space-y-1">
                     <label for="inputId" class="text-md text-black">Enter your name</label>
                     <fieldset class="input-number-wrapper group">
@@ -106,7 +118,7 @@
     
                 </div>
     
-                <!-- large number input set disabled with label -->
+                <!-- ANCHOR Read-only -->
                 <div class="flex flex-col space-y-1">
                     <label for="inputId" class="text-md text-black">Enter your age</label>
                     <fieldset class="input-number-wrapper group" disabled>
@@ -118,7 +130,7 @@
     
                 </div>
 
-                <!-- large number input set default with label error -->
+                <!-- ANCHOR Error -->
                 <div class="error flex flex-col space-y-1">
                     <label for="inputId" class="text-md text-black">Enter your name</label>
                     <fieldset class="input-number-wrapper group">
@@ -131,9 +143,12 @@
                 </div>
                 
             </div>
-            <!-- Middle -->
+            <!-- !SECTION large ends -->
+
+            <!-- SECTION Middle -->
             <div class="flex flex-col space-y-4">
-                <!-- middle number input set default with label -->
+
+                <!-- ANCHOR Default -->
                 <div class="flex flex-col space-y-1">
                     <label for="inputId" class="text-md text-black">Enter your age</label>
                     <fieldset class="input-number-wrapper group">
@@ -145,7 +160,7 @@
     
                 </div>
     
-                <!-- middle number input set disabled with label -->
+                <!-- ANCHOR Read-only -->
                 <div class="flex flex-col space-y-1">
                     <label for="inputId" class="text-md text-black">Enter your age</label>
                     <fieldset class="input-number-wrapper group" disabled>
@@ -157,6 +172,7 @@
     
                 </div>
 
+                <!-- ANCHOR Error -->
                 <div class="error flex flex-col space-y-1">
                     <label for="inputId" class="text-md text-black">Enter your age</label>
                     <fieldset class="input-number-wrapper group">
@@ -169,9 +185,12 @@
                 </div>
                 
             </div>
-            <!-- Small -->
+            <!-- !SECTION Middle ends -->
+
+            <!-- SECTION Small -->
             <div class="flex flex-col space-y-4">
-                <!-- small number input set default with label -->
+
+                <!-- ANCHOR Default -->
                 <div class="flex flex-col space-y-1">
                     <label for="inputId" class="text-md text-black">Enter your age</label>
                     <fieldset class="input-number-wrapper group">
@@ -182,7 +201,7 @@
                     <p class="field-description">Description</p>
                 </div>
     
-                <!-- small number input set disabled with label -->
+                <!-- ANCHOR Read-only -->
                 <div class="flex flex-col space-y-1">
                     <label for="inputId" class="text-md text-black">Enter your age</label>
                     <fieldset class="input-number-wrapper group" disabled>
@@ -193,7 +212,7 @@
                     <p class="field-description">Description</p>
                 </div>
 
-                <!-- small number input set default with label error -->
+                <!-- ANCHOR Error -->
                 <div class="error flex flex-col space-y-1">
                     <label for="inputId" class="text-md text-black">Enter your age</label>
                     <fieldset class="input-number-wrapper group">
@@ -206,7 +225,11 @@
 
                 
             </div>
+            <!-- !SECTION Small ends -->
+
         </div>
+        <!-- !SECTION Labeled ends -->
+
     </div>
 </body>
 

@@ -12,46 +12,57 @@
 
 <body>
   <div id="outerDiv" class="bg-yellow-50 inline-flex flex-col items-center w-screen p-5 space-y-5">
-    <div class="flex flex-col space-y-4">
+
+    <!-- SECTION Checkmark -->
+    <form class="flex flex-col space-y-4">
+      <!-- ANCHOR Disabled -->
       <forminput class="group flex flex-row content-center space-x-3">
-        <input id="myCheckbox" type="checkbox" name="group-1" class="radiocheck"></input>
-        <label for="myCheckbox" class="text-md">Add this item</label>
+        <input name="check-group" type="checkbox" id="check-1" class="radiocheck" disabled></input>
+        <label for="check-1" class="text-md">This item is disabled</label>
+      </forminput>
+      <!-- ANCHOR Default -->
+      <forminput class="group flex flex-row content-center space-x-3">
+        <input name="check-group" id="check-2" type="checkbox" class="radiocheck"></input>
+        <label for="check-2" class="text-md">Add this item</label>
       </forminput>
       <forminput class="group flex flex-row content-center space-x-3">
-        <input type="checkbox" name="group-1" class="radiocheck" disabled></input>
-        <label class="text-md">This item is disabled</label>
+        <input name="check-group" type="checkbox" id="check-3" class="radiocheck"></input>
+        <label for="check-3" class="text-md">Add this item too</label>
       </forminput>
       <forminput class="group flex flex-row content-center space-x-3">
-        <input type="checkbox" name="group-1" class="radiocheck"></input>
-        <label class="text-md">Add this item too</label>
+        <input name="check-group" type="checkbox" id="check-4" class="radiocheck"></input>
+        <label for="check-4" class="text-md">Another item to add</label>
+      </forminput>
+    </form>
+    <!-- !SECTION Checkmarks ends -->
+
+    <!-- SECTION Radio -->
+    <form class="flex flex-col space-y-4">
+      <!-- ANCHOR Disabled -->
+      <forminput class="group flex flex-row content-center space-x-3">
+        <input name="radio-group" type="radio" id="radio-1" class="radiocheck" disabled></input>
+        <label for="radio-1" class="text-md">This item is disabled</label>
+      </forminput>
+      <!-- ANCHOR Default -->
+      <forminput class="group flex flex-row content-center space-x-3">
+        <input name="radio-group" type="radio" id="radio-2" class="radiocheck"></input>
+        <label for="radio-2" class="text-md">Item to select</label>
       </forminput>
       <forminput class="group flex flex-row content-center space-x-3">
-        <input type="checkbox" name="group-1" class="radiocheck"></input>
-        <label class="text-md">Another item to add</label>
-      </forminput>
-    </div>
-    <div class="flex flex-col space-y-4">
-      <forminput class="group flex flex-row content-center space-x-3">
-        <input type="radio" name="group-2" class="radiocheck"></input>
-        <label class="text-md">Item to select</label>
+        <input name="radio-group" type="radio" id="radio-3" class="radiocheck"></input>
+        <label for="radio-3" class="text-md">Select this item</label>
       </forminput>
       <forminput class="group flex flex-row content-center space-x-3">
-        <input type="radio" name="group-2" class="radiocheck" disabled></input>
-        <label class="text-md">This item is disabled</label>
+        <input name="radio-group" type="radio" id="radio-4" class="radiocheck"></input>
+        <label for="radio-4" class="text-md">Another item to select</label>
       </forminput>
       <forminput class="group flex flex-row content-center space-x-3">
-        <input type="radio" name="group-2" class="radiocheck"></input>
-        <label class="text-md">Select this item</label>
+        <input name="radio-group" type="radio" id="radio-5" class="radiocheck"></input>
+        <label for="radio-5" class="text-md">Select this item instead</label>
       </forminput>
-      <forminput class="group flex flex-row content-center space-x-3">
-        <input type="radio" name="group-2" class="radiocheck"></input>
-        <label class="text-md">Another item to select</label>
-      </forminput>
-      <forminput class="group flex flex-row content-center space-x-3">
-        <input type="radio" name="group-2" class="radiocheck"></input>
-        <label class="text-md">Select this item instead</label>
-      </forminput>
-    </div>
+    </form>
+    <!-- !SECTION Radio ends -->
+
   </div>
 </body>
 

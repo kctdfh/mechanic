@@ -9,17 +9,16 @@
     <link rel="stylesheet" href="../dist/css/styles.mini.css" />
     <script>
       function openMenu() {
-        document.getElementById("userDropdown").classList.toggle("hidden");
+            document.getElementById("userDropdown").classList.toggle("hidden");
+            document.getElementById("userDropdown").classList.toggle("flex");
       }
     </script>
   </head>
 
   <body>
     <div id="outerDiv" class="inline-flex flex-col items-end w-screen p-5">
-      <div
-        onClick="openMenu()"
-        class="group inline-flex items-center h-16 px-6 py-3 space-x-4 cursor-pointer"
-      >
+      <!-- ANCHOR Trigger -->
+      <div onClick="openMenu()" class="group inline-flex items-center h-16 px-6 py-3 space-x-4 cursor-pointer">
         <div class="justify-items-start inline-flex flex-col space-y-1">
           <p
             class="group-hover:text-blue-850 text-md font-semibold text-right text-black"
@@ -40,10 +39,8 @@
           />
         </div>
       </div>
-      <div
-        id="userDropdown"
-        class="w-55 relative z-50 flex flex-col hidden py-2 space-y-2 bg-white shadow"
-      >
+      <!-- ANCHOR Dropdown list -->
+      <div id="userDropdown" class="w-55 relative z-50 flex-col hidden py-2 space-y-2 bg-white shadow">
         <a
           href="#"
           class="group align-end h-7 hover:bg-gray-25 inline-flex w-full px-4 py-1 space-x-3"

@@ -13,104 +13,110 @@
 </head>
 
 <body>
-    <div id="outerDiv" class="inline-flex flex-col items-center w-screen p-5 space-y-5 bg-blue-50">
-        <div role="document" id="simple-dialog" class="flex flex-col w-1/2 bg-white shadow-xl">
-            <div class="flex flex-row justify-between px-6 min-h-md shadow-border-b">
+    <div id="outerDiv" class="bg-blue-50 inline-flex flex-col items-center w-screen p-5 space-y-5">
+        <!-- ANCHOR Simple -->
+        <div role="document" class="flex flex-col w-1/2 bg-white shadow-xl">
+            <div class="min-h-md shadow-border-b flex flex-row justify-between px-6">
                 <p class="my-auto text-base font-semibold">Header</p>
-                <button class="my-auto btn-large-ghost-icon feather-x"></button>
+                <button class="btn-large-ghost-icon feather-x my-auto"></button>
             </div>
-            <div class="px-6 py-4 shadow-border-b">
+            <div class="shadow-border-b px-6 py-4">
                 <p>Ut consequat minim exercitation aliqua aute commodo et ut in minim. Voluptate labore do qui non nostrud culpa cupidatat laborum fugiat nisi mollit enim ipsum. Pariatur est culpa eu non est labore officia occaecat. Nostrud qui nulla consectetur anim sit consequat in irure ea ullamco dolor cillum reprehenderit occaecat. Est tempor aliqua ad ex sint proident reprehenderit reprehenderit officia anim. Ut commodo aliquip excepteur irure non occaecat incididunt Lorem. Mollit veniam veniam ut aliqua voluptate consectetur magna sit.</p>
             </div>
             <div class="flex flex-row justify-end h-16 px-6">
                 <div class="flex flex-row justify-end h-full space-x-4">
-                    <button class="my-auto btn-middle-ghost">Dismiss</button>
-                    <button class="my-auto btn-middle-primary">Confirm</button>
+                    <button class="btn-middle-ghost my-auto">Dismiss</button>
+                    <button class="btn-middle-primary my-auto">Confirm</button>
                 </div>
             </div>
         </div>
-        <div role="document" id="basic-dialog" class="flex flex-col w-1/4 bg-white shadow-xl basic-modal">
+        <!-- ANCHOR Basic -->
+        <div role="document" class="basic-modal flex flex-col w-1/4 bg-white shadow-xl">
             <div class="flex flex-row py-6 pr-6">
                 <div class="h-full">
-                    <i class="px-6 text-xl feather-at-sign"></i>
+                    <i class="feather-at-sign px-6 text-xl"></i>
                 </div>
                 <div class="w-full">
                     <p class="mb-4 text-base font-semibold">Header</p>
                     <p>Ut consequat minim exercitation aliqua aute commodo et ut in minim.</p>
                 </div>
             </div>
-            <div class="flex flex-row justify-end h-16 px-6 shadow-border-t">
+            <div class="shadow-border-t flex flex-row justify-end h-16 px-6">
                 <div class="flex flex-row justify-end h-full space-x-4">
-                    <button class="my-auto btn-middle-ghost">Dismiss</button>
-                    <button class="my-auto btn-middle-primary">Confirm</button>
+                    <button class="btn-middle-ghost my-auto">Dismiss</button>
+                    <button class="btn-middle-primary my-auto">Confirm</button>
                 </div>
             </div>
         </div>
-        <div role="document" id="info-dialog" class="flex flex-col w-1/4 bg-white shadow-xl info-modal">
+        <!-- ANCHOR Info -->
+        <div role="document" class="info-modal flex flex-col w-1/4 bg-white shadow-xl">
             <div class="flex flex-row py-6 pr-6">
                 <div class="h-full">
-                    <i class="px-6 text-xl feather-info"></i>
+                    <i class="feather-info px-6 text-xl"></i>
                 </div>
                 <div class="w-full">
                     <p class="mb-4 text-base font-semibold">Header</p>
                     <p>Ut consequat minim exercitation aliqua aute commodo et ut in minim.</p>
                 </div>
             </div>
-            <div class="flex flex-row justify-end h-16 px-6 shadow-border-t">
+            <div class="shadow-border-t flex flex-row justify-end h-16 px-6">
                 <div class="flex flex-row justify-end h-full space-x-4">
-                    <button class="my-auto btn-middle-ghost">Dismiss</button>
-                    <button class="my-auto btn-middle-primary">Confirm</button>
+                    <button class="btn-middle-ghost my-auto">Dismiss</button>
+                    <button class="btn-middle-primary my-auto">Confirm</button>
                 </div>
             </div>
         </div>
-        <div role="document" id="warning-dialog" class="flex flex-col w-1/4 bg-white shadow-xl warning-modal">
+        <!-- ANCHOR Warning -->
+        <div role="document" class="warning-modal flex flex-col w-1/4 bg-white shadow-xl">
             <div class="flex flex-row py-6 pr-6">
                 <div class="h-full">
-                    <i class="px-6 text-xl feather-info"></i>
+                    <i class="feather-info px-6 text-xl"></i>
                 </div>
                 <div class="w-full">
                     <p class="mb-4 text-base font-semibold">Header</p>
                     <p>Ut consequat minim exercitation aliqua aute commodo et ut in minim.</p>
                 </div>
             </div>
-            <div class="flex flex-row justify-end h-16 px-6 shadow-border-t">
+            <div class="shadow-border-t flex flex-row justify-end h-16 px-6">
                 <div class="flex flex-row justify-end h-full space-x-4">
-                    <button class="my-auto btn-middle-ghost">Dismiss</button>
-                    <button class="my-auto btn-middle-primary">Confirm</button>
+                    <button class="btn-middle-ghost my-auto">Dismiss</button>
+                    <button class="btn-middle-primary my-auto">Confirm</button>
                 </div>
             </div>
         </div>
-        <div role="document" id="error-dialog" class="flex flex-col w-1/4 bg-white shadow-xl error-modal">
+        <!-- ANCHOR Error -->
+        <div role="document" class="error-modal flex flex-col w-1/4 bg-white shadow-xl">
             <div class="flex flex-row py-6 pr-6">
                 <div class="h-full">
-                    <i class="px-6 text-xl feather-x-circle"></i>
+                    <i class="feather-x-circle px-6 text-xl"></i>
                 </div>
                 <div class="w-full">
                     <p class="mb-4 text-base font-semibold">Header</p>
                     <p>Ut consequat minim exercitation aliqua aute commodo et ut in minim.</p>
                 </div>
             </div>
-            <div class="flex flex-row justify-end h-16 px-6 shadow-border-t">
+            <div class="shadow-border-t flex flex-row justify-end h-16 px-6">
                 <div class="flex flex-row justify-end h-full space-x-4">
-                    <button class="my-auto btn-middle-ghost">Dismiss</button>
-                    <button class="my-auto btn-middle-primary">Confirm</button>
+                    <button class="btn-middle-ghost my-auto">Dismiss</button>
+                    <button class="btn-middle-primary my-auto">Confirm</button>
                 </div>
             </div>
         </div>
-        <div role="document" id="success-dialog" class="flex flex-col w-1/4 bg-white shadow-xl success-modal">
+        <!-- ANCHOR Success -->
+        <div role="document" class="success-modal flex flex-col w-1/4 bg-white shadow-xl">
             <div class="flex flex-row py-6 pr-6">
                 <div class="h-full">
-                    <i class="px-6 text-xl feather-check-circle"></i>
+                    <i class="feather-check-circle px-6 text-xl"></i>
                 </div>
                 <div class="w-full">
                     <p class="mb-4 text-base font-semibold">Header</p>
                     <p>Ut consequat minim exercitation aliqua aute commodo et ut in minim.</p>
                 </div>
             </div>
-            <div class="flex flex-row justify-end h-16 px-6 shadow-border-t">
+            <div class="shadow-border-t flex flex-row justify-end h-16 px-6">
                 <div class="flex flex-row justify-end h-full space-x-4">
-                    <button class="my-auto btn-middle-ghost">Dismiss</button>
-                    <button class="my-auto btn-middle-primary">Confirm</button>
+                    <button class="btn-middle-ghost my-auto">Dismiss</button>
+                    <button class="btn-middle-primary my-auto">Confirm</button>
                 </div>
             </div>
         </div>

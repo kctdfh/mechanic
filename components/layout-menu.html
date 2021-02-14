@@ -7,6 +7,7 @@
   <title>layout-menu</title>
   <link type="text/css" rel="stylesheet" href="../dist/css/styles.mini.css" />
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="../dist/js/a11y-dialog.js"></script>
   <script src="../dist/js/select2.full.js"></script>
   <script src="../dist/js/mmenu.polyfills.js"></script>
   <script src="../dist/js/mmenu.js"></script>
@@ -14,6 +15,7 @@
 </head>
 
 <body>
+  <!-- ANCHOR Session header -->
   <header id="session-header"
       class="shadow-border-b z-2 absolute top-0 left-0 flex justify-between w-full h-16 px-6 py-4 bg-white">
       <div id="header-overlay" class="_close-drawer absolute inset-0 hidden w-full h-full bg-black opacity-0"></div>
@@ -57,7 +59,9 @@
           </div>
         </div>
   </header>
+  <!-- ANCHOR Page wrapper -->
   <div id="page" class="absolute">
+    <!-- ANCHOR Headers Wrapper -->
     <div id="headers">
       <div id="system-header"
         class="top-16 shadow-border-b h-14 fixed left-0 inline-flex w-full px-6 py-2 bg-white border-l border-gray-100">
@@ -93,7 +97,7 @@
             <button class="btn-middle-secondary-icon feather-help-circle">
             </button>
             <div class="divider-h"></div>
-            <button class="_open-drawer btn-middle-secondary-icon feather-book-open"></button>
+            <button data-tippy-placement="auto" data-tippy-content="Open drawer" class="_open-drawer btn-middle-secondary-icon feather-book-open"></button>
             <div class="divider-h"></div>
             <button class="btn-middle-secondary-icon feather-message-square"></button>
           </div>
@@ -124,7 +128,7 @@
               <div class="tab-border">
               </div>
             </div>
-            <button class="btn-large-ghost-icon feather-more-horizontal my-auto"></button>
+            <button data-tippy-placement="auto" data-tippy-content="More Tabs" class="btn-large-ghost-icon feather-more-horizontal my-auto"></button>
           </div>
         </div>
         <div class="flex flex-row h-8 px-6 my-auto space-x-4">
@@ -186,6 +190,7 @@
         </div>
       </div>
     </div>
+    <!-- ANCHOR Content wrapper -->
     <div id="content" class="scrollbar-regular bottom-16 fixed w-full p-6 overflow-scroll border-l border-gray-100">
       <p>Mollit aliquip nisi sint adipisicing non enim sit proident pariatur. Anim nostrud commodo irure Lorem
         exercitation occaecat. Quis dolore sit velit esse aliquip aute.
@@ -294,26 +299,31 @@
         elit ut minim officia irure. Sit labore duis ipsum cupidatat.
       </p>
     </div>
-    <div class="shadow-border-t flow-row fixed bottom-0 flex justify-end w-full h-16 px-6 py-4 bg-white border-l border-gray-100">
-      <div class="flex flex-row justify-end h-full space-x-4">
-        <button class="btn-middle-tertiary">Edit</button>
+    <!-- ANCHOR Footer -->
+    <div id="page-footer" class="shadow-border-t flow-row fixed bottom-0 flex justify-end w-full h-16 px-6 py-4 bg-white border-l border-gray-100">
+      <!-- ANCHOR Buttons Wrapper -->
+      <div id="footer-buttons" class="flex flex-row justify-end h-full space-x-4">
+        <button data-tippy-placement="auto" data-tippy-content="This button says edit" class="btn-middle-tertiary">Edit</button>
         <div class="divider-h"></div>
-        <button class="btn-middle-tertiary">Cancel</button>
+        <button data-tippy-placement="auto" data-tippy-content="Some button" class="btn-middle-tertiary">Cancel</button>
         <div class="divider-h"></div>
-        <button class="btn-middle-primary">Apply</button>
+        <button data-a11y-dialog-show="modal" class="btn-middle-primary">Apply</button>
       </div>
     </div>
-    <!-- ANCHOR drawer begins -->
+    <!-- ANCHOR Drawer overlay -->
     <div id="dark-overlay" class="_close-drawer z-100 absolute inset-0 hidden w-screen h-screen bg-black opacity-0">
     </div>
+    <!-- ANCHOR Drawer -->
     <div id="drawer"
       class="-right-full z-100 absolute inset-y-0 flex flex-col float-right w-1/2 overflow-hidden transition-transform duration-200 ease-in-out bg-white shadow-2xl">
+      <!-- ANCHOR Drawer header -->
       <div class="shadow-border-b inline-flex items-center w-full h-16 py-1 pl-4 pr-2 bg-white">
         <div class="inline-flex items-center justify-between w-full h-full">
           <p class="flex-grow text-base font-semibold text-black">Drawer</p>
           <button class="_close-drawer feather-x btn-large-ghost-icon"></button>
         </div>
       </div>
+      <!-- ANCHOR Drawer tabs -->
       <div class="shadow-border-b h-14 inline-flex justify-center w-full bg-white">
         <div class="flex flex-row h-full">
           <div class="flex justify-start space-x-6">
@@ -332,8 +342,10 @@
           </div>
         </div>
       </div>
+      <!-- ANCHOR Drawer content wrapper -->
       <div id="drawer-content" class="scrollbar-regular w-full p-6 overflow-x-hidden overflow-y-scroll">
         <article class="max-w-none prose">
+          <!-- ANCHOR Drawer Content -->
           <p>
             Pass your markdown here and the <code>prose</code> utility class
             will render it correctly! the <code>prose</code> class applies all
@@ -492,13 +504,14 @@
           </p>
         </article>
       </div>
+      <!-- ANCHOR Drawer footer -->
       <div class="min-h-lg shadow-border-t relative w-full bg-white">
         <div class="absolute right-0 flex flex-row justify-end h-full p-4 space-x-4">
           <button class="_close-drawer btn-middle-primary">Close</button>
         </div>
       </div>
     </div>
-    <!-- ANCHOR drawer ends -->
+    <!-- ANCHOR Menu wrapper -->
     <nav id="menu">
       <ul class="listview-icons">
         <li>
@@ -867,8 +880,108 @@
         </li>
       </ul>
     </nav>
+    <!-- ANCHOR Modal -->
+    <div class="dialog-container" id="modal" aria-hidden="true">
+          <div class="dialog-overlay" id="dialog-overlay" tabindex="-1" data-a11y-dialog-hide></div>
+          <div role="dialog" aria-labelledby="dialog-title">
+              <div role="document" class="dialog-content flex flex-col w-1/2 bg-white shadow-xl">
+                  <div class="min-h-md shadow-border-b flex flex-row justify-between px-6">
+                      <p class="my-auto text-base font-semibold">Header</p>
+                      <button data-a11y-dialog-hide class="btn-large-ghost-icon feather-x my-auto"></button>
+                  </div>
+                  <div class="shadow-border-b px-6 py-4">
+                      <p>Ut consequat minim exercitation aliqua aute commodo et ut in minim. Voluptate labore do qui non nostrud culpa cupidatat laborum fugiat nisi mollit enim ipsum. Pariatur est culpa eu non est labore officia occaecat. Nostrud qui nulla consectetur anim sit consequat in irure ea ullamco dolor cillum reprehenderit occaecat. Est tempor aliqua ad ex sint proident reprehenderit reprehenderit officia anim. Ut commodo aliquip excepteur irure non occaecat incididunt Lorem. Mollit veniam veniam ut aliqua voluptate consectetur magna sit.</p>
+                  </div>
+                  <div class="flex flex-row justify-end h-16 px-6">
+                      <div class="flex flex-row justify-end h-full space-x-4">
+                          <button class="btn-middle-ghost my-auto" id="modal-close" data-a11y-dialog-hide >Dismiss</button>
+                          <button class="btn-middle-primary my-auto" id="modal-confirm" data-a11y-dialog-hide >Confirm</button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+    </div>
   </div>
-    <script>
+
+  <!-- SECTION Load framework scripts -->
+  <!-- ANCHOR Tippy.js -->
+  <script src="../dist/js/popper.js"></script>
+  <script src="../dist/js/tippy-bundle.umd.js"></script>
+  <!-- ANCHOR Notify.js framework -->
+  <script src="../dist/js/notify.js"></script>
+  <!-- ANCHOR Notification templates -->
+  <script src="../dist/js/notifications-templates.js"></script>
+  <!-- !SECTION Load framework scripts end -->
+
+  <!-- ANCHOR Attach click events to trigger alerts -->
+  <script>
+    $("#modal-close").click(function() {
+    $.notify({
+        title: 'You dismissed the modal',
+        icon: '<i class="feather-book"></i>',
+        body: '',
+        primary: '',
+        ghost: ''
+      }, { 
+        style: 'info',
+        autoHide: true,
+        arrowShow: false,
+        clickToHide: true,
+        globalPosition: 'bottom left'
+    });
+  });
+    $("#modal-confirm").click(function() {
+    $.notify({
+        title: 'Modal confirmed',
+        icon: '<i class="feather-check-circle"></i>',
+        body: "This alert appears because you closed the test modal by clicking on the Confirm button. This alert won't auto-hide; You need to close it by clicking on the close icon",
+        primary: '',
+        ghost: ''
+      }, { 
+        style: 'success-icon-body-close',
+        autoHide: false,
+        arrowShow: false,
+        clickToHide: true,
+        globalPosition: 'bottom left'
+      });
+  });
+  </script>
+
+  <!-- ANCHOR Load all tooltips -->
+  <script>
+    tippy('[data-tippy-content]');
+  </script>
+
+  <!-- ANCHOR Create functions for making the modal overlay work -->
+  <script>
+    function openModal(overlayClass, sessionHeaderID) {
+      $("#"+sessionHeaderID).css("z-index","0");
+      $("."+overlayClass).css("margin-left","-50px");
+    };
+    function closeModal(overlayClass, sessionHeaderID) {
+      $("#"+sessionHeaderID).css("z-index","2");
+      $("."+overlayClass).css("margin-left","0px");
+    };
+  </script>
+
+  <!-- SECTION Modal setup -->
+  <script>
+    // ANCHOR Setup modal
+    var mainEl = document.getElementsByTagName("body");
+    const test = document.getElementById("modal");
+    const testDialog = new A11yDialog(test, mainEl);
+    // ANCHOR Modal open and close functions
+    testDialog.on('show', function (dialogEl, event) {
+      openModal("dialog-overlay","session-header");
+    });
+    testDialog.on('hide', function (dialogEl, event) {
+      closeModal("dialog-overlay","session-header");
+    });
+  </script>
+  <!-- !SECTION Modal setup ends -->
+
+  <!-- ANCHOR Menu setup -->
+  <script>
       new Mmenu(document.querySelector("#menu"), {
         extensions: [
           "theme-white",
@@ -912,8 +1025,10 @@
           }
         },
       });
-    </script>
-    <script>
+  </script>
+
+  <!-- ANCHOR Dynamically set #content position -->
+  <script>
       var allHeights = 0;
 
       var fixedHeader = $("#session-header");
@@ -938,16 +1053,21 @@
       content.css({
         top: allHeights
       });
-    </script>
-    <script>
+  </script>
+
+  <!-- ANCHOR User menu trigger -->
+  <script>
       function openMenu() {
         document.getElementById("userDropdown").classList.toggle("hidden");
         document.getElementById("userDropdown").classList.toggle("flex");
       }
-    </script>
-    <script>
+  </script>
+  
+  <!-- ANCHOR Initialize dropdowns -->
+  <script>
       $('._dropdown').select2({});
-    </script>
+  </script>
+
 </body>
 
 </html>
