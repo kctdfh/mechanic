@@ -11,8 +11,11 @@
 @import "imports/basics.css";
 @import "imports/tabs.css";
 @import "imports/avatar.css";
+@import "imports/buttons-v1.css";
+@import "imports/button-helpers.css";
 @import "imports/buttons.css";
 @import "imports/collapse.css";
+@import "imports/text-inputs-v1.css";
 @import "imports/text-inputs.css";
 @import "imports/number-input.css";
 @import "imports/radio-checkbox.css";

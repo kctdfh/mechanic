@@ -6,8 +6,8 @@
 }
 
 .tab-btn {
-  @apply text-md group-hover:text-blue-500 disabled:text-gray-200 focus-standard h-full text-black;
-  @apply disabled:pointer-events-none !important;
+  @apply disabled:pointer-events-none disabled:text-gray-200 !important;
+  @apply text-md focus-standard group-hover:text-blue-500 h-full text-black;
 }
 
 .active .tab-border {

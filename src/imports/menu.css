@@ -406,7 +406,7 @@ height: 50px;
  position:relative;
  box-sizing:border-box;
  height:var(--mb-button-size);
- width: 50px;
+ width: 35px;
  line-height:var(--mb-button-size);
  vertical-align:middle;
  appearance:none;

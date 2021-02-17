@@ -8,7 +8,7 @@ module.exports = {
       './dist/*.js'],
     defaultExtractor: content =>  content.match(/[A-Za-z0-9-_:!\/]+/g) || [],
     options: {
-      safelist: [/readonly$/]
+      safelist: [/read-only$/]
     }
   },
   darkMode: false,
@@ -398,7 +398,6 @@ module.exports = {
       textColor: [
         "visited",
         "group-disabled",
-        "disabled",
         "active",
         "focus-visible",
         "group-focus-within",
@@ -406,6 +405,9 @@ module.exports = {
         "group-active",
         "group-visited",
         "last",
+        "disabled",
+        "read-only",
+        "group-hover",
         "important"
       ],
       backgroundColor: [
@@ -414,6 +416,7 @@ module.exports = {
         "group-disabled",
         "group-hover",
         "disabled",
+        "read-only",
         "focus",
         "active",
         "important",
@@ -422,7 +425,7 @@ module.exports = {
         "group-focus-visible",
         "group-active",
         "group-visited",
-        "readonly"
+        "read-only"
       ],
       padding: ["important"],
       minHeight: ["important"],
@@ -436,6 +439,7 @@ module.exports = {
         "focus-within",
         "group-disabled",
         "disabled",
+        "read-only",
         "active",
         "hover",
         "focus-visible",
@@ -461,26 +465,31 @@ module.exports = {
         "group-active",
         "group-visited",
         "group-hover",
+        "read-only"
       ],
-      ringColor: ["hover", "group-hover", "disabled"],
-      ringWidth: ["hover", "group-hover", "disabled", "group-disabled"],
+      ringColor: ["hover", "group-hover", "disabled","read-only"],
+      ringWidth: ["hover", "group-hover", "disabled", "group-disabled","read-only"],
       outline: ["focus-visible","focus","last"],
-      cursor: ["disabled", "group-disabled","last"],
-      placeholderColor: ["group-disabled", "disabled"],
-      pointerEvents: ["group-disabled", "important"],
+      cursor: ["disabled", "group-disabled","last","read-only"],
+      placeholderColor: ["group-disabled", "disabled", "read-only"],
+      pointerEvents: ["group-disabled", "important","read-only"],
       boxShadow: ["active", "focus-within","last","first"],
-      pointerEvents: ["disabled","hover","last","group-disabled","readonly"]
+      pointerEvents: ["hover","last","group-disabled","disabled","read-only"]
     },
   },
+  // variantOrder: [
+  //   'foo',
+  //   'bar' 
+  // ],
   plugins: [
     require("tailwindcss-interaction-variants"),
     require("tailwindcss-important")(),
     require("@tailwindcss/typography"),
     require('tailwind-scrollbar'),
     plugin(function({ addVariant, e }) {
-      addVariant('readonly', ({ modifySelectors, separator }) => {
+      addVariant('read-only', ({ modifySelectors, separator }) => {
         modifySelectors(({ className }) => {
-          return `.${e(`readonly${separator}${className}`)}:read-only`
+          return `.${e(`read-only${separator}${className}`)}:read-only`
         })
       })
     })
