@@ -884,7 +884,7 @@
 				bottom: "ui-corner-bottom",
 				resizer: "ui-widget-header"
 			},
-			large: {
+			pim2: {
 				/* remove border by removing ui-widget and ui-widget content */
 				gBox: "largeTable",
 				gView: "",
@@ -983,190 +983,6 @@
 				top: "",
 				bottom: "",
 				resizer: "" // resizer: "ui-widget-header"
-			},
-			middle: {
-				gBox: "ui-jqgrid-jquery-ui ui-widget-middle ui-widget-content ui-corner-all",  // ui-widget-content??? for the children of gbox
-				gView: "",
-				overlay: "ui-widget-overlay",
-				loading: "ui-state-default ui-state-active",
-				hDiv: "ui-state-default ui-corner-top",
-				hTable: "",
-				colHeaders: "ui-state-default",
-				states: {
-					select: "ui-state-highlight",
-					disabled: "ui-state-disabled ui-jqgrid-disablePointerEvents",
-					hover: "ui-state-hover",    // can be table-hover on <table> only and style like .table-hover tbody tr:hover td
-					error: "ui-state-error",
-					active: "ui-state-active",
-					textOfClickable: "ui-state-default"
-				},
-				dialog: {
-					header: "ui-widget-header ui-dialog-titlebar ui-corner-all ui-helper-clearfix",
-					window: "ui-jqgrid-jquery-ui ui-widget-middle ui-widget-content ui-corner-all ui-front",
-					document: "",
-					subdocument: "",
-					body: "",
-					footer: "",
-					content: "ui-widget-content",
-					hr: "ui-widget-content",
-					closeButton: "ui-corner-all",
-					fmButton: "ui-state-default",
-					dataField: "ui-widget-content ui-corner-all",
-					viewCellLabel: "ui-widget-content",
-					viewLabel: "",
-					viewCellData: "ui-widget-content",
-					viewData: "",
-					leftCorner: "ui-corner-left",
-					rightCorner: "ui-corner-right",
-					defaultCorner: "ui-corner-all"
-				},
-				filterToolbar: {
-					dataField: "ui-widget-content"
-				},
-				subgrid: {
-					thSubgrid: "ui-state-default", // used only with subGridModel
-					rowSubTable: "ui-widget-content", // used only with subGridModel additionally to ui-subtblcell
-					row: "ui-widget-content", // class of the subgrid row, additional to ui-subgrid
-					tdStart: "", // it can be with span over rownumber and multiselect columns
-					tdWithIcon: "ui-widget-content", // class of cell with +- icon, additional to subgrid-cell
-					buttonDiv: "",
-					button: "",
-					tdData: "ui-widget-content", // class of main td with span over the grid, additional subgrid-data
-					legacyTable: ""
-				},
-				grid: "",
-				gridRow: "ui-widget-content",
-				rowNum: "ui-state-default",
-				gridFooter: "",
-				rowFooter: "ui-widget-content",
-				gridTitle: "ui-widget-header ui-corner-top",
-				gridError: "ui-state-error",
-				gridErrorText: "",
-				titleButton: "ui-corner-all",
-				toolbarUpper: "ui-state-default",
-				toolbarBottom: "ui-state-default",
-				actionsDiv: "ui-widget-content",
-				actionsButton: "ui-corner-all",
-				pager: {
-					pager: "ui-state-default",
-					pagerButton: "ui-corner-all",
-					pagerInput: "ui-widget-content",
-					pagerSelect: "ui-widget-content"
-				},
-				navButton: "ui-corner-all",
-				searchDialog: {
-					operator: "ui-corner-all",
-					label: "ui-corner-all",
-					elem: "ui-corner-all",
-					operationGroup: "",
-					addRuleButton: "ui-corner-all",
-					deleteRuleButton: "ui-corner-all",
-					operationSelect: "ui-corner-all",
-					addGroupButton: "ui-corner-all",
-					deleteGroupButton: "ui-corner-all"
-				},
-				searchToolbar: {
-					menu: "ui-menu-jqueryui ui-menu ui-widget-middle ui-widget-content ui-corner-all",
-					menuItem: "ui-menu-item",
-					menuItemButton: "ui-corner-all",
-					operButton: "ui-corner-all",
-					clearButton: "ui-corner-all"
-				},
-				top: "ui-corner-top",
-				bottom: "ui-corner-bottom",
-				resizer: "ui-widget-header"
-			},
-			small: {
-				gBox: "ui-jqgrid-jquery-ui ui-widget-small ui-widget-content ui-corner-all",  // ui-widget-content??? for the children of gbox
-				gView: "",
-				overlay: "ui-widget-overlay",
-				loading: "ui-state-default ui-state-active",
-				hDiv: "ui-state-default ui-corner-top",
-				hTable: "",
-				colHeaders: "ui-state-default",
-				states: {
-					select: "ui-state-highlight",
-					disabled: "ui-state-disabled ui-jqgrid-disablePointerEvents",
-					hover: "ui-state-hover",    // can be table-hover on <table> only and style like .table-hover tbody tr:hover td
-					error: "ui-state-error",
-					active: "ui-state-active",
-					textOfClickable: "ui-state-default"
-				},
-				dialog: {
-					header: "ui-widget-header ui-dialog-titlebar ui-corner-all ui-helper-clearfix",
-					window: "ui-jqgrid-jquery-ui ui-widget-small ui-widget-content ui-corner-all ui-front",
-					document: "",
-					subdocument: "",
-					body: "",
-					footer: "",
-					content: "ui-widget-content",
-					hr: "ui-widget-content",
-					closeButton: "ui-corner-all",
-					fmButton: "ui-state-default",
-					dataField: "ui-widget-content ui-corner-all",
-					viewCellLabel: "ui-widget-content",
-					viewLabel: "",
-					viewCellData: "ui-widget-content",
-					viewData: "",
-					leftCorner: "ui-corner-left",
-					rightCorner: "ui-corner-right",
-					defaultCorner: "ui-corner-all"
-				},
-				filterToolbar: {
-					dataField: "ui-widget-content"
-				},
-				subgrid: {
-					thSubgrid: "ui-state-default", // used only with subGridModel
-					rowSubTable: "ui-widget-content", // used only with subGridModel additionally to ui-subtblcell
-					row: "ui-widget-content", // class of the subgrid row, additional to ui-subgrid
-					tdStart: "", // it can be with span over rownumber and multiselect columns
-					tdWithIcon: "ui-widget-content", // class of cell with +- icon, additional to subgrid-cell
-					buttonDiv: "",
-					button: "",
-					tdData: "ui-widget-content", // class of main td with span over the grid, additional subgrid-data
-					legacyTable: ""
-				},
-				grid: "",
-				gridRow: "ui-widget-content",
-				rowNum: "ui-state-default",
-				gridFooter: "",
-				rowFooter: "ui-widget-content",
-				gridTitle: "ui-widget-header ui-corner-top",
-				gridError: "ui-state-error",
-				gridErrorText: "",
-				titleButton: "ui-corner-all",
-				toolbarUpper: "ui-state-default",
-				toolbarBottom: "ui-state-default",
-				actionsDiv: "ui-widget-content",
-				actionsButton: "ui-corner-all",
-				pager: {
-					pager: "ui-state-default",
-					pagerButton: "ui-corner-all",
-					pagerInput: "ui-widget-content",
-					pagerSelect: "ui-widget-content"
-				},
-				navButton: "ui-corner-all",
-				searchDialog: {
-					operator: "ui-corner-all",
-					label: "ui-corner-all",
-					elem: "ui-corner-all",
-					operationGroup: "",
-					addRuleButton: "ui-corner-all",
-					deleteRuleButton: "ui-corner-all",
-					operationSelect: "ui-corner-all",
-					addGroupButton: "ui-corner-all",
-					deleteGroupButton: "ui-corner-all"
-				},
-				searchToolbar: {
-					menu: "ui-menu-jqueryui ui-menu ui-widget-small ui-widget-content ui-corner-all",
-					menuItem: "ui-menu-item",
-					menuItemButton: "ui-corner-all",
-					operButton: "ui-corner-all",
-					clearButton: "ui-corner-all"
-				},
-				top: "ui-corner-top",
-				bottom: "ui-corner-bottom",
-				resizer: "ui-widget-header"
 			},
 			bootstrap: {
 				gBox: "ui-jqgrid-bootstrap",
@@ -2907,7 +2723,7 @@
 						checkboxHtml = $.isFunction(p.checkboxHtml) ?
 							p.checkboxHtml.call(self, callbackParams) :
 							"<input type='checkbox' id='jqg_" + p.id + "_" + rowid +
-							"' class='cbox' name='jqg_" + p.id + "_" + rowid + "'" +
+							"' class='gridcheck' name='jqg_" + p.id + "_" + rowid + "'" +
 							(checked ? " checked='checked' aria-checked='true'" : " aria-checked='false'") + "/>";
 					}
 					return "<td role='gridcell' " + formatCol(pos, irow, "", null, rowid, true) + ">" +
@@ -5848,7 +5664,7 @@
 			}
 			if (p.multiselect && (p.multiselectPosition === "left" || p.multiselectPosition === "right")) {
 				var insertMethod = p.multiselectPosition === "left" ? "unshift" : "push";
-				p.colNames[insertMethod]("<input id='" + p.cbId + "' class='cbox' type='checkbox' aria-checked='false'/>");
+				p.colNames[insertMethod]("<input id='" + p.cbId + "' class='gridcheck' type='checkbox' aria-checked='false'/>");
 				p.colModel[insertMethod]({ name: "cb", width: jgrid.cell_width ? p.multiselectWidth + p.cellLayout : p.multiselectWidth, labelClasses: "jqgh_cbox", classes: "td_cbox", sortable: false, resizable: false, hidedlg: true, search: false, align: "center", fixed: true, frozen: true });
 			}
 			if (p.rownumbers) {
@@ -6003,7 +5819,7 @@
 										{ "aria-selected": "true", tabindex: "0" } :
 										{ "aria-selected": "false", tabindex: "-1" });
 							if (iColCb !== undefined) { // p.multiselectCheckboxes
-								$(tr.cells[iColCb]).children("input.cbox").prop("checked", toSelect);
+								$(tr.cells[iColCb]).children("input.gridcheck").prop("checked", toSelect);
 							}
 						},
 						frozenRows = grid.fbRows,
@@ -6335,7 +6151,7 @@
 						return;
 					}
 					var ri = $tr[0].id, ci = $td[0].cellIndex,
-						checkboxClicked = $(target).hasClass("cbox") &&
+						checkboxClicked = $(target).hasClass("gridcheck") &&
 							$(target).is(":enabled") && !hasOneFromClasses(target, disabledStateClasses),
 						selectionAllowed = feedback.call(ts, "beforeSelectRow", ri, e), alreadySelected = false,
 						editingInfo = jgrid.detectRowEditing.call(ts, ri),
@@ -7017,7 +6833,7 @@
 							selectUnselectRowInTable = function (tr) {
 								$(tr)[method](highlightClass).attr(attributes);
 								if (iColCb !== undefined) { // p.multiselect or p.multiselectCheckboxes
-									$(tr.cells[iColCb]).children("input.cbox").prop("checked", toSelect);
+									$(tr.cells[iColCb]).children("input.gridcheck").prop("checked", toSelect);
 								}
 							};
 						selectUnselectRowInTable(tr1);
@@ -7094,7 +6910,7 @@
 					if (ia === -1) {
 						stat = true;
 						p.selarrrow.push(p.selrow);
-					} else if (editingInfo !== null && (editingInfo.mode === "inlineEditing" || !$(e.target).hasClass("cbox"))) {
+					} else if (editingInfo !== null && (editingInfo.mode === "inlineEditing" || !$(e.target).hasClass("gridcheck"))) {
 						// the row is editing and selected now. The checkbox is clicked
 						stat = true; // set to force the checkbox stay selected
 					} else {
@@ -7128,13 +6944,13 @@
 							attributes = { "aria-selected": "false", tabindex: "-1" };
 						$(tr)[method](highlightClass).attr(attributes);
 						if (multiselectChechboxes) { // p.multiselect or p.multiselectCheckboxes
-							$(tr.cells[iColCb]).children("input.cbox").prop("checked", false);
+							$(tr.cells[iColCb]).children("input.gridcheck").prop("checked", false);
 						}
 						if (frozenRows) {
 							frozenRow = frozenRows[tr.rowIndex];
 							$(frozenRow)[method](highlightClass).attr(attributes);
 							if (multiselectChechboxes) { // p.multiselect or p.multiselectCheckboxes
-								$(frozenRow.cells[iColCb]).children("input.cbox").prop("checked", false);
+								$(frozenRow.cells[iColCb]).children("input.gridcheck").prop("checked", false);
 							}
 						}
 					};
@@ -7476,7 +7292,7 @@
 				}
 				if (p.multiselect) {
 					newCboxId = "jqg_" + p.id + "_" + newRowId;
-					$tr.find("input.cbox")
+					$tr.find("input.gridcheck")
 						.attr("id", newCboxId)
 						.attr("name", newCboxId);
 				}

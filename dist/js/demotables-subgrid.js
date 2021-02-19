@@ -231,7 +231,7 @@ function loadJqGrid() {
         ignoreCase: true,
         rowNum: 20,
         page: 1,
-        guiStyle: "large",
+        guiStyle: "pim2",
         iconSet: "feather",
         //sortname: lastSortName,
         //sortorder: lastSortOrder,
@@ -244,8 +244,6 @@ loadSubGrid = function () {
     subGridHeader = getGridHeader();
     subGridModel = getGridModel();
     appJqGrid.jqGrid('setGridParam', {
-        // ANCHOR set the iconSet option to "feather" but icons don't apply 
-        iconSet: "feather",
         subGridRowExpanded: function (subgridId, rowId) {
             console.log(rowId);
             var gridData = getSubGridData(rowId);
@@ -265,6 +263,8 @@ loadSubGrid = function () {
                 height: '100%',
                 rowNum: 20,
                 sortname: 'Id',
+                // ANCHOR set the iconSet option to "feather" 
+                iconSet: "feather",
                 sortorder: "asc"
             });		// sub JqGrid ends
         }

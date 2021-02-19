@@ -24,6 +24,10 @@
 /* Large 
 */
 
+.largeTable .ui-jqgrid-view .ui-jqgrid-bdiv table.ui-jqgrid-btable tr, .largeTable .ui-jqgrid-view .ui-jqgrid-bdiv table.ui-jqgrid-btable tr {
+ @apply even:bg-blue-10; 
+}
+
 .large-filter-operators {
   @apply hover:text-blue-750 text-base;
 }
@@ -55,11 +59,11 @@
 } */
 
 tr.selectedState {
-  @apply bg-blue-50;
+  background-color: #D8EDFF !important;
 }
 
 tr.selectedState.hoverState {
-  @apply bg-blue-50 !important;
+  background-color: #D5EBFF !important;
 }
 
 tr.hoverState {

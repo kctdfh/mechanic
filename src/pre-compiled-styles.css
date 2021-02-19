@@ -11,11 +11,13 @@
 @import "imports/basics.css";
 @import "imports/tabs.css";
 @import "imports/avatar.css";
-@import "imports/buttons-v1.css";
-@import "imports/button-helpers.css";
+/* 
+Deprecated 
+@import "imports/buttons-v1.css"; 
+@import "imports/text-inputs-v1.css";
+*/
 @import "imports/buttons.css";
 @import "imports/collapse.css";
-@import "imports/text-inputs-v1.css";
 @import "imports/text-inputs.css";
 @import "imports/number-input.css";
 @import "imports/radio-checkbox.css";
@@ -40,7 +42,6 @@
 
 /* Custom free-jqGrid themes */
 @import "imports/free-jqGrid-themes.css";
-/* @import "imports/custom-jQuery-ui.css"; */
 @import "imports/datepicker.css";
 
 /* Custom Select2 themes */

@@ -22,11 +22,15 @@
 }
 
 .pdex.ui-datepicker .ui-datepicker-buttonpane button {
-  @apply btn-middle-ghost;
-}
+  @apply rounded-0.5 font-semibold;
+  @apply btn-ghost;
+  @apply btn-middle;
+} 
 
 .pdex.ui-datepicker .ui-datepicker-buttonpane button.ui-datepicker-current {
-  @apply btn-middle-primary;
+  @apply rounded-0.5 font-semibold;
+  @apply btn-primary;
+  @apply btn-middle;
   margin-left: 15px;
 }
 
@@ -92,7 +96,7 @@
 .pdex.ui-datepicker .ui-datepicker-title select {
   @apply cursor-pointer;
   @apply focus-standard;
-}
+} 
 
 .pdex.ui-datepicker .ui-datepicker-prev-hover {
   left: 2px;
@@ -185,12 +189,12 @@
 }
 
 .pdex.ui-state-disabled .ui-state-default {
-  color: #fba49e;
+  @apply text-red-150;
 }
 
 .pdex td .ui-state-active {
-  background: #a7d4ff;
+  @apply bg-blue-250 font-semibold text-black;
 }
 .pdex td .ui-state-hover {
-  background: #f1f9ff;
+  @apply bg-blue-150;
 }

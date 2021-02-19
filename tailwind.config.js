@@ -34,6 +34,7 @@ module.exports = {
         900: "#25282B",
       },
       blue: {
+        10: "#F6FBFF",
         50: "#F1F9FF",
         100: "#CFE8FF",
         150: "#A7D4FF",
@@ -394,7 +395,7 @@ module.exports = {
   variants: {
     scrollbar: ['rounded'],
     extend: {
-      display: ['group-hover'],
+      display: ['group-hover','important'],
       textColor: [
         "visited",
         "group-disabled",
@@ -411,6 +412,7 @@ module.exports = {
         "important"
       ],
       backgroundColor: [
+        "even",
         "checked",
         "visited",
         "group-disabled",

@@ -1,102 +1,183 @@
-/* ANCHOR Sizes */
+/* Sizes */
 
 .text-input-wrapper.large {
-  @apply relative h-10;
+    @apply relative h-10;
 }
 
 .text-input-wrapper.middle {
-  @apply relative h-8;
+    @apply relative h-8;
 }
 
 .text-input-wrapper.small {
-  @apply relative h-6;
+    @apply relative h-6;
 }
 
-/* ANCHOR Icon wrappers */
+.input-large-size {
+    @apply h-10 text-base pl-3.5;
+}
+
+.input-large-icon-left-size {
+    @apply h-10 pl-10 text-base;
+}
+
+.input-middle-size {
+    @apply text-md h-8 pl-3;
+}
+
+.input-middle-icon-left-size {
+    @apply text-md h-8 pl-8;
+}
+
+.input-small-size {
+    @apply h-6 pl-2 text-sm;
+}
+
+.input-small-icon-left-size {
+    @apply h-6 pl-6 text-sm;
+}
+
+.input-label {
+    @apply text-md mb-1.25 text-black;
+}
+
+/* Base styles */
+
+.label-input-wrapper {
+    @apply flex flex-col;
+}
+
+.input-descriptions {
+    @apply flex flex-col mt-1 text-sm text-gray-500;
+}
+
+.input-default-base {
+    @apply rounded-0.5 text-black placeholder-gray-300 bg-white border border-gray-100 hover:bg-gray-25 focus:border-blue-250 disabled:placeholder-gray-200 disabled:bg-gray-50 disabled:border-gray-100 disabled:cursor-not-allowed read-only:placeholder-gray-200 read-only:bg-gray-50 read-only:border-gray-100 read-only:cursor-not-allowed focus-visible:outline-none;
+    ;
+}
+
+.input-error-base {
+    @apply rounded-0.5 text-black placeholder-gray-300 bg-white border border-red-600 hover:bg-gray-25 disabled:placeholder-gray-200 disabled:bg-gray-50 disabled:border-gray-100 disabled:cursor-not-allowed read-only:placeholder-gray-200 read-only:bg-gray-50 read-only:border-gray-100 read-only:cursor-not-allowed focus-visible:outline-none;
+}
+
+/* Icon wrappers */
 
 .text-input-wrapper.large .icon-right {
-  @apply absolute inset-y-0 right-0 flex items-center space-x-1.5 pr-3.5;
+    @apply absolute inset-y-0 right-0 flex items-center space-x-1.5 pr-3.5;
 }
 
 .text-input-wrapper.large .icon-left {
-  @apply absolute inset-y-0 left-0 flex items-center space-x-1.5 pl-3.5;
+    @apply absolute inset-y-0 left-0 flex items-center space-x-1.5 pl-3.5;
 }
 
-/* ANCHOR Icons */
+.text-input-wrapper.middle .icon-right {
+    @apply absolute inset-y-0 right-0 flex items-center pr-3 space-x-2;
+}
+
+.text-input-wrapper.middle .icon-left {
+    @apply absolute inset-y-0 left-0 flex items-center pl-3 space-x-2;
+}
+
+.text-input-wrapper.small .icon-right {
+    @apply absolute inset-y-0 right-0 flex items-center space-x-2.5 pr-1.5;
+}
+
+.text-input-wrapper.small .icon-left {
+    @apply absolute inset-y-0 left-0 flex items-center space-x-2.5 pl-1.5;
+}
+
+/* Icons */
 
 .text-input-wrapper.large .input-icon {
-  @apply leading-0 !important;
-  @apply text-base text-gray-200;
+    @apply leading-0 !important;
+    @apply text-base text-gray-200;
 }
 
-/* ANCHOR Double icon right */
-
-/* .text-input-wrapper[disabled] .icon-right > i:nth-child(2):before {
-  content: "\e9d0" !important;
+.text-input-wrapper.middle .input-icon {
+    @apply leading-0 !important;
+    @apply text-md text-gray-200;
 }
 
-.text-input-wrapper[disabled] .icon-right > i:only-child:before {
-  content: "\e9d0" !important;
+.text-input-wrapper.small .input-icon {
+    @apply leading-0 !important;
+    @apply text-sm text-gray-200;
 }
 
-.text-input-wrapper.error .icon-right i:nth-child(2) {
-  @apply hidden;
-}
+/* Input fields */
 
-.text-input-wrapper.error .icon-right i {
-  @apply text-red-600;
-}
+/* Large */
 
-.text-input-wrapper.error .icon-right i:only-child:before {
-  content: "\e97c" !important;
-} */
-
-/* ANCHOR Input fields */
-
-.text-input.large, .text-input-wrapper.large .text-input, .text-input-wrapper.large .text-input-icon-right {
-  @apply rounded-0.5 h-10 text-base pl-3.5 text-black placeholder-gray-300 bg-white border border-gray-100 hover:bg-gray-25 focus:border-blue-250 disabled:placeholder-gray-200 disabled:bg-gray-50 disabled:border-gray-100 disabled:cursor-not-allowed read-only:placeholder-gray-200 read-only:bg-gray-50 read-only:border-gray-100 read-only:cursor-not-allowed focus-visible:outline-none;
+.text-input.large,
+.text-input-wrapper.large .text-input,
+.text-input-wrapper.large .text-input-icon-right {
+    @apply input-large-size;
+    @apply input-default-base;
 }
 
 .text-input-wrapper.large .text-input-icon-left {
-  @apply rounded-0.5 h-10 pl-10 text-base text-black placeholder-gray-300 bg-white border border-gray-100 hover:bg-gray-25  focus:border-blue-250 disabled:placeholder-gray-200 disabled:bg-gray-50 disabled:border-gray-100 disabled:cursor-not-allowed read-only:placeholder-gray-200 read-only:bg-gray-50 read-only:border-gray-100 read-only:cursor-not-allowed focus-visible:outline-none;
+    @apply input-large-icon-left-size;
+    @apply input-default-base;
 }
 
-.text-input.large.error, .text-input-wrapper.large.error .text-input, .text-input-wrapper.large.error .text-input-icon-right {
-  @apply rounded-0.5 h-10 text-base pl-3.5 text-black placeholder-gray-300 bg-white border border-red-600 hover:bg-gray-25  disabled:placeholder-gray-200 disabled:bg-gray-50 disabled:border-gray-100 disabled:cursor-not-allowed read-only:placeholder-gray-200 read-only:bg-gray-50 read-only:border-gray-100 read-only:cursor-not-allowed focus-visible:outline-none;
+.text-input.large.error,
+.text-input-wrapper.large.error .text-input,
+.text-input-wrapper.large.error .text-input-icon-right {
+    @apply input-large-size;
+    @apply input-error-base;
 }
 
 .text-input-wrapper.large.error .text-input-icon-left {
-  @apply rounded-0.5 h-10 pl-10 text-base text-black placeholder-gray-300 bg-white border border-red-600 hover:bg-gray-25  disabled:placeholder-gray-200 disabled:bg-gray-50 disabled:border-gray-100 disabled:cursor-not-allowed read-only:placeholder-gray-200 read-only:bg-gray-50 read-only:border-gray-100 read-only:cursor-not-allowed focus-visible:outline-none;
+    @apply input-large-icon-left-size;
+    @apply input-error-base;
 }
 
-/* .text-input.middle {
-  @apply rounded-0.5 h-8 pl-3 text-black placeholder-gray-300 bg-white border border-gray-100 text-md hover:bg-gray-25  focus:border-blue-250 disabled:placeholder-gray-200 disabled:bg-gray-50 disabled:border-gray-100 disabled:cursor-not-allowed read-only:placeholder-gray-200 read-only:bg-gray-50 read-only:border-gray-100 read-only:cursor-not-allowed focus-visible:outline-none;
+/* middle */
+
+.text-input.middle,
+.text-input-wrapper.middle .text-input,
+.text-input-wrapper.middle .text-input-icon-right {
+    @apply input-middle-size;
+    @apply input-default-base;
 }
 
-.text-input-with-icon.middle {
-  @apply rounded-0.5 h-8 pl-8 text-black placeholder-gray-300 bg-white border border-gray-100 text-md hover:bg-gray-25  focus:border-blue-250 disabled:placeholder-gray-200 disabled:bg-gray-50 disabled:border-gray-100 disabled:cursor-not-allowed read-only:placeholder-gray-200 read-only:bg-gray-50 read-only:border-gray-100 read-only:cursor-not-allowed focus-visible:outline-none;
+.text-input-wrapper.middle .text-input-icon-left {
+    @apply input-middle-icon-left-size;
+    @apply input-default-base;
 }
 
-.text-input.middle.error {
-  @apply rounded-0.5 h-8 pl-3 text-black placeholder-gray-300 bg-white border border-red-600 text-md hover:bg-gray-25  disabled:placeholder-gray-200 disabled:bg-gray-50 disabled:border-gray-100 disabled:cursor-not-allowed read-only:placeholder-gray-200 read-only:bg-gray-50 read-only:border-gray-100 read-only:cursor-not-allowed focus-visible:outline-none;
+.text-input.middle.error,
+.text-input-wrapper.middle.error .text-input,
+.text-input-wrapper.middle.error .text-input-icon-right {
+    @apply input-middle-size;
+    @apply input-error-base;
 }
 
-.text-input-with-icon.middle.error {
-  @apply rounded-0.5 h-8 pl-8 text-black placeholder-gray-300 bg-white border border-red-600 text-md hover:bg-gray-25  disabled:placeholder-gray-200 disabled:bg-gray-50 disabled:border-gray-100 disabled:cursor-not-allowed read-only:placeholder-gray-200 read-only:bg-gray-50 read-only:border-gray-100 read-only:cursor-not-allowed focus-visible:outline-none;
+.text-input-wrapper.middle.error .text-input-icon-left {
+    @apply input-middle-icon-left-size;
+    @apply input-error-base;
 }
 
-.text-input.small {
-  @apply rounded-0.5 h-6 pl-2 text-sm text-black placeholder-gray-300 bg-white border border-gray-100 hover:bg-gray-25  focus:border-blue-250 disabled:placeholder-gray-200 disabled:bg-gray-50 disabled:border-gray-100 disabled:cursor-not-allowed read-only:placeholder-gray-200 read-only:bg-gray-50 read-only:border-gray-100 read-only:cursor-not-allowed focus-visible:outline-none;
+/* small */
+
+.text-input.small,
+.text-input-wrapper.small .text-input,
+.text-input-wrapper.small .text-input-icon-right {
+    @apply input-small-size;
+    @apply input-default-base;
 }
 
-.text-input-with-icon.small {
-  @apply rounded-0.5 h-6 pl-6 text-sm text-black placeholder-gray-300 bg-white border border-gray-100 hover:bg-gray-25  focus:border-blue-250 disabled:placeholder-gray-200 disabled:bg-gray-50 disabled:border-gray-100 disabled:cursor-not-allowed read-only:placeholder-gray-200 read-only:bg-gray-50 read-only:border-gray-100 read-only:cursor-not-allowed focus-visible:outline-none;
+.text-input-wrapper.small .text-input-icon-left {
+    @apply input-small-icon-left-size;
+    @apply input-default-base;
 }
 
-.text-input.small.error {
-  @apply rounded-0.5 h-6 pl-2 text-sm text-black placeholder-gray-300 bg-white border border-red-600 hover:bg-gray-25  disabled:placeholder-gray-200 disabled:bg-gray-50 disabled:border-gray-100 disabled:cursor-not-allowed read-only:placeholder-gray-200 read-only:bg-gray-50 read-only:border-gray-100 read-only:cursor-not-allowed focus-visible:outline-none;
+.text-input.small.error,
+.text-input-wrapper.small.error .text-input,
+.text-input-wrapper.small.error .text-input-icon-right {
+    @apply input-small-size;
+    @apply input-error-base;
 }
 
-.text-input-with-icon.small.error {
-  @apply rounded-0.5 h-6 pl-6 text-sm text-black placeholder-gray-300 bg-white border border-red-600 hover:bg-gray-25  disabled:placeholder-gray-200 disabled:bg-gray-50 disabled:border-gray-100 disabled:cursor-not-allowed read-only:placeholder-gray-200 read-only:bg-gray-50 read-only:border-gray-100 read-only:cursor-not-allowed focus-visible:outline-none;
-} */
+.text-input-wrapper.small.error .text-input-icon-left {
+    @apply input-small-icon-left-size;
+    @apply input-error-base;
+}

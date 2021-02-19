@@ -14,7 +14,7 @@ $(function () {
             { id: "110", invdate: "2007-09-08", name: "test11", note: "note11", amount: "500.00", tax: "30.00", closed: false, ship_via: "FE", total: "530.00" },
             { id: "120", invdate: "2007-09-10", name: "test12", note: "note12", amount: "500.00", tax: "30.00", closed: false, ship_via: "FE", total: "530.00" }
         ],
-        $grid = $("#large"),
+        $grid = $("#pim2"),
         initDateEdit = function (elem) {
             $(elem).datepicker({
                 dateFormat: "dd-M-yy",
@@ -59,7 +59,7 @@ $(function () {
                 return {"class": "errorState"}
             }
         },
-        guiStyle: "large",
+        guiStyle: "pim2",
         iconSet: "feather",
         rowNum: 10,
         autoResizing: { compact: true },
