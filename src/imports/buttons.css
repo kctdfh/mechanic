@@ -1,33 +1,33 @@
 /* SECTION Base styles */
 
 .btn-centered {
-  @apply leading-0 inline-flex flex-row items-center justify-center;
+  @apply inline-flex flex-row items-center justify-center leading-0;
 }
 
 /* ANCHOR Main types */
 
 .btn-primary {
-  @apply btn-centered focus-standard active:bg-blue-650 active:text-white hover:bg-blue-350 hover:text-white focus-visible:bg-blue-250 focus-visible:text-white disabled:cursor-not-allowed disabled:border disabled:border-gray-100 disabled:bg-gray-50 disabled:text-gray-200 text-white bg-blue-500 border-blue-500;
+  @apply text-white bg-blue-500 border-blue-500 btn-centered focus-standard active:bg-blue-650 active:text-white hover:bg-blue-350 hover:text-white focus-visible:bg-blue-250 focus-visible:text-white disabled:cursor-not-allowed disabled:border disabled:border-gray-100 disabled:bg-gray-50 disabled:text-gray-200;
 }
 
 .btn-secondary {
-  @apply bg-gray-50 btn-centered focus-standard active:bg-blue-50 active:text-black active:border-blue-650 active:border hover:bg-gray-25 hover:text-black hover:border-blue-250 hover:border focus-visible:bg-blue-50 focus-visible:border-blue-250 focus-visible:text-black focus-visible:border disabled:cursor-not-allowed disabled:border disabled:border-gray-100 disabled:bg-gray-25 disabled:text-gray-200 text-black border border-gray-100;
+  @apply text-black border border-gray-100 bg-gray-50 btn-centered focus-standard active:bg-blue-50 active:text-black active:border-blue-650 active:border hover:bg-gray-25 hover:text-black hover:border-blue-250 hover:border focus-visible:bg-blue-50 focus-visible:border-blue-250 focus-visible:text-black focus-visible:border disabled:cursor-not-allowed disabled:border disabled:border-gray-100 disabled:bg-gray-25 disabled:text-gray-200;
 }
 
 .btn-secondary-icon {
-  @apply btn-centered focus-standard active:bg-blue-50 active:text-blue-750 active:border-blue-650 hover:text-blue-500 hover:border-blue-250 hover:bg-white focus-visible:bg-blue-50 focus-visible:border-blue-250 focus-visible:text-blue-500 disabled:cursor-not-allowed disabled:border disabled:border-gray-100 disabled:bg-white disabled:text-gray-200 text-black bg-white border border-gray-100;
+  @apply text-black bg-white border border-gray-100 btn-centered focus-standard active:bg-blue-50 active:text-blue-750 active:border-blue-650 hover:text-blue-500 hover:border-blue-250 hover:bg-white focus-visible:bg-blue-50 focus-visible:border-blue-250 focus-visible:text-blue-500 disabled:cursor-not-allowed disabled:border disabled:border-gray-100 disabled:bg-white disabled:text-gray-200;
 }
 
 .btn-tertiary {
-  @apply btn-centered focus-standard active:bg-blue-50 active:text-blue-750 active:border-blue-650 active:border hover:bg-white hover:text-blue-500 hover:border-blue-250 hover:border focus-visible:bg-blue-50 focus-visible:border-blue-50 focus-visible:text-blue-500 focus-visible:border disabled:cursor-not-allowed disabled:border disabled:border-gray-100 disabled:bg-white disabled:text-gray-200 text-blue-500 bg-white border border-gray-100;
+  @apply text-blue-500 bg-white border border-gray-100 btn-centered focus-standard active:bg-blue-50 active:text-blue-750 active:border-blue-650 active:border hover:bg-white hover:text-blue-500 hover:border-blue-250 hover:border focus-visible:bg-blue-50 focus-visible:border-blue-50 focus-visible:text-blue-500 focus-visible:border disabled:cursor-not-allowed disabled:border disabled:border-gray-100 disabled:bg-white disabled:text-gray-200;
 }
 
 .btn-ghost {
-  @apply btn-centered focus-standard active:text-blue-750 hover:text-blue-500 focus-visible:text-blue-350 disabled:cursor-not-allowed disabled:text-gray-200 text-black bg-transparent border-0;
+  @apply text-black bg-transparent border-0 btn-centered focus-standard active:text-blue-750 hover:text-blue-500 focus-visible:text-blue-350 disabled:cursor-not-allowed disabled:text-gray-200;
 }
 
 .btn-danger {
-  @apply btn-centered focus-standard active:bg-red-750 active:text-white active:border-red-750 active:border hover:bg-red-600 hover:text-white hover:border-red-600 hover:border focus-visible:bg-red-50 focus-visible:border-red-350 focus-visible:text-red-600 focus-visible:border disabled:cursor-not-allowed disabled:border disabled:border-gray-100 disabled:bg-white disabled:text-gray-200 text-red-600 bg-white border border-gray-100;
+  @apply text-red-600 bg-white border border-gray-100 btn-centered focus-standard active:bg-red-750 active:text-white active:border-red-750 active:border hover:bg-red-600 hover:text-white hover:border-red-600 hover:border focus-visible:bg-red-50 focus-visible:border-red-350 focus-visible:text-red-600 focus-visible:border disabled:cursor-not-allowed disabled:border disabled:border-gray-100 disabled:bg-white disabled:text-gray-200;
 }
 
 /* ANCHOR Sizes */
@@ -48,17 +48,17 @@
 
 .icon-btn-large {
   @apply btn-centered;
-  @apply w-9 h-9 text-base;
+  @apply text-base w-9 h-9;
 }
 
 .icon-btn-middle {
   @apply btn-centered;
-  @apply text-md w-8 h-8;
+  @apply w-8 h-8 text-md;
 }
 
 .icon-btn-small {
   @apply btn-centered;
-  @apply text-xsm w-6 h-6;
+  @apply w-6 h-6 text-xsm;
 }
 
 /* ANCHOR Base */
@@ -292,11 +292,11 @@
 /* ANCHOR Other buttons */
 
 .btn.pagination {
-  @apply text-md hover:text-blue-500 hover:border-blue-250 hover:bg-white focus-visible:bg-blue-50 focus-visible:border-blue-250 focus-visible:text-blue-500 active:bg-blue-50 active:text-blue-750 active:border-blue-650 disabled:cursor-not-allowed disabled:border disabled:border-gray-100 disabled:bg-white disabled:text-gray-200 leading-0 inline-flex flex-col items-center justify-center w-8 h-8 text-black bg-white border border-gray-100 rounded-full;
+  @apply inline-flex flex-col items-center justify-center w-8 h-8 text-black bg-white border border-gray-100 rounded-full text-md hover:text-blue-500 hover:border-blue-250 hover:bg-white focus-visible:bg-blue-50 focus-visible:border-blue-250 focus-visible:text-blue-500 active:bg-blue-50 active:text-blue-750 active:border-blue-650 disabled:cursor-not-allowed disabled:border disabled:border-gray-100 disabled:bg-white disabled:text-gray-200 leading-0;
   @apply focus-standard;
 }
 
 .btn.pagination.active {
-  @apply text-md leading-0 inline-flex flex-col items-center justify-center w-8 h-8 text-white bg-blue-500 rounded-full cursor-not-allowed;
+  @apply inline-flex flex-col items-center justify-center w-8 h-8 text-white bg-blue-500 rounded-full cursor-not-allowed text-md leading-0;
   @apply focus-standard;
 }

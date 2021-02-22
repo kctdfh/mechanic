@@ -21,11 +21,11 @@
 }
 
 .input-middle-size {
-    @apply text-md h-8 pl-3;
+    @apply h-8 pl-3 text-md;
 }
 
 .input-middle-icon-left-size {
-    @apply text-md h-8 pl-8;
+    @apply h-8 pl-8 text-md;
 }
 
 .input-small-size {
@@ -94,7 +94,7 @@
 
 .text-input-wrapper.middle .input-icon {
     @apply leading-0 !important;
-    @apply text-md text-gray-200;
+    @apply text-gray-200 text-md;
 }
 
 .text-input-wrapper.small .input-icon {

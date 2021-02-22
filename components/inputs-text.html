@@ -13,18 +13,18 @@
 
 <body class="bg-yellow-50">
     <div id="outerDiv" class="inline-flex flex-col items-center w-full p-5 space-y-5">
-        <p class="text-md text-center text-gray-900">To test validation, type in the fields. Valid inputs must contain ".com"
+        <p class="text-center text-gray-900 text-md">To test validation, type in the fields. Valid inputs must contain ".com"
             <br>You can toggle "read-only" for the first row of inputs. Press "Toggle" to change the input field above it.</p>
 
         <!-- SECTION No label -->
         <div id="no-label" class="flex-col items-center w-full p-5 space-y-5">
             <!-- SECTION Read-only toggle -->
-            <div class="justify-evenly flex flex-row flex-wrap w-full mx-auto">
+            <div class="flex flex-row flex-wrap w-full mx-auto justify-evenly">
                 <!-- ANCHOR No icon -->
                 <div class="flex flex-row space-x-1">
                     <input type="text" placeholder="Enter website" class="w-49 text-input large">
                     </input>
-                    <button class="_toggle btn large tertiary w-20">Toggle</button>
+                    <button class="w-20 _toggle btn large tertiary">Toggle</button>
                 </div>
                 <!-- ANCHOR Icon left -->
                 <div class="flex flex-row space-x-1">
@@ -35,7 +35,7 @@
                         </span>
                         <input type="text" class="w-49 text-input-icon-left large" placeholder="Enter website">
                     </fieldset>
-                    <button class="_toggle btn large tertiary w-20">Toggle</button>
+                    <button class="w-20 _toggle btn large tertiary">Toggle</button>
                 </div>
                 <!-- ANCHOR Icon right -->
                 <div class="flex flex-row space-x-1">
@@ -46,7 +46,7 @@
                         </span>
                         <input type="text" class="text-input large w-49" placeholder="Enter website">
                     </fieldset>
-                    <button class="_toggle btn large tertiary w-20">Toggle</button>
+                    <button class="w-20 _toggle btn large tertiary">Toggle</button>
                 </div>
                 <!-- ANCHOR Double icon right -->
                 <div class="flex flex-row space-x-1">
@@ -59,7 +59,7 @@
                         </span>
                         <input type="text" class="text-input large w-49" placeholder="Enter website">
                     </fieldset>
-                    <button class="_toggle btn large tertiary w-20">Toggle</button>
+                    <button class="w-20 _toggle btn large tertiary">Toggle</button>
                 </div>
                 <!-- ANCHOR Icon right left -->
                 <div class="flex flex-row space-x-1">
@@ -74,12 +74,12 @@
                         </span>
                         <input type="text" class="text-input-icon-left large w-49" placeholder="Enter website">
                     </fieldset>
-                    <button class="_toggle btn large tertiary w-20">Toggle</button>
+                    <button class="w-20 _toggle btn large tertiary">Toggle</button>
                 </div>
             </div>
             <!-- !SECTION Read-only toggle ends -->
             <!-- SECTION Read-only -->
-            <div class="justify-evenly flex flex-row flex-wrap w-full mx-auto">
+            <div class="flex flex-row flex-wrap w-full mx-auto justify-evenly">
                 <!-- ANCHOR No icon -->
                 <input type="text" placeholder="Enter website" class="w-70 text-input large" readonly></input>
                 <!-- ANCHOR Icon left -->
@@ -123,7 +123,7 @@
             </div>
             <!-- !SECTION Read-only ends -->
             <!-- SECTION Large -->
-            <div class="justify-evenly flex flex-row flex-wrap w-full mx-auto">
+            <div class="flex flex-row flex-wrap w-full mx-auto justify-evenly">
                 <!-- ANCHOR No icon -->
                 <input type="text" placeholder="Enter website" class="w-70 text-input large"></input>
                 <!-- ANCHOR Icon left -->
@@ -167,7 +167,7 @@
             </div>
             <!-- !SECTION Large ends -->
             <!-- SECTION Middle -->
-            <div class="justify-evenly flex flex-row flex-wrap w-full mx-auto">
+            <div class="flex flex-row flex-wrap w-full mx-auto justify-evenly">
                 <!-- ANCHOR No icon -->
                 <input type="text" placeholder="Enter website" class="w-70 text-input middle"></input>
                 <!-- ANCHOR Icon left -->
@@ -211,7 +211,7 @@
             </div>
             <!-- !SECTION Middle ends -->
             <!-- SECTION small -->
-            <div class="justify-evenly flex flex-row flex-wrap w-full mx-auto">
+            <div class="flex flex-row flex-wrap w-full mx-auto justify-evenly">
                 <!-- ANCHOR No icon -->
                 <input type="text" placeholder="Enter website" class="w-70 text-input small"></input>
                 <!-- ANCHOR Icon left -->
@@ -262,17 +262,17 @@
 
         <div id="with-label" class="flex-col items-center w-full p-5 space-y-5">
             <!-- SECTION Read-only toggle -->
-            <div class="justify-evenly flex flex-row flex-wrap w-full mx-auto">
+            <div class="flex flex-row flex-wrap w-full mx-auto justify-evenly">
                 <!-- ANCHOR No icon -->
                 <div class="label-input-wrapper">
                     <label for="" class="input-label">Enter website</label>
                     <div class="flex flex-row content-center space-x-1">
                         <input type="text" placeholder="Enter website" class="text-input large w-49">
                         </input>
-                        <button class="_toggle btn large tertiary w-20">Toggle</button>
+                        <button class="w-20 _toggle btn large tertiary">Toggle</button>
                     </div>
                     <div class="input-descriptions">
-                        <span class="_error hidden text-red-600">Input must be a ".com" website</span>
+                        <span class="hidden text-red-600 _error">Input must be a ".com" website</span>
                         <span class="_default">
                             Please provide your website
                         </span>
@@ -289,10 +289,10 @@
                             </span>
                             <input type="text" class="text-input-icon-left large w-49" placeholder="Enter website">
                         </fieldset>
-                        <button class="_toggle btn large tertiary w-20">Toggle</button>
+                        <button class="w-20 _toggle btn large tertiary">Toggle</button>
                     </div>
                     <div class="input-descriptions">
-                        <span class="_error hidden text-red-600">Input must be a ".com" website</span>
+                        <span class="hidden text-red-600 _error">Input must be a ".com" website</span>
                         <span class="_default">
                             Please provide your website
                         </span>
@@ -309,10 +309,10 @@
                             </span>
                             <input type="text" class="text-input large w-49" placeholder="Enter website">
                         </fieldset>
-                        <button class="_toggle btn large tertiary w-20">Toggle</button>
+                        <button class="w-20 _toggle btn large tertiary">Toggle</button>
                     </div>
                     <div class="input-descriptions">
-                        <span class="_error hidden text-red-600">Input must be a ".com" website</span>
+                        <span class="hidden text-red-600 _error">Input must be a ".com" website</span>
                         <span class="_default">
                             Please provide your website
                         </span>
@@ -331,10 +331,10 @@
                             </span>
                             <input type="text" class="text-input large w-49" placeholder="Enter website">
                         </fieldset>
-                        <button class="_toggle btn large tertiary w-20">Toggle</button>
+                        <button class="w-20 _toggle btn large tertiary">Toggle</button>
                     </div>
                     <div class="input-descriptions">
-                        <span class="_error hidden text-red-600">Input must be a ".com" website</span>
+                        <span class="hidden text-red-600 _error">Input must be a ".com" website</span>
                         <span class="_default">
                             Please provide your website
                         </span>
@@ -355,10 +355,10 @@
                             </span>
                             <input type="text" class="text-input-icon-left large w-49" placeholder="Enter website">
                         </fieldset>
-                        <button class="_toggle btn large tertiary w-20">Toggle</button>
+                        <button class="w-20 _toggle btn large tertiary">Toggle</button>
                     </div>
                     <div class="input-descriptions !hidden">
-                        <span class="_error hidden text-red-600">Input must be a ".com" website</span>
+                        <span class="hidden text-red-600 _error">Input must be a ".com" website</span>
                         <span class="_default">
                             Please provide your website
                         </span>
@@ -368,13 +368,13 @@
             <!-- !SECTION Read-only toggle ends -->
 
             <!-- SECTION Large -->
-            <div class="justify-evenly flex flex-row flex-wrap w-full mx-auto">
+            <div class="flex flex-row flex-wrap w-full mx-auto justify-evenly">
                 <!-- ANCHOR No icon -->
                 <div class="label-input-wrapper">
                         <label for="inputId" class="input-label">Enter website</label>
                         <input type="text" placeholder="Enter website" class="w-70 text-input large"></input>
                         <div class="input-descriptions">
-                            <span class="_error hidden text-red-600">Input must be a ".com" website</span>
+                            <span class="hidden text-red-600 _error">Input must be a ".com" website</span>
                             <span class="_default">Please provide your website</span>
                         </div>
                 </div>
@@ -389,7 +389,7 @@
                         <input type="text" class="w-70 text-input-icon-left large" placeholder="Enter website">
                     </fieldset>
                     <div class="input-descriptions">
-                        <span class="_error hidden text-red-600">Input must be a ".com" website</span>
+                        <span class="hidden text-red-600 _error">Input must be a ".com" website</span>
                         <span class="_default">
                             Please provide your website
                         </span>
@@ -406,7 +406,7 @@
                         <input type="text" class="text-input large w-70" placeholder="Enter website">
                     </fieldset>
                     <div class="input-descriptions">
-                        <span class="_error hidden text-red-600">Input must be a ".com" website</span>
+                        <span class="hidden text-red-600 _error">Input must be a ".com" website</span>
                         <span class="_default">
                             Please provide your website
                         </span>
@@ -425,7 +425,7 @@
                         <input type="text" class="text-input large w-70" placeholder="Enter website">
                     </fieldset>
                     <div class="input-descriptions">
-                        <span class="_error hidden text-red-600">Input must be a ".com" website</span>
+                        <span class="hidden text-red-600 _error">Input must be a ".com" website</span>
                         <span class="_default">
                             Please provide your website
                         </span>
@@ -446,7 +446,7 @@
                         <input type="text" class="text-input-icon-left large w-70" placeholder="Enter website">
                     </fieldset>
                     <div class="input-descriptions">
-                        <span class="_error hidden text-red-600">Input must be a ".com" website</span>
+                        <span class="hidden text-red-600 _error">Input must be a ".com" website</span>
                         <span class="_default">
                             Please provide your website
                         </span>
@@ -455,14 +455,14 @@
             </div>
             <!-- !SECTION Large ends -->
             <!-- SECTION Middle -->
-            <div class="justify-evenly flex flex-row flex-wrap w-full mx-auto">
+            <div class="flex flex-row flex-wrap w-full mx-auto justify-evenly">
                 <!-- ANCHOR No icon -->
                 <div class="label-input-wrapper">
                     <label for="" class="input-label">Enter website</label>
                     <input type="text" placeholder="Enter website" class="w-70 text-input middle">
                 </input>
                 <div class="input-descriptions">
-                    <span class="_error hidden text-red-600">Input must be a ".com" website</span>
+                    <span class="hidden text-red-600 _error">Input must be a ".com" website</span>
                     <span class="_default">Please provide your website</span>
                 </div>
             </div>
@@ -477,7 +477,7 @@
                         <input type="text" class="w-70 text-input-icon-left middle" placeholder="Enter website">
                     </fieldset>
                     <div class="input-descriptions">
-                        <span class="_error hidden text-red-600">Input must be a ".com" website</span>
+                        <span class="hidden text-red-600 _error">Input must be a ".com" website</span>
                         <span class="_default">
                             Please provide your website
                         </span>
@@ -494,7 +494,7 @@
                         <input type="text" class="text-input middle w-70" placeholder="Enter website">
                     </fieldset>
                     <div class="input-descriptions">
-                        <span class="_error hidden text-red-600">Input must be a ".com" website</span>
+                        <span class="hidden text-red-600 _error">Input must be a ".com" website</span>
                         <span class="_default">
                             Please provide your website
                         </span>
@@ -513,7 +513,7 @@
                         <input type="text" class="text-input middle w-70" placeholder="Enter website">
                     </fieldset>
                     <div class="input-descriptions">
-                        <span class="_error hidden text-red-600">Input must be a ".com" website</span>
+                        <span class="hidden text-red-600 _error">Input must be a ".com" website</span>
                         <span class="_default">
                             Please provide your website
                         </span>
@@ -534,7 +534,7 @@
                         <input type="text" class="text-input-icon-left middle w-70" placeholder="Enter website">
                     </fieldset>
                     <div class="input-descriptions">
-                        <span class="_error hidden text-red-600">Input must be a ".com" website</span>
+                        <span class="hidden text-red-600 _error">Input must be a ".com" website</span>
                         <span class="_default">
                             Please provide your website
                         </span>
@@ -543,13 +543,13 @@
             </div>
             <!-- !SECTION Middle ends -->
             <!-- SECTION small -->
-            <div class="justify-evenly flex flex-row flex-wrap w-full mx-auto">
+            <div class="flex flex-row flex-wrap w-full mx-auto justify-evenly">
                 <!-- ANCHOR No icon -->
                 <div class="label-input-wrapper">
                     <label for="" class="input-label">Enter website</label>
                     <input type="text" placeholder="Enter website" class="w-70 text-input small"></input>
                     <div class="input-descriptions">
-                        <span class="_error hidden text-red-600">Input must be a ".com" website</span>
+                        <span class="hidden text-red-600 _error">Input must be a ".com" website</span>
                         <span class="_default">Please provide your website</span>
                     </div>
                 </div>
@@ -564,7 +564,7 @@
                         <input type="text" class="w-70 text-input-icon-left small" placeholder="Enter website">
                     </fieldset>
                     <div class="input-descriptions">
-                        <span class="_error hidden text-red-600">Input must be a ".com" website</span>
+                        <span class="hidden text-red-600 _error">Input must be a ".com" website</span>
                         <span class="_default">
                             Please provide your website
                         </span>
@@ -581,7 +581,7 @@
                         <input type="text" class="text-input small w-70" placeholder="Enter website">
                     </fieldset>
                     <div class="input-descriptions">
-                        <span class="_error hidden text-red-600">Input must be a ".com" website</span>
+                        <span class="hidden text-red-600 _error">Input must be a ".com" website</span>
                         <span class="_default">
                             Please provide your website
                         </span>
@@ -600,7 +600,7 @@
                         <input type="text" class="text-input small w-70" placeholder="Enter website">
                     </fieldset>
                     <div class="input-descriptions">
-                        <span class="_error hidden text-red-600">Input must be a ".com" website</span>
+                        <span class="hidden text-red-600 _error">Input must be a ".com" website</span>
                         <span class="_default">
                             Please provide your website
                         </span>
@@ -621,7 +621,7 @@
                         <input type="text" class="text-input-icon-left small w-70" placeholder="Enter website">
                     </fieldset>
                     <div class="input-descriptions">
-                        <span class="_error hidden text-red-600">Input must be a ".com" website</span>
+                        <span class="hidden text-red-600 _error">Input must be a ".com" website</span>
                         <span class="_default">
                             Please provide your website
                         </span>
@@ -651,19 +651,19 @@
         }
 
         const clearIcon =
-            "<i onClick=clearInput() class='_custom-icon input-icon feather-delete cursor-pointer' data-tippy-placement='auto' data-tippy-content='Clear'" +
+            "<i onClick=clearInput() class='cursor-pointer _custom-icon icon-gray input-icon feather-delete' data-tippy-placement='auto' data-tippy-content='Clear'" +
             ">" + "<" + "/i" + ">"
 
         const validIcon =
-            "<i class='_custom-icon input-icon feather-check !text-green-600' data-tippy-placement='auto' data-tippy-content='Valid'" +
+            "<i class='_custom-icon input-icon feather-check icon-success' data-tippy-placement='auto' data-tippy-content='Valid'" +
             ">" + "<" + "/i" + ">"
 
         const errorIcon =
-            "<i onClick=clearInput() class='_added-dynamically input-icon feather-info !text-red-600 cursor-pointer'" +
+            "<i onClick=clearInput() class='cursor-pointer _added-dynamically input-icon icon-error feather-info'" +
             ">" + "<" + "/i" + ">"
 
         const readOnlyIcon =
-            "<i class='_readonly-icon input-icon feather-eye cursor-pointer' data-tippy-placement='auto' data-tippy-content='This filed cannot be edited'" +
+            "<i class='cursor-pointer _readonly-icon input-icon icon-noninteractive feather-eye' data-tippy-placement='auto' data-tippy-content='This filed cannot be edited'" +
             ">" + "<" + "/i" + ">"
 
         $(document).ready(bubbleReadonly());
