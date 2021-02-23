@@ -1,0 +1,39 @@
+.alert-icon {
+  @apply my-auto text-base;  
+}
+
+.notifyjs-wrapper [class*="basic"] .bg-border {
+  @apply border-gray-100 bg-gray-25;
+}
+
+.notifyjs-wrapper [class*="info"] .bg-border {
+  @apply border-blue-500 bg-blue-50;
+}
+
+.notifyjs-wrapper [class*="error"] .bg-border {
+  @apply border-red-600 bg-red-50;
+}
+
+.notifyjs-wrapper [class*="warning"] .bg-border {
+  @apply border-yellow-600 bg-yellow-50;
+}
+
+.notifyjs-wrapper [class*="success"] .bg-border {
+  @apply border-green-400 bg-green-50;
+}
+
+.notifyjs-wrapper [class*="warning"] .alert-icon {
+  @apply text-yellow-600 !important;
+}
+
+.notifyjs-wrapper [class*="info"] .alert-icon {
+  @apply text-blue-500 !important;
+}
+
+.notifyjs-wrapper [class*="error"] .alert-icon {
+  @apply text-red-600 !important;
+}
+
+.notifyjs-wrapper [class*="success"] .alert-icon {
+  @apply text-green-400 !important;
+}

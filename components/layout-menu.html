@@ -918,12 +918,13 @@
     $("#modal-close").click(function() {
     $.notify({
         title: 'You dismissed the modal',
-        icon: '<i class="feather-book"></i>',
+        icon: '<i class="alert-icon feather-book"></i>',
         body: '',
         primary: '',
         ghost: ''
       }, { 
-        style: 'info',
+        style: 'title',
+        className: 'info',
         autoHide: true,
         arrowShow: false,
         clickToHide: true,
@@ -933,12 +934,13 @@
     $("#modal-confirm").click(function() {
     $.notify({
         title: 'Modal confirmed',
-        icon: '<i class="feather-check-circle"></i>',
+        icon: '<i class="alert-icon feather-check-circle"></i>',
         body: "This alert appears because you closed the test modal by clicking on the Confirm button. This alert won't auto-hide; You need to close it by clicking on the close icon",
         primary: '',
         ghost: ''
       }, { 
-        style: 'success-icon-body',
+        style: 'title-icon-body',
+        className: 'success',
         autoHide: false,
         arrowShow: false,
         clickToHide: true,
