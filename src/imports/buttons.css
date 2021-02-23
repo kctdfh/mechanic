@@ -48,7 +48,7 @@
 
 .icon-btn-large {
   @apply btn-centered;
-  @apply text-base w-9 h-9;
+  @apply w-10 h-10 text-base;
 }
 
 .icon-btn-middle {

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>inputs-number</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../dist/css/styles.mini.css" />
+</head>
+
+<body>
+    <div id="outerDiv" class="bg-yellow-50 inline-flex flex-col items-center w-screen p-5 space-y-5">
+        
+        <!-- SECTION No label -->
+        <div class="flex flex-row space-x-5">
+
+            <!-- SECTION large -->
+            <div class="flex flex-col space-y-4">
+
+                <!-- ANCHOR Default -->
+                <fieldset class="input-number-wrapper group">
+                    <button id="increment" class="increment-left-large feather-plus"></button>
+                    <input class="w-30 input-number-large" type="number" placeholder="Your age"></input>
+                    <button id="decrement" class="increment-right-large feather-minus"></button>
+                </fieldset>
+    
+                <!-- ANCHOR Read-only -->
+                <fieldset class="input-number-wrapper group" disabled>
+                    <button id="increment" class="increment-left-large feather-plus"></button>
+                    <input class="w-30 input-number-large" type="number" placeholder="Your age"></input>
+                    <button id="decrement" class="increment-right-large feather-minus"></button>
+                </fieldset>
+
+                <!-- ANCHOR Error -->
+                <fieldset class="input-number-wrapper group error">
+                    <button id="increment" class="increment-left-large feather-plus"></button>
+                    <input class="w-30 input-number-large" type="number" placeholder="Your age"></input>
+                    <button id="decrement" class="increment-right-large feather-minus"></button>
+                </fieldset>
+
+            </div>
+            <!-- !SECTION large ends -->
+
+            <!-- SECTION Middle -->
+            <div class="flex flex-col space-y-4">
+    
+                <!-- ANCHOR Default -->
+                <fieldset class="input-number-wrapper group">
+                    <button id="increment" class="increment-left-middle feather-plus"></button>
+                    <input class="w-26 input-number-middle" type="number" placeholder="Your age"></input>
+                    <button id="decrement" class="increment-right-middle feather-minus"></button>
+                </fieldset>
+    
+                <!-- ANCHOR Read-only -->
+                <fieldset class="input-number-wrapper group" disabled>
+                    <button id="increment" class="increment-left-middle feather-plus"></button>
+                    <input class="w-26 input-number-middle" type="number" placeholder="Your age"></input>
+                    <button id="decrement" class="increment-right-middle feather-minus"></button>
+                </fieldset>
+
+                <!-- ANCHOR Error -->
+                 <fieldset class="input-number-wrapper group error">
+                    <button id="increment" class="increment-left-middle feather-plus"></button>
+                    <input class="w-26 input-number-middle" type="number" placeholder="Your age"></input>
+                    <button id="decrement" class="increment-right-middle feather-minus"></button>
+                </fieldset>
+                
+            </div>
+            <!-- !SECTION Middle ends -->
+
+            <!-- SECTION Small -->
+            <div class="flex flex-col space-y-4">
+    
+                <!-- ANCHOR Default -->
+                <fieldset class="input-number-wrapper group">
+                    <button id="increment" class="increment-left-small feather-plus"></button>
+                    <input class="input-number-small w-20" type="number" placeholder="Your age"></input>
+                    <button id="decrement" class="increment-right-small feather-minus"></button>
+                </fieldset>
+    
+                <!-- ANCHOR Read-only -->
+                <fieldset class="input-number-wrapper group" disabled>
+                    <button id="increment" class="increment-left-small feather-plus"></button>
+                    <input class="input-number-small w-20" type="number" placeholder="Your age"></input>
+                    <button id="decrement" class="increment-right-small feather-minus"></button>
+                </fieldset>
+
+                <!-- ANCHOR Error -->
+                 <fieldset class="input-number-wrapper group error">
+                    <button id="increment" class="increment-left-small feather-plus"></button>
+                    <input class="input-number-small w-20" type="number" placeholder="Your age"></input>
+                    <button id="decrement" class="increment-right-small feather-minus"></button>
+                </fieldset>
+                
+            </div>
+            <!-- !SECTION Small ends -->
+
+        </div>
+        <!-- !SECTION No label ends -->
+
+        <!-- SECTION Labeled -->
+        <div class="flex flex-row space-x-5">
+
+            <!-- SECTION large -->
+            <div class="flex flex-col space-y-4">
+    
+                <!-- ANCHOR Default -->
+                <div class="flex flex-col space-y-1">
+                    <label for="inputId" class="text-md text-black">Enter your name</label>
+                    <fieldset class="input-number-wrapper group">
+                        <button id="increment" class="increment-left-large feather-plus"></button>
+                        <input class="w-30 input-number-large" type="number" placeholder="Your age"></input>
+                        <button id="decrement" class="increment-right-large feather-minus"></button>
+                    </fieldset>
+                    <p class="field-description">Description</p>
+    
+                </div>
+    
+                <!-- ANCHOR Read-only -->
+                <div class="flex flex-col space-y-1">
+                    <label for="inputId" class="text-md text-black">Enter your age</label>
+                    <fieldset class="input-number-wrapper group" disabled>
+                        <button id="increment" class="increment-left-large feather-plus"></button>
+                        <input class="w-30 input-number-large" type="number" placeholder="Your age"></input>
+                        <button id="decrement" class="increment-right-large feather-minus"></button>
+                    </fieldset>
+                    <p class="field-description">Description</p>
+    
+                </div>
+
+                <!-- ANCHOR Error -->
+                <div class="error flex flex-col space-y-1">
+                    <label for="inputId" class="text-md text-black">Enter your name</label>
+                    <fieldset class="input-number-wrapper group">
+                        <button id="increment" class="increment-left-large feather-plus"></button>
+                        <input class="w-30 input-number" type="number" placeholder="Your age"></input>
+                        <button id="decrement" class="increment-right-large feather-minus"></button>
+                    </fieldset>
+                    <p class="field-description">Description</p>
+    
+                </div>
+                
+            </div>
+            <!-- !SECTION large ends -->
+
+            <!-- SECTION Middle -->
+            <div class="flex flex-col space-y-4">
+
+                <!-- ANCHOR Default -->
+                <div class="flex flex-col space-y-1">
+                    <label for="inputId" class="text-md text-black">Enter your age</label>
+                    <fieldset class="input-number-wrapper group">
+                        <button id="increment" class="increment-left-middle feather-plus"></button>
+                        <input class="w-26 input-number-middle" type="number" placeholder="Your age"></input>
+                        <button id="decrement" class="increment-right-middle feather-minus"></button>
+                    </fieldset>
+                    <p class="field-description">Description</p>
+    
+                </div>
+    
+                <!-- ANCHOR Read-only -->
+                <div class="flex flex-col space-y-1">
+                    <label for="inputId" class="text-md text-black">Enter your age</label>
+                    <fieldset class="input-number-wrapper group" disabled>
+                        <button id="increment" class="increment-left-middle feather-plus"></button>
+                        <input class="w-26 input-number-middle" type="number" placeholder="Your age"></input>
+                        <button id="decrement" class="increment-right-middle feather-minus"></button>
+                    </fieldset>
+                    <p class="field-description">Description</p>
+    
+                </div>
+
+                <!-- ANCHOR Error -->
+                <div class="error flex flex-col space-y-1">
+                    <label for="inputId" class="text-md text-black">Enter your age</label>
+                    <fieldset class="input-number-wrapper group">
+                        <button id="increment" class="increment-left-middle feather-plus"></button>
+                        <input class="w-26 input-number-middle" type="number" placeholder="Your age"></input>
+                        <button id="decrement" class="increment-right-middle feather-minus"></button>
+                    </fieldset>
+                    <p class="field-description">Description</p>
+    
+                </div>
+                
+            </div>
+            <!-- !SECTION Middle ends -->
+
+            <!-- SECTION Small -->
+            <div class="flex flex-col space-y-4">
+
+                <!-- ANCHOR Default -->
+                <div class="flex flex-col space-y-1">
+                    <label for="inputId" class="text-md text-black">Enter your age</label>
+                    <fieldset class="input-number-wrapper group">
+                        <button id="increment" class="increment-left-small feather-plus"></button>
+                        <input class="input-number-small w-20" type="number" placeholder="Your age"></input>
+                        <button id="decrement" class="increment-right-small feather-minus"></button>
+                    </fieldset>
+                    <p class="field-description">Description</p>
+                </div>
+    
+                <!-- ANCHOR Read-only -->
+                <div class="flex flex-col space-y-1">
+                    <label for="inputId" class="text-md text-black">Enter your age</label>
+                    <fieldset class="input-number-wrapper group" disabled>
+                        <button id="increment" class="increment-left-small feather-plus"></button>
+                        <input class="input-number-small w-20" type="number" placeholder="Your age"></input>
+                        <button id="decrement" class="increment-right-small feather-minus"></button>
+                    </fieldset>
+                    <p class="field-description">Description</p>
+                </div>
+
+                <!-- ANCHOR Error -->
+                <div class="error flex flex-col space-y-1">
+                    <label for="inputId" class="text-md text-black">Enter your age</label>
+                    <fieldset class="input-number-wrapper group">
+                        <button id="increment" class="increment-left-small feather-plus"></button>
+                        <input class="input-number-small w-20" type="number" placeholder="Your age"></input>
+                        <button id="decrement" class="increment-right-small feather-minus"></button>
+                    </fieldset>
+                    <p class="field-description">Description</p>
+                </div>
+
+                
+            </div>
+            <!-- !SECTION Small ends -->
+
+        </div>
+        <!-- !SECTION Labeled ends -->
+
+    </div>
+</body>
+
+</html>

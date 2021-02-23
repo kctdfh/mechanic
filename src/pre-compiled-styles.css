@@ -21,6 +21,7 @@ Deprecated
 @import "imports/collapse.css";
 @import "imports/text-inputs.css";
 @import "imports/number-input.css";
+@import "imports/number-input-v2.css";
 @import "imports/radio-checkbox.css";
 @import "imports/input-grid.css";
 @import "imports/alerts.css";

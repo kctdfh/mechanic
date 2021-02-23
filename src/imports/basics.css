@@ -1,9 +1,9 @@
-.divider-h {
-  @apply w-px h-full bg-gray-100;
+.divider-v {
+  @apply w-px bg-gray-100;
 }
 
-.divider-v {
-  @apply w-full h-px bg-gray-100;
+.divider-h {
+  @apply h-px bg-gray-100;
 }
 
 .scrollbar-regular {

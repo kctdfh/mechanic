@@ -11,59 +11,62 @@
 </head>
 
 <body>
-  <div id="outerDiv" class="bg-yellow-50 inline-flex flex-col items-center w-screen p-5 space-y-5">
+  <div id="outerDiv" class="inline-flex flex-col items-center w-screen p-5 space-y-5 bg-yellow-50">
 
     <!-- SECTION Checkmark -->
     <form class="flex flex-col space-y-4">
       <!-- ANCHOR Disabled -->
-      <forminput class="group flex flex-row content-center space-x-3">
-        <input name="check-group" type="checkbox" id="check-1" class="radiocheck" disabled></input>
+      <div class="select-wrapper">
+        <input name="check-group" type="checkbox" id="check-1" class="radiocheck" disabled> 
         <label for="check-1" class="text-md">This item is disabled</label>
-      </forminput>
+      </div>
       <!-- ANCHOR Default -->
-      <forminput class="group flex flex-row content-center space-x-3">
-        <input name="check-group" id="check-2" type="checkbox" class="radiocheck"></input>
+      <div class="select-wrapper">
+        <input name="check-group" id="check-2" type="checkbox" class="radiocheck"> 
         <label for="check-2" class="text-md">Add this item</label>
-      </forminput>
-      <forminput class="group flex flex-row content-center space-x-3">
-        <input name="check-group" type="checkbox" id="check-3" class="radiocheck"></input>
+      </div>
+      <div class="select-wrapper">
+        <input name="check-group" type="checkbox" id="check-3" class="radiocheck"> 
         <label for="check-3" class="text-md">Add this item too</label>
-      </forminput>
-      <forminput class="group flex flex-row content-center space-x-3">
-        <input name="check-group" type="checkbox" id="check-4" class="radiocheck"></input>
+      </div>
+      <div class="select-wrapper">
+        <input name="check-group" type="checkbox" id="check-4" class="radiocheck"> 
         <label for="check-4" class="text-md">Another item to add</label>
-      </forminput>
+      </div>
     </form>
     <!-- !SECTION Checkmarks ends -->
 
     <!-- SECTION Radio -->
     <form class="flex flex-col space-y-4">
       <!-- ANCHOR Disabled -->
-      <forminput class="group flex flex-row content-center space-x-3">
-        <input name="radio-group" type="radio" id="radio-1" class="radiocheck" disabled></input>
+      <div class="select-wrapper">
+        <input name="radio-group" type="radio" id="radio-1" class="radiocheck" disabled> 
         <label for="radio-1" class="text-md">This item is disabled</label>
-      </forminput>
+      </div>
       <!-- ANCHOR Default -->
-      <forminput class="group flex flex-row content-center space-x-3">
-        <input name="radio-group" type="radio" id="radio-2" class="radiocheck"></input>
+      <div class="select-wrapper">
+        <input name="radio-group" type="radio" id="radio-2" class="radiocheck"> 
         <label for="radio-2" class="text-md">Item to select</label>
-      </forminput>
-      <forminput class="group flex flex-row content-center space-x-3">
-        <input name="radio-group" type="radio" id="radio-3" class="radiocheck"></input>
+      </div>
+      <div class="select-wrapper">
+        <input name="radio-group" type="radio" id="radio-3" class="radiocheck"> 
         <label for="radio-3" class="text-md">Select this item</label>
-      </forminput>
-      <forminput class="group flex flex-row content-center space-x-3">
-        <input name="radio-group" type="radio" id="radio-4" class="radiocheck"></input>
+      </div>
+      <div class="select-wrapper">
+        <input name="radio-group" type="radio" id="radio-4" class="radiocheck"> 
         <label for="radio-4" class="text-md">Another item to select</label>
-      </forminput>
-      <forminput class="group flex flex-row content-center space-x-3">
-        <input name="radio-group" type="radio" id="radio-5" class="radiocheck"></input>
+      </div>
+      <div class="select-wrapper">
+        <input name="radio-group" type="radio" id="radio-5" class="radiocheck"> 
         <label for="radio-5" class="text-md">Select this item instead</label>
-      </forminput>
+      </div>
     </form>
     <!-- !SECTION Radio ends -->
 
   </div>
+  <script>
+    document.querySelector("#check-2").indeterminate = true;
+  </script>
 </body>
 
 </html>
