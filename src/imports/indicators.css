@@ -15,9 +15,9 @@
 }
 
 .dot-indicator {
-  @apply w-2 h-2 border border-white rounded-full;
+  @apply mr-0.5 w-2 h-2 border border-white rounded-full;
 }
 
-.dot-indicator-small {
-  @apply w-1.5 h-1.5 border border-white rounded-full;
+.dot-indicator-small, .status-small .dot-indicator {
+  @apply mr-px w-1.5 h-1.5 border border-white rounded-full;
 }
