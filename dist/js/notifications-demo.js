@@ -60,7 +60,7 @@ $("#basic-icon").click(function() {
     });
 });
 
-$("#basic-icon-body-close").click(function() {
+$("#basic-body-close").click(function() {
     $.notify({
         title: 'This is a test',
         icon: '<i class="feather-book"></i>',
@@ -68,7 +68,7 @@ $("#basic-icon-body-close").click(function() {
         primary: '',
         ghost: ''
       }, { 
-        style: 'basic-icon-body-close',
+        style: 'basic-body-close',
         autoHide: false,
         clickToHide: false,
         globalPosition: 'right bottom'
@@ -95,8 +95,8 @@ $("#basic-body-buttons-close").click(function() {
         title: 'This is a test',
         icon: '<i class="feather-book"></i>',
         body: 'This is the body of a basic alert. It can be really long or short. The alert height adjusts automatically',
-        primary: 'Okay',
-        ghost: 'Dimiss'
+        primary: '<button class="btn primary middle _confirm">Okay</button>',
+        ghost: '<button class="btn ghost middle _dismiss">Dismiss</button>'
       }, { 
         style: 'basic-body-buttons-close',
         autoHide: false,
@@ -110,8 +110,8 @@ $("#basic-icon-body-buttons").click(function() {
         title: 'This is a test',
         icon: '<i class="feather-book"></i>',
         body: 'This is the body of a basic alert. It can be really long or short. The alert height adjusts automatically',
-        primary: 'Okay',
-        ghost: 'Dismiss'
+        primary: '<button class="btn primary middle _confirm">Okay</button>',
+        ghost: '<button class="btn ghost middle _dismiss">Dismiss</button>'
       }, { 
         style: 'basic-icon-body-buttons',
         autoHide: false,
@@ -182,7 +182,7 @@ $("#info-icon").click(function() {
     });
 });
 
-$("#info-icon-body-close").click(function() {
+$("#info-body-close").click(function() {
     $.notify({
         title: 'This is a test',
         icon: '<i class="feather-info"></i>',
@@ -190,7 +190,7 @@ $("#info-icon-body-close").click(function() {
         primary: '',
         ghost: ''
       }, { 
-        style: 'info-icon-body-close',
+        style: 'info-body-close',
         autoHide: false,
         clickToHide: false,
         globalPosition: 'right bottom'
@@ -217,8 +217,8 @@ $("#info-body-buttons-close").click(function() {
         title: 'This is a test',
         icon: '<i class="feather-info"></i>',
         body: 'This is the body of a info alert. It can be really long or short. The alert height adjusts automatically',
-        primary: 'Okay',
-        ghost: 'Dimiss'
+        primary: '<button class="btn primary middle _confirm">Okay</button>',
+        ghost: '<button class="btn ghost middle _dismiss">Dismiss</button>'
       }, { 
         style: 'info-body-buttons-close',
         autoHide: false,
@@ -232,8 +232,8 @@ $("#info-icon-body-buttons").click(function() {
         title: 'This is a test',
         icon: '<i class="feather-info"></i>',
         body: 'This is the body of a info alert. It can be really long or short. The alert height adjusts automatically',
-        primary: 'Okay',
-        ghost: 'Dismiss'
+        primary: '<button class="btn primary middle _confirm">Okay</button>',
+        ghost: '<button class="btn ghost middle _dismiss">Dismiss</button>'
       }, { 
         style: 'info-icon-body-buttons',
         autoHide: false,
@@ -304,7 +304,7 @@ $("#error-icon").click(function() {
     });
 });
 
-$("#error-icon-body-close").click(function() {
+$("#error-body-close").click(function() {
     $.notify({
         title: 'This is a test',
         icon: '<i class="feather-x-circle"></i>',
@@ -312,7 +312,7 @@ $("#error-icon-body-close").click(function() {
         primary: '',
         ghost: ''
       }, { 
-        style: 'error-icon-body-close',
+        style: 'error-body-close',
         autoHide: false,
         clickToHide: false,
         globalPosition: 'right bottom'
@@ -339,8 +339,8 @@ $("#error-body-buttons-close").click(function() {
         title: 'This is a test',
         icon: '<i class="feather-x-circle"></i>',
         body: 'This is the body of a error alert. It can be really long or short. The alert height adjusts automatically',
-        primary: 'Okay',
-        ghost: 'Dimiss'
+        primary: '<button class="btn primary middle _confirm">Okay</button>',
+        ghost: '<button class="btn ghost middle _dismiss">Dismiss</button>'
       }, { 
         style: 'error-body-buttons-close',
         autoHide: false,
@@ -354,8 +354,8 @@ $("#error-icon-body-buttons").click(function() {
         title: 'This is a test',
         icon: '<i class="feather-x-circle"></i>',
         body: 'This is the body of a error alert. It can be really long or short. The alert height adjusts automatically',
-        primary: 'Okay',
-        ghost: 'Dismiss'
+        primary: '<button class="btn primary middle _confirm">Okay</button>',
+        ghost: '<button class="btn ghost middle _dismiss">Dismiss</button>'
       }, { 
         style: 'error-icon-body-buttons',
         autoHide: false,
@@ -426,7 +426,7 @@ $("#warning-icon").click(function() {
     });
 });
 
-$("#warning-icon-body-close").click(function() {
+$("#warning-body-close").click(function() {
     $.notify({
         title: 'This is a test',
         icon: '<i class="feather-triangle"></i>',
@@ -434,7 +434,7 @@ $("#warning-icon-body-close").click(function() {
         primary: '',
         ghost: ''
       }, { 
-        style: 'warning-icon-body-close',
+        style: 'warning-body-close',
         autoHide: false,
         clickToHide: false,
         globalPosition: 'right bottom'
@@ -461,8 +461,8 @@ $("#warning-body-buttons-close").click(function() {
         title: 'This is a test',
         icon: '<i class="feather-triangle"></i>',
         body: 'This is the body of a warning alert. It can be really long or short. The alert height adjusts automatically',
-        primary: 'Okay',
-        ghost: 'Dimiss'
+        primary: '<button class="btn primary middle _confirm">Okay</button>',
+        ghost: '<button class="btn ghost middle _dismiss">Dismiss</button>'
       }, { 
         style: 'warning-body-buttons-close',
         autoHide: false,
@@ -476,8 +476,8 @@ $("#warning-icon-body-buttons").click(function() {
         title: 'This is a test',
         icon: '<i class="feather-triangle"></i>',
         body: 'This is the body of a warning alert. It can be really long or short. The alert height adjusts automatically',
-        primary: 'Okay',
-        ghost: 'Dismiss'
+        primary: '<button class="btn primary middle _confirm">Okay</button>',
+        ghost: '<button class="btn ghost middle _dismiss">Dismiss</button>'
       }, { 
         style: 'warning-icon-body-buttons',
         autoHide: false,
@@ -548,7 +548,7 @@ $("#success-icon").click(function() {
     });
 });
 
-$("#success-icon-body-close").click(function() {
+$("#success-body-close").click(function() {
     $.notify({
         title: 'This is a test',
         icon: '<i class="feather-check-circle"></i>',
@@ -556,7 +556,7 @@ $("#success-icon-body-close").click(function() {
         primary: '',
         ghost: ''
       }, { 
-        style: 'success-icon-body-close',
+        style: 'success-body-close',
         autoHide: false,
         clickToHide: false,
         globalPosition: 'right bottom'
@@ -583,8 +583,8 @@ $("#success-body-buttons-close").click(function() {
         title: 'This is a test',
         icon: '<i class="feather-check-circle"></i>',
         body: 'This is the body of a success alert. It can be really long or short. The alert height adjusts automatically',
-        primary: 'Okay',
-        ghost: 'Dimiss'
+        primary: '<button class="btn primary middle _confirm">Okay</button>',
+        ghost: '<button class="btn ghost middle _dismiss">Dismiss</button>'
       }, { 
         style: 'success-body-buttons-close',
         autoHide: false,
@@ -598,8 +598,8 @@ $("#success-icon-body-buttons").click(function() {
         title: 'This is a test',
         icon: '<i class="feather-check-circle"></i>',
         body: 'This is the body of a success alert. It can be really long or short. The alert height adjusts automatically',
-        primary: 'Okay',
-        ghost: 'Dismiss'
+        primary: '<button class="btn primary middle _confirm">Okay</button>',
+        ghost: '<button class="btn ghost middle _dismiss">Dismiss</button>'
       }, { 
         style: 'success-icon-body-buttons',
         autoHide: false,
@@ -611,7 +611,7 @@ $("#success-icon-body-buttons").click(function() {
 // ANCHOR Click events for alerts
 
 //listen for click events from this style
-$(document).on('click', 'div[class^="notifyjs"] ._ghost', function() {
+$(document).on('click', 'div[class^="notifyjs"] ._dismiss', function() {
 $(this).trigger('notify-hide');
 $.notify({
     title: 'Alert dismissed'
@@ -623,7 +623,7 @@ $.notify({
 });
 });
 
-$(document).on('click', 'div[class^="notifyjs"] ._primary', function() {
+$(document).on('click', 'div[class^="notifyjs"] ._confirm', function() {
 $(this).trigger('notify-hide');
 $.notify({
     title: 'Alert confirmed'

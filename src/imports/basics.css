@@ -29,25 +29,25 @@
 
 .icon-error {
   @apply text-red-600 !important;
-  @apply cursor-pointer hover:text-red-750 active:text-red-900 disabled:text-gray-200 focus-standard disabled:cursor-not-allowed !important;
+  @apply hover:text-red-750 active:text-red-900 disabled:text-gray-200 focus-standard disabled:cursor-not-allowed !important;
 }
 
 .icon-danger {
   @apply text-yellow-600 !important;
-  @apply cursor-pointer hover:text-yellow-850 active:text-yellow-900 disabled:text-gray-200 focus-standard disabled:cursor-not-allowed !important;
+  @apply hover:text-yellow-850 active:text-yellow-900 disabled:text-gray-200 focus-standard disabled:cursor-not-allowed !important;
 }
 
 .icon-primary {
   @apply text-blue-500 !important; 
-  @apply cursor-pointer hover:text-blue-650 active:text-blue-750 disabled:text-gray-200 focus-standard disabled:cursor-not-allowed !important;
+  @apply hover:text-blue-650 active:text-blue-750 disabled:text-gray-200 focus-standard disabled:cursor-not-allowed !important;
 }
 
 .icon-gray {
   @apply text-gray-200 !important;
-  @apply cursor-pointer hover:text-blue-500 active:text-blue-750 disabled:text-gray-200 focus-visible:text-blue-350 focus-standard !important; 
+  @apply hover:text-blue-500 active:text-blue-750 disabled:text-gray-200 focus-visible:text-blue-350 focus-standard !important; 
 }
 
 .icon-noninteractive {
   @apply text-gray-200 !important;
-  @apply cursor-default focus-standard !important; 
+  @apply focus-standard !important; 
 }

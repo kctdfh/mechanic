@@ -1,22 +1,63 @@
-.basic-modal i {
-    @apply text-black;
+.modal-wrapper {
+    @apply flex flex-col shadow-xl;
 }
 
-.info-modal i {
-    @apply text-blue-500;
+.modal-wrapper button, .modal-wrapper .divider-h {
+    @apply my-auto;
 }
 
-.warning-modal i {
-    @apply text-yellow-600;
+.modal-wrapper.basic .modal-header {
+    @apply flex flex-row justify-between h-16 px-6 shadow-border-b;
 }
 
-.error-modal i {
-    @apply text-red-600;
+.modal-wrapper.basic .modal-title {
+    @apply my-auto text-base font-semibold;
 }
 
-.success-modal i {
-    @apply text-green-400;
+.modal-wrapper.icon .modal-title {
+    @apply mb-4 text-base font-semibold;
 }
+
+.modal-wrapper.basic .modal-close {
+    @apply icon-btn-large;
+    @apply btn-ghost;
+}
+
+.modal-wrapper.basic .modal-content {
+    @apply px-6 py-4 shadow-border-b;
+}
+
+.modal-wrapper.icon .modal-content {
+    @apply flex flex-row py-6 pr-6;
+}
+
+.modal-wrapper.icon .modal-content .icon {
+    @apply h-full;
+}
+
+.modal-wrapper.icon .modal-content .icon i {
+    @apply px-6 text-xl;
+}
+
+.modal-wrapper.icon .modal-content .content {
+    @apply w-full;
+}
+
+.modal-wrapper.basic .modal-footer {
+    @apply flex flex-row justify-end h-16 px-6;
+}
+
+.modal-wrapper.icon .modal-footer {
+    @apply flex flex-row justify-end h-16 px-6 shadow-border-t;
+}
+
+.modal-buttons {
+    @apply flex flex-row justify-end h-full space-x-4;
+}
+
+
+
+
 
 [data-a11y-dialog-native] > .dialog-overlay {
     @apply hidden;

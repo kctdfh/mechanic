@@ -17,8 +17,8 @@
 <body>
   <!-- ANCHOR Session header -->
   <header id="session-header"
-      class="shadow-border-b z-2 absolute top-0 left-0 flex justify-between w-full h-16 px-6 py-4 bg-white">
-      <div id="header-overlay" class="_close-drawer absolute inset-0 hidden w-full h-full bg-black opacity-0"></div>
+      class="absolute top-0 left-0 flex justify-between w-full h-16 px-6 py-4 bg-white shadow-border-b z-2">
+      <div id="header-overlay" class="absolute inset-0 hidden w-full h-full bg-black opacity-0 _close-drawer"></div>
         <div class="h-8 my-auto">
           <img class="h-full" src="../dist/assets/pdexlogo.png" alt="Pricedex Logo">
         </div>
@@ -26,12 +26,12 @@
           <img class="h-full" src="../dist/assets/clientlogo.png" alt="Audi Logo">
         </div>
         <div class="relative flex flex-col items-end">
-          <div onClick="openMenu()" class="group inline-flex items-center space-x-4 cursor-pointer">
-            <div class="justify-items-start inline-flex flex-col space-y-1">
-              <p class="group-hover:text-blue-850 text-sm font-semibold text-right text-black">
+          <div onClick="openMenu()" class="inline-flex items-center space-x-4 cursor-pointer group">
+            <div class="inline-flex flex-col space-y-1 justify-items-start">
+              <p class="text-sm font-semibold text-right text-black group-hover:text-blue-850">
                 Jane Doe
               </p>
-              <p class="text-xsm group-hover:text-blue-850 leading-none text-right text-gray-500">
+              <p class="leading-none text-right text-gray-500 text-xsm group-hover:text-blue-850">
                 Admin
               </p>
             </div>
@@ -39,20 +39,20 @@
               <img src="../dist/assets/avatar.jpg" alt="user avatar" class="object-cover w-full h-full" />
             </div>
           </div>
-          <div id="userDropdown" class="z-100 w-55 top-10 absolute flex-col hidden py-2 space-y-2 bg-white shadow">
-            <a href="#" class="group align-end h-7 hover:bg-gray-25 inline-flex w-full px-4 py-1 space-x-3">
+          <div id="userDropdown" class="absolute flex-col hidden py-2 space-y-2 bg-white shadow z-100 w-55 top-10">
+            <a href="#" class="inline-flex w-full px-4 py-1 space-x-3 group align-end h-7 hover:bg-gray-25">
               <div class="flex items-center h-full">
-                <i class="group-hover:text-blue-850 align-center feather-info text-gray-300"></i>
+                <i class="text-gray-300 group-hover:text-blue-850 align-center feather-info"></i>
               </div>
-              <p class="group-hover:text-blue-850 align-center text-md w-44 h-full text-black">
+              <p class="h-full text-black group-hover:text-blue-850 align-center text-md w-44">
                 Help
               </p>
             </a>
-            <a href="#" class="group align-end h-7 hover:bg-gray-25 inline-flex w-full px-4 py-1 space-x-3">
+            <a href="#" class="inline-flex w-full px-4 py-1 space-x-3 group align-end h-7 hover:bg-gray-25">
               <div class="flex items-center h-full">
-                <i class="align-center group-hover:text-blue-850 feather-log-out text-gray-300"></i>
+                <i class="text-gray-300 align-center group-hover:text-blue-850 feather-log-out"></i>
               </div>
-              <p class="align-center group-hover:text-blue-850 text-md w-44 h-full text-black">
+              <p class="h-full text-black align-center group-hover:text-blue-850 text-md w-44">
                 Log out
               </p>
             </a>
@@ -64,13 +64,13 @@
     <!-- ANCHOR Headers Wrapper -->
     <div id="headers">
       <div id="system-header"
-        class="top-16 shadow-border-b h-14 fixed left-0 inline-flex w-full px-6 py-2 bg-white border-l border-gray-100">
-        <a href="#menu" class="mburger mburger--collapse self-center">
+        class="fixed left-0 inline-flex w-full px-6 py-2 bg-white border-l border-gray-100 top-16 shadow-border-b h-14">
+        <a href="#menu" class="self-center mburger mburger--collapse">
           <b></b>
           <b></b>
           <b></b>
         </a>
-        <div class="crumbs self-center">
+        <div class="self-center crumbs">
           <button class="crumb-home feather-home"></button>
           <i class="crumb-chevron feather-chevron-right"></i>
           <button class="crumb">First Page</button>
@@ -83,15 +83,15 @@
           <i class="crumb-chevron feather-chevron-right"></i>
           <button class="crumb">Fifth Page</button>
         </div>
-        <div class="justify-self-end self-center h-8">
+        <div class="self-center h-8 justify-self-end">
           <div class="flex flex-row justify-end h-full space-x-3">
-            <div class="relative h-8">
-              <span class="absolute inset-y-0 left-0 flex items-center pl-3">
-                <i class="!leading-0 text-gray-200 text-md feather-search">
-                </i>
+            <fieldset class="text-input-wrapper middle">
+              <span class="icon-left">
+                  <i class="input-icon feather-search">
+                  </i>
               </span>
-              <input type="text" id="search_part" class="input-icon-middle w-50" placeholder="Search part">
-            </div>
+              <input type="text" class="w-50 text-input-icon-left middle" placeholder="Part ID">
+            </fieldset>
             <button class="icon-btn middle secondary feather-search"></button>
             <div class="divider-h"></div>
             <button class="icon-btn middle secondary feather-help-circle">
@@ -103,7 +103,7 @@
           </div>
         </div>
       </div>
-      <div id="page-header" class="h-14 top-30 shadow-border-b fixed inline-flex justify-between w-full bg-white border-l border-gray-100">
+      <div id="page-header" class="fixed inline-flex justify-between w-full bg-white border-l border-gray-100 h-14 top-30 shadow-border-b">
         <div class="flex flex-row h-full">
           <p class="self-center flex-shrink-0 px-6 py-4 text-lg">Page Name</p>
           <div class="flex justify-start space-x-4">
@@ -128,7 +128,7 @@
               <div class="tab-border">
               </div>
             </div>
-            <button data-tippy-placement="auto" data-tippy-content="More Tabs" class="btn-large-ghost-icon feather-more-horizontal my-auto"></button>
+            <button data-tippy-placement="auto" data-tippy-content="More Tabs" class="my-auto btn-large-ghost-icon feather-more-horizontal"></button>
           </div>
         </div>
         <div class="flex flex-row h-8 px-6 my-auto space-x-4">
@@ -144,19 +144,19 @@
             </select>
           </div>
           <div class="divider-h"></div>
-          <div class="relative h-8">
-            <span class="absolute inset-y-0 left-0 flex items-center pl-3">
-              <i class="!leading-0 text-gray-200 text-md feather-search">
-              </i>
+          <fieldset class="text-input-wrapper middle">
+            <span class="icon-left">
+                <i class="input-icon feather-search">
+                </i>
             </span>
-            <input type="text" id="input" class="input-icon-middle w-40" placeholder="Search">
-          </div>
+            <input type="text" class="w-50 text-input-icon-left middle" placeholder="Search">
+        </fieldset>
           <div class="divider-h"></div>
           <button class="btn">Button</button>
         </div>
       </div>
       <div id="progress-header"
-        class="top-44 shadow-border-b h-14 fixed inline-flex justify-center w-full bg-white border-l border-gray-100">
+        class="fixed inline-flex justify-center w-full bg-white border-l border-gray-100 top-44 shadow-border-b h-14">
         <div class="flex flex-row h-full">
           <div class="flex justify-start space-x-6">
             <div id="tab-1" class="tab-btn-wrapper group">
@@ -166,7 +166,7 @@
               <div class="tab-border">
               </div>
             </div>
-            <i class="feather-chevron-right my-auto text-lg text-gray-300"></i>
+            <i class="my-auto text-lg text-gray-300 feather-chevron-right"></i>
             <div id="tab-2" class="tab-btn-wrapper group active">
               <div class="flex flex-row space-x-2">
                 <button class="tab-btn">Second Step</button>
@@ -174,7 +174,7 @@
               <div class="tab-border">
               </div>
             </div>
-            <i class="feather-chevron-right my-auto text-lg text-gray-300"></i>
+            <i class="my-auto text-lg text-gray-300 feather-chevron-right"></i>
             <div id="tab-3" class="tab-btn-wrapper group">
               <div class="flex flex-row space-x-2">
                 <button class="tab-btn" disabled>Third Step</button>
@@ -182,7 +182,7 @@
               <div class="tab-border">
               </div>
             </div>
-            <i class="feather-chevron-right my-auto text-lg text-gray-300"></i>
+            <i class="my-auto text-lg text-gray-300 feather-chevron-right"></i>
             <div id="tab-3" class="tab-btn-wrapper group">
               <button class="tab-btn" disabled>Last Step</button>
             </div>
@@ -191,7 +191,7 @@
       </div>
     </div>
     <!-- ANCHOR Content wrapper -->
-    <div id="content" class="scrollbar-regular bottom-16 fixed w-full p-6 overflow-scroll border-l border-gray-100">
+    <div id="content" class="fixed w-full p-6 overflow-scroll border-l border-gray-100 scrollbar-regular bottom-16">
       <p>Mollit aliquip nisi sint adipisicing non enim sit proident pariatur. Anim nostrud commodo irure Lorem
         exercitation occaecat. Quis dolore sit velit esse aliquip aute.
         </br>
@@ -300,7 +300,7 @@
       </p>
     </div>
     <!-- ANCHOR Footer -->
-    <div id="page-footer" class="shadow-border-t flow-row fixed bottom-0 flex justify-end w-full h-16 px-6 py-4 bg-white border-l border-gray-100">
+    <div id="page-footer" class="fixed bottom-0 flex justify-end w-full h-16 px-6 py-4 bg-white border-l border-gray-100 shadow-border-t flow-row">
       <!-- ANCHOR Buttons Wrapper -->
       <div id="footer-buttons" class="flex flex-row justify-end h-full space-x-4">
         <button data-tippy-placement="auto" data-tippy-content="This button says edit" class="btn">Edit</button>
@@ -311,20 +311,20 @@
       </div>
     </div>
     <!-- ANCHOR Drawer overlay -->
-    <div id="dark-overlay" class="_close-drawer z-100 absolute inset-0 hidden w-screen h-screen bg-black opacity-0">
+    <div id="dark-overlay" class="absolute inset-0 hidden w-screen h-screen bg-black opacity-0 _close-drawer z-100">
     </div>
     <!-- ANCHOR Drawer -->
     <div id="drawer"
-      class="-right-full z-100 absolute inset-y-0 flex flex-col float-right w-1/2 overflow-hidden transition-transform duration-200 ease-in-out bg-white shadow-2xl">
+      class="absolute inset-y-0 flex flex-col float-right w-1/2 overflow-hidden transition-transform duration-200 ease-in-out bg-white shadow-2xl -right-full z-100">
       <!-- ANCHOR Drawer header -->
-      <div class="shadow-border-b inline-flex items-center w-full h-16 py-1 pl-4 pr-2 bg-white">
+      <div class="inline-flex items-center w-full h-16 py-1 pl-4 pr-2 bg-white shadow-border-b">
         <div class="inline-flex items-center justify-between w-full h-full">
           <p class="flex-grow text-base font-semibold text-black">Drawer</p>
           <button class="_close-drawer feather-x icon-btn large ghost"></button>
         </div>
       </div>
       <!-- ANCHOR Drawer tabs -->
-      <div class="shadow-border-b h-14 inline-flex justify-center w-full bg-white">
+      <div class="inline-flex justify-center w-full bg-white shadow-border-b h-14">
         <div class="flex flex-row h-full">
           <div class="flex justify-start space-x-6">
             <div id="tab-1" class="tab-btn-wrapper group active">
@@ -343,8 +343,8 @@
         </div>
       </div>
       <!-- ANCHOR Drawer content wrapper -->
-      <div id="drawer-content" class="scrollbar-regular w-full p-6 overflow-x-hidden overflow-y-scroll">
-        <article class="max-w-none prose">
+      <div id="drawer-content" class="w-full p-6 overflow-x-hidden overflow-y-scroll scrollbar-regular">
+        <article class="prose max-w-none">
           <!-- ANCHOR Drawer Content -->
           <p>
             Pass your markdown here and the <code>prose</code> utility class
@@ -505,7 +505,7 @@
         </article>
       </div>
       <!-- ANCHOR Drawer footer -->
-      <div class="min-h-lg shadow-border-t relative w-full bg-white">
+      <div class="relative w-full bg-white min-h-lg shadow-border-t">
         <div class="absolute right-0 flex flex-row justify-end h-full p-4 space-x-4">
           <button class="_close-drawer btn middle primary">Close</button>
         </div>
@@ -882,24 +882,24 @@
     </nav>
     <!-- ANCHOR Modal -->
     <div class="dialog-container" id="modal" aria-hidden="true">
-          <div class="dialog-overlay" id="dialog-overlay" tabindex="-1" data-a11y-dialog-hide></div>
-          <div role="dialog" aria-labelledby="dialog-title">
-              <div role="document" class="dialog-content flex flex-col w-1/2 bg-white shadow-xl">
-                  <div class="min-h-md shadow-border-b flex flex-row justify-between px-6">
-                      <p class="my-auto text-base font-semibold">Header</p>
-                      <button data-a11y-dialog-hide class="icon-btn large ghost feather-x my-auto"></button>
-                  </div>
-                  <div class="shadow-border-b px-6 py-4">
-                      <p>Ut consequat minim exercitation aliqua aute commodo et ut in minim. Voluptate labore do qui non nostrud culpa cupidatat laborum fugiat nisi mollit enim ipsum. Pariatur est culpa eu non est labore officia occaecat. Nostrud qui nulla consectetur anim sit consequat in irure ea ullamco dolor cillum reprehenderit occaecat. Est tempor aliqua ad ex sint proident reprehenderit reprehenderit officia anim. Ut commodo aliquip excepteur irure non occaecat incididunt Lorem. Mollit veniam veniam ut aliqua voluptate consectetur magna sit.</p>
-                  </div>
-                  <div class="flex flex-row justify-end h-16 px-6">
-                      <div class="flex flex-row justify-end h-full space-x-4">
-                          <button class="btn middle ghost my-auto" id="modal-close" data-a11y-dialog-hide >Dismiss</button>
-                          <button class="btn middle primary my-auto" id="modal-confirm" data-a11y-dialog-hide >Confirm</button>
-                      </div>
-                  </div>
+      <div class="dialog-overlay" id="dialog-overlay" tabindex="-1" data-a11y-dialog-hide></div>
+      <div role="dialog" aria-labelledby="dialog-title">
+        <div role="document" class="w-1/2 bg-white modal-wrapper basic dialog-content">
+          <div class="modal-header">
+              <p class="modal-title">Header</p>
+              <button data-a11y-dialog-hide class="icon-btn large ghost feather-x"></button>
+          </div>
+          <div class="modal-content">
+              <p>Ut consequat minim exercitation aliqua aute commodo et ut in minim. Voluptate labore do qui non nostrud culpa cupidatat laborum fugiat nisi mollit enim ipsum. Pariatur est culpa eu non est labore officia occaecat. Nostrud qui nulla consectetur anim sit consequat in irure ea ullamco dolor cillum reprehenderit occaecat. Est tempor aliqua ad ex sint proident reprehenderit reprehenderit officia anim. Ut commodo aliquip excepteur irure non occaecat incididunt Lorem. Mollit veniam veniam ut aliqua voluptate consectetur magna sit.</p>
+          </div>
+          <div class="modal-footer">
+              <div class="modal-buttons">
+                  <button id="modal-close" data-a11y-dialog-hide class="btn middle ghost">Dismiss</button>
+                  <button id="modal-confirm" data-a11y-dialog-hide class="btn middle primary">Confirm</button>
               </div>
           </div>
+      </div>
+      </div>
     </div>
   </div>
 
@@ -938,7 +938,7 @@
         primary: '',
         ghost: ''
       }, { 
-        style: 'success-icon-body-close',
+        style: 'success-icon-body',
         autoHide: false,
         arrowShow: false,
         clickToHide: true,
@@ -1028,31 +1028,10 @@
   </script>
 
   <!-- ANCHOR Dynamically set #content position -->
+  <script src="../dist/js/setheaders.js">
+  </script>
   <script>
-      var allHeights = 0;
-
-      var fixedHeader = $("#session-header");
-
-      var paddingTpx = fixedHeader.css('padding-top');
-      var paddingT = Number(paddingTpx.slice(0, -2));
-      var paddingBpx = fixedHeader.css('padding-bottom');
-      var paddingB = Number(paddingBpx.slice(0, -2));
-      var realHeight = fixedHeader.height() + paddingT + paddingB;
-      allHeights += realHeight;
-
-      $("#headers").children().each(function () {
-        var paddingTpx = $(this).css('padding-top');
-        var paddingT = Number(paddingTpx.slice(0, -2));
-        var paddingBpx = $(this).css('padding-bottom');
-        var paddingB = Number(paddingBpx.slice(0, -2));
-        var realHeight = $(this).height() + paddingT + paddingB;
-        allHeights += realHeight;
-      });
-
-      const content = $("#content");
-      content.css({
-        top: allHeights
-      });
+    setHeaders("#session-header","#headers","#content");
   </script>
 
   <!-- ANCHOR User menu trigger -->

@@ -13,148 +13,54 @@
         <div id="main" style="width: 800px;" class="mx-auto">
             <div class="grid grid-cols-2 gap-5 m-5">
                 <!-- ANCHOR Trigger buttons -->
-                <button data-a11y-dialog-show="basic-dialog" id="basic-modal" class="justify-self-center btn-large-tertiary">Basic Modal</button>
-                <button data-a11y-dialog-show="info-dialog" id="info-modal" class="justify-self-center btn-large-tertiary">Info Modal</button>
-                <button data-a11y-dialog-show="warning-dialog" id="warning-modal" class="justify-self-center btn-large-tertiary">Warning Modal</button>
-                <button data-a11y-dialog-show="error-dialog" id="error-modal" class="justify-self-center btn-large-tertiary">Error Modal</button>
-                <button data-a11y-dialog-show="success-dialog" id="success-modal" class="justify-self-center btn-large-tertiary">Success Modal</button>
-                <button data-a11y-dialog-show="simple-dialog" id="simple-modal" class="justify-self-center btn-large-tertiary">Simple Modal</button>
+                <button data-a11y-dialog-show="basic-dialog" class="justify-self-center btn large tertiary">Basic Modal</button>
+                <button data-a11y-dialog-show="icon-dialog" class="justify-self-center btn large tertiary">Icon Modal</button>
             </div>
         </div>
 
         <!-- SECTION Modal templates -->
 
+        <!-- ANCHOR Icon -->
+        <div class="dialog-container" id="icon-dialog" aria-hidden="true">
+            <div class="dialog-overlay" tabindex="-1" data-a11y-dialog-hide></div>
+            <div role="dialog" aria-labelledby="icon-title">
+                <div role="document" class="w-1/4 m-auto bg-white modal-wrapper icon dialog-content">
+                    <div class="modal-content">
+                        <div class="icon">
+                            <i class="text-blue-500 feather-at-sign"></i>
+                        </div>
+                        <div class="content">
+                            <p id="icon-title" class="modal-title">Header</p>
+                            <div>
+                                <p>Ut consequat minim exercitation aliqua aute commodo et ut in minim.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="modal-buttons">
+                            <button class="btn middle ghost">Dismiss</button>
+                            <button class="btn middle primary">Confirm</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- ANCHOR Basic -->
         <div class="dialog-container" id="basic-dialog" aria-hidden="true">
             <div class="dialog-overlay" tabindex="-1" data-a11y-dialog-hide></div>
-            <div role="dialog" aria-labelledby="dialog-title">
-                <div role="document" class="dialog-content basic-modal flex flex-col w-1/4 bg-white shadow-xl">
-                    <div class="flex flex-row py-6 pr-6">
-                        <div class="h-full">
-                            <i class="feather-at-sign px-6 text-xl"></i>
-                        </div>
-                        <div class="w-full">
-                            <p class="mb-4 text-base font-semibold">Header</p>
-                            <p>Ut consequat minim exercitation aliqua aute commodo et ut in minim.</p>
-                        </div>
+            <div role="dialog" aria-labelledby="basic-title">
+                <div role="document" class="w-1/2 m-auto bg-white modal-wrapper basic dialog-content">
+                    <div class="modal-header">
+                        <p id="basic-title" class="modal-title">Header</p>
+                        <button class="modal-close feather-x"></button>
                     </div>
-                    <div class="shadow-border-t flex flex-row justify-end h-16 px-6">
-                        <div class="flex flex-row justify-end h-full space-x-4">
-                            <button data-a11y-dialog-hide class="btn-middle-ghost my-auto">Dismiss</button>
-                            <button class="btn-middle-primary my-auto">Confirm</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- ANCHOR Info -->
-        <div class="dialog-container" id="info-dialog" aria-hidden="true">
-            <div class="dialog-overlay" tabindex="-1" data-a11y-dialog-hide></div>
-            <div role="dialog" aria-labelledby="dialog-title">
-                <div role="document" class="dialog-content info-modal flex flex-col w-1/4 bg-white shadow-xl">
-                    <div class="flex flex-row py-6 pr-6">
-                        <div class="h-full">
-                            <i class="feather-at-sign px-6 text-xl"></i>
-                        </div>
-                        <div class="w-full">
-                            <p class="mb-4 text-base font-semibold">Header</p>
-                            <p>Ut consequat minim exercitation aliqua aute commodo et ut in minim.</p>
-                        </div>
-                    </div>
-                    <div class="shadow-border-t flex flex-row justify-end h-16 px-6">
-                        <div class="flex flex-row justify-end h-full space-x-4">
-                            <button data-a11y-dialog-hide class="btn-middle-ghost my-auto">Dismiss</button>
-                            <button class="btn-middle-primary my-auto">Confirm</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- ANCHOR Warning -->
-        <div class="dialog-container" id="warning-dialog" aria-hidden="true">
-            <div class="dialog-overlay" tabindex="-1" data-a11y-dialog-hide></div>
-            <div role="dialog" aria-labelledby="dialog-title">
-                <div role="document" class="dialog-content warning-modal flex flex-col w-1/4 bg-white shadow-xl">
-                    <div class="flex flex-row py-6 pr-6">
-                        <div class="h-full">
-                            <i class="feather-at-sign px-6 text-xl"></i>
-                        </div>
-                        <div class="w-full">
-                            <p class="mb-4 text-base font-semibold">Header</p>
-                            <p>Ut consequat minim exercitation aliqua aute commodo et ut in minim.</p>
-                        </div>
-                    </div>
-                    <div class="shadow-border-t flex flex-row justify-end h-16 px-6">
-                        <div class="flex flex-row justify-end h-full space-x-4">
-                            <button data-a11y-dialog-hide class="btn-middle-ghost my-auto">Dismiss</button>
-                            <button class="btn-middle-primary my-auto">Confirm</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- ANCHOR Error -->
-        <div class="dialog-container" id="error-dialog" aria-hidden="true">
-            <div class="dialog-overlay" tabindex="-1" data-a11y-dialog-hide></div>
-            <div role="dialog" aria-labelledby="dialog-title">
-                <div role="document" class="dialog-content error-modal flex flex-col w-1/4 bg-white shadow-xl">
-                    <div class="flex flex-row py-6 pr-6">
-                        <div class="h-full">
-                            <i class="feather-at-sign px-6 text-xl"></i>
-                        </div>
-                        <div class="w-full">
-                            <p class="mb-4 text-base font-semibold">Header</p>
-                            <p>Ut consequat minim exercitation aliqua aute commodo et ut in minim.</p>
-                        </div>
-                    </div>
-                    <div class="shadow-border-t flex flex-row justify-end h-16 px-6">
-                        <div class="flex flex-row justify-end h-full space-x-4">
-                            <button data-a11y-dialog-hide class="btn-middle-ghost my-auto">Dismiss</button>
-                            <button class="btn-middle-primary my-auto">Confirm</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- ANCHOR Success -->
-        <div class="dialog-container" id="success-dialog" aria-hidden="true">
-            <div class="dialog-overlay" tabindex="-1" data-a11y-dialog-hide></div>
-            <div role="dialog" aria-labelledby="dialog-title">
-                <div role="document" class="dialog-content success-modal flex flex-col w-1/4 bg-white shadow-xl">
-                    <div class="flex flex-row py-6 pr-6">
-                        <div class="h-full">
-                            <i class="feather-at-sign px-6 text-xl"></i>
-                        </div>
-                        <div class="w-full">
-                            <p class="mb-4 text-base font-semibold">Header</p>
-                            <p>Ut consequat minim exercitation aliqua aute commodo et ut in minim.</p>
-                        </div>
-                    </div>
-                    <div class="shadow-border-t flex flex-row justify-end h-16 px-6">
-                        <div class="flex flex-row justify-end h-full space-x-4">
-                            <button data-a11y-dialog-hide class="btn-middle-ghost my-auto">Dismiss</button>
-                            <button class="btn-middle-primary my-auto">Confirm</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- ANCHOR Simple -->
-        <div class="dialog-container" id="simple-dialog" aria-hidden="true">
-            <div class="dialog-overlay" tabindex="-1" data-a11y-dialog-hide></div>
-            <div role="dialog" aria-labelledby="dialog-title">
-                <div role="document" class="dialog-content flex flex-col w-1/2 bg-white shadow-xl">
-                    <div class="min-h-md shadow-border-b flex flex-row justify-between px-6">
-                        <p class="my-auto text-base font-semibold">Header</p>
-                        <button data-a11y-dialog-hide class="btn-large-ghost-icon feather-x my-auto"></button>
-                    </div>
-                    <div class="shadow-border-b px-6 py-4">
+                    <div class="modal-content">
                         <p>Ut consequat minim exercitation aliqua aute commodo et ut in minim. Voluptate labore do qui non nostrud culpa cupidatat laborum fugiat nisi mollit enim ipsum. Pariatur est culpa eu non est labore officia occaecat. Nostrud qui nulla consectetur anim sit consequat in irure ea ullamco dolor cillum reprehenderit occaecat. Est tempor aliqua ad ex sint proident reprehenderit reprehenderit officia anim. Ut commodo aliquip excepteur irure non occaecat incididunt Lorem. Mollit veniam veniam ut aliqua voluptate consectetur magna sit.</p>
                     </div>
-                    <div class="flex flex-row justify-end h-16 px-6">
-                        <div class="flex flex-row justify-end h-full space-x-4">
-                            <button data-a11y-dialog-hide class="btn-middle-ghost my-auto">Dismiss</button>
-                            <button class="btn-middle-primary my-auto">Confirm</button>
+                    <div class="modal-footer">
+                        <div class="modal-buttons">
+                            <button class="btn middle ghost">Dismiss</button>
+                            <button class="btn middle primary">Confirm</button>
                         </div>
                     </div>
                 </div>
@@ -165,21 +71,13 @@
 
         <script>
             
+            const icon = document.getElementById('icon-dialog');
             const basic = document.getElementById('basic-dialog');
-            const info = document.getElementById('info-dialog');
-            const warning = document.getElementById('warning-dialog');
-            const error = document.getElementById('error-dialog');
-            const success = document.getElementById('success-dialog');
-            const simple = document.getElementById('simple-dialog');
 
             var mainEl = document.getElementById('main');
 
             const dialogBasic = new A11yDialog(basic, mainEl);
-            const dialogInfo = new A11yDialog(info, mainEl);
-            const dialogWarning = new A11yDialog(warning, mainEl);
-            const dialogError = new A11yDialog(error, mainEl);
-            const dialogSuccess = new A11yDialog(success, mainEl);
-            const dialogSimple = new A11yDialog(simple, mainEl);
+            const dialogIcon = new A11yDialog(icon, mainEl);
 
         </script>
     </body>
