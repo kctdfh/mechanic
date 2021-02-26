@@ -6,7 +6,7 @@ module.exports = {
     content: [
       './components/*.html',
       './dist/*.js'],
-    defaultExtractor: content =>  content.match(/[A-Za-z0-9-_:!\/]+/g) || [],
+    // defaultExtractor: content =>  content.match(/[A-Za-z0-9-_:!\/]+/g) || [],
     options: {
       safelist: [/read-only$/]
     }
@@ -426,8 +426,7 @@ module.exports = {
         "group-focus-within",
         "group-focus-visible",
         "group-active",
-        "group-visited",
-        "read-only"
+        "group-visited"
       ],
       padding: ["important"],
       minHeight: ["important"],

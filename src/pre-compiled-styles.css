@@ -20,11 +20,11 @@ Deprecated
 @import "imports/buttons.css";
 @import "imports/collapse.css";
 @import "imports/text-inputs.css";
-@import "imports/number-input.css";
+/* @import "imports/number-input.css"; */
 @import "imports/number-input-v2.css";
 @import "imports/radio-checkbox.css";
 @import "imports/input-grid.css";
-@import "imports/alerts.css";
+/* @import "imports/alerts.css"; */
 @import "imports/alerts-v2.css";
 @import "imports/indicators.css";
 @import "imports/system-messages.css";
@@ -50,7 +50,7 @@ Deprecated
 /* Custom Select2 themes */
 @import "imports/select2-lg.css";
 @import "imports/select2-md.css";
-@import "imports/select2_sm.css";
+/* @import "imports/select2_sm.css"; */
 
 /* Custom Mmenu.js themes */
 @import "imports/menu.css";

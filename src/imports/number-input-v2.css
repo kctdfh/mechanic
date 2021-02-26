@@ -1,118 +1,131 @@
 .input-number-wrapper {
-  @apply focus-within:border-blue-250 rounded-0.5 disabled:border-gray-100 disabled:cursor-not-allowed hover:border-blue-250 flex flex-row border border-gray-100;
+  @apply mt-1 focus-within:border-blue-250 rounded-0.5 hover:border-blue-250 flex flex-row border border-gray-100;
 }
 
-.error.input-number-wrapper, .error .input-number-wrapper {
-  @apply focus-within:border-blue-250 disabled:border-gray-100 disabled:cursor-not-allowed hover:border-blue-250 flex flex-row border border-red-600;
+.input-number-wrapper.read-only {
+  @apply mt-1 rounded-0.5 flex flex-row border border-gray-100;
+}
+
+.error.input-number-wrapper, .error.label-input-wrapper .input-number-wrapper {
+  @apply flex flex-row mt-1 border border-red-600 focus-within:border-red-600 hover:border-blue-250;
 }
 
 
-.input-number {
-  @apply group-hover:bg-gray-25 group-disabled:bg-gray-50 focus-visible:outline-none group-disabled:placeholder-gray-200 group-disabled:cursor-not-allowed focus:bg-white text-center text-black placeholder-gray-300 bg-white border-0;
+.number-input {
+  @apply text-center text-black placeholder-gray-300 bg-white border-0 focus:bg-white read-only:bg-gray-50 focus-visible:outline-none read-only:placeholder-gray-200 read-only:cursor-not-allowed group-hover:bg-gray-25;
+}
+
+.group:hover .number-input:read-only {
+  @apply bg-gray-50;
 }
 
 .increment-right {
-  @apply !leading-0 rounded-r-0.5 text-black bg-white border-l border-gray-100 disabled:cursor-not-allowed hover:text-blue-250 hover:border-l hover:border-blue-250 focus:bg-blue-50 active:bg-blue-50 active:text-blue-650 active:border active:border-blue-650 focus-standard group-disabled:border-gray-100 group-disabled:border-l group-disabled:bg-gray-50 group-disabled:text-gray-200 group-disabled:pointer-events-none;
+  @apply !leading-0 rounded-r-0.5 text-black bg-white border-l border-gray-100 disabled:cursor-not-allowed hover:text-blue-250 hover:border-l hover:border-blue-250 focus:bg-blue-50 active:bg-blue-50 active:text-blue-650 active:border active:border-blue-650 focus-standard;
 }
+
+.increment-right.read-only {
+  @apply text-gray-200 border-l border-gray-100 cursor-not-allowed pointer-events-none bg-gray-50;
+}
+
+/* read-only:border-gray-100 read-only:border-r read-only:bg-gray-50 read-only:text-gray-200 read-only:pointer-events-none */
 
 .increment-left {
-  @apply !leading-0 rounded-l-0.5 text-black bg-white border-r border-gray-100 disabled:cursor-not-allowed hover:text-blue-250 hover:border-r hover:border-blue-250 focus:bg-blue-50 active:bg-blue-50 active:text-blue-650 active:border active:border-blue-650 focus-standard group-disabled:border-gray-100 group-disabled:border-r group-disabled:bg-gray-50 group-disabled:text-gray-200 group-disabled:pointer-events-none;
+  @apply !leading-0 rounded-l-0.5 text-black bg-white border-r border-gray-100 disabled:cursor-not-allowed hover:text-blue-250 hover:border-r hover:border-blue-250 focus:bg-blue-50 active:bg-blue-50 active:text-blue-650 active:border active:border-blue-650 focus-standard;
 }
 
-.increment-right-large {
+.increment-left.read-only {
+  @apply text-gray-200 border-r border-gray-100 cursor-not-allowed pointer-events-none bg-gray-50;
+}
+
+.increment-right.large {
   @apply w-10 h-10 text-base;
-  @apply increment-right;
 }
 
-.increment-left-large {
+.increment-left.large {
   @apply w-10 h-10 text-base;
-  @apply increment-left;
 }
 
-.increment-right-middle {
-  @apply text-md w-8 h-8;
-  @apply increment-right;
+.increment-right.middle {
+  @apply w-8 h-8 text-md;
 }
 
-.increment-left-middle {
-  @apply text-md w-8 h-8;
-  @apply increment-left;
+.increment-left.middle {
+  @apply w-8 h-8 text-md;
 }
 
-.increment-right-small {
+/* .increment-right.small {
   @apply w-6 h-6 text-sm;
   @apply increment-right;
-}
+} */
 
-.increment-left-small {
+/* .increment-left.small {
   @apply w-6 h-6 text-sm;
   @apply increment-left;
+} */
+
+
+.error.label-input-wrapper .increment-right {
+  @apply !leading-0 text-black bg-white border-l border-red-600 disabled:cursor-not-allowed hover:text-blue-250 hover:border-l hover:border-blue-250 focus:bg-blue-50 active:bg-blue-50 active:text-blue-650 active:border active:border-blue-650 focus-standard;
 }
 
-
-.error .increment-right {
-  @apply !leading-0 text-black bg-white border-l border-red-600 disabled:cursor-not-allowed hover:text-blue-250 hover:border-l hover:border-blue-250 focus:bg-blue-50 active:bg-blue-50 active:text-blue-650 active:border active:border-blue-650 focus-standard group-disabled:border-gray-100 group-disabled:border-l group-disabled:bg-gray-50 group-disabled:text-gray-200 group-disabled:pointer-events-none;
+.error.label-input-wrapper .increment-left {
+  @apply !leading-0 text-black bg-white border-r border-red-600 disabled:cursor-not-allowed hover:text-blue-250 hover:border-r hover:border-blue-250 focus:bg-blue-50 active:bg-blue-50 active:text-blue-650 active:border active:border-blue-650 focus-standard;
 }
 
-.error .increment-left {
-  @apply !leading-0 text-black bg-white border-r border-red-600 disabled:cursor-not-allowed hover:text-blue-250 hover:border-r hover:border-blue-250 focus:bg-blue-50 active:bg-blue-50 active:text-blue-650 active:border active:border-blue-650 focus-standard group-disabled:border-gray-100 group-disabled:border-r group-disabled:bg-gray-50 group-disabled:text-gray-200 group-disabled:pointer-events-none;
-}
-
-.error .increment-right-large {
+.error.label-input-wrapper .increment-right.large {
   @apply w-10 h-10 text-base;
   @apply border-gray-100;
 }
 
-.error .increment-left-large {
+.error.label-input-wrapper .increment-left.large {
   @apply w-10 h-10 text-base;
   @apply border-gray-100;
 }
 
-.error .increment-right-middle {
-  @apply text-md w-8 h-8;
+.error.label-input-wrapper .increment-right.middle {
+  @apply w-8 h-8 text-md;
   @apply border-gray-100;
 }
 
-.error .increment-left-middle {
-  @apply text-md w-8 h-8;
+.error.label-input-wrapper .increment-left.middle {
+  @apply w-8 h-8 text-md;
   @apply border-gray-100;
 }
 
-.error .increment-right-small {
+/* .error .increment-right.small {
   @apply w-6 h-6 text-sm;
   @apply border-gray-100;
 }
 
-.error .increment-left-small {
+.error .increment-left.small {
   @apply w-6 h-6 text-sm;
   @apply border-gray-100;
-}
+} */
 
 
-.input-number-large {
+.number-input.large {
   @apply h-10 text-base;
-  @apply input-number;
 }
 
-.input-number-middle {
-  @apply text-md h-8;
-  @apply input-number;
+.number-input.middle {
+  @apply h-8 text-md;
 }
 
-.input-number-small {
+/* 
+.number-input.small {
   @apply h-6 text-sm;
   @apply input-number;
-}
+} */
 
-.field-description {
+/* .field-description {
   @apply mt-1 text-sm text-gray-500;
-}
+} */
 
-.error .field-description {
+/* .error .field-description {
   @apply text-red-600;
-}
+} */
 
-fieldset.group:disabled.input-number-wrapper input.group-disabled\:bg-gray-50 {
+/* fieldset.group:disabled.input-number-wrapper input.group-disabled\:bg-gray-50 {
   --tw-bg-opacity: 1;
   background-color: rgba(243, 244, 244, var(--tw-bg-opacity)) !important;
 }
@@ -125,7 +138,7 @@ fieldset.input-number-wrapper > button.hover\:border-r-blue-250:hover {
 fieldset.input-number-wrapper > button.hover\:border-l-blue-250:hover {
   --tw-text-opacity: 1;
   border-color: rgba(123, 191, 255, var(--tw-border-opacity)) !important;
-}
+} */
 
 /* remove default incriment for Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,

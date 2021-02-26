@@ -5,7 +5,7 @@
   "main": "index.html",
   "scripts": {
     "source": "postcss src/pre-compiled-styles.css -o dist/css/styles.src.css",
-    "purged": "cross-env NODE_ENV=production postcss src/pre-compiled-styles.css -o dist/css/styles.purged.css",
+    "purged": "cross-env NODE_ENV=production NODE_OPTIONS=--max-old-space-size=6144 postcss src/pre-compiled-styles.css -o dist/css/styles.purged.css",
     "minify": "postcss dist/css/styles.purged.css > dist/css/styles.mini.css",
     "mini": "npm run purged && npm run minify",
     "config-export": "tailwind-config-viewer export ./config",

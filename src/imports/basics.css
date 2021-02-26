@@ -1,6 +1,15 @@
-.divider-v {
-  @apply w-px bg-gray-100;
+.divider-v.middle {
+  @apply w-px h-6 bg-gray-100;
 }
+
+.divider-v.small {
+  @apply w-px h-8 bg-gray-100;
+}
+
+.divider-v.large {
+  @apply w-px h-10 bg-gray-100;
+}
+
 
 .divider-h {
   @apply h-px bg-gray-100;
