@@ -9,26 +9,26 @@
         <link rel="stylesheet" href="../dist/css/styles.mini.css" />
     </head>
     <body>
-        <div id="outerDiv" class="bg-yellow-50 inline-flex flex-col items-center w-screen p-5">
+        <div id="outerDiv" class="inline-flex flex-col items-center w-screen p-5 bg-yellow-50">
             <!-- ANCHOR No checkbox -->
             <div class="row-wrapper">
-                <div class="grid-cols-sys text-md grid items-center grid-rows-1">
-                    <p class="row-title">Widget Name</p>
-                    <p class=" justify-self-start">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</p>
-                    <div class="justify-self-end flex flex-row space-x-4">
-                        <span class="hidden"><button class="_settings btn-middle-secondary-icon feather-settings"></button></span>
-                        <button class="_add btn-middle-secondary-icon feather-plus"></button>
+                <div class="row-grid">
+                    <p class="title">Widget Name</p>
+                    <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</p>
+                    <div class="row-actions">
+                        <span class="hidden"><button class="_settings icon-btn middle secondary feather-settings"></button></span>
+                        <button class="_add icon-btn middle secondary feather-plus"></button>
                     </div>
                 </div>
             </div>
             <!-- ANCHOR With checkbox -->
             <div class="row-wrapper">
-                <div class="grid-cols-row text-md grid content-center grid-rows-1">
-                    <input type="checkbox" name="someName" class="_rowcheck radiocheck"></input>
-                    <p class="row-title">Document Name</p>
-                    <p class="my-auto">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</p>
-                    <div class="justify-self-end flex flex-row space-x-4">
-                        <button class="btn-middle-secondary-icon feather-edit-2"></button>
+                <div class="row-grid-box">
+                    <input type="checkbox" name="someName" class="_rowcheck radiocheck"> 
+                    <p class="title">Document Name</p>
+                    <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</p>
+                    <div class="row-actions">
+                        <button class="icon-btn middle secondary feather-edit-2"></button>
                     </div>
                 </div>
             </div>

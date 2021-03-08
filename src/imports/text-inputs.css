@@ -1,15 +1,15 @@
 /* Sizes */
 
 .text-input-wrapper.large {
-    @apply relative h-10;
+    @apply relative h-10 w-max;
 }
 
 .text-input-wrapper.middle {
-    @apply relative h-8;
+    @apply relative h-8 w-max;
 }
 
 .text-input-wrapper.small {
-    @apply relative h-6;
+    @apply relative h-6 w-max;
 }
 
 .input-large-size {
@@ -44,6 +44,7 @@
 
 .label-input-wrapper {
     @apply flex flex-col;
+    width: min-content;
 }
 
 .input-descriptions {
@@ -51,18 +52,41 @@
 }
 
 .input-default-base {
-    @apply rounded-0.5 text-black placeholder-gray-300 bg-white border border-gray-100 hover:bg-gray-25 focus:border-blue-250 disabled:placeholder-gray-200 disabled:bg-gray-50 disabled:border-gray-100 disabled:cursor-not-allowed read-only:placeholder-gray-200 read-only:bg-gray-50 read-only:border-gray-100 read-only:cursor-not-allowed focus-visible:outline-none;
+    @apply rounded-0.5 text-black placeholder-gray-300 bg-white border border-gray-100 hover:bg-gray-25 focus:border-blue-250 disabled:placeholder-gray-200 disabled:bg-gray-50 disabled:border-gray-100 disabled:cursor-not-allowed read-only:placeholder-gray-200 read-only:bg-gray-50 read-only:border-gray-100 read-only:cursor-not-allowed focus-visible:outline-none transition-all ease-in-out;
     ;
 }
 
 .input-error-base {
-    @apply rounded-0.5 text-black placeholder-gray-300 bg-white border border-red-600 hover:bg-gray-25 disabled:placeholder-gray-200 disabled:bg-gray-50 disabled:border-gray-100 disabled:cursor-not-allowed read-only:placeholder-gray-200 read-only:bg-gray-50 read-only:border-gray-100 read-only:cursor-not-allowed focus-visible:outline-none;
+    @apply rounded-0.5 text-black placeholder-gray-300 bg-white border border-red-600 hover:bg-gray-25 disabled:placeholder-gray-200 disabled:bg-gray-50 disabled:border-gray-100 disabled:cursor-not-allowed read-only:placeholder-gray-200 read-only:bg-gray-50 read-only:border-gray-100 read-only:cursor-not-allowed focus-visible:outline-none transition-all ease-in-out;
 }
 
 /* Icon wrappers */
 
+/* .icon-right {
+    @apply bg-white;
+}
+
+.text-input-wrapper:hover .icon-right {
+    @apply bg-transparent;
+}
+
+.text-input-wrapper.large input:disabled ~ span.icon-right,
+.text-input-wrapper.large input[disabled="true"] ~ .icon-right,
+.text-input-wrapper.large input:read-only ~ span.icon-right,
+.text-input-wrapper.large input[readonly="true"] ~ span.icon-right,
+.text-input-wrapper.middle input:disabled ~ span.icon-right,
+.text-input-wrapper.middle input[disabled="true"] ~ span.icon-right,
+.text-input-wrapper.middle input:read-only ~ span.icon-right,
+.text-input-wrapper.middle input[readonly="true"] ~ span.icon-right,
+.text-input-wrapper.small input:disabled ~ span.icon-right,
+.text-input-wrapper.small input[disabled="true"] ~ span.icon-right,
+.text-input-wrapper.small input:read-only ~ span.icon-right,
+.text-input-wrapper.small input[readonly="true"] ~ span.icon-right {
+    @apply bg-gray-50;
+} */
+
 .text-input-wrapper.large .icon-right {
-    @apply absolute inset-y-0 right-0 flex items-center space-x-1.5 pr-3.5;
+    @apply absolute inset-y-0 right-0 flex items-center space-x-1.5 px-3.5 mr-px my-px;
 }
 
 .text-input-wrapper.large .icon-left {
@@ -70,7 +94,7 @@
 }
 
 .text-input-wrapper.middle .icon-right {
-    @apply absolute inset-y-0 right-0 flex items-center pr-3 space-x-2;
+    @apply absolute inset-y-0 right-0 flex items-center px-3 my-px mr-px space-x-2;
 }
 
 .text-input-wrapper.middle .icon-left {
@@ -78,7 +102,7 @@
 }
 
 .text-input-wrapper.small .icon-right {
-    @apply absolute inset-y-0 right-0 flex items-center space-x-2.5 pr-1.5;
+    @apply absolute inset-y-0 right-0 flex items-center space-x-2.5 px-1.5 mr-px my-px;
 }
 
 .text-input-wrapper.small .icon-left {

@@ -19,6 +19,30 @@
 		},
 		{
 			"type": "npm",
+			"script": "remote",
+			"problemMatcher": [],
+			"label": "Remote",
+			"detail": "Build source CSS with remote links for ZeroHeight",
+			"group": "build"
+		},
+		{
+			"type": "npm",
+			"script": "allremote",
+			"problemMatcher": [],
+			"label": "All + Remote",
+			"detail": "Build all 3 CSS file and remote source",
+			"group": "build"
+		},
+		{
+			"type": "npm",
+			"script": "allsource",
+			"problemMatcher": [],
+			"label": "Remote & Local",
+			"detail": "Build both local and remote source CSS",
+			"group": "build"
+		},
+		{
+			"type": "npm",
 			"script": "mini",
 			"problemMatcher": [],
 			"label": "Mini",

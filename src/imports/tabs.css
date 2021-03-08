@@ -1,13 +1,16 @@
 /* (div.flex.flex-row.space-x-2>(i.feather-edit-2.tab-icon+*{$#}+i.feather-check.tab-icon))+div.tab-border
 */
+.tab-title {
+  @apply flex flex-row space-x-2;
+}
 
 .active .tab-btn {
-  @apply text-md group-hover:text-blue-500 group-disabled:text-gray-200 focus-standard h-full text-blue-500;
+  @apply h-full text-blue-500 transition-colors ease-in-out text-md group-hover:text-blue-500 group-disabled:text-gray-200 focus-standard;
 }
 
 .tab-btn {
   @apply disabled:pointer-events-none disabled:text-gray-200 !important;
-  @apply text-md focus-standard group-hover:text-blue-500 h-full text-black;
+  @apply h-full text-black transition-colors ease-in-out text-md focus-standard group-hover:text-blue-500;
 }
 
 .active .tab-border {
@@ -15,7 +18,7 @@
 }
 
 .tab-border {
-  @apply h-border absolute bottom-0 w-full bg-transparent rounded-t-full;
+  @apply absolute bottom-0 w-full bg-transparent rounded-t-full h-border;
 }
 
 .tab-btn-wrapper {
@@ -23,7 +26,7 @@
 }
 
 .tab-icon {
-  @apply text-md group-hover:text-blue-500 my-auto; 
+  @apply my-auto transition-colors ease-in-out text-md group-hover:text-blue-500; 
 }
 
 .active .tab-icon {

@@ -7,27 +7,35 @@
 /* ANCHOR Main types */
 
 .btn-primary {
-  @apply text-white bg-blue-500 border-blue-500 btn-centered focus-standard active:bg-blue-650 active:text-white hover:bg-blue-350 hover:text-white focus-visible:bg-blue-250 focus-visible:text-white disabled:cursor-not-allowed disabled:border disabled:border-gray-100 disabled:bg-gray-50 disabled:text-gray-200;
+  @apply text-white transition-colors ease-in-out bg-blue-500 border-blue-500 btn-centered focus-standard active:bg-blue-650 active:text-white hover:bg-blue-350 hover:text-white focus-visible:bg-blue-250 focus-visible:text-white disabled:cursor-not-allowed disabled:border disabled:border-gray-100 disabled:bg-gray-50 disabled:text-gray-200;
 }
 
 .btn-secondary {
-  @apply text-black border border-gray-100 bg-gray-50 btn-centered focus-standard active:bg-blue-50 active:text-black active:border-blue-650 active:border hover:bg-gray-25 hover:text-black hover:border-blue-250 hover:border focus-visible:bg-blue-50 focus-visible:border-blue-250 focus-visible:text-black focus-visible:border disabled:cursor-not-allowed disabled:border disabled:border-gray-100 disabled:bg-gray-25 disabled:text-gray-200;
+  @apply text-black transition-colors ease-in-out border border-gray-100 bg-gray-50 btn-centered focus-standard active:bg-blue-50 active:text-black active:border-blue-650 active:border hover:bg-gray-25 hover:text-black hover:border-blue-250 hover:border focus-visible:bg-blue-50 focus-visible:border-blue-250 focus-visible:text-black focus-visible:border disabled:cursor-not-allowed disabled:border disabled:border-gray-100 disabled:bg-gray-25 disabled:text-gray-200;
 }
 
 .btn-secondary-icon {
-  @apply text-black bg-white border border-gray-100 btn-centered focus-standard active:bg-blue-50 active:text-blue-750 active:border-blue-650 hover:text-blue-500 hover:border-blue-250 hover:bg-white focus-visible:bg-blue-50 focus-visible:border-blue-250 focus-visible:text-blue-500 disabled:cursor-not-allowed disabled:border disabled:border-gray-100 disabled:bg-white disabled:text-gray-200;
+  @apply text-black transition-colors ease-in-out bg-white border border-gray-100 btn-centered focus-standard active:bg-blue-50 active:text-blue-750 active:border-blue-650 hover:text-blue-500 hover:border-blue-250 hover:bg-white focus-visible:bg-blue-50 focus-visible:border-blue-250 focus-visible:text-blue-500 disabled:cursor-not-allowed disabled:border disabled:border-gray-100 disabled:bg-white disabled:text-gray-200;
 }
 
 .btn-tertiary {
-  @apply text-blue-500 bg-white border border-gray-100 btn-centered focus-standard active:bg-blue-50 active:text-blue-750 active:border-blue-650 active:border hover:bg-white hover:text-blue-500 hover:border-blue-250 hover:border focus-visible:bg-blue-50 focus-visible:border-blue-50 focus-visible:text-blue-500 focus-visible:border disabled:cursor-not-allowed disabled:border disabled:border-gray-100 disabled:bg-white disabled:text-gray-200;
+  @apply text-blue-500 transition-colors ease-in-out bg-white border border-gray-100 btn-centered focus-standard active:bg-blue-50 active:text-blue-750 active:border-blue-650 active:border hover:bg-white hover:text-blue-500 hover:border-blue-250 hover:border focus-visible:bg-blue-50 focus-visible:border-blue-250 focus-visible:text-blue-500 focus-visible:border disabled:cursor-not-allowed disabled:border disabled:border-gray-100 disabled:bg-white disabled:text-gray-200;
+}
+
+.btn-warning {
+  @apply text-red-600 transition-colors ease-in-out bg-white border border-gray-100 btn-centered focus-standard active:bg-red-50 active:text-red-750 active:border-red-600 active:border hover:bg-white hover:text-red-600 hover:border-red-250 hover:border focus-visible:bg-red-50 focus-visible:border-red-250 focus-visible:text-red-600 focus-visible:border disabled:cursor-not-allowed disabled:border disabled:border-gray-100 disabled:bg-white disabled:text-gray-200;
 }
 
 .btn-ghost {
-  @apply text-black bg-transparent border-0 btn-centered focus-standard active:text-blue-750 hover:text-blue-500 focus-visible:text-blue-350 disabled:cursor-not-allowed disabled:text-gray-200;
+  @apply text-black transition-colors ease-in-out bg-transparent border-0 btn-centered focus-standard active:text-blue-750 hover:text-blue-500 focus-visible:text-blue-350 disabled:cursor-not-allowed disabled:text-gray-200;
 }
 
-.btn-danger {
+/* .btn-danger {
   @apply text-red-600 bg-white border border-gray-100 btn-centered focus-standard active:bg-red-750 active:text-white active:border-red-750 active:border hover:bg-red-600 hover:text-white hover:border-red-600 hover:border focus-visible:bg-red-50 focus-visible:border-red-350 focus-visible:text-red-600 focus-visible:border disabled:cursor-not-allowed disabled:border disabled:border-gray-100 disabled:bg-white disabled:text-gray-200;
+} */
+
+.btn-danger {
+  @apply text-white transition-colors ease-in-out bg-red-600 border border-red-600 btn-centered focus-standard active:bg-red-750 active:text-white active:border-red-750 active:border hover:bg-red-350 hover:text-white hover:border-red-350 hover:border focus-visible:bg-red-250 focus-visible:border-red-250 focus-visible:text-white focus-visible:border disabled:cursor-not-allowed disabled:border disabled:border-gray-100 disabled:bg-gray-50 disabled:text-gray-200;
 }
 
 /* ANCHOR Sizes */
@@ -155,6 +163,26 @@
   @apply btn-danger;
 }
 
+/* ANCHOR Warning */
+
+.icon-btn.large.warning {
+  @apply rounded-full;
+  @apply icon-btn-large;
+  @apply btn-warning;
+}
+
+.icon-btn.middle.warning {
+  @apply rounded-full;
+  @apply icon-btn-middle;
+  @apply btn-warning;
+}
+
+.icon-btn.small.warning {
+  @apply rounded-full;
+  @apply icon-btn-small;
+  @apply btn-warning;
+}
+
 /* !SECTION Icon button ends */
 
 /* ANCHOR Button icon */
@@ -186,6 +214,26 @@
 /* !SECTION Icon ends */
 
 /* SECTION Text */
+
+/* ANCHOR warning */
+
+.btn.large.warning {
+  @apply rounded-0.5 font-semibold;
+  @apply btn-warning;
+  @apply btn-large;
+}
+
+.btn.middle.warning {
+  @apply rounded-0.5 font-semibold;
+  @apply btn-warning;
+  @apply btn-middle;
+}
+
+.btn.small.warning {
+  @apply rounded-0.5 font-semibold;
+  @apply btn-warning;
+  @apply btn-small;
+}
 
 /* ANCHOR Primary */
 

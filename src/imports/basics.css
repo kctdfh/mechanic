@@ -1,9 +1,9 @@
 .divider-v.middle {
-  @apply w-px h-6 bg-gray-100;
+  @apply w-px h-8 bg-gray-100;
 }
 
 .divider-v.small {
-  @apply w-px h-8 bg-gray-100;
+  @apply w-px h-6 bg-gray-100;
 }
 
 .divider-v.large {
@@ -33,27 +33,32 @@
 
 .icon-success {
   @apply text-green-600 !important; 
-  @apply hover:text-green-850 active:text-green-900 disabled:text-gray-200 focus-standard disabled:cursor-not-allowed !important;
+  @apply hover:text-green-850 active:text-green-900 disabled:text-gray-200 focus-standard disabled:cursor-not-allowed transition-colors ease-in-out !important;
 }
 
 .icon-error {
   @apply text-red-600 !important;
-  @apply hover:text-red-750 active:text-red-900 disabled:text-gray-200 focus-standard disabled:cursor-not-allowed !important;
+  @apply hover:text-red-750 active:text-red-900 disabled:text-gray-200 focus-standard disabled:cursor-not-allowed transition-colors ease-in-out !important;
 }
 
 .icon-danger {
   @apply text-yellow-600 !important;
-  @apply hover:text-yellow-850 active:text-yellow-900 disabled:text-gray-200 focus-standard disabled:cursor-not-allowed !important;
+  @apply hover:text-yellow-850 active:text-yellow-900 disabled:text-gray-200 focus-standard disabled:cursor-not-allowed transition-colors ease-in-out !important;
 }
 
 .icon-primary {
   @apply text-blue-500 !important; 
-  @apply hover:text-blue-650 active:text-blue-750 disabled:text-gray-200 focus-standard disabled:cursor-not-allowed !important;
+  @apply hover:text-blue-650 active:text-blue-750 disabled:text-gray-200 focus-standard disabled:cursor-not-allowed transition-colors ease-in-out !important;
+}
+
+.icon-link {
+  @apply text-black !important; 
+  @apply hover:text-blue-650 active:text-blue-750 focus-standard cursor-pointer transition-colors ease-in-out !important;
 }
 
 .icon-gray {
   @apply text-gray-200 !important;
-  @apply hover:text-blue-500 active:text-blue-750 disabled:text-gray-200 focus-visible:text-blue-350 focus-standard !important; 
+  @apply hover:text-blue-500 active:text-blue-750 disabled:text-gray-200 focus-visible:text-blue-350 focus-standard transition-colors ease-in-out !important; 
 }
 
 .icon-noninteractive {

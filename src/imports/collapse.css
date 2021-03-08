@@ -2,31 +2,42 @@
     @apply flex flex-col;
 }
 
-.collapse-heading {
-    @apply text-md font-semibold; 
+.collapse-wrapper.block .collapse-header > :not(i), .collapse-wrapper.outline .collapse-header > :not(i) {
+    @apply font-semibold text-md; 
 }
 
-.collapse-header > i {
+.collapse-wrapper.block .collapse-header:disabled > :not(i), .collapse-wrapper.outline .collapse-header:disabled > :not(i) {
+    @apply font-semibold text-gray-300 text-md; 
+}
+
+.collapse-wrapper.block .collapse-header:disabled > i:before, .collapse-wrapper.outline .collapse-header:disabled > i:before {
+    @apply text-gray-300;
+    content: "\e9d0"; 
+}
+
+.collapse-wrapper.block .collapse-header > i, .collapse-wrapper.outline .collapse-header > i {
     @apply my-auto transition-all;
 }
 
-.collapse-header.open > i {
+.collapse-wrapper.block .collapse-header.open > i, .collapse-wrapper.outline .collapse-header.open > i {
     @apply transition-all;
     transform: rotate(180deg);
 }
 
-.collapse-wrapper.gray .collapse-header {
-    @apply bg-gray-25 w-full h-12 px-4 py-3.5 flex flex-row space-x-3 hover:bg-gray-50 focus-standard shadow-segment-t;
+.collapse-wrapper.block .collapse-header {
+    @apply bg-gray-25 w-full h-12 px-4 py-3.5 flex flex-row space-x-3 hover:bg-blue-50 focus-standard shadow-segment-t;
+    @apply disabled:bg-gray-50 disabled:cursor-not-allowed;
 }
 
-.collapse-wrapper.white .collapse-header {
-    @apply bg-white shadow-border-t w-full h-12 px-4 py-3.5 flex flex-row space-x-3 hover:bg-gray-50 focus-standard;
+.collapse-wrapper.outline .collapse-header {
+    @apply bg-white shadow-border-t w-full h-12 px-4 py-3.5 flex flex-row space-x-3 hover:bg-blue-50 focus-standard;
+    @apply disabled:bg-gray-50 disabled:cursor-not-allowed;
 }
 
-.collapse-wrapper.gray .collapse-body {
-    @apply shadow-border-x text-md p-4 bg-white;
+.collapse-wrapper.block .collapse-body {
+    @apply p-4 bg-white shadow-border-x text-md;
 }
 
-.collapse-wrapper.white .collapse-body {
-    @apply text-md p-4 bg-white shadow-none;
+.collapse-wrapper.outline .collapse-body {
+    @apply p-4 bg-white shadow-none text-md;
 }

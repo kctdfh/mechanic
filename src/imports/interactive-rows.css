@@ -1,11 +1,27 @@
 .row-wrapper {
-    @apply bg-white hover:bg-gray-50 py-4 pl-8.5 pr-4.5 shadow-border-b w-full;
+    @apply bg-white hover:bg-gray-25 py-4 pl-8.5 pr-4.5 shadow-border-b w-full transition-colors ease-in-out;
 }
 
-.row-title {
-    @apply my-auto font-semibold justify-self-start;
+.row-wrapper .title {
+    @apply font-semibold;
 }
 
 .row-wrapper.active {
-    @apply bg-blue-50 hover:bg-blue-100;
+    @apply transition-colors ease-in-out bg-blue-50 hover:bg-blue-100;
+}
+
+.row-grid {
+    @apply grid items-center grid-rows-1 grid-cols-sys text-md;
+}
+
+.row-grid p, .row-grid-box p {
+    @apply my-auto justify-self-start;
+}
+
+.row-actions {
+    @apply flex flex-row space-x-4 justify-self-end;
+}
+
+.row-grid-box {
+    @apply grid content-center grid-rows-1 grid-cols-row text-md;
 }

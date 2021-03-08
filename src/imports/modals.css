@@ -7,7 +7,7 @@
 }
 
 .modal-wrapper.basic .modal-header {
-    @apply flex flex-row justify-between h-16 px-6 shadow-border-b;
+    @apply flex flex-row justify-between h-16 pl-6 pr-2 shadow-border-b;
 }
 
 .modal-wrapper.basic .modal-title {

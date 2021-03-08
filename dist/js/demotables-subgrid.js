@@ -265,6 +265,7 @@ loadSubGrid = function () {
                 sortname: 'Id',
                 // ANCHOR set the iconSet option to "feather" 
                 iconSet: "feather",
+                guiStyle: "pim2",
                 sortorder: "asc"
             });		// sub JqGrid ends
         }

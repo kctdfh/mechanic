@@ -1,5 +1,5 @@
 .select2-dropdown-chevron {
 @apply block border-0 h-5 w-5 !important;
-    background-image: url(../assets/chevron-down.svg);
+    background-image: url(https://storage.googleapis.com/pricedex-mechanic/chevron-down.svg);
     background-size: contain;
 }

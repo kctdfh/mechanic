@@ -1,23 +1,23 @@
 .crumb-home {
-    @apply hover:text-blue-500 focus-visible:text-blue-500 active:text-blue-750 disabled:cursor-not-allowed disabled:text-gray-200 leading-0 text-base text-black bg-transparent border-0 rounded-full;
+    @apply text-base text-black transition-colors ease-in-out bg-transparent border-0 rounded-full hover:text-blue-500 focus-visible:text-blue-500 active:text-blue-750 disabled:cursor-not-allowed disabled:text-gray-200 leading-0;
     @apply focus-standard;
     @apply mr-2.5;
 }
 
 .crumb-chevron {
-    @apply text-md px-1 text-gray-300;
+    @apply px-1 text-gray-300 text-md;
   }
   
 .crumbs {
-    @apply justify-items-start inline-flex items-center w-full h-full;
+    @apply inline-flex items-center w-full h-full justify-items-start;
 }
 
 .crumbs-short {
-    @apply crumbs relative;
+    @apply relative crumbs;
 }
   
 .crumb {
-    @apply h-6 py-1 px-2 text-sm font-semibold inline-flex flex-row items-center justify-center border-0 rounded-0.5 text-black bg-transparent hover:text-blue-500  focus-visible:text-blue-350 active:text-blue-750; 
+    @apply h-6 py-1 px-2 text-sm font-semibold inline-flex flex-row items-center justify-center border-0 rounded-0.5 text-black bg-transparent hover:text-blue-500  focus-visible:text-blue-350 active:text-blue-750 transition-colors ease-in-out; 
     @apply focus-standard;
     @apply last:text-gray-200 last:pointer-events-none;
 }

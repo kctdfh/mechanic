@@ -1,9 +1,17 @@
 .label-middle {
-  @apply py-0.5 rounded-full px-2 text-md text-white;
+  @apply py-0.5 rounded-full px-2 font-semibold text-md;
 }
 
 .label-small {
-  @apply py-0.5 rounded-full px-1.5 text-sm text-white;
+  @apply py-0.5 rounded-full px-1.5 font-semibold text-sm;
+}
+
+.label-tiny {
+  @apply py-0.5 rounded-full px-1.5 font-semibold text-xsm;
+}
+
+.status-middle :not(div), .status-small :not(div) {
+  @apply font-semibold;
 }
 
 .status-middle {
@@ -14,10 +22,10 @@
   @apply text-sm flex flex-row space-x-1 py-1 px-1.5 rounded-0.5 items-center;
 }
 
-.dot-indicator {
-  @apply mr-0.5 w-2 h-2 border border-white rounded-full;
+.status-middle .dot-indicator {
+  @apply mr-0.5 w-2 h-2 border-white rounded-full border-solid;
 }
 
 .dot-indicator-small, .status-small .dot-indicator {
-  @apply mr-px w-1.5 h-1.5 border border-white rounded-full;
+  @apply w-1.5 h-1.5 border-white rounded-full border-solid;
 }

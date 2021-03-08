@@ -1,18 +1,24 @@
-.input-number-wrapper {
-  @apply mt-1 focus-within:border-blue-250 rounded-0.5 hover:border-blue-250 flex flex-row border border-gray-100;
+.number-input-wrapper {
+  @apply focus-within:border-blue-250 rounded-0.5 transition-colors ease-in-out hover:border-blue-250 flex flex-row border border-gray-100 border-solid w-max;
+  height: max-content;
 }
 
-.input-number-wrapper.read-only {
-  @apply mt-1 rounded-0.5 flex flex-row border border-gray-100;
+.number-input-wrapper.read-only {
+  @apply rounded-0.5 flex flex-row border border-gray-100 border-solid w-max;
+  height: max-content;
 }
 
-.error.input-number-wrapper, .error.label-input-wrapper .input-number-wrapper {
-  @apply flex flex-row mt-1 border border-red-600 focus-within:border-red-600 hover:border-blue-250;
+.error.number-input-wrapper {
+  @apply flex flex-row transition-all ease-in-out border border-red-600 border-solid focus-within:border-red-600 hover:border-red-600 w-max;
+  height: max-content;
 }
 
+.error.label-input-wrapper .number-input-wrapper {
+  @apply flex flex-row transition-all ease-in-out border border-red-600 border-solid focus-within:border-red-600 hover:border-red-600 w-max;
+}
 
 .number-input {
-  @apply text-center text-black placeholder-gray-300 bg-white border-0 focus:bg-white read-only:bg-gray-50 focus-visible:outline-none read-only:placeholder-gray-200 read-only:cursor-not-allowed group-hover:bg-gray-25;
+  @apply text-center text-black placeholder-gray-300 transition-colors ease-in-out bg-white border-0 border-solid focus:bg-white read-only:bg-gray-50 focus-visible:outline-none read-only:placeholder-gray-200 read-only:cursor-not-allowed group-hover:bg-gray-25;
 }
 
 .group:hover .number-input:read-only {
@@ -20,21 +26,21 @@
 }
 
 .increment-right {
-  @apply !leading-0 rounded-r-0.5 text-black bg-white border-l border-gray-100 disabled:cursor-not-allowed hover:text-blue-250 hover:border-l hover:border-blue-250 focus:bg-blue-50 active:bg-blue-50 active:text-blue-650 active:border active:border-blue-650 focus-standard;
+  @apply !leading-0 rounded-r-0.5 text-black bg-white border-l border-gray-100 disabled:cursor-not-allowed hover:text-blue-250 hover:border-l hover:border-blue-250 focus:bg-blue-50 active:bg-blue-50 active:text-blue-650 active:border active:border-blue-650 focus-standard border-solid transition-all ease-in-out;
 }
 
 .increment-right.read-only {
-  @apply text-gray-200 border-l border-gray-100 cursor-not-allowed pointer-events-none bg-gray-50;
+  @apply text-gray-200 border-l border-gray-100 border-solid cursor-not-allowed pointer-events-none bg-gray-50;
 }
 
 /* read-only:border-gray-100 read-only:border-r read-only:bg-gray-50 read-only:text-gray-200 read-only:pointer-events-none */
 
 .increment-left {
-  @apply !leading-0 rounded-l-0.5 text-black bg-white border-r border-gray-100 disabled:cursor-not-allowed hover:text-blue-250 hover:border-r hover:border-blue-250 focus:bg-blue-50 active:bg-blue-50 active:text-blue-650 active:border active:border-blue-650 focus-standard;
+  @apply !leading-0 rounded-l-0.5 text-black bg-white border-r border-gray-100 disabled:cursor-not-allowed hover:text-blue-250 hover:border-r hover:border-blue-250 focus:bg-blue-50 active:bg-blue-50 active:text-blue-650 active:border active:border-blue-650 focus-standard border-solid transition-all ease-in-out;
 }
 
 .increment-left.read-only {
-  @apply text-gray-200 border-r border-gray-100 cursor-not-allowed pointer-events-none bg-gray-50;
+  @apply text-gray-200 border-r border-gray-100 border-solid cursor-not-allowed pointer-events-none bg-gray-50;
 }
 
 .increment-right.large {
@@ -65,11 +71,11 @@
 
 
 .error.label-input-wrapper .increment-right {
-  @apply !leading-0 text-black bg-white border-l border-red-600 disabled:cursor-not-allowed hover:text-blue-250 hover:border-l hover:border-blue-250 focus:bg-blue-50 active:bg-blue-50 active:text-blue-650 active:border active:border-blue-650 focus-standard;
+  @apply !leading-0 text-black bg-white border-l border-red-600 disabled:cursor-not-allowed hover:text-blue-250 hover:border-l hover:border-blue-250 focus:bg-blue-50 active:bg-blue-50 active:text-blue-650 active:border active:border-blue-650 focus-standard border-solid transition-all ease-in-out;
 }
 
 .error.label-input-wrapper .increment-left {
-  @apply !leading-0 text-black bg-white border-r border-red-600 disabled:cursor-not-allowed hover:text-blue-250 hover:border-r hover:border-blue-250 focus:bg-blue-50 active:bg-blue-50 active:text-blue-650 active:border active:border-blue-650 focus-standard;
+  @apply !leading-0 text-black bg-white border-r border-red-600 disabled:cursor-not-allowed hover:text-blue-250 hover:border-r hover:border-blue-250 focus:bg-blue-50 active:bg-blue-50 active:text-blue-650 active:border active:border-blue-650 focus-standard border-solid transition-all ease-in-out;
 }
 
 .error.label-input-wrapper .increment-right.large {
@@ -125,17 +131,17 @@
   @apply text-red-600;
 } */
 
-/* fieldset.group:disabled.input-number-wrapper input.group-disabled\:bg-gray-50 {
+/* fieldset.group:disabled.number-input-wrapper input.group-disabled\:bg-gray-50 {
   --tw-bg-opacity: 1;
   background-color: rgba(243, 244, 244, var(--tw-bg-opacity)) !important;
 }
 
-fieldset.input-number-wrapper > button.hover\:border-r-blue-250:hover {
+fieldset.number-input-wrapper > button.hover\:border-r-blue-250:hover {
   --tw-text-opacity: 1;
   border-color: rgba(123, 191, 255, var(--tw-border-opacity)) !important;
 }
 
-fieldset.input-number-wrapper > button.hover\:border-l-blue-250:hover {
+fieldset.number-input-wrapper > button.hover\:border-l-blue-250:hover {
   --tw-text-opacity: 1;
   border-color: rgba(123, 191, 255, var(--tw-border-opacity)) !important;
 } */

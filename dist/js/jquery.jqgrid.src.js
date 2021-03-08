@@ -890,8 +890,8 @@
 				gView: "",
 				overlay: "tableOverlay",
 				loading: "loadingState",
-				hDiv: "!border-b-2 !border-opacity-100 !border-solid !border-gray-200",
-				hTable: "bg-gray-50",
+				hDiv: "",
+				hTable: "",
 				/* header text size and vertical padding */
 				// colHeaders: "text-md font-normal hover:font-semibold !py-3.5 hover:bg-blue-50 !border-0.5 !border-opacity-100 !border-solid !border-gray-100",
 				colHeaders: "columnHeader",
@@ -927,9 +927,9 @@
 					dataField: "simpleDataField"
 				},
 				subgrid: {
-					thSubgrid: "ui-state-default", // used only with subGridModel
+					thSubgrid: "columnHeader", // used only with subGridModel
 					rowSubTable: "ui-widget-content", // used only with subGridModel additionally to ui-subtblcell
-					row: "ui-widget-content", // class of the subgrid row, additional to ui-subgrid
+					row: "row-theme", // class of the subgrid row, additional to ui-subgrid
 					tdStart: "", // it can be with span over rownumber and multiselect columns
 					tdWithIcon: "ui-widget-content", // class of cell with +- icon, additional to subgrid-cell
 					buttonDiv: "",
@@ -973,8 +973,8 @@
 					deleteGroupButton: "ui-corner-all"
 				},
 				searchToolbar: {
-					menu: "ui-menu-jqueryui ui-menu ui-widget ui-widget-content ui-corner-all",
-					menuItem: "ui-menu-item",
+					menu: "bg-white shadow-md",
+					menuItem: "text-md text-black focus-standard",
 					menuItemButton: "ui-corner-all",
 					/* filter operator buttons */
 					operButton: "large-filter-operators",
@@ -10718,11 +10718,18 @@
 									itemText = item.text;
 								}
 								selclass = selected === itemOper ? highlightClass : "";
+								// ANCHOR new operator markup maker
 								str += '<li class="' +
 									getGuiStyles.call($t, "searchToolbar.menuItem", "ui-jqgrid-menu-item " + selclass) +
 									'" role="presentation"><a class="' +
-									getGuiStyles.call($t, "searchToolbar.menuItemButton", "g-menu-item") +
-									'" tabindex="0" role="menuitem" value="' + htmlEncode(itemOper) + '" data-oper="' + htmlEncode(itemOperand) + '"><table><tr><td style="width:25px">' + htmlEncode(itemOperand) + '</td><td>' + htmlEncode(itemText) + '</td></tr></table></a></li>';
+									getGuiStyles.call($t, "searchToolbar.menuItemButton", "flex flex-row text-md text-black py-2 px-3 hover:bg-blue-50 focus-standard cursor-pointer") +
+									'" tabindex="0" role="menuitem" value="' + htmlEncode(itemOper) + '" data-oper="' + htmlEncode(itemOperand) + '"><div class="flex flex-row space-x-4"><div>' + htmlEncode(itemOperand) + '</div>' + '<div>' + '</div>' + htmlEncode(itemText) + '</div></div></a></li>';
+								// ANCHOR old operator markup maker
+								// str += '<li class="' +
+								// 	getGuiStyles.call($t, "searchToolbar.menuItem", "ui-jqgrid-menu-item " + selclass) +
+								// 	'" role="presentation"><a class="' +
+								// 	getGuiStyles.call($t, "searchToolbar.menuItemButton", "g-menu-item") +
+								// 	'" tabindex="0" role="menuitem" value="' + htmlEncode(itemOper) + '" data-oper="' + htmlEncode(itemOperand) + '"><table><tr><td style="width:25px">' + htmlEncode(itemOperand) + '</td><td>' + htmlEncode(itemText) + '</td></tr></table></a></li>';
 							}
 						}
 						str += "</ul>";

@@ -9,293 +9,161 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
-    <link rel="stylesheet" href="../dist/css/styles.mini.css" />
+    <link rel="stylesheet" href="../dist/css/styles.src.css" />
 </head>
 
 <body>
-    <div id="outerDiv" class="bg-yellow-50 space-y-7 inline-flex flex-col items-center justify-center w-screen p-5">
+    
+</div>
+    <div id="outerDiv" class="inline-flex flex-col items-center justify-center w-screen p-5 bg-yellow-50 space-y-7">
 
         <!-- SECTION Large inputs -->
-        <div class="justify-items-start grid items-center grid-cols-3 grid-rows-none">
+        <div class="grid items-center grid-cols-3 grid-rows-input justify-items-start">
             <!-- ANCHOR Labels -->
-            <label class="text-md col-start-1 row-start-1 row-end-1 pl-4">First field</label>
-            <label class="text-md col-start-2 row-start-1 row-end-1 pl-4">Second field</label>
-            <label class="text-md col-start-3 row-start-1 row-end-1 pl-4">Third field</label>
+            <label class="col-start-1 row-start-1 row-end-1 pl-4 text-md">First field</label>
+            <label class="col-start-2 row-start-1 row-end-1 pl-4 text-md">Second field</label>
+            <label class="col-start-3 row-start-1 row-end-1 pl-4 text-md">Third field</label>
             <!-- ANCHOR Rows -->
-            <div class="my-2.5 z-2 col-start-1 px-4">
-                <div class="w-55">
-                    <select data-theme="lg" data-allow-clear="true" data-placeholder="Select option" multiple="multiple"
-                        class="_dropdown">
-                        <option value="AL">Alabama</option>
-                        <option value="WY">Wyoming</option>
-                        <option value="WY">vaxming</option>
-                        <option value="WY">xvsming</option>
-                        <option value="WY">tetming</option>
-                        <option value="WY">yhfming</option>
-                        <option value="WY">dcfbshx</option>
-                    </select>
+            <div id="large-1" class="contents">
+                <div class="my-2.5 z-2 col-start-1 px-4">
+                    <div class="w-55">
+                        <select data-theme="lg" data-allow-clear="true" data-placeholder="Select option" multiple="multiple"
+                            class="_dropdown">
+                            <option value="ON">Ontario</option>
+                            <option value="BC">British Colombia</option>
+                            <option value="QC">Quebec</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="my-2.5 z-2 col-start-2 px-4 border-l border-gray-100">
+                    <div class="w-55">
+                        <select data-theme="lg" data-allow-clear="true" data-placeholder="Select option" multiple="multiple"
+                            class="_dropdown">
+                            <option value="ON">Ontario</option>
+                            <option value="BC">British Colombia</option>
+                            <option value="QC">Quebec</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="my-2.5 z-2 col-start-3 px-4 border-l border-gray-100">
+                    <div class="w-55">
+                        <select data-theme="lg" data-allow-clear="true" data-placeholder="Select option" multiple="multiple"
+                            class="_dropdown">
+                            <option value="ON">Ontario</option>
+                            <option value="BC">British Colombia</option>
+                            <option value="QC">Quebec</option>
+                        </select>
+                    </div>
                 </div>
             </div>
-            <div class="my-2.5 z-2 col-start-2 px-4 border-l border-gray-100">
-                <div class="w-55">
-                    <select data-theme="lg" data-allow-clear="true" data-placeholder="Select option" multiple="multiple"
-                        class="_dropdown">
-                        <option value="AL">Alabama</option>
-                        <option value="WY">Wyoming</option>
-                        <option value="WY">vaxming</option>
-                        <option value="WY">xvsming</option>
-                        <option value="WY">tetming</option>
-                        <option value="WY">yhfming</option>
-                        <option value="WY">dcfbshx</option>
-                    </select>
+            <div id="large-2" class="contents">
+                <div class="my-2.5 z-2 col-start-1 px-4">
+                    <div class="w-55">
+                        <select data-theme="lg" data-allow-clear="true" data-placeholder="Select option" multiple="multiple"
+                            class="_dropdown">
+                            <option value="ON">Ontario</option>
+                            <option value="BC">British Colombia</option>
+                            <option value="QC">Quebec</option>
+                        </select>
+                    </div>
                 </div>
-            </div>
-            <div class="my-2.5 z-2 col-start-3 px-4 border-l border-gray-100">
-                <div class="w-55">
-                    <select data-theme="lg" data-allow-clear="true" data-placeholder="Select option" multiple="multiple"
-                        class="_dropdown">
-                        <option value="AL">Alabama</option>
-                        <option value="WY">Wyoming</option>
-                        <option value="WY">vaxming</option>
-                        <option value="WY">xvsming</option>
-                        <option value="WY">tetming</option>
-                        <option value="WY">yhfming</option>
-                        <option value="WY">dcfbshx</option>
-                    </select>
+                <div class="my-2.5 z-2 col-start-2 px-4 border-l border-gray-100">
+                    <div class="w-55">
+                        <select data-theme="lg" data-allow-clear="true" data-placeholder="Select option" multiple="multiple"
+                            class="_dropdown">
+                            <option value="ON">Ontario</option>
+                            <option value="BC">British Colombia</option>
+                            <option value="QC">Quebec</option>
+                        </select>
+                    </div>
                 </div>
-            </div>
-            <div class="my-2.5 z-2 col-start-1 px-4">
-                <div class="w-55">
-                    <select data-theme="lg" data-allow-clear="true" data-placeholder="Select option" multiple="multiple"
-                        class="_dropdown">
-                        <option value="AL">Alabama</option>
-                        <option value="WY">Wyoming</option>
-                        <option value="WY">vaxming</option>
-                        <option value="WY">xvsming</option>
-                        <option value="WY">tetming</option>
-                        <option value="WY">yhfming</option>
-                        <option value="WY">dcfbshx</option>
-                    </select>
-                </div>
-            </div>
-            <div class="my-2.5 z-2 col-start-2 px-4 border-l border-gray-100">
-                <div class="w-55">
-                    <select data-theme="lg" data-allow-clear="true" data-placeholder="Select option" multiple="multiple"
-                        class="_dropdown">
-                        <option value="AL">Alabama</option>
-                        <option value="WY">Wyoming</option>
-                        <option value="WY">vaxming</option>
-                        <option value="WY">xvsming</option>
-                        <option value="WY">tetming</option>
-                        <option value="WY">yhfming</option>
-                        <option value="WY">dcfbshx</option>
-                    </select>
-                </div>
-            </div>
-            <div class="my-2.5 z-2 col-start-3 px-4 border-l border-gray-100">
-                <div class="w-55">
-                    <select data-theme="lg" data-allow-clear="true" data-placeholder="Select option" multiple="multiple"
-                        class="_dropdown">
-                        <option value="AL">Alabama</option>
-                        <option value="WY">Wyoming</option>
-                        <option value="WY">vaxming</option>
-                        <option value="WY">xvsming</option>
-                        <option value="WY">tetming</option>
-                        <option value="WY">yhfming</option>
-                        <option value="WY">dcfbshx</option>
-                    </select>
+                <div class="my-2.5 z-2 col-start-3 px-4 border-l border-gray-100">
+                    <div class="w-55">
+                        <select data-theme="lg" data-allow-clear="true" data-placeholder="Select option" multiple="multiple"
+                            class="_dropdown">
+                            <option value="ON">Ontario</option>
+                            <option value="BC">British Colombia</option>
+                            <option value="QC">Quebec</option>
+                        </select>
+                    </div>
                 </div>
             </div>
         </div>
         <!-- !SECTION Large inputs ends -->
 
         <!-- SECTION Medium inputs -->
-        <div class="justify-items-start grid items-center grid-cols-3 grid-rows-none">
+        <div class="grid items-center grid-cols-3 grid-rows-input justify-items-start">
             <!-- ANCHOR Labels -->
-            <label class="text-md col-start-1 row-start-1 row-end-1 pl-4">First field</label>
-            <label class="text-md col-start-2 row-start-1 row-end-1 pl-4">Second field</label>
-            <label class="text-md col-start-3 row-start-1 row-end-1 pl-4">Third field</label>
+            <label class="col-start-1 row-start-1 row-end-1 pl-4 text-md">First field</label>
+            <label class="col-start-2 row-start-1 row-end-1 pl-4 text-md">Second field</label>
+            <label class="col-start-3 row-start-1 row-end-1 pl-4 text-md">Third field</label>
             <!-- ANCHOR Rows -->
-            <div class="my-2 z-2 col-start-1 px-3.5">
-                <div class="w-55">
-                    <select data-theme="md" data-allow-clear="true" data-placeholder="Select option" multiple="multiple"
-                        class="_dropdown">
-                        <option value="AL">Alabama</option>
-                        <option value="WY">Wyoming</option>
-                        <option value="WY">vaxming</option>
-                        <option value="WY">xvsming</option>
-                        <option value="WY">tetming</option>
-                        <option value="WY">yhfming</option>
-                        <option value="WY">dcfbshx</option>
-                    </select>
+            <div id="middle-1" class="contents">
+                <div class="my-2 z-2 col-start-1 px-3.5">
+                    <div class="w-55">
+                        <select data-theme="md" data-allow-clear="true" data-placeholder="Select option" multiple="multiple"
+                            class="_dropdown">
+                            <option value="ON">Ontario</option>
+                            <option value="BC">British Colombia</option>
+                            <option value="QC">Quebec</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="my-2 z-2 col-start-2 px-3.5 border-l border-gray-100">
+                    <div class="w-55">
+                        <select data-theme="md" data-allow-clear="true" data-placeholder="Select option" multiple="multiple"
+                            class="_dropdown">
+                            <option value="ON">Ontario</option>
+                            <option value="BC">British Colombia</option>
+                            <option value="QC">Quebec</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="my-2 z-2 col-start-3 px-3.5 border-l border-gray-100">
+                    <div class="w-55">
+                        <select data-theme="md" data-allow-clear="true" data-placeholder="Select option" multiple="multiple"
+                            class="_dropdown">
+                            <option value="ON">Ontario</option>
+                            <option value="BC">British Colombia</option>
+                            <option value="QC">Quebec</option>
+                        </select>
+                    </div>
                 </div>
             </div>
-            <div class="my-2 z-2 col-start-2 px-3.5 border-l border-gray-100">
-                <div class="w-55">
-                    <select data-theme="md" data-allow-clear="true" data-placeholder="Select option" multiple="multiple"
-                        class="_dropdown">
-                        <option value="AL">Alabama</option>
-                        <option value="WY">Wyoming</option>
-                        <option value="WY">vaxming</option>
-                        <option value="WY">xvsming</option>
-                        <option value="WY">tetming</option>
-                        <option value="WY">yhfming</option>
-                        <option value="WY">dcfbshx</option>
-                    </select>
+            <div id="middle-2" class="contents">
+                <div class="my-2 z-2 col-start-1 px-3.5">
+                    <div class="w-55">
+                        <select data-theme="md" data-allow-clear="true" data-placeholder="Select option" multiple="multiple"
+                            class="_dropdown">
+                            <option value="ON">Ontario</option>
+                            <option value="BC">British Colombia</option>
+                            <option value="QC">Quebec</option>
+                        </select>
+                    </div>
                 </div>
-            </div>
-            <div class="my-2 z-2 col-start-3 px-3.5 border-l border-gray-100">
-                <div class="w-55">
-                    <select data-theme="md" data-allow-clear="true" data-placeholder="Select option" multiple="multiple"
-                        class="_dropdown">
-                        <option value="AL">Alabama</option>
-                        <option value="WY">Wyoming</option>
-                        <option value="WY">vaxming</option>
-                        <option value="WY">xvsming</option>
-                        <option value="WY">tetming</option>
-                        <option value="WY">yhfming</option>
-                        <option value="WY">dcfbshx</option>
-                    </select>
+                <div class="my-2 z-2 col-start-2 px-3.5 border-l border-gray-100">
+                    <div class="w-55">
+                        <select data-theme="md" data-allow-clear="true" data-placeholder="Select option" multiple="multiple"
+                            class="_dropdown">
+                            <option value="ON">Ontario</option>
+                            <option value="BC">British Colombia</option>
+                            <option value="QC">Quebec</option>
+                        </select>
+                    </div>
                 </div>
-            </div>
-            <div class="my-2 z-2 col-start-1 px-3.5">
-                <div class="w-55">
-                    <select data-theme="md" data-allow-clear="true" data-placeholder="Select option" multiple="multiple"
-                        class="_dropdown">
-                        <option value="AL">Alabama</option>
-                        <option value="WY">Wyoming</option>
-                        <option value="WY">vaxming</option>
-                        <option value="WY">xvsming</option>
-                        <option value="WY">tetming</option>
-                        <option value="WY">yhfming</option>
-                        <option value="WY">dcfbshx</option>
-                    </select>
-                </div>
-            </div>
-            <div class="my-2 z-2 col-start-2 px-3.5 border-l border-gray-100">
-                <div class="w-55">
-                    <select data-theme="md" data-allow-clear="true" data-placeholder="Select option" multiple="multiple"
-                        class="_dropdown">
-                        <option value="AL">Alabama</option>
-                        <option value="WY">Wyoming</option>
-                        <option value="WY">vaxming</option>
-                        <option value="WY">xvsming</option>
-                        <option value="WY">tetming</option>
-                        <option value="WY">yhfming</option>
-                        <option value="WY">dcfbshx</option>
-                    </select>
-                </div>
-            </div>
-            <div class="my-2 z-2 col-start-3 px-3.5 border-l border-gray-100">
-                <div class="w-55">
-                    <select data-theme="md" data-allow-clear="true" data-placeholder="Select option" multiple="multiple"
-                        class="_dropdown">
-                        <option value="AL">Alabama</option>
-                        <option value="WY">Wyoming</option>
-                        <option value="WY">vaxming</option>
-                        <option value="WY">xvsming</option>
-                        <option value="WY">tetming</option>
-                        <option value="WY">yhfming</option>
-                        <option value="WY">dcfbshx</option>
-                    </select>
+                <div class="my-2 z-2 col-start-3 px-3.5 border-l border-gray-100">
+                    <div class="w-55">
+                        <select data-theme="md" data-allow-clear="true" data-placeholder="Select option" multiple="multiple"
+                            class="_dropdown">
+                            <option value="ON">Ontario</option>
+                            <option value="BC">British Colombia</option>
+                            <option value="QC">Quebec</option>
+                        </select>
+                    </div>
                 </div>
             </div>
         </div>
         <!-- !SECTION Medium inputs ends -->
-
-        <!-- SECTION Small inputs -->
-        <div class="justify-items-start grid items-center grid-cols-3 grid-rows-none">
-            <!-- ANCHOR Labels -->
-            <label class="text-md col-start-1 row-start-1 row-end-1 pl-4">First field</label>
-            <label class="text-md col-start-2 row-start-1 row-end-1 pl-4">Second field</label>
-            <label class="text-md col-start-3 row-start-1 row-end-1 pl-4">Third field</label>
-            <!-- ANCHOR Rows -->
-            <div class="my-1.5 z-2 col-start-1 px-3.5">
-                <div class="w-55">
-                    <select data-theme="sm" data-allow-clear="true" data-placeholder="Select option" multiple="multiple"
-                        class="_dropdown">
-                        <option value="AL">Alabama</option>
-                        <option value="WY">Wyoming</option>
-                        <option value="WY">vaxming</option>
-                        <option value="WY">xvsming</option>
-                        <option value="WY">tetming</option>
-                        <option value="WY">yhfming</option>
-                        <option value="WY">dcfbshx</option>
-                    </select>
-                </div>
-            </div>
-            <div class="my-1.5 z-2 col-start-2 px-3.5 border-l border-gray-100">
-                <div class="w-55">
-                    <select data-theme="sm" data-allow-clear="true" data-placeholder="Select option" multiple="multiple"
-                        class="_dropdown">
-                        <option value="AL">Alabama</option>
-                        <option value="WY">Wyoming</option>
-                        <option value="WY">vaxming</option>
-                        <option value="WY">xvsming</option>
-                        <option value="WY">tetming</option>
-                        <option value="WY">yhfming</option>
-                        <option value="WY">dcfbshx</option>
-                    </select>
-                </div>
-            </div>
-            <div class="my-1.5 z-2 col-start-3 px-3.5 border-l border-gray-100">
-                <div class="w-55">
-                    <select data-theme="sm" data-allow-clear="true" data-placeholder="Select option" multiple="multiple"
-                        class="_dropdown">
-                        <option value="AL">Alabama</option>
-                        <option value="WY">Wyoming</option>
-                        <option value="WY">vaxming</option>
-                        <option value="WY">xvsming</option>
-                        <option value="WY">tetming</option>
-                        <option value="WY">yhfming</option>
-                        <option value="WY">dcfbshx</option>
-                    </select>
-                </div>
-            </div>
-            <div class="my-1.5 z-2 col-start-1 px-3.5">
-                <div class="w-55">
-                    <select data-theme="sm" data-allow-clear="true" data-placeholder="Select option" multiple="multiple"
-                        class="_dropdown">
-                        <option value="AL">Alabama</option>
-                        <option value="WY">Wyoming</option>
-                        <option value="WY">vaxming</option>
-                        <option value="WY">xvsming</option>
-                        <option value="WY">tetming</option>
-                        <option value="WY">yhfming</option>
-                        <option value="WY">dcfbshx</option>
-                    </select>
-                </div>
-            </div>
-            <div class="my-1.5 z-2 col-start-2 px-3.5 border-l border-gray-100">
-                <div class="w-55">
-                    <select data-theme="sm" data-allow-clear="true" data-placeholder="Select option" multiple="multiple"
-                        class="_dropdown">
-                        <option value="AL">Alabama</option>
-                        <option value="WY">Wyoming</option>
-                        <option value="WY">vaxming</option>
-                        <option value="WY">xvsming</option>
-                        <option value="WY">tetming</option>
-                        <option value="WY">yhfming</option>
-                        <option value="WY">dcfbshx</option>
-                    </select>
-                </div>
-            </div>
-            <div class="my-1.5 z-2 col-start-3 px-3.5 border-l border-gray-100">
-                <div class="w-55">
-                    <select data-theme="sm" data-allow-clear="true" data-placeholder="Select option" multiple="multiple"
-                        class="_dropdown">
-                        <option value="AL">Alabama</option>
-                        <option value="WY">Wyoming</option>
-                        <option value="WY">vaxming</option>
-                        <option value="WY">xvsming</option>
-                        <option value="WY">tetming</option>
-                        <option value="WY">yhfming</option>
-                        <option value="WY">dcfbshx</option>
-                    </select>
-                </div>
-            </div>
-        </div>
-        <!-- !SECTION Small inputs ends -->
 
     </div>
     <script>

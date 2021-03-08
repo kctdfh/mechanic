@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>inputs-dropdown</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+    <link rel="stylesheet" href="../dist/css/styles.mini.css" />
+</head>
+
+<body>
+    <div id="outerDiv" class="inline-flex flex-col items-center justify-center w-screen p-5 bg-blue-50 space-y-7">
+        <!-- SECTION No label -->
+        <div class="flex flex-row space-x-4">
+            <div class="flex flex-col items-center space-y-4">
+
+                <!-- SECTION Large 40px -->
+
+                <!-- SECTION No placeholder / no clear -->
+                <!-- ANCHOR Single-select default -->
+                <div class="w-70">
+                    <select data-theme="lg" class="_dropdown">
+                        <option value="AL">Ontario</option>
+                        <option value="AL">Quebec</option>
+                        <option value="AL">Manitoba</option>
+                        <option value="WY">Alberta</option>
+                    </select>
+                </div>
+                <!-- ANCHOR Single-select disabled -->
+                <div class="w-70">
+                    <select data-theme="lg" class="_dropdown" disabled>
+                        <option value="AL">Ontario</option>
+                        <option value="AL">Quebec</option>
+                        <option value="AL">Manitoba</option>
+                        <option value="WY">Alberta</option>
+                    </select>
+                </div>
+                <!-- ANCHOR Multi-select default -->
+                <div class="w-70">
+                    <select data-theme="lg" class="_dropdown" multiple="multiple">
+                        <option value="AL">Ontario</option>
+                        <option value="WY">Alberta</option>
+                        <option value="WY">Quebec</option>
+                        <option value="WY">British Colombia</option>
+                        <option value="WY">Manitoba</option>
+                        <option value="WY">Saskatchewan</option>
+                        <option value="WY">Nova Scotia</option>
+                    </select>
+                </div>
+                <!-- ANCHOR Multi-select disabled -->
+                <div class="w-70">
+                    <select data-theme="lg" class="_dropdown" multiple="multiple" disabled>
+                        <option value="AL">Ontario</option>
+                        <option value="WY">Alberta</option>
+                        <option value="WY">Quebec</option>
+                        <option value="WY">British Colombia</option>
+                        <option value="WY">Manitoba</option>
+                        <option value="WY">Saskatchewan</option>
+                        <option value="WY">Nova Scotia</option>
+                    </select>
+                </div>
+                <!-- !SECTION No placeholder / no clear ends -->
+
+                <!-- SECTION With placeholder / with clear -->
+                <!-- ANCHOR Single-select default -->
+                <div class="w-70">
+                    <select data-theme="lg" data-placeholder="Select one option..." data-multiple="false"
+                        data-allow-clear="true" class="_dropdown">
+                        <option></option><!-- Needed to show X image to clear the select -->
+                        <option value="1">Quebec</option>
+                        <option value="2">Ontario</option>
+                        <option value="3">Alberta</option>
+                        <option value="4">Manitoba</option>
+                        <option value="5">New Brunswick</option>
+                    </select>
+                </div>
+                <!-- ANCHOR Single-select disabled -->
+                <div class="w-70">
+                    <select data-theme="lg" data-placeholder="Option unavailable" data-multiple="false"
+                        data-allow-clear="true" class="_dropdown" disabled>
+                        <option></option><!-- Needed to show X image to clear the select -->
+                        <option value="1">Quebec</option>
+                        <option value="2">Ontario</option>
+                        <option value="3">Alberta</option>
+                        <option value="4">Manitoba</option>
+                        <option value="5">New Brunswick</option>
+                    </select>
+                </div>
+                <!-- ANCHOR Multi-select default -->
+                <div class="w-70">
+                    <select data-theme="lg" data-allow-clear="true" data-placeholder="Select provinces of residence..."
+                        multiple="multiple" class="_dropdown">
+                        <option value="AL">Ontario</option>
+                        <option value="WY">Alberta</option>
+                        <option value="WY">Quebec</option>
+                        <option value="WY">British Colombia</option>
+                        <option value="WY">Manitoba</option>
+                        <option value="WY">Saskatchewan</option>
+                        <option value="WY">Nova Scotia</option>
+                    </select>
+                </div>
+                <!-- ANCHOR Multi-select disabled -->
+                <div class="w-70">
+                    <select data-theme="lg" data-allow-clear="true" data-placeholder="Options unavailable"
+                        multiple="multiple" class="_dropdown" disabled>
+                        <option value="AL">Ontario</option>
+                        <option value="WY">Alberta</option>
+                        <option value="WY">Quebec</option>
+                        <option value="WY">British Colombia</option>
+                        <option value="WY">Manitoba</option>
+                        <option value="WY">Saskatchewan</option>
+                        <option value="WY">Nova Scotia</option>
+                    </select>
+                </div>
+                <!-- !SECTION With placeholder / with clear ends -->
+
+                <!-- !SECTION Large 40px ends -->
+
+            </div>
+            <div class="flex flex-col items-center space-y-4">
+
+                <!-- SECTION Middle (32px) -->
+
+                <!-- SECTION No placeholder / no clear -->
+                <!-- ANCHOR Single-select default -->
+                <div class="w-70">
+                    <select data-theme="md" class="_dropdown">
+                        <option value="AL">Ontario</option>
+                        <option value="AL">Quebec</option>
+                        <option value="AL">Manitoba</option>
+                        <option value="WY">Alberta</option>
+                    </select>
+                </div>
+                <!-- ANCHOR Single-select disabled -->
+                <div class="w-70">
+                    <select data-theme="md" class="_dropdown" disabled>
+                        <option value="AL">Ontario</option>
+                        <option value="AL">Quebec</option>
+                        <option value="AL">Manitoba</option>
+                        <option value="WY">Alberta</option>
+                    </select>
+                </div>
+                <!-- ANCHOR Multi-select default -->
+                <div class="w-70">
+                    <select data-theme="md" class="_dropdown" multiple="multiple">
+                        <option value="AL">Ontario</option>
+                        <option value="WY">Alberta</option>
+                        <option value="WY">Quebec</option>
+                        <option value="WY">British Colombia</option>
+                        <option value="WY">Manitoba</option>
+                        <option value="WY">Saskatchewan</option>
+                        <option value="WY">Nova Scotia</option>
+                    </select>
+                </div>
+                <!-- ANCHOR Multi-select disabled -->
+                <div class="w-70">
+                    <select data-theme="md" class="_dropdown" multiple="multiple" disabled>
+                        <option value="AL">Ontario</option>
+                        <option value="WY">Alberta</option>
+                        <option value="WY">Quebec</option>
+                        <option value="WY">British Colombia</option>
+                        <option value="WY">Manitoba</option>
+                        <option value="WY">Saskatchewan</option>
+                        <option value="WY">Nova Scotia</option>
+                    </select>
+                </div>
+                <!-- !SECTION No placeholder / no clear ends -->
+
+                <!-- SECTION With placeholder / with clear -->
+                <!-- ANCHOR Single-select default -->
+                <div class="w-70">
+                    <select data-theme="md" data-placeholder="Select one option..." data-multiple="false"
+                        data-allow-clear="true" class="_dropdown">
+                        <option></option><!-- Needed to show X image to clear the select -->
+                        <option value="1">Quebec</option>
+                        <option value="2">Ontario</option>
+                        <option value="3">Alberta</option>
+                        <option value="4">Manitoba</option>
+                        <option value="5">New Brunswick</option>
+                    </select>
+                </div>
+                <!-- ANCHOR Single-select disabled -->
+                <div class="w-70">
+                    <select data-theme="md" data-placeholder="Option unavailable" data-multiple="false"
+                        data-allow-clear="true" class="_dropdown" disabled>
+                        <option></option><!-- Needed to show X image to clear the select -->
+                        <option value="1">Quebec</option>
+                        <option value="2">Ontario</option>
+                        <option value="3">Alberta</option>
+                        <option value="4">Manitoba</option>
+                        <option value="5">New Brunswick</option>
+                    </select>
+                </div>
+                <!-- ANCHOR Multi-select default -->
+                <div class="w-70">
+                    <select data-theme="md" data-allow-clear="true" data-placeholder="Select provinces of residence..."
+                        multiple="multiple" class="_dropdown">
+                        <option value="AL">Ontario</option>
+                        <option value="WY">Alberta</option>
+                        <option value="WY">Quebec</option>
+                        <option value="WY">British Colombia</option>
+                        <option value="WY">Manitoba</option>
+                        <option value="WY">Saskatchewan</option>
+                        <option value="WY">Nova Scotia</option>
+                    </select>
+                </div>
+                <!-- ANCHOR Multi-select disabled -->
+                <div class="w-70">
+                    <select data-theme="md" data-allow-clear="true" data-placeholder="Options unavailable"
+                        multiple="multiple" class="_dropdown" disabled>
+                        <option value="AL">Ontario</option>
+                        <option value="WY">Alberta</option>
+                        <option value="WY">Quebec</option>
+                        <option value="WY">British Colombia</option>
+                        <option value="WY">Manitoba</option>
+                        <option value="WY">Saskatchewan</option>
+                        <option value="WY">Nova Scotia</option>
+                    </select>
+                </div>
+                <!-- !SECTION With placeholder / with clear ends -->
+
+                <!-- SECTION Middle (32px) ends -->
+
+            </div>
+            <div class="flex flex-col items-center space-y-4">
+
+                <!-- SECTION Small (24px) -->
+
+                <!-- SECTION No placeholder / no clear -->
+                <!-- ANCHOR Single-select default -->
+                <div class="w-70">
+                    <select data-theme="sm" class="_dropdown">
+                        <option value="AL">Ontario</option>
+                        <option value="AL">Quebec</option>
+                        <option value="AL">Manitoba</option>
+                        <option value="WY">Alberta</option>
+                    </select>
+                </div>
+                <!-- ANCHOR Single-select disabled -->
+                <div class="w-70">
+                    <select data-theme="sm" class="_dropdown" disabled>
+                        <option value="AL">Ontario</option>
+                        <option value="AL">Quebec</option>
+                        <option value="AL">Manitoba</option>
+                        <option value="WY">Alberta</option>
+                    </select>
+                </div>
+                <!-- ANCHOR Multi-select default -->
+                <div class="w-70">
+                    <select data-theme="sm" class="_dropdown" multiple="multiple">
+                        <option value="AL">Ontario</option>
+                        <option value="WY">Alberta</option>
+                        <option value="WY">Quebec</option>
+                        <option value="WY">British Colombia</option>
+                        <option value="WY">Manitoba</option>
+                        <option value="WY">Saskatchewan</option>
+                        <option value="WY">Nova Scotia</option>
+                    </select>
+                </div>
+                <!-- ANCHOR Multi-select disabled -->
+                <div class="w-70">
+                    <select data-theme="sm" class="_dropdown" multiple="multiple" disabled>
+                        <option value="AL">Ontario</option>
+                        <option value="WY">Alberta</option>
+                        <option value="WY">Quebec</option>
+                        <option value="WY">British Colombia</option>
+                        <option value="WY">Manitoba</option>
+                        <option value="WY">Saskatchewan</option>
+                        <option value="WY">Nova Scotia</option>
+                    </select>
+                </div>
+                <!-- !SECTION No placeholder / no clear ends -->
+
+                <!-- SECTION With placeholder / with clear -->
+                <!-- ANCHOR Single-select default -->
+                <div class="w-70">
+                    <select data-theme="sm" data-placeholder="Select one option..." data-multiple="false"
+                        data-allow-clear="true" class="_dropdown">
+                        <option></option><!-- Needed to show X image to clear the select -->
+                        <option value="1">Quebec</option>
+                        <option value="2">Ontario</option>
+                        <option value="3">Alberta</option>
+                        <option value="4">Manitoba</option>
+                        <option value="5">New Brunswick</option>
+                    </select>
+                </div>
+                <!-- ANCHOR Single-select disabled -->
+                <div class="w-70">
+                    <select data-theme="sm" data-placeholder="Option unavailable" data-multiple="false"
+                        data-allow-clear="true" class="_dropdown" disabled>
+                        <option></option><!-- Needed to show X image to clear the select -->
+                        <option value="1">Quebec</option>
+                        <option value="2">Ontario</option>
+                        <option value="3">Alberta</option>
+                        <option value="4">Manitoba</option>
+                        <option value="5">New Brunswick</option>
+                    </select>
+                </div>
+                <!-- ANCHOR Multi-select default -->
+                <div class="w-70">
+                    <select data-theme="sm" data-allow-clear="true" data-placeholder="Select provinces of residence..."
+                        multiple="multiple" class="_dropdown">
+                        <option value="AL">Ontario</option>
+                        <option value="WY">Alberta</option>
+                        <option value="WY">Quebec</option>
+                        <option value="WY">British Colombia</option>
+                        <option value="WY">Manitoba</option>
+                        <option value="WY">Saskatchewan</option>
+                        <option value="WY">Nova Scotia</option>
+                    </select>
+                </div>
+                <!-- ANCHOR Multi-select disabled -->
+                <div class="w-70">
+                    <select data-theme="sm" data-allow-clear="true" data-placeholder="Options unavailable"
+                        multiple="multiple" class="_dropdown" disabled>
+                        <option value="AL">Ontario</option>
+                        <option value="WY">Alberta</option>
+                        <option value="WY">Quebec</option>
+                        <option value="WY">British Colombia</option>
+                        <option value="WY">Manitoba</option>
+                        <option value="WY">Saskatchewan</option>
+                        <option value="WY">Nova Scotia</option>
+                    </select>
+                </div>
+                <!-- !SECTION With placeholder / with clear ends -->
+
+                <!-- !SECTION Small (24px) ends -->
+
+            </div>
+        </div>
+        <!-- !SECTION No label ends -->
+
+        <!-- SECTION Labeled -->
+        <div class="flex flex-row space-x-4">
+            <div class="flex flex-col items-center space-y-4">
+
+                <!-- SECTION Large (40px) -->
+
+                <!-- SECTION No placeholder / no clear -->
+                <!-- ANCHOR Single-select default -->
+                <div class="flex flex-col space-y-1">
+                    <label for="inputId" class="text-black text-md">Select an option</label>
+                    <div class="w-70">
+                        <select data-theme="lg" class="_dropdown">
+                            <option value="AL">Ontario</option>
+                            <option value="AL">Quebec</option>
+                            <option value="AL">Manitoba</option>
+                            <option value="WY">Alberta</option>
+                        </select>
+                    </div>
+                    <p class="mt-1 text-sm text-red-600">Description</p>
+                </div>
+                <!-- ANCHOR Single-select disabled -->
+                <div class="flex flex-col space-y-1">
+                    <label for="inputId" class="text-black text-md">Select an option</label>
+                    <div class="w-70">
+                        <select data-theme="lg" class="_dropdown" disabled>
+                            <option value="AL">Ontario</option>
+                            <option value="AL">Quebec</option>
+                            <option value="AL">Manitoba</option>
+                            <option value="WY">Alberta</option>
+                        </select>
+                    </div>
+                    <p class="mt-1 text-sm text-red-600">Description</p>
+                    </label>
+                </div>
+                <!-- ANCHOR Multi-select default -->
+                <div class="flex flex-col space-y-1">
+                    <label for="inputId" class="text-black text-md">Enter your name</label>
+                    <div class="w-70">
+                        <select data-theme="lg" class="_dropdown" multiple="multiple">
+                            <option value="AL">Ontario</option>
+                            <option value="WY">Alberta</option>
+                            <option value="WY">Quebec</option>
+                            <option value="WY">British Colombia</option>
+                            <option value="WY">Manitoba</option>
+                            <option value="WY">Saskatchewan</option>
+                            <option value="WY">Nova Scotia</option>
+                        </select>
+                    </div>
+                    <p class="mt-1 text-sm text-red-600">Description</p>
+                </div>
+                <!-- ANCHOR Multi-select disabled -->
+                <div class="flex flex-col space-y-1">
+                    <label for="inputId" class="text-black text-md">Enter your name</label>
+                    <div class="w-70">
+                        <select data-theme="lg" class="_dropdown" multiple="multiple" disabled>
+                            <option value="AL">Ontario</option>
+                            <option value="WY">Alberta</option>
+                            <option value="WY">Quebec</option>
+                            <option value="WY">British Colombia</option>
+                            <option value="WY">Manitoba</option>
+                            <option value="WY">Saskatchewan</option>
+                            <option value="WY">Nova Scotia</option>
+                        </select>
+                    </div>
+                    <p class="mt-1 text-sm text-red-600">Description</p>
+                </div>
+                <!-- !SECTION No placeholder / no clear ends -->
+
+                <!-- SECTION With placeholder / with clear -->
+                <!-- ANCHOR Single-select default -->
+                <div class="flex flex-col space-y-1">
+                    <label for="inputId" class="text-black text-md">Enter your name</label>
+                    <div class="w-70">
+                        <select data-theme="lg" data-placeholder="Select one option..." data-multiple="false"
+                            data-allow-clear="true" class="_dropdown">
+                            <option></option><!-- Needed to show X image to clear the select -->
+                            <option value="1">Quebec</option>
+                            <option value="2">Ontario</option>
+                            <option value="3">Alberta</option>
+                            <option value="4">Manitoba</option>
+                            <option value="5">New Brunswick</option>
+                        </select>
+                    </div>
+                    <p class="mt-1 text-sm text-red-600">Description</p>
+                </div>
+                <!-- ANCHOR Single-select disabled -->
+                <div class="flex flex-col space-y-1">
+                    <label for="inputId" class="text-black text-md">Enter your name</label>
+                    <div class="w-70">
+                        <select data-theme="lg" data-placeholder="Option unavailable" data-multiple="false"
+                            data-allow-clear="true" class="_dropdown" disabled>
+                            <option></option><!-- Needed to show X image to clear the select -->
+                            <option value="1">Quebec</option>
+                            <option value="2">Ontario</option>
+                            <option value="3">Alberta</option>
+                            <option value="4">Manitoba</option>
+                            <option value="5">New Brunswick</option>
+                        </select>
+                    </div>
+                    <p class="mt-1 text-sm text-red-600">Description</p>
+                </div>
+                <!-- ANCHOR Multi-select default -->
+                <div class="flex flex-col space-y-1">
+                    <label for="inputId" class="text-black text-md">Enter your name</label>
+                    <div class="w-70">
+                        <select data-theme="lg" data-allow-clear="true"
+                            data-placeholder="Select provinces of residence..." multiple="multiple" class="_dropdown">
+                            <option value="AL">Ontario</option>
+                            <option value="WY">Alberta</option>
+                            <option value="WY">Quebec</option>
+                            <option value="WY">British Colombia</option>
+                            <option value="WY">Manitoba</option>
+                            <option value="WY">Saskatchewan</option>
+                            <option value="WY">Nova Scotia</option>
+                        </select>
+                    </div>
+                    <p class="mt-1 text-sm text-red-600">Description</p>
+                </div>
+                <!-- ANCHOR Multi-select disabled -->
+                <div class="flex flex-col space-y-1">
+                    <label for="inputId" class="text-black text-md">Enter your name</label>
+                    <div class="w-70">
+                        <select data-theme="lg" data-allow-clear="true" data-placeholder="Options unavailable"
+                            multiple="multiple" class="_dropdown" disabled>
+                            <option value="AL">Ontario</option>
+                            <option value="WY">Alberta</option>
+                            <option value="WY">Quebec</option>
+                            <option value="WY">British Colombia</option>
+                            <option value="WY">Manitoba</option>
+                            <option value="WY">Saskatchewan</option>
+                            <option value="WY">Nova Scotia</option>
+                        </select>
+                    </div>
+                    <p class="mt-1 text-sm text-red-600">Description</p>
+                </div>
+                <!-- !SECTION With placeholder / with clear ends -->
+
+                <!-- !SECTION Large (40px) ends -->
+
+            </div>
+            <div class="flex flex-col items-center space-y-4">
+
+                <!-- SECTION Middle (32px) -->
+
+                <!-- SECTION No placeholder / no clear -->
+                <!-- ANCHOR Single-select default -->
+                <div class="flex flex-col space-y-1">
+                    <label for="inputId" class="text-black text-md">Enter your name</label>
+                    <div class="w-70">
+                        <select data-theme="md" class="_dropdown">
+                            <option value="AL">Ontario</option>
+                            <option value="AL">Quebec</option>
+                            <option value="AL">Manitoba</option>
+                            <option value="WY">Alberta</option>
+                        </select>
+                    </div>
+                    <p class="mt-1 text-sm text-red-600">Description</p>
+                </div>
+                <!-- ANCHOR Single-select disabled -->
+                <div class="flex flex-col space-y-1">
+                    <label for="inputId" class="text-black text-md">Enter your name</label>
+                    <div class="w-70">
+                        <select data-theme="md" class="_dropdown" disabled>
+                            <option value="AL">Ontario</option>
+                            <option value="AL">Quebec</option>
+                            <option value="AL">Manitoba</option>
+                            <option value="WY">Alberta</option>
+                        </select>
+                    </div>
+                    <p class="mt-1 text-sm text-red-600">Description</p>
+                </div>
+                <!-- ANCHOR Multi-select default -->
+                <div class="flex flex-col space-y-1">
+                    <label for="inputId" class="text-black text-md">Enter your name</label>
+                    <div class="w-70">
+                        <select data-theme="md" class="_dropdown" multiple="multiple">
+                            <option value="AL">Ontario</option>
+                            <option value="WY">Alberta</option>
+                            <option value="WY">Quebec</option>
+                            <option value="WY">British Colombia</option>
+                            <option value="WY">Manitoba</option>
+                            <option value="WY">Saskatchewan</option>
+                            <option value="WY">Nova Scotia</option>
+                        </select>
+                    </div>
+                    <p class="mt-1 text-sm text-red-600">Description</p>
+                </div>
+                <!-- ANCHOR Multi-select disabled -->
+                <div class="flex flex-col space-y-1">
+                    <label for="inputId" class="text-black text-md">Enter your name</label>
+                    <div class="w-70">
+                        <select data-theme="md" class="_dropdown" multiple="multiple" disabled>
+                            <option value="AL">Ontario</option>
+                            <option value="WY">Alberta</option>
+                            <option value="WY">Quebec</option>
+                            <option value="WY">British Colombia</option>
+                            <option value="WY">Manitoba</option>
+                            <option value="WY">Saskatchewan</option>
+                            <option value="WY">Nova Scotia</option>
+                        </select>
+                    </div>
+                    <p class="mt-1 text-sm text-red-600">Description</p>
+                </div>
+                <!-- !SECTION No placeholder / no clear ends -->
+
+                <!-- SECTION With placeholder / with clear -->
+                <!-- ANCHOR Single-select default -->
+                <div class="flex flex-col space-y-1">
+                    <label for="inputId" class="text-black text-md">Enter your name</label>
+                    <div class="w-70">
+                        <select data-theme="md" data-placeholder="Select one option..." data-multiple="false"
+                            data-allow-clear="true" class="_dropdown">
+                            <option></option><!-- Needed to show X image to clear the select -->
+                            <option value="1">Quebec</option>
+                            <option value="2">Ontario</option>
+                            <option value="3">Alberta</option>
+                            <option value="4">Manitoba</option>
+                            <option value="5">New Brunswick</option>
+                        </select>
+                    </div>
+                    <p class="mt-1 text-sm text-red-600">Description</p>
+                </div>
+                <!-- ANCHOR Single-select disabled -->
+                <div class="flex flex-col space-y-1">
+                    <label for="inputId" class="text-black text-md">Enter your name</label>
+                    <div class="w-70">
+                        <select data-theme="md" data-placeholder="Option unavailable" data-multiple="false"
+                            data-allow-clear="true" class="_dropdown" disabled>
+                            <option></option><!-- Needed to show X image to clear the select -->
+                            <option value="1">Quebec</option>
+                            <option value="2">Ontario</option>
+                            <option value="3">Alberta</option>
+                            <option value="4">Manitoba</option>
+                            <option value="5">New Brunswick</option>
+                        </select>
+                    </div>
+                    <p class="mt-1 text-sm text-red-600">Description</p>
+                </div>
+                <!-- ANCHOR Multi-select default -->
+                <div class="flex flex-col space-y-1">
+                    <label for="inputId" class="text-black text-md">Enter your name</label>
+                    <div class="w-70">
+                        <select data-theme="md" data-allow-clear="true"
+                            data-placeholder="Select provinces of residence..." multiple="multiple" class="_dropdown">
+                            <option value="AL">Ontario</option>
+                            <option value="WY">Alberta</option>
+                            <option value="WY">Quebec</option>
+                            <option value="WY">British Colombia</option>
+                            <option value="WY">Manitoba</option>
+                            <option value="WY">Saskatchewan</option>
+                            <option value="WY">Nova Scotia</option>
+                        </select>
+                    </div>
+                    <p class="mt-1 text-sm text-red-600">Description</p>
+                </div>
+                <!-- ANCHOR Multi-select disabled -->
+                <div class="flex flex-col space-y-1">
+                    <label for="inputId" class="text-black text-md">Enter your name</label>
+                    <div class="w-70">
+                        <select data-theme="md" data-allow-clear="true" data-placeholder="Options unavailable"
+                            multiple="multiple" class="_dropdown" disabled>
+                            <option value="AL">Ontario</option>
+                            <option value="WY">Alberta</option>
+                            <option value="WY">Quebec</option>
+                            <option value="WY">British Colombia</option>
+                            <option value="WY">Manitoba</option>
+                            <option value="WY">Saskatchewan</option>
+                            <option value="WY">Nova Scotia</option>
+                        </select>
+                    </div>
+                    <p class="mt-1 text-sm text-red-600">Description</p>
+                </div>
+                <!-- !SECTION With placeholder / with clear ends -->
+
+                <!-- !SECTION Middle (32px) ends -->
+
+            </div>
+            <div class="flex flex-col items-center space-y-4">
+
+                <!-- SECTION Small (24px) -->
+
+                <!-- SECTION No placeholder / no clear -->
+                <!-- ANCHOR Single-select default -->
+                <div class="flex flex-col space-y-1">
+                    <label for="inputId" class="text-black text-md">Enter your name</label>
+                    <div class="w-70">
+                        <select data-theme="sm" class="_dropdown">
+                            <option value="AL">Ontario</option>
+                            <option value="AL">Quebec</option>
+                            <option value="AL">Manitoba</option>
+                            <option value="WY">Alberta</option>
+                        </select>
+                    </div>
+                    <p class="mt-1 text-sm text-red-600">Description</p>
+                </div>
+                <!-- ANCHOR Single-select disabled -->
+                <div class="flex flex-col space-y-1">
+                    <label for="inputId" class="text-black text-md">Enter your name</label>
+                    <div class="w-70">
+                        <select data-theme="sm" class="_dropdown" disabled>
+                            <option value="AL">Ontario</option>
+                            <option value="AL">Quebec</option>
+                            <option value="AL">Manitoba</option>
+                            <option value="WY">Alberta</option>
+                        </select>
+                    </div>
+                    <p class="mt-1 text-sm text-red-600">Description</p>
+                </div>
+                <!-- ANCHOR Multi-select default -->
+                <div class="flex flex-col space-y-1">
+                    <label for="inputId" class="text-black text-md">Enter your name</label>
+                    <div class="w-70">
+                        <select data-theme="sm" class="_dropdown" multiple="multiple">
+                            <option value="AL">Ontario</option>
+                            <option value="WY">Alberta</option>
+                            <option value="WY">Quebec</option>
+                            <option value="WY">British Colombia</option>
+                            <option value="WY">Manitoba</option>
+                            <option value="WY">Saskatchewan</option>
+                            <option value="WY">Nova Scotia</option>
+                        </select>
+                    </div>
+                    <p class="mt-1 text-sm text-red-600">Description</p>
+                </div>
+                <!-- ANCHOR Multi-select disabled -->
+                <div class="flex flex-col space-y-1">
+                    <label for="inputId" class="text-black text-md">Enter your name</label>
+                    <div class="w-70">
+                        <select data-theme="sm" class="_dropdown" multiple="multiple" disabled>
+                            <option value="AL">Ontario</option>
+                            <option value="WY">Alberta</option>
+                            <option value="WY">Quebec</option>
+                            <option value="WY">British Colombia</option>
+                            <option value="WY">Manitoba</option>
+                            <option value="WY">Saskatchewan</option>
+                            <option value="WY">Nova Scotia</option>
+                        </select>
+                    </div>
+                    <p class="mt-1 text-sm text-red-600">Description</p>
+                </div>
+                <!-- !SECTION No placeholder / no clear ends -->
+
+                <!-- SECTION With placeholder / with clear -->
+                <!-- ANCHOR Single-select default -->
+                <div class="flex flex-col space-y-1">
+                    <label for="inputId" class="text-black text-md">Enter your name</label>
+                    <div class="w-70">
+                        <select data-theme="sm" data-placeholder="Select one option..." data-multiple="false"
+                            data-allow-clear="true" class="_dropdown">
+                            <option></option><!-- Needed to show X image to clear the select -->
+                            <option value="1">Quebec</option>
+                            <option value="2">Ontario</option>
+                            <option value="3">Alberta</option>
+                            <option value="4">Manitoba</option>
+                            <option value="5">New Brunswick</option>
+                        </select>
+                    </div>
+                    <p class="mt-1 text-sm text-red-600">Description</p>
+                </div>
+                <!-- ANCHOR Single-select disabled -->
+                <div class="flex flex-col space-y-1">
+                    <label for="inputId" class="text-black text-md">Enter your name</label>
+                    <div class="w-70">
+                        <select data-theme="sm" data-placeholder="Option unavailable" data-multiple="false"
+                            data-allow-clear="true" class="_dropdown" disabled>
+                            <option></option><!-- Needed to show X image to clear the select -->
+                            <option value="1">Quebec</option>
+                            <option value="2">Ontario</option>
+                            <option value="3">Alberta</option>
+                            <option value="4">Manitoba</option>
+                            <option value="5">New Brunswick</option>
+                        </select>
+                    </div>
+                    <p class="mt-1 text-sm text-red-600">Description</p>
+                </div>
+                <!-- ANCHOR Multi-select default -->
+                <div class="flex flex-col space-y-1">
+                    <label for="inputId" class="text-black text-md">Enter your name</label>
+                    <div class="w-70">
+                        <select data-theme="sm" data-allow-clear="true"
+                            data-placeholder="Select provinces of residence..." multiple="multiple" class="_dropdown">
+                            <option value="AL">Ontario</option>
+                            <option value="WY">Alberta</option>
+                            <option value="WY">Quebec</option>
+                            <option value="WY">British Colombia</option>
+                            <option value="WY">Manitoba</option>
+                            <option value="WY">Saskatchewan</option>
+                            <option value="WY">Nova Scotia</option>
+                        </select>
+                    </div>
+                    <p class="mt-1 text-sm text-red-600">Description</p>
+                </div>
+                <!-- ANCHOR Multi-select disabled -->
+                <div class="flex flex-col space-y-1">
+                    <label for="inputId" class="text-black text-md">Enter your name</label>
+                    <div class="w-70">
+                        <select data-theme="sm" data-allow-clear="true" data-placeholder="Options unavailable"
+                            multiple="multiple" class="_dropdown" disabled>
+                            <option value="AL">Ontario</option>
+                            <option value="WY">Alberta</option>
+                            <option value="WY">Quebec</option>
+                            <option value="WY">British Colombia</option>
+                            <option value="WY">Manitoba</option>
+                            <option value="WY">Saskatchewan</option>
+                            <option value="WY">Nova Scotia</option>
+                        </select>
+                    </div>
+                    <p class="mt-1 text-sm text-red-600">Description</p>
+                </div>
+                <!-- !SECTION With placeholder / with clear ends -->
+
+                <!-- !SECTION Small (24px) ends -->
+
+            </div>
+        </div>
+        <!-- !SECTION Labeled ends -->
+
+    </div>
+    <script>
+        $('._dropdown').select2({});
+    </script>
+</body>

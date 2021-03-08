@@ -5,97 +5,90 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>inputs-number</title>
+    <title>inputs-number-v2</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="../dist/css/styles.mini.css" />
 </head>
 
 <body>
-    <div id="outerDiv" class="bg-yellow-50 inline-flex flex-col items-center w-screen p-5 space-y-5">
-        
+    <div id="outerDiv" class="inline-flex flex-col items-center w-screen p-5 space-y-5 bg-yellow-50">
+
         <!-- SECTION No label -->
         <div class="flex flex-row space-x-5">
 
             <!-- SECTION large -->
             <div class="flex flex-col space-y-4">
 
-                <!-- ANCHOR Default -->
-                <fieldset class="input-number-wrapper group">
-                    <button id="increment" class="increment-left-large feather-plus"></button>
-                    <input class="w-30 input-number-large" type="number" placeholder="Your age"></input>
-                    <button id="decrement" class="increment-right-large feather-minus"></button>
-                </fieldset>
-    
-                <!-- ANCHOR Read-only -->
-                <fieldset class="input-number-wrapper group" disabled>
-                    <button id="increment" class="increment-left-large feather-plus"></button>
-                    <input class="w-30 input-number-large" type="number" placeholder="Your age"></input>
-                    <button id="decrement" class="increment-right-large feather-minus"></button>
-                </fieldset>
+                <!-- ANCHOR Toggle read-only -->
+                <div class="flex flex-col space-y-1">
+                    <button class="w-full my-auto btn tertiary large _toggle">Toggle</button>
+                    <div class="number-input-wrapper group">
+                        <button   class="increment-left large feather-plus"></button>
+                        <input   class="w-30 number-input large" type="number" placeholder="E.g. 1975">
+                        <button   class="increment-right large feather-minus"></button>
+                    </div>
+                </div>
 
-                <!-- ANCHOR Error -->
-                <fieldset class="input-number-wrapper group error">
-                    <button id="increment" class="increment-left-large feather-plus"></button>
-                    <input class="w-30 input-number-large" type="number" placeholder="Your age"></input>
-                    <button id="decrement" class="increment-right-large feather-minus"></button>
-                </fieldset>
+                <!-- ANCHOR Default -->
+                <div class="number-input-wrapper group">
+                    <button   class="increment-left large feather-plus"></button>
+                    <input   class="w-30 number-input large" type="number" placeholder="E.g. 1975">
+                    <button   class="increment-right large feather-minus"></button>
+                </div>
+
+                <!-- ANCHOR Read-only -->
+                <div class="number-input-wrapper group read-only">
+                    <button   class="increment-left large feather-plus read-only"></button>
+                    <input   class="w-30 number-input large" type="number" placeholder="E.g. 1975" readonly>
+                    <button   class="increment-right large feather-minus read-only"></button>
+                </div>
+
+                <!-- ANCHOR Page load read-only -->
+                <div class="number-input-wrapper group">
+                    <button   class="increment-left large feather-plus"></button>
+                    <input   class="w-30 number-input large" type="number" placeholder="E.g. 1975" readonly>
+                    <button   class="increment-right large feather-minus"></button>
+                </div>
 
             </div>
             <!-- !SECTION large ends -->
 
             <!-- SECTION Middle -->
             <div class="flex flex-col space-y-4">
-    
-                <!-- ANCHOR Default -->
-                <fieldset class="input-number-wrapper group">
-                    <button id="increment" class="increment-left-middle feather-plus"></button>
-                    <input class="w-26 input-number-middle" type="number" placeholder="Your age"></input>
-                    <button id="decrement" class="increment-right-middle feather-minus"></button>
-                </fieldset>
-    
-                <!-- ANCHOR Read-only -->
-                <fieldset class="input-number-wrapper group" disabled>
-                    <button id="increment" class="increment-left-middle feather-plus"></button>
-                    <input class="w-26 input-number-middle" type="number" placeholder="Your age"></input>
-                    <button id="decrement" class="increment-right-middle feather-minus"></button>
-                </fieldset>
 
-                <!-- ANCHOR Error -->
-                 <fieldset class="input-number-wrapper group error">
-                    <button id="increment" class="increment-left-middle feather-plus"></button>
-                    <input class="w-26 input-number-middle" type="number" placeholder="Your age"></input>
-                    <button id="decrement" class="increment-right-middle feather-minus"></button>
-                </fieldset>
-                
+                <!-- ANCHOR Toggle read-only -->
+                <div class="flex flex-col space-y-1">
+                    <button class="w-full my-auto btn tertiary middle _toggle">Toggle</button>
+                    <div class="number-input-wrapper group">
+                        <button   class="increment-left middle feather-plus"></button>
+                        <input   class="w-26 number-input middle" type="number" placeholder="E.g. 1975">
+                        <button   class="increment-right middle feather-minus"></button>
+                    </div>
+                </div>
+
+                <!-- ANCHOR Default -->
+                <div class="number-input-wrapper group">
+                    <button   class="increment-left middle feather-plus"></button>
+                    <input   class="w-26 number-input middle" type="number" placeholder="E.g. 1975">
+                    <button   class="increment-right middle feather-minus"></button>
+                </div>
+
+                <!-- ANCHOR Read-only -->
+                <div class="number-input-wrapper group read-only">
+                    <button   class="increment-left middle feather-plus read-only"></button>
+                    <input   class="w-26 number-input middle" type="number" placeholder="E.g. 1975" readonly>
+                    <button   class="increment-right middle feather-minus read-only"></button>
+                </div>
+
+                <!-- ANCHOR Page load read-only -->
+                <div class="number-input-wrapper group">
+                    <button   class="increment-left middle feather-plus"></button>
+                    <input   class="w-26 number-input middle" type="number" placeholder="E.g. 1975" readonly>
+                    <button   class="increment-right middle feather-minus"></button>
+                </div>
+
             </div>
             <!-- !SECTION Middle ends -->
-
-            <!-- SECTION Small -->
-            <div class="flex flex-col space-y-4">
-    
-                <!-- ANCHOR Default -->
-                <fieldset class="input-number-wrapper group">
-                    <button id="increment" class="increment-left-small feather-plus"></button>
-                    <input class="input-number-small w-20" type="number" placeholder="Your age"></input>
-                    <button id="decrement" class="increment-right-small feather-minus"></button>
-                </fieldset>
-    
-                <!-- ANCHOR Read-only -->
-                <fieldset class="input-number-wrapper group" disabled>
-                    <button id="increment" class="increment-left-small feather-plus"></button>
-                    <input class="input-number-small w-20" type="number" placeholder="Your age"></input>
-                    <button id="decrement" class="increment-right-small feather-minus"></button>
-                </fieldset>
-
-                <!-- ANCHOR Error -->
-                 <fieldset class="input-number-wrapper group error">
-                    <button id="increment" class="increment-left-small feather-plus"></button>
-                    <input class="input-number-small w-20" type="number" placeholder="Your age"></input>
-                    <button id="decrement" class="increment-right-small feather-minus"></button>
-                </fieldset>
-                
-            </div>
-            <!-- !SECTION Small ends -->
 
         </div>
         <!-- !SECTION No label ends -->
@@ -103,134 +96,374 @@
         <!-- SECTION Labeled -->
         <div class="flex flex-row space-x-5">
 
-            <!-- SECTION large -->
-            <div class="flex flex-col space-y-4">
-    
-                <!-- ANCHOR Default -->
-                <div class="flex flex-col space-y-1">
-                    <label for="inputId" class="text-md text-black">Enter your name</label>
-                    <fieldset class="input-number-wrapper group">
-                        <button id="increment" class="increment-left-large feather-plus"></button>
-                        <input class="w-30 input-number-large" type="number" placeholder="Your age"></input>
-                        <button id="decrement" class="increment-right-large feather-minus"></button>
-                    </fieldset>
-                    <p class="field-description">Description</p>
-    
-                </div>
-    
-                <!-- ANCHOR Read-only -->
-                <div class="flex flex-col space-y-1">
-                    <label for="inputId" class="text-md text-black">Enter your age</label>
-                    <fieldset class="input-number-wrapper group" disabled>
-                        <button id="increment" class="increment-left-large feather-plus"></button>
-                        <input class="w-30 input-number-large" type="number" placeholder="Your age"></input>
-                        <button id="decrement" class="increment-right-large feather-minus"></button>
-                    </fieldset>
-                    <p class="field-description">Description</p>
-    
-                </div>
+         <!-- SECTION large -->
+        <div class="flex flex-col space-y-4">
 
-                <!-- ANCHOR Error -->
-                <div class="error flex flex-col space-y-1">
-                    <label for="inputId" class="text-md text-black">Enter your name</label>
-                    <fieldset class="input-number-wrapper group">
-                        <button id="increment" class="increment-left-large feather-plus"></button>
-                        <input class="w-30 input-number" type="number" placeholder="Your age"></input>
-                        <button id="decrement" class="increment-right-large feather-minus"></button>
-                    </fieldset>
-                    <p class="field-description">Description</p>
-    
-                </div>
-                
+            <!-- ANCHOR Toggle read-only -->
+            <div class="flex flex-col space-y-1">
+                    <button class="w-full my-auto btn tertiary large _toggle">Toggle</button>
+                    <div class="label-input-wrapper">
+                        <label for="inputId" class="input-label">Year of birth</label>
+                        <div class="number-input-wrapper group">
+                            <button class="increment-left large feather-plus"></button>
+                            <input class="w-30 number-input large" type="number" placeholder="E.g. 1975">
+                            <button   class="increment-right large feather-minus"></button>
+                        </div>
+                        <div class="input-descriptions">
+                            <p class="_default">Enter your birth year</p>
+                            <p class="hidden text-red-600 _error _age">You must be between 18 and 90 years old</p>
+                            <p class="hidden text-red-600 _error _digits">Please enter a 4 digit number</p>
+                        </div>
+                    </div>
             </div>
-            <!-- !SECTION large ends -->
+            
 
-            <!-- SECTION Middle -->
-            <div class="flex flex-col space-y-4">
-
-                <!-- ANCHOR Default -->
-                <div class="flex flex-col space-y-1">
-                    <label for="inputId" class="text-md text-black">Enter your age</label>
-                    <fieldset class="input-number-wrapper group">
-                        <button id="increment" class="increment-left-middle feather-plus"></button>
-                        <input class="w-26 input-number-middle" type="number" placeholder="Your age"></input>
-                        <button id="decrement" class="increment-right-middle feather-minus"></button>
-                    </fieldset>
-                    <p class="field-description">Description</p>
-    
+            <!-- ANCHOR Default -->
+            <div class="label-input-wrapper">
+                <label for="inputId" class="input-label">Year of birth</label>
+                <div class="number-input-wrapper group">
+                    <button   class="increment-left large feather-plus"></button>
+                    <input   class="w-30 number-input large" type="number" placeholder="E.g. 1975">
+                    <button   class="increment-right large feather-minus"></button>
                 </div>
-    
-                <!-- ANCHOR Read-only -->
-                <div class="flex flex-col space-y-1">
-                    <label for="inputId" class="text-md text-black">Enter your age</label>
-                    <fieldset class="input-number-wrapper group" disabled>
-                        <button id="increment" class="increment-left-middle feather-plus"></button>
-                        <input class="w-26 input-number-middle" type="number" placeholder="Your age"></input>
-                        <button id="decrement" class="increment-right-middle feather-minus"></button>
-                    </fieldset>
-                    <p class="field-description">Description</p>
-    
+                <div class="input-descriptions">
+                    <p class="_default">Enter your birth year</p>
+                    <p class="hidden text-red-600 _error _age">You must be between 18 and 90 years old</p>
+                    <p class="hidden text-red-600 _error _digits">Please enter a 4 digit number</p>
                 </div>
-
-                <!-- ANCHOR Error -->
-                <div class="error flex flex-col space-y-1">
-                    <label for="inputId" class="text-md text-black">Enter your age</label>
-                    <fieldset class="input-number-wrapper group">
-                        <button id="increment" class="increment-left-middle feather-plus"></button>
-                        <input class="w-26 input-number-middle" type="number" placeholder="Your age"></input>
-                        <button id="decrement" class="increment-right-middle feather-minus"></button>
-                    </fieldset>
-                    <p class="field-description">Description</p>
-    
-                </div>
-                
             </div>
-            <!-- !SECTION Middle ends -->
 
-            <!-- SECTION Small -->
-            <div class="flex flex-col space-y-4">
-
-                <!-- ANCHOR Default -->
-                <div class="flex flex-col space-y-1">
-                    <label for="inputId" class="text-md text-black">Enter your age</label>
-                    <fieldset class="input-number-wrapper group">
-                        <button id="increment" class="increment-left-small feather-plus"></button>
-                        <input class="input-number-small w-20" type="number" placeholder="Your age"></input>
-                        <button id="decrement" class="increment-right-small feather-minus"></button>
-                    </fieldset>
-                    <p class="field-description">Description</p>
+            <!-- ANCHOR Read-only -->
+            <div class="label-input-wrapper">
+                <label for="inputId" class="input-label">Year of birth</label>
+                <div class="number-input-wrapper group read-only">
+                    <button   class="increment-left large feather-plus read-only"></button>
+                    <input   class="w-30 number-input large" type="number" placeholder="E.g. 1975" readonly>
+                    <button   class="increment-right large feather-minus read-only"></button>
                 </div>
-    
-                <!-- ANCHOR Read-only -->
-                <div class="flex flex-col space-y-1">
-                    <label for="inputId" class="text-md text-black">Enter your age</label>
-                    <fieldset class="input-number-wrapper group" disabled>
-                        <button id="increment" class="increment-left-small feather-plus"></button>
-                        <input class="input-number-small w-20" type="number" placeholder="Your age"></input>
-                        <button id="decrement" class="increment-right-small feather-minus"></button>
-                    </fieldset>
-                    <p class="field-description">Description</p>
+                <div class="input-descriptions">
+                    <p class="_default">Enter your birth year</p>
+                    <p class="hidden text-red-600 _error _age">You must be between 18 and 90 years old</p>
+                    <p class="hidden text-red-600 _error _digits">Please enter a 4 digit number</p>
                 </div>
-
-                <!-- ANCHOR Error -->
-                <div class="error flex flex-col space-y-1">
-                    <label for="inputId" class="text-md text-black">Enter your age</label>
-                    <fieldset class="input-number-wrapper group">
-                        <button id="increment" class="increment-left-small feather-plus"></button>
-                        <input class="input-number-small w-20" type="number" placeholder="Your age"></input>
-                        <button id="decrement" class="increment-right-small feather-minus"></button>
-                    </fieldset>
-                    <p class="field-description">Description</p>
-                </div>
-
-                
             </div>
-            <!-- !SECTION Small ends -->
+    
+            <!-- ANCHOR Page load read-only -->
+            <div class="label-input-wrapper">
+                <label for="inputId" class="input-label">Year of birth</label>
+                <div class="number-input-wrapper group">
+                    <button   class="increment-left large feather-plus"></button>
+                    <input   class="w-30 number-input large" type="number" placeholder="E.g. 1975" readonly>
+                    <button   class="increment-right large feather-minus"></button>
+                </div>
+                <div class="input-descriptions">
+                    <p class="_default">Enter your birth year</p>
+                    <p class="hidden text-red-600 _error _age">You must be between 18 and 90 years old</p>
+                    <p class="hidden text-red-600 _error _digits">Please enter a 4 digit number</p>
+                </div>
+            </div>
 
+        </div>
+
+        <!-- !SECTION Large ends -->
+        <!-- SECTION Middle -->
+    <div class="flex flex-col space-y-4">
+
+        <!-- ANCHOR Toggle read-only -->
+        <div class="flex flex-col space-y-1">
+            <button class="w-full my-auto btn tertiary middle _toggle">Toggle</button>
+            <div class="label-input-wrapper">
+                <label for="inputId" class="input-label">Year of birth</label>
+                <div class="number-input-wrapper group">
+                    <button   class="increment-left middle feather-plus"></button>
+                    <input   class="w-30 number-input middle" type="number" placeholder="E.g. 1975">
+                    <button   class="increment-right middle feather-minus"></button>
+                </div>
+                <div class="input-descriptions">
+                    <p class="_default">Enter your birth year</p>
+                    <p class="hidden text-red-600 _error _age">You must be between 18 and 90 years old</p>
+                    <p class="hidden text-red-600 _error _digits">Please enter a 4 digit number</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ANCHOR Default -->
+        <div class="label-input-wrapper">
+            <label for="inputId" class="input-label">Year of birth</label>
+            <div class="number-input-wrapper group">
+                <button   class="increment-left middle feather-plus"></button>
+                <input   class="w-26 number-input middle" type="number" placeholder="E.g. 1975">
+                <button   class="increment-right middle feather-minus"></button>
+            </div>
+            <div class="input-descriptions">
+                <p class="_default">Enter your birth year</p>
+                <p class="hidden text-red-600 _error _age">You must be between 18 and 90 years old</p>
+                <p class="hidden text-red-600 _error _digits">Please enter a 4 digit number</p>
+            </div>
+        </div>
+
+        <!-- ANCHOR Read-only -->
+        <div class="label-input-wrapper">
+            <label for="inputId" class="input-label">Year of birth</label>
+            <div class="number-input-wrapper group read-only">
+                <button   class="increment-left middle feather-plus read-only"></button>
+                <input   class="w-26 number-input middle" type="number" placeholder="E.g. 1975" readonly>
+                <button   class="increment-right middle feather-minus read-only"></button>
+            </div>
+            <div class="input-descriptions">
+                <p class="_default">Enter your birth year</p>
+                <p class="hidden text-red-600 _error _age">You must be between 18 and 90 years old</p>
+                <p class="hidden text-red-600 _error _digits">Please enter a 4 digit number</p>
+            </div>
+        </div>
+
+        <!-- ANCHOR Page load read-only -->
+        <div class="label-input-wrapper">
+            <label for="inputId" class="input-label">Year of birth</label>
+            <div class="number-input-wrapper group">
+                <button   class="increment-left middle feather-plus"></button>
+                <input   class="w-26 number-input middle" type="number" placeholder="E.g. 1975" readonly>
+                <button   class="increment-right middle feather-minus"></button>
+            </div>
+            <div class="input-descriptions">
+                <p class="_default">Enter your birth year</p>
+                <p class="hidden text-red-600 _error _age">You must be between 18 and 90 years old</p>
+                <p class="hidden text-red-600 _error _digits">Please enter a 4 digit number</p>
+            </div>
+        </div>
+
+<!-- !SECTION Middle ends -->
+     </div>
         </div>
         <!-- !SECTION Labeled ends -->
 
     </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+
+        // set read-only classes based on the read-only attribute of inputs on the page
+        $(document).ready(setGlobalNumberInputReadonly());
+
+        // set global variables for the existance of a label wrapper, the jQuery object of the wrapper, and the validity of the input
+        // these variables are used across functions and are updated when the input updates
+        var hasLabel;
+        var wrapper;
+        var valid;
+
+
+        // increment or decrement the input value when the plus or minus button is clicked
+        $('.increment-left').on("click", function () {
+            increment(this);
+        })
+
+        $('.increment-right').on("click", function () {
+            decrement(this);
+        })
+
+        // find the sibiling input element, increment the value, set the new value, and then validate the new value
+        function increment(incrementor) {
+            value = $(incrementor).siblings('input').val();
+            value = Number(value);
+            value = value + 1;
+            $(incrementor).siblings('input').val(value);
+            validate($(incrementor).siblings('input'));
+        }
+
+        // find the sibiling input element, decrement the value, set the new value, and then validate the new value
+        function decrement(decrementor) {
+            value = $(decrementor).siblings('input').val();
+            value = Number(value);
+            value = value - 1;
+            $(decrementor).siblings('input').val(value);
+            validate($(decrementor).siblings('input'));
+        }
+
+        // determine the existence of the label and the wrapper element object for the toggle read-only function
+        function determineLabelAndWrapper(button) {
+            if (button.siblings('.number-input-wrapper').length == 1) {
+                wrapper = button.parent().find('.number-input-wrapper');
+                hasLabel = false;
+            } else if (button.siblings('.label-input-wrapper').length == 1) {
+                wrapper = button.parent().find('.label-input-wrapper');
+                hasLabel = true;
+            }
+        }
+
+        // find all number inputs that are read-only then add classes / tab indexes to the wrapper and the buttons. also hides the descriptions wrapper if the input has labels
+        function setGlobalNumberInputReadonly() {
+            var readonly = $('input[type=number][readonly]');
+            if (readonly.parents(".label-input-wrapper").find(".input-descriptions")){
+                readonly.parents(".label-input-wrapper").find(".input-descriptions").css("display", "none");
+            };
+            var thisWrapper = $(readonly).parents('.number-input-wrapper').not('.read-only');
+            readonly.attr("tabindex", "-1");
+            thisWrapper.addClass('read-only');
+            thisWrapper.find('button').addClass('read-only');
+            thisWrapper.find('button').attr("tabindex", "-1");
+        }
+
+        // find the target number inputs then add classes / tab indexes to the wrapper and the buttons
+        function setThisNumberInputReadonly(input) {
+            var isReadonly;
+
+            // find the initial read-only value of the target input
+            if (input.parents('.number-input-wrapper').not('.read-only').length == 1) {
+                // not read only
+                isReadonly = false;
+            } else if (input.parents('.number-input-wrapper').not('.read-only').length == 0) {
+                // is read only
+                isReadonly = true;
+            };
+
+            // if the input is initially read-only
+            if (isReadonly == true) {
+                // remove the read-only class and tabindex attribute on the buttons and the input itself
+                wrapper.find('button').removeClass('read-only');
+                wrapper.find('button').removeAttr('tabindex');
+                input.removeAttr("readonly");
+                input.removeAttr("tabindex");
+                // if it has a label, remove the read-only and error class from the wrapper and show the descriptions
+                if (hasLabel == true) {
+                    wrapper.find('.number-input-wrapper').removeClass('read-only');
+                    wrapper.find('.number-input-wrapper').removeClass('error');
+                    wrapper.find('.input-descriptions').css("display","flex");
+                // if it has no label, remove the read-only and error class from the wrapper
+                } else if (hasLabel == false) {
+                    wrapper.removeClass('read-only');
+                    wrapper.removeClass('error');
+                }
+                // to make sure the error class is removed appropriately, we validate the input again so that the error class can be applied again, if need be
+                validate($(input));
+
+            // if the input is initially not read-only
+            } else if (isReadonly == false) {
+                // add the read-only class and tabindex attribute to the buttons and the input itself
+                wrapper.find('button').addClass('read-only');
+                wrapper.find('button').attr("tabindex", "-1");
+                input.attr("readonly", true);
+                input.attr("tabindex", "-1");
+                // if it has a label, add the read-only, remove the error class and hide descriptions
+                if (hasLabel == true) {
+                    wrapper.find('.number-input-wrapper').addClass('read-only');
+                    wrapper.find('.number-input-wrapper').removeClass('error');
+                    wrapper.find('.input-descriptions').css("display","none");
+                // if it has no label, add the read-only class and remove the error class
+                } else if (hasLabel == false) {
+                    wrapper.addClass('read-only');
+                    wrapper.removeClass('error');
+                }
+                // we don't validate the input when going from not read-only to read-only since we validate again when the input is no longer read-only and since the read-only state does not have a unique style when the input is invalid
+            }
+        }
+
+        // toggle read-only state of the input when the _toggle button is clicked
+        $('._toggle').click(function () {
+
+            // we use this function to determine the wrapper element
+            determineLabelAndWrapper($(this));
+
+            // find the input element and pass it to the function that sets the read-only attributes and classes based on its initial value
+            input = $(wrapper).find('input');
+            setThisNumberInputReadonly($(input));
+
+        });
+
+        // on every input change, validate the input
+        $('input[type="number"]').on('input', function() {
+            validate($(this));
+        });
+
+        function validate(input){
+            var validYear;
+            value = $(input).val();
+            digits = value.length;
+            digits = Number(digits);
+            numValue = Number(value);
+            age = 2021 - numValue;
+
+            // determine the existance of a label wrapper
+            if (input.parents('.label-input-wrapper').length == 1) {
+                hasLabel = true;
+            } else {
+                hasLabel = false;
+            }
+
+            // find the wrapper and hide the default description for now
+            wrapper = $(input).parents('.number-input-wrapper');
+            wrapper.find('._default').addClass('hidden');
+
+            // here we first find the validity of the input based on the digit count and set the classes as if the number of digits is the only validity check we are going to run
+            // aftert that, we run the age validation test and set the classes as if the age is the only validity check we are going to run, which determines the final validity state of the input and its wrapper 
+
+            if (digits === 4){
+                validYear = true;
+                if (hasLabel = true){
+                    wrapper.parents('.label-input-wrapper').find('.input-descriptions').children().addClass('hidden');
+                    wrapper.parents('.label-input-wrapper').find('._default').removeClass('hidden');
+                    wrapper.removeClass('error');
+                }
+            } else if (value == ''){
+                if (hasLabel = true){
+                    wrapper.parents('.label-input-wrapper').find('.input-descriptions').children().addClass('hidden');
+                    wrapper.parents('.label-input-wrapper').find('._default').removeClass('hidden');
+                    wrapper.removeClass('error');
+                }
+            } else {
+                validYear = false;
+                if (hasLabel = true){
+                    wrapper.parents('.label-input-wrapper').find('.input-descriptions').children().addClass('hidden');
+                    wrapper.parents('.label-input-wrapper').find('._digits').removeClass('hidden');
+                    wrapper.addClass('error');
+                }
+            }
+
+            if (value == ''){
+                if (hasLabel = true){
+                    wrapper.parents('.label-input-wrapper').find('.input-descriptions').children().addClass('hidden');
+                    wrapper.parents('.label-input-wrapper').find('._default').removeClass('hidden');
+                    wrapper.removeClass('error');
+                } else {
+                    wrapper.removeClass('error');
+                }
+            }
+            else if (validYear == false){
+                // not valid year
+                if (hasLabel = true){
+                    wrapper.parents('.label-input-wrapper').find('.input-descriptions').children().addClass('hidden');
+                    wrapper.parents('.label-input-wrapper').find('._digits').removeClass('hidden');
+                    wrapper.addClass('error');
+                } else {
+                    wrapper.addClass('error');
+                }
+            }
+            else if (age < 18 || 90 < age){
+                // outside age range
+                if (hasLabel = true){
+                    wrapper.parents('.label-input-wrapper').find('.input-descriptions').children().addClass('hidden');
+                    wrapper.parents('.label-input-wrapper').find('._age').removeClass('hidden');
+                    wrapper.addClass('error');
+                } else {
+                    wrapper.addClass('error');
+                }
+
+            } else if (age >= 18 && 90 >= age){
+                // within age range
+                if (hasLabel = true){
+                    wrapper.parents('.label-input-wrapper').find('.input-descriptions').children().addClass('hidden');
+                    wrapper.removeClass('error');
+                } else {
+                    wrapper.removeClass('error');
+                }
+            }
+        }
+
+        
+
+    </script>
+
 </body>
 
 </html>

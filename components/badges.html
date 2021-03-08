@@ -7,39 +7,87 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>badges</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="../dist/css/styles.mini.css" />
+  <link rel="stylesheet" href="../dist/css/styles.src.css" />
 </head>
 
 <body class="bg-yellow-50">
   <div id="outerDiv" class="inline-flex flex-col items-center w-full p-5 space-y-5">
     <!-- ANCHOR Dot -->
     <div>
-      <i class="border-0 absolute w-1.5 h-1.5 bg-red-600 border-white rounded-full"></i>
+      <i class="absolute bg-red-600 border-0 dot-indicator-small"></i>
     </div>
     <!-- ANCHOR Text with dot left -->
-    <div class="relative flex space-x-5">
-      <div class="mt-2">
-        <i class="border-0 absolute w-1.5 h-1.5 bg-green-400 border-white rounded-full"></i>
-        <i class="animate-ping border-0 absolute w-1.5 h-1.5 bg-green-400 border-white rounded-full"></i>
+    <div class="flex flex-row space-x-5">
+      <div class="mt-1.5">
+        <i class="absolute bg-green-400 border-0 dot-indicator-small"></i>
+        <i class="absolute bg-green-400 border-0 animate-ping dot-indicator-small"></i>
       </div>
       <span class="text-black text-md">Status</span>
+    </div>
+    <!-- ANCHOR Text with dot right -->
+    <div class="flex flex-row space-x-5">
+      <span class="text-black text-md">Status</span>
+      <div class="mt-1.5">
+        <i class="absolute bg-red-600 border-0 dot-indicator-small"></i>
+        <i class="absolute bg-red-600 border-0 animate-ping dot-indicator-small"></i>
+      </div>
     </div>
     <!-- ANCHOR Text with dot top-right -->
     <div class="relative flex">
       <span class="text-black text-md">Notifications</span>
       <div class="ml-1">
-        <i class="border-0 absolute w-1.5 h-1.5 bg-red-600 border-white rounded-full"></i>
-        <i class="animate-ping border-0 absolute w-1.5 h-1.5 bg-red-600 border-white rounded-full"></i>
+        <i class="absolute bg-red-600 border-0 dot-indicator-small"></i>
+        <i class="absolute bg-red-600 border-0 animate-ping dot-indicator-small"></i>
       </div>
     </div>
-    <!-- ANCHOR Icon with dot top-right -->
+    <!-- ANCHOR Icon button small with dot top-right -->
     <div class="flex flex-row">
-      <i class="text-lg feather-bell"></i>
-      <div class="-ml-2">
-        <i class="border-0 absolute w-1.5 h-1.5 bg-red-600 border-white rounded-full"></i>
-        <i class="animate-ping border-0 absolute w-1.5 h-1.5 bg-red-600 border-white rounded-full"></i>
+      <button class="icon-btn small secondary feather-bell"></button>
+      <div class="-ml-1.5">
+        <i class="absolute bg-red-600 border-0 dot-indicator-small"></i>
+        <i class="absolute bg-red-600 border-0 animate-ping dot-indicator-small"></i>
       </div>
     </div>
+    <!-- ANCHOR Icon button middle with dot top-right -->
+    <div class="flex flex-row">
+      <button class="icon-btn middle secondary feather-bell"></button>
+      <div class="-ml-2">
+        <i class="absolute bg-red-600 border-0 dot-indicator-small"></i>
+        <i class="absolute bg-red-600 border-0 animate-ping dot-indicator-small"></i>
+      </div>
+    </div>
+    <!-- ANCHOR Icon button large with dot top-right -->
+    <div class="flex flex-row">
+      <button class="icon-btn large secondary feather-bell"></button>
+      <div class="-ml-2.5 mt-1">
+        <i class="absolute bg-red-600 border-0 dot-indicator-small"></i>
+        <i class="absolute bg-red-600 border-0 animate-ping dot-indicator-small"></i>
+      </div>
+    </div>
+        <!-- ANCHOR Text button small with dot top-right -->
+        <div class="flex flex-row">
+          <button class="btn small tertiary">Button</button>
+          <div class="-ml-1.5">
+            <i class="absolute bg-red-600 border-0 dot-indicator-small"></i>
+            <i class="absolute bg-red-600 border-0 animate-ping dot-indicator-small"></i>
+          </div>
+        </div>
+        <!-- ANCHOR Text button middle with dot top-right -->
+        <div class="flex flex-row">
+          <button class="btn middle tertiary">Button</button>
+          <div class="-ml-1.5">
+            <i class="absolute bg-red-600 border-0 dot-indicator-small"></i>
+            <i class="absolute bg-red-600 border-0 animate-ping dot-indicator-small"></i>
+          </div>
+        </div>
+        <!-- ANCHOR Text button large with dot top-right -->
+        <div class="flex flex-row">
+          <button class="btn large tertiary">Button</button>
+          <div class="-ml-1.5">
+            <i class="absolute bg-red-600 border-0 dot-indicator-small"></i>
+            <i class="absolute bg-red-600 border-0 animate-ping dot-indicator-small"></i>
+          </div>
+        </div>
     <!-- ANCHOR Avatar with dot top-right -->
     <div class="flex flex-row">
       <div class="flex w-10 h-10 p-1 align-middle bg-gray-300 justify-items-center rounded-0"></div>
@@ -48,6 +96,20 @@
           <i class="animate-ping border-0 absolute w-1.5 h-1.5 bg-red-600 border-white rounded-full"></i>
         </div>
     </div>
+    <!-- ANCHOR Small numbered dot left -->
+    <div class="flex flex-row items-center space-x-5">
+      <span class="text-white bg-red-600 border border-white number-small">
+        1
+      </span>
+      <span class="text-black text-md">New requests</span>
+    </div>
+        <!-- ANCHOR Large numbered dot left -->
+        <div class="flex flex-row items-center space-x-5">
+          <span class="text-white bg-red-600 border border-white number-large">
+            1
+          </span>
+          <span class="text-base text-black">New requests</span>
+        </div>
     <!-- ANCHOR Small numbered dot red -->
     <span class="text-white bg-red-600 border border-white number-small">
       1
@@ -72,24 +134,59 @@
     <span class="text-white bg-green-600 border-white number-large">
       1
     </span>
-    <!-- ANCHOR Icon with numbered dot top-right -->
+    <!-- ANCHOR Icon button small with numbered dot top-right -->
     <div class="relative flex flex-row justify-start">
-      <i class="text-lg feather-bell"></i>
-      <span class="-mt-1.5 -ml-2.5 text-xsm min-w-4 h-4 px-1 text-center text-white bg-red-600 border border-white rounded-full">
+      <button class="icon-btn small secondary feather-bell"></button>
+      <span class="-mt-1.5 -ml-2 number-small text-white bg-red-600 border-white">
         99
       </span>
     </div>
+    <!-- ANCHOR Icon button middle with numbered dot top-right -->
+    <div class="relative flex flex-row justify-start">
+      <button class="icon-btn middle secondary feather-bell"></button>
+      <span class="-mt-1.5 -ml-3 number-small text-white bg-red-600 border-white">
+        99
+      </span>
+    </div>
+    <!-- ANCHOR Icon button large with numbered dot top-right -->
+    <div class="relative flex flex-row justify-start">
+      <button class="icon-btn large secondary feather-bell"></button>
+      <span class="-mt-1.5 -ml-4 number-large text-white bg-red-600 border-white">
+        999
+      </span>
+    </div>
+<!-- ANCHOR text button small with numbered dot top-right -->
+<div class="relative flex flex-row justify-start">
+  <button class="btn small tertiary">Button</button>
+  <span class="-mt-1.5 -ml-2 number-small text-white bg-red-600 border-white">
+    99
+  </span>
+</div>
+<!-- ANCHOR text button middle with numbered dot top-right -->
+<div class="relative flex flex-row justify-start">
+  <button class="btn middle tertiary">Button</button>
+  <span class="-mt-1.5 -ml-3 number-small text-white bg-red-600 border-white">
+    99
+  </span>
+</div>
+<!-- ANCHOR text button large with numbered dot top-right -->
+<div class="relative flex flex-row justify-start">
+  <button class="btn large tertiary">Button</button>
+  <span class="-mt-1.5 -ml-4 number-large text-white bg-red-600 border-white">
+    999
+  </span>
+</div>
     <!-- ANCHOR Small avatar with numbered dot top-right -->
     <div class="relative flex flex-row justify-start">
       <div class="flex w-10 h-10 p-1 align-middle bg-gray-300 justify-items-center rounded-0"></div>
-      <span class="-mt-1.5 -ml-2.5 text-xsm min-w-4 h-4 px-1 text-center text-white bg-red-600 border border-white rounded-full">
+      <span class="-mt-1.5 -ml-2.5 number-small text-white bg-red-600 border-white">
         99
       </span>
     </div>
     <!-- ANCHOR Larger avatar with numbered dot top-right -->
     <div class="relative flex flex-row justify-start">
       <div class="flex w-16 h-16 p-4 align-middle bg-gray-300 justify-items-center rounded-0"></div>
-      <span class="-mt-2 -ml-2.5 h-5.5 min-w-5.5 px-1.25 text-center text-md border-2 !leading-0.4 text-white bg-red-600 border-white rounded-full">
+      <span class="-mt-2 -ml-2.5 number-large text-white bg-red-600 border-white">
         999
       </span>
     </div>

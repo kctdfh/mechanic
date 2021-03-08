@@ -2,12 +2,11 @@
     height: 1.375rem;
     min-width: 1.375rem;
     line-height: 1.1rem !important;
-    @apply rounded-full px-1.25 text-center text-md border-2;
+    @apply rounded-full px-1.25 text-center border-solid text-md border-2;
 }
 
 .number-small {
     height: 1rem;
     min-width: 1rem;
-    @apply px-1 text-center border rounded-full text-xsm;
+    @apply px-1 text-center border border-solid rounded-full text-xsm;
 }
-

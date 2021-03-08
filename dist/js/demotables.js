@@ -5,12 +5,12 @@ $(function () {
             { id: "20",  invdate: "2007-09-01", name: "test18",  note: "note2",  amount: "300.00", tax: "20.00", closed: false, ship_via: "FE", total: "320.00" },
             { id: "30",  invdate: "2007-09-01", name: "test3",  note: "note3",  amount: "400.00", tax: "30.00", closed: false, ship_via: "FE", total: "430.00" },
             { id: "40",  invdate: "2007-10-04", name: "error",  note: "note4",  amount: "200.00", tax: "10.00", closed: true,  ship_via: "TN", total: "210.00" },
-            { id: "50",  invdate: "2007-10-31", name: "disabled",  note: "note5",  amount: "300.00", tax: "20.00", closed: false, ship_via: "FE", total: "320.00" },
+            { id: "50",  invdate: "2007-10-31", name: "test12",  note: "note5",  amount: "300.00", tax: "20.00", closed: false, ship_via: "FE", total: "320.00" },
             { id: "60",  invdate: "2007-09-06", name: "test6",  note: "note6",  amount: "400.00", tax: "30.00", closed: false, ship_via: "FE", total: "430.00" },
             { id: "70",  invdate: "2007-10-04", name: "test7",  note: "note7",  amount: "200.00", tax: "10.00", closed: true,  ship_via: "TN", total: "210.00" },
             { id: "80",  invdate: "2007-10-03", name: "selected",  note: "note8",  amount: "300.00", tax: "20.00", closed: false, ship_via: "FE", total: "320.00" },
             { id: "90",  invdate: "2007-09-01", name: "test9 test9 test9 test9 test9",  note: "note9",  amount: "400.00", tax: "30.00", closed: false, ship_via: "TN", total: "430.00" },
-            { id: "100", invdate: "2007-09-08", name: "test10", note: "note10", amount: "500.00", tax: "30.00", closed: true,  ship_via: "TN", total: "530.00" },
+            { id: "100", invdate: "2007-09-08", name: "disabled", note: "note10", amount: "500.00", tax: "30.00", closed: true,  ship_via: "TN", total: "530.00" },
             { id: "110", invdate: "2007-09-08", name: "test11", note: "note11", amount: "500.00", tax: "30.00", closed: false, ship_via: "FE", total: "530.00" },
             { id: "120", invdate: "2007-09-10", name: "test12", note: "note12", amount: "500.00", tax: "30.00", closed: false, ship_via: "FE", total: "530.00" }
         ],
@@ -79,7 +79,7 @@ $(function () {
         inlineEditing: { keys: true },
         navOptions: { add: true, edit: true, del: true, search: true },
         searching: { searchOnEnter: false, searchOperators: true },
-        caption: "'large' guiStyle with 'feather' iconSet"
+        caption: "'pim2' guiStyle with 'feather' iconSet"
     }).jqGrid("navGrid")
     .jqGrid("filterToolbar")
     .jqGrid("gridResize");

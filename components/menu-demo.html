@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width minimum-scale=1.0 maximum-scale=1.0 user-scalable=no" />
+  <title>menu-demo</title>
+  <link type="text/css" rel="stylesheet" href="../dist/css/styles.mini.css" />
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="../dist/js/mmenu.polyfills.js"></script>
+  <script src="../dist/js/mmenu.js"></script>
+</head>
+
+<body>
+  <!-- ANCHOR Session header -->
+  <header id="session-header"
+      class="absolute top-0 left-0 flex justify-between w-full h-16 px-6 py-4 bg-white shadow-border-b z-2">
+  </header>
+  <!-- ANCHOR Page wrapper -->
+  <div id="page" class="absolute">
+    <!-- ANCHOR Headers Wrapper -->
+    <div id="headers">
+      <div id="system-header"
+        class="fixed left-0 inline-flex w-full px-6 py-2 bg-white border-l border-gray-100 top-16 shadow-border-b h-14">
+        <a href="#menu" class="self-center mburger mburger--collapse">
+          <b></b>
+          <b></b>
+          <b></b>
+        </a>
+      </div>
+    </div>
+    <!-- ANCHOR Content wrapper -->
+    <div id="content" class="fixed w-full p-6 overflow-scroll border-l border-gray-100 bg-gray-25 scrollbar-regular bottom-16">
+      <p>Click on the menu button<br>or the sidebar icons<br>to open the menu demo</p>
+    </div>
+    <!-- ANCHOR Menu wrapper -->
+    <nav id="menu">
+      <ul class="listview-icons">
+        <li>
+          <a href="#!"><i class="feather-home"></i>Link row</a>
+        </li>
+        <li>
+          <a href="#!"><i class="feather-search"></i>Link row</a>
+        </li>
+        <li>
+          <span><i class="feather-fast-forward"></i>Sub-menu row</span>
+          <ul>
+            <li>
+              <span>Sub-sub-menu row</span>
+              <ul>
+                <li><a href="#!">Inner-inner-link row</a></li>
+                <li><a href="#!">Inner-inner-link row</a></li>
+                <li><a href="#!">Inner-inner-link row</a></li>
+              </ul>
+            </li>
+            <li>
+              <span>Sub-sub-menu row</span>
+              <ul>
+                <li><a href="#!">Inner-inner-link row</a></li>
+                <li><a href="#!">Inner-inner-link row</a></li>
+              </ul>
+            </li>
+            <li><a href="#!">Sub-menu row</a></li>
+            <li><a href="#!">Sub-menu row</a></li>
+            <li><a href="#!">Sub-menu row</a></li>
+          </ul>
+        </li>
+        <li class="Divider"></li>
+        <li>
+          <span><i class="feather-box"></i>Sub-menu row</span>
+          <ul>
+            <li><a href="#!">Sub-menu row</a></li>
+            <li><a href="#!">Sub-menu row</a></li>
+            <li>
+              <span>Sub-sub-menu row</span>
+              <ul>
+                <li><a href="#!">Inner-inner-link row</a></li>
+                <li><a href="#!">Inner-inner-link row</a></li>
+              </ul>
+            </li>
+            <li><a href="#!">Sub-menu row</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+<!-- ANCHOR Dynamically set #content position -->
+<script src="../dist/js/setheaders.js">
+</script>
+<script>
+ setHeaders("#session-header","#headers","#content");
+</script>
+
+  <!-- ANCHOR Menu setup -->
+  <script>
+    new Mmenu(document.querySelector("#menu"), {
+      extensions: [
+        "theme-white",
+        "pagedim-black",
+      ],
+      counters: !0,
+      iconPanels: {
+        add: !0,
+        hideDivider: !0,
+        hideNavbar: !0,
+        visible: "first"
+      },
+      navbar: {
+        title: "Menu"
+      },
+      navbars: [{
+        position: "top",
+        content: ["searchfield"]
+      }, {
+        position: "top"
+      }],
+      searchfield: {
+        panel: {
+          add: '!0',
+          splash: "<p>What are you looking for?<br />Type the menu name you are looking for.</p>",
+        },
+      },
+      setSelected: {
+        hover: !0,
+        parent: !0
+      },
+      sidebar: {
+        collapsed: {
+          use: 768,
+          hideNavbar: !0,
+          hideDivider: !0
+        },
+        expanded: {
+          use: 10440,
+          initial: "remember"
+        }
+      },
+    });
+  </script>
+
+</body>
+
+</html>

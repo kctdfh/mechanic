@@ -5,12 +5,15 @@
   "main": "index.html",
   "scripts": {
     "source": "postcss src/pre-compiled-styles.css -o dist/css/styles.src.css",
+    "remote": "postcss src/compile-for-remote.css -o dist/css/styles.remote.css",
     "purged": "cross-env NODE_ENV=production NODE_OPTIONS=--max-old-space-size=6144 postcss src/pre-compiled-styles.css -o dist/css/styles.purged.css",
     "minify": "postcss dist/css/styles.purged.css > dist/css/styles.mini.css",
     "mini": "npm run purged && npm run minify",
     "config-export": "tailwind-config-viewer export ./config",
     "all": "npm run source && npm run purged && npm run minify",
-    "config": "tailwind-config-viewer -o"
+    "config": "tailwind-config-viewer -o",
+    "allsource": "npm run source && npm run remote",
+    "allremote": "npm run all && npm run remote"
   },
   "author": "",
   "license": "ISC",

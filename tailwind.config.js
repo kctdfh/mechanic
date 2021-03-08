@@ -5,8 +5,7 @@ module.exports = {
   purge: {
     content: [
       './components/*.html',
-      './dist/*.js'],
-    // defaultExtractor: content =>  content.match(/[A-Za-z0-9-_:!\/]+/g) || [],
+      './dist/js/*.js'],
     options: {
       safelist: [/read-only$/]
     }
@@ -318,7 +317,7 @@ module.exports = {
         'row': '3.25rem 11.875rem auto 6.875rem'
       },
       gridTemplateRows: {
-        'input':'1.8rem auto'
+        'input':'1.8rem auto',
       },
       typography: {
         DEFAULT: {
@@ -357,6 +356,7 @@ module.exports = {
         sm: "3rem",
         md: "3.5rem",
         lg: "4rem",
+        max: "max-content"
       },
       height: {
         border: "2px",
@@ -375,6 +375,8 @@ module.exports = {
         md: "1.875rem"
       },
       boxShadow: {
+        // gray 100
+        "border-all": "inset -1px 0px 0px #DBDEDF, inset 1px 0px 0px #DBDEDF, inset 0px 1px 0px #DBDEDF, inset 0px -1px 0px #DBDEDF",
         "border-r": "inset -1px 0px 0px #DBDEDF",
         "border-l": "inset 1px 0px 0px #DBDEDF",
         "border-t": "inset 0px 1px 0px #DBDEDF",
@@ -395,6 +397,8 @@ module.exports = {
   variants: {
     scrollbar: ['rounded'],
     extend: {
+      transitionDuration: ['group-hover'],
+      transitionProperty: ['group-hover'],
       display: ['group-hover','important'],
       textColor: [
         "visited",
@@ -452,9 +456,10 @@ module.exports = {
       borderOpacity: ["important"],
       borderRadius: ["important"],
       lineHeight: ["important"],
-      borderStyle: ["important"],
+      borderStyle: ["important","focus","disabled","first"],
       borderWidth: [
         "checked",
+        "first",
         "important",
         "group-disabled",
         "disabled",
@@ -474,7 +479,7 @@ module.exports = {
       cursor: ["disabled", "group-disabled","last","read-only"],
       placeholderColor: ["group-disabled", "disabled", "read-only"],
       pointerEvents: ["group-disabled", "important","read-only"],
-      boxShadow: ["active", "focus-within","last","first"],
+      boxShadow: ["active", "focus-within","last","first","hover"],
       pointerEvents: ["hover","last","group-disabled","disabled","read-only"]
     },
   },

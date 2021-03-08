@@ -1,7 +1,7 @@
 /* Common */
 
 .tableOverlay {
-  @apply opacity-30 bg-gray-200;
+  @apply bg-gray-200 opacity-30;
 }
 
 .loadingState {
@@ -13,12 +13,28 @@
 }
 
 .simpleDataField {
-  @apply hover:border-blue-250 border border-gray-100 rounded;
-  @apply simpleFocusRing;
+  @apply h-6 pl-2 text-md rounded-0.5 text-black placeholder-gray-300 bg-white border border-gray-100 border-solid focus:border-solid hover:bg-gray-25 transition-colors ease-in-out focus:border-blue-250 focus-visible:outline-none;
+}
+
+input[type="text"].ui-widget-content.ui-pg-input {
+  @apply h-auto pl-1 mx-1 text-sm rounded-0.5 text-black placeholder-gray-300 bg-white border border-gray-100 border-solid focus:border-solid hover:bg-gray-25 transition-colors ease-in-out focus:border-blue-250 focus-visible:outline-none !important;
+}
+
+select.ui-widget-content.ui-pg-selbox {
+  @apply rounded-0.5 text-sm text-black bg-white border border-gray-100 focus-visible:outline-0 outline-0 focus:border-blue-250 border-solid focus:border-solid;
+}
+
+input[type="checkbox"].simpleDataField {
+  @apply gridcheck;
 }
 
 .row-theme {
   @apply text-sm border-gray-100 !important;
+  border-left-style: none;
+  border-right-style: none;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  @apply bg-white;
 }
 
 /* Large 
@@ -29,26 +45,41 @@
 }
 
 .large-filter-operators {
-  @apply hover:text-blue-750 text-base;
+  @apply text-base transition-colors ease-in-out hover:text-blue-750;
 }
 
 /* row height through vertical padding */
 
 .large-row-num {
-  @apply bg-gray-50; 
+  @apply bg-white; 
   @apply py-2 !important;
 }
 
 /* Header with column names */
 
+.largeTable .ui-jqgrid-labels, .largeTable .ui-search-toolbar {
+  @apply border-none;
+} 
+
 .largeTable .ui-jqgrid-labels > .columnHeader {
-  @apply text-md font-normal hover:font-semibold py-3.5 hover:bg-blue-50 border-0.5 border-opacity-100 border-solid border-gray-100 !important;
+  @apply text-md font-normal hover:font-semibold py-3.5 hover:bg-blue-50 transition-all ease-in-out bg-white !important;
+  @apply border-gray-100 !important;
+  border-right-width: 1px !important;
+  border-right-style: solid;
 }
 
 /* Header search toolbar */
+
 .largeTable .ui-search-toolbar > .columnHeader {
-  @apply text-md font-normal py-3.5 border-0.5 border-opacity-100 border-solid border-gray-100 !important;
+  @apply text-md font-normal py-3.5 px-1.5 bg-white !important;
+  @apply border-gray-100 !important;
+  border-right-width: 1px !important;
+  border-right-style: solid;
 }
+
+/* .largeTable .ui-search-toolbar > .columnHeader:last-child, .largeTable .ui-jqgrid-labels > .columnHeader:last-child {
+  border-right-style: none !important;
+} */
 
 /* .ui-jqgrid-labels > .columnHeaderLarge {
     @apply text-md font-normal hover:font-semibold !py-3.5 hover:bg-blue-50 border-0.5 border-opacity-100 border-solid border-gray-100 !important;
@@ -94,6 +125,14 @@ tr.disabledState.hoverState {
   pointer-events: none;
 }
 
+.errorState td.jqgrid-rownum {
+  @apply text-black !important;
+}
+
+.disabledState td.jqgrid-rownum {
+  @apply text-black !important;
+}
+
 tr.errorState {
   @apply bg-red-50 text-red-150 !important;
   pointer-events: none;
@@ -108,10 +147,25 @@ tr.errorState.hoverState {
   @apply text-gray-200 cursor-not-allowed;
 }
 
-/* takes out default search toolbar top border so we can set it with a theme-specific colHeader class assignment */
-.ui-jqgrid .ui-jqgrid-hdiv .ui-search-toolbar {
-  @apply border-t-0;
+/* .g-menu-item {
+  @apply text-md leading-2 text-black focus-standard !important;
+} */
+
+.ui-search-menu table > tbody tr > td:nth-child(1) {
+  @apply font-sans;
 }
+
+.ui-search-menu {
+  @apply focus-standard !important;
+}
+
+/* takes out default search toolbar top border so we can set it with a theme-specific colHeader class assignment */
+/* .ui-jqgrid .ui-jqgrid-hdiv .ui-search-toolbar {
+  border-bottom-style: solid;
+  border-top-style: none;
+  border-left-style: none;
+  border-right-style: none;
+} */
 
 /* Tailwind pre-flight applies global border defaults - we disable that so that we can style the gridRow border */
 /* .jqgrow *,
@@ -135,7 +189,7 @@ tr.errorState.hoverState {
   position: relative;
   height: auto;
   margin: 2px 2px;
-  @apply justify-items-center flex flex-row items-center content-center justify-center;
+  @apply flex flex-row items-center content-center justify-center justify-items-center;
 }
 
 /* column header icon wrapper renders icons in one line */
@@ -149,15 +203,15 @@ tr.errorState.hoverState {
 }
 
 .large-pager-wrapper {
-  @apply largePager py-2 px-1.5 text-sm border border-solid border-gray-100 !important;
+  @apply largePager py-2 px-1.5 text-sm border border-solid border-gray-100 bg-white !important;
 }
 
 .large-pager-btn {
-  @apply border-0 text-md mx-1 my-0 hover:text-blue-500 !important;
+  @apply border-0 text-md mx-1 my-0 hover:text-blue-500 transition-colors ease-in-out !important;
 }
 
 .large-nav-btn {
-  @apply mx-1 hover:text-blue-500 !important;
+  @apply mx-1 hover:text-blue-500 transition-colors ease-in-out !important;
 }
 
 .largePager .ui-separator {
@@ -172,10 +226,24 @@ tr.errorState.hoverState {
   @apply px-1.5 !important;
 }
 
+.ui-jqgrid .ui-jqgrid-bdiv tr.ui-row-ltr>td {
+  @apply border-l border-gray-100 !important;
+  border-left-style: solid !important;
+  border-right-style: none;
+}
+
 /* Subgrid */
 
+.ui-jqgrid .ui-jqgrid-bdiv tr.ui-row-ltr>td.subgrid-data {
+  @apply border-none !important;
+}
+
+.subgrid-data .largeTable .ui-jqgrid-view .ui-jqgrid-bdiv table.ui-jqgrid-btable tr.jqgrow td , .subgrid-data .largeTable .ui-jqgrid-view .ui-jqgrid-bdiv table.ui-jqgrid-btable tr.jqgrow td {
+  @apply py-2;
+}
+
 .largeTable .ui-subgrid .ui-th-column {
-  @apply text-sm font-normal hover:font-semibold py-2.5 hover:bg-blue-50 font-sans !important;
+  @apply text-sm font-normal hover:font-semibold py-2.5 hover:bg-blue-50 font-sans transition-all ease-in-out !important;
 }
 
 .ui-widget-content.jqgrow.ui-row-ltr {
@@ -192,7 +260,7 @@ tbody > tr.ui-widget-content.ui-subgrid.ui-row-ltr > td.ui-widget-content.subgri
 }
 
 .ui-jqgrid .ui-row-ltr.ui-subgrid>.subgrid-cell>span {
-  @apply self-center mx-auto;
+  @apply text-center w-full !important;
 }
 
 .ui-subgrid .ui-jqgrid-jquery-ui.ui-widget.ui-widget-content.ui-corner-all.ui-jqgrid {
@@ -204,5 +272,30 @@ tbody > tr.ui-widget-content.ui-subgrid.ui-row-ltr > td.ui-widget-content.subgri
 }
 
 .ui-subgrid .ui-state-default, .ui-subgrid .ui-widget-content .ui-state-default {
-  @apply bg-gray-50 text-black !important;
+  @apply bg-white text-black !important;
+}
+
+/* .ui-jqgrid table, .ui-jqgrid [role="row"]:not(.ui-jqgrid-labels), .ui-jqgrid tr:not(.ui-jqgrid-labels) {
+  @apply border border-gray-100;
+} */
+
+.ui-jqgrid table.ui-jqgrid-btable {
+  @apply border-t-0 border-b-0 border-l border-r border-gray-100;
+  border-left-style: none;
+  border-right-style: solid;
+  border-bottom-style: none;
+  border-top-style: none;
+}
+
+.ui-jqgrid table.ui-jqgrid-htable {
+  @apply border-b-1.5 border-gray-100 !important;
+  border-bottom-style: solid;
+}
+
+.ui-jqgrid .ui-jqgrid-hdiv .ui-jqgrid-htable {
+  @apply border-t border-b border-l border-r-0 border-gray-100 border-solid;
+}
+
+.ui-jqgrid .ui-pg-table .ui-pg-button {
+  @apply focus-standard;
 }

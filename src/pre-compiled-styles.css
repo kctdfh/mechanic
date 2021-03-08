@@ -4,8 +4,8 @@
 @import "tailwindcss/utilities";
 
 /* [Important] Change URLs */
-@import "imports/fonts.css";
-@import "imports/paths.css";
+@import "imports/fonts-local.css";
+@import "imports/paths-local.css";
 
 /* Components */
 @import "imports/basics.css";

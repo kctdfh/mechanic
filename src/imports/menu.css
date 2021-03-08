@@ -35,10 +35,9 @@ nav:not(.mm-menu) {
 /* #page{
 	border-left: 1px solid #e1e1e1;
 } */
-#content{
-	background-color: #F9FAFA;
-}
+
 span#hamburger {
+	@apply hover:bg-blue-500; 
 	width: 45px;
 	height: 100%;
 	position: relative;

@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>inputs-text-without-label</title>
+    <title>inputs-text-clean</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <link rel="stylesheet" href="../dist/css/styles.mini.css" />
@@ -22,58 +22,58 @@
             <div class="flex flex-row flex-wrap w-full mx-auto justify-evenly">
                 <!-- ANCHOR No icon -->
                 <div class="flex flex-row space-x-1">
-                    <input type="text" placeholder="Enter website" class="w-49 text-input large">
-                    </input>
+                    <input type="text" placeholder="E.g. google.com" class="w-49 text-input large">
+                     
                     <button class="w-20 _toggle btn large tertiary">Toggle</button>
                 </div>
                 <!-- ANCHOR Icon left -->
                 <div class="flex flex-row space-x-1">
-                    <fieldset class="text-input-wrapper large">
+                    <div class="text-input-wrapper large">
+                        <input type="text" class="w-49 text-input-icon-left large" placeholder="E.g. google.com">
                         <span class="icon-left">
                             <i class="input-icon feather-search">
                             </i>
                         </span>
-                        <input type="text" class="w-49 text-input-icon-left large" placeholder="Enter website">
-                    </fieldset>
+                    </div>
                     <button class="w-20 _toggle btn large tertiary">Toggle</button>
                 </div>
                 <!-- ANCHOR Icon right -->
                 <div class="flex flex-row space-x-1">
-                    <fieldset class="text-input-wrapper large">
+                    <div class="text-input-wrapper large">
+                        <input type="text" class="text-input large w-49" placeholder="E.g. google.com">
                         <span class="icon-right">
-                            <i class="input-icon feather-sun">
+                            <i class="input-icon feather-globe">
                             </i>
                         </span>
-                        <input type="text" class="text-input large w-49" placeholder="Enter website">
-                    </fieldset>
+                    </div>
                     <button class="w-20 _toggle btn large tertiary">Toggle</button>
                 </div>
                 <!-- ANCHOR Double icon right -->
                 <div class="flex flex-row space-x-1">
-                    <fieldset class="text-input-wrapper large">
+                    <div class="text-input-wrapper large">
+                        <input type="text" class="text-input large w-49" placeholder="E.g. google.com">
                         <span class="icon-right">
-                            <i class="input-icon feather-cloud">
+                            <i class="input-icon feather-type">
                             </i>
-                            <i class="input-icon feather-sun">
+                            <i class="input-icon feather-globe">
                             </i>
                         </span>
-                        <input type="text" class="text-input large w-49" placeholder="Enter website">
-                    </fieldset>
+                    </div>
                     <button class="w-20 _toggle btn large tertiary">Toggle</button>
                 </div>
                 <!-- ANCHOR Icon right left -->
                 <div class="flex flex-row space-x-1">
-                    <fieldset class="text-input-wrapper large" readonly>
+                    <div class="text-input-wrapper large">
+                        <input type="text" class="text-input-icon-left large w-49" placeholder="E.g. google.com" readonly>
                         <span class="icon-right">
-                            <i class="input-icon feather-cloud">
+                            <i class="input-icon feather-type">
                             </i>
                         </span>
                         <span class="icon-left">
                             <i class="input-icon feather-search">
                             </i>
                         </span>
-                        <input type="text" class="text-input-icon-left large w-49" placeholder="Enter website">
-                    </fieldset>
+                    </div>
                     <button class="w-20 _toggle btn large tertiary">Toggle</button>
                 </div>
             </div>
@@ -81,179 +81,135 @@
             <!-- SECTION Read-only -->
             <div class="flex flex-row flex-wrap w-full mx-auto justify-evenly">
                 <!-- ANCHOR No icon -->
-                <input type="text" placeholder="Enter website" class="w-70 text-input large" readonly></input>
+                <input type="text" placeholder="E.g. google.com" class="w-70 text-input large" readonly> 
                 <!-- ANCHOR Icon left -->
-                <fieldset class="text-input-wrapper large" readonly>
+                <div class="text-input-wrapper large">
+                    <input type="text" class="w-70 text-input-icon-left large" placeholder="E.g. google.com" readonly>
                     <span class="icon-left">
                         <i class="input-icon feather-search">
                         </i>
                     </span>
-                    <input type="text" class="w-70 text-input-icon-left large" placeholder="Enter website">
-                </fieldset>
+                </div>
                 <!-- ANCHOR Icon right -->
-                <fieldset class="text-input-wrapper large" readonly>
+                <div class="text-input-wrapper large" >
+                    <input type="text" class="text-input large w-70" placeholder="E.g. google.com" readonly>
                     <span class="icon-right">
-                        <i class="input-icon feather-sun">
+                        <i class="input-icon feather-globe">
                         </i>
                     </span>
-                    <input type="text" class="text-input large w-70" placeholder="Enter website">
-                </fieldset>
+                </div>
                 <!-- ANCHOR Double icon right -->
-                <fieldset class="text-input-wrapper large" readonly>
+                <div class="text-input-wrapper large">
+                    <input type="text" class="text-input large w-70" placeholder="E.g. google.com" readonly>
                     <span class="icon-right">
-                        <i class="input-icon feather-cloud">
+                        <i class="input-icon feather-type">
                         </i>
-                        <i class="input-icon feather-sun">
+                        <i class="input-icon feather-globe">
                         </i>
-                    </span>
-                    <input type="text" class="text-input large w-70" placeholder="Enter website">
-                </fieldset>
+                    </span>  
+                </div>
                 <!-- ANCHOR Icon right left -->
-                <fieldset class="text-input-wrapper large" readonly>
+                <div class="text-input-wrapper large">
+                    <input type="text" class="text-input-icon-left large w-70" placeholder="E.g. google.com" readonly>
                     <span class="icon-right">
-                        <i class="input-icon feather-cloud">
+                        <i class="input-icon feather-type">
                         </i>
                     </span>
                     <span class="icon-left">
                         <i class="input-icon feather-search">
                         </i>
                     </span>
-                    <input type="text" class="text-input-icon-left large w-70" placeholder="Enter website">
-                </fieldset>
+                </div>
             </div>
             <!-- !SECTION Read-only ends -->
             <!-- SECTION Large -->
             <div class="flex flex-row flex-wrap w-full mx-auto justify-evenly">
                 <!-- ANCHOR No icon -->
-                <input type="text" placeholder="Enter website" class="w-70 text-input large"></input>
+                <input type="text" placeholder="E.g. google.com" class="w-70 text-input large"> 
                 <!-- ANCHOR Icon left -->
-                <fieldset class="text-input-wrapper large">
+                <div class="text-input-wrapper large">
+                    <input type="text" class="w-70 text-input-icon-left large" placeholder="E.g. google.com">
                     <span class="icon-left">
                         <i class="input-icon feather-search">
                         </i>
                     </span>
-                    <input type="text" class="w-70 text-input-icon-left large" placeholder="Enter website">
-                </fieldset>
+                </div>
                 <!-- ANCHOR Icon right -->
-                <fieldset class="text-input-wrapper large">
+                <div class="text-input-wrapper large">
+                    <input type="text" class="text-input large w-70" placeholder="E.g. google.com">
                     <span class="icon-right">
-                        <i class="input-icon feather-sun">
+                        <i class="input-icon feather-globe">
                         </i>
                     </span>
-                    <input type="text" class="text-input large w-70" placeholder="Enter website">
-                </fieldset>
+                </div>
                 <!-- ANCHOR Double icon right -->
-                <fieldset class="text-input-wrapper large">
+                <div class="text-input-wrapper large">
+                    <input type="text" class="text-input large w-70" placeholder="E.g. google.com">
                     <span class="icon-right">
-                        <i class="input-icon feather-cloud">
+                        <i class="input-icon feather-type">
                         </i>
-                        <i class="input-icon feather-sun">
+                        <i class="input-icon feather-globe">
                         </i>
                     </span>
-                    <input type="text" class="text-input large w-70" placeholder="Enter website">
-                </fieldset>
+                </div>
                 <!-- ANCHOR Icon right left -->
-                <fieldset class="text-input-wrapper large">
+                <div class="text-input-wrapper large">
+                    <input type="text" class="text-input-icon-left large w-70" placeholder="E.g. google.com">
                     <span class="icon-right">
-                        <i class="input-icon feather-cloud">
+                        <i class="input-icon feather-type">
                         </i>
                     </span>
                     <span class="icon-left">
                         <i class="input-icon feather-search">
                         </i>
                     </span>
-                    <input type="text" class="text-input-icon-left large w-70" placeholder="Enter website">
-                </fieldset>
+                </div>
             </div>
             <!-- !SECTION Large ends -->
             <!-- SECTION Middle -->
             <div class="flex flex-row flex-wrap w-full mx-auto justify-evenly">
                 <!-- ANCHOR No icon -->
-                <input type="text" placeholder="Enter website" class="w-70 text-input middle"></input>
+                <input type="text" placeholder="E.g. google.com" class="w-70 text-input middle"> 
                 <!-- ANCHOR Icon left -->
-                <fieldset class="text-input-wrapper middle">
+                <div class="text-input-wrapper middle">
+                    <input type="text" class="w-70 text-input-icon-left middle" placeholder="E.g. google.com">
                     <span class="icon-left">
                         <i class="input-icon feather-search">
                         </i>
                     </span>
-                    <input type="text" class="w-70 text-input-icon-left middle" placeholder="Enter website">
-                </fieldset>
+                </div>
                 <!-- ANCHOR Icon right -->
-                <fieldset class="text-input-wrapper middle">
+                <div class="text-input-wrapper middle">
+                    <input type="text" class="text-input middle w-70" placeholder="E.g. google.com">
                     <span class="icon-right">
-                        <i class="input-icon feather-sun">
+                        <i class="input-icon feather-globe">
                         </i>
                     </span>
-                    <input type="text" class="text-input middle w-70" placeholder="Enter website">
-                </fieldset>
+                </div>
                 <!-- ANCHOR Double icon right -->
-                <fieldset class="text-input-wrapper middle">
+                <div class="text-input-wrapper middle">
+                    <input type="text" class="text-input middle w-70" placeholder="E.g. google.com">
                     <span class="icon-right">
-                        <i class="input-icon feather-cloud">
+                        <i class="input-icon feather-type">
                         </i>
-                        <i class="input-icon feather-sun">
+                        <i class="input-icon feather-globe">
                         </i>
                     </span>
-                    <input type="text" class="text-input middle w-70" placeholder="Enter website">
-                </fieldset>
+                </div>
                 <!-- ANCHOR Icon right left -->
-                <fieldset class="text-input-wrapper middle">
+                <div class="text-input-wrapper middle">
+                    <input type="text" class="text-input-icon-left middle w-70" placeholder="E.g. google.com">
                     <span class="icon-right">
-                        <i class="input-icon feather-cloud">
+                        <i class="input-icon feather-type">
                         </i>
                     </span>
                     <span class="icon-left">
                         <i class="input-icon feather-search">
                         </i>
                     </span>
-                    <input type="text" class="text-input-icon-left middle w-70" placeholder="Enter website">
-                </fieldset>
+                </div>
             </div>
             <!-- !SECTION Middle ends -->
-            <!-- SECTION small -->
-            <div class="flex flex-row flex-wrap w-full mx-auto justify-evenly">
-                <!-- ANCHOR No icon -->
-                <input type="text" placeholder="Enter website" class="w-70 text-input small"></input>
-                <!-- ANCHOR Icon left -->
-                <fieldset class="text-input-wrapper small">
-                    <span class="icon-left">
-                        <i class="input-icon feather-search">
-                        </i>
-                    </span>
-                    <input type="text" class="w-70 text-input-icon-left small" placeholder="Enter website">
-                </fieldset>
-                <!-- ANCHOR Icon right -->
-                <fieldset class="text-input-wrapper small">
-                    <span class="icon-right">
-                        <i class="input-icon feather-sun">
-                        </i>
-                    </span>
-                    <input type="text" class="text-input small w-70" placeholder="Enter website">
-                </fieldset>
-                <!-- ANCHOR Double icon right -->
-                <fieldset class="text-input-wrapper small">
-                    <span class="icon-right">
-                        <i class="input-icon feather-cloud">
-                        </i>
-                        <i class="input-icon feather-sun">
-                        </i>
-                    </span>
-                    <input type="text" class="text-input small w-70" placeholder="Enter website">
-                </fieldset>
-                <!-- ANCHOR Icon right left -->
-                <fieldset class="text-input-wrapper small">
-                    <span class="icon-right">
-                        <i class="input-icon feather-cloud">
-                        </i>
-                    </span>
-                    <span class="icon-left">
-                        <i class="input-icon feather-search">
-                        </i>
-                    </span>
-                    <input type="text" class="text-input-icon-left small w-70" placeholder="Enter website">
-                </fieldset>
-            </div>
-            <!-- !SECTION small ends -->
         </div>
 
         <!-- !SECTION No label ends -->
@@ -267,8 +223,8 @@
                 <div class="label-input-wrapper">
                     <label for="" class="input-label">Enter website</label>
                     <div class="flex flex-row content-center space-x-1">
-                        <input type="text" placeholder="Enter website" class="text-input large w-49">
-                        </input>
+                        <input type="text" placeholder="E.g. google.com" class="text-input large w-49">
+                         
                         <button class="w-20 _toggle btn large tertiary">Toggle</button>
                     </div>
                     <div class="input-descriptions">
@@ -282,13 +238,13 @@
                 <div class="label-input-wrapper">
                     <label for="" class="input-label">Enter website</label>
                     <div class="flex flex-row content-center space-x-1">
-                        <fieldset class="text-input-wrapper large">
+                        <div class="text-input-wrapper large">
+                            <input type="text" class="text-input-icon-left large w-49" placeholder="E.g. google.com">
                             <span class="icon-left">
                                 <i class="input-icon feather-search">
                                 </i>
                             </span>
-                            <input type="text" class="text-input-icon-left large w-49" placeholder="Enter website">
-                        </fieldset>
+                        </div>
                         <button class="w-20 _toggle btn large tertiary">Toggle</button>
                     </div>
                     <div class="input-descriptions">
@@ -302,13 +258,13 @@
                 <div class="label-input-wrapper">
                     <label for="" class="input-label">Enter website</label>
                     <div class="flex flex-row content-center space-x-1">
-                        <fieldset class="text-input-wrapper large">
+                        <div class="text-input-wrapper large">
+                            <input type="text" class="text-input large w-49" placeholder="E.g. google.com">
                             <span class="icon-right">
-                                <i class="input-icon feather-sun">
+                                <i class="input-icon feather-globe">
                                 </i>
                             </span>
-                            <input type="text" class="text-input large w-49" placeholder="Enter website">
-                        </fieldset>
+                        </div>
                         <button class="w-20 _toggle btn large tertiary">Toggle</button>
                     </div>
                     <div class="input-descriptions">
@@ -322,15 +278,15 @@
                 <div class="label-input-wrapper">
                     <label for="" class="input-label">Enter website</label>
                     <div class="flex flex-row space-x-1">
-                        <fieldset class="text-input-wrapper large">
+                        <div class="text-input-wrapper large">
+                            <input type="text" class="text-input large w-49" placeholder="E.g. google.com">
                             <span class="icon-right">
-                                <i class="input-icon feather-cloud">
+                                <i class="input-icon feather-type">
                                 </i>
-                                <i class="input-icon feather-sun">
+                                <i class="input-icon feather-globe">
                                 </i>
-                            </span>
-                            <input type="text" class="text-input large w-49" placeholder="Enter website">
-                        </fieldset>
+                            </span>        
+                        </div>
                         <button class="w-20 _toggle btn large tertiary">Toggle</button>
                     </div>
                     <div class="input-descriptions">
@@ -344,20 +300,20 @@
                 <div class="label-input-wrapper">
                     <label for="" class="input-label">Enter website</label>
                     <div class="flex flex-row content-center space-x-1">
-                        <fieldset class="text-input-wrapper large" readonly>
+                        <div class="text-input-wrapper large">
+                            <input type="text" class="text-input-icon-left large w-49" placeholder="E.g. google.com" readonly>
                             <span class="icon-right">
-                                <i class="input-icon feather-cloud">
+                                <i class="input-icon feather-type">
                                 </i>
                             </span>
                             <span class="icon-left">
                                 <i class="input-icon feather-search">
                                 </i>
                             </span>
-                            <input type="text" class="text-input-icon-left large w-49" placeholder="Enter website">
-                        </fieldset>
+                        </div>
                         <button class="w-20 _toggle btn large tertiary">Toggle</button>
                     </div>
-                    <div class="input-descriptions !hidden">
+                    <div class="input-descriptions">
                         <span class="hidden text-red-600 _error">Input must be a ".com" website</span>
                         <span class="_default">
                             Please provide your website
@@ -372,7 +328,7 @@
                 <!-- ANCHOR No icon -->
                 <div class="label-input-wrapper">
                         <label for="inputId" class="input-label">Enter website</label>
-                        <input type="text" placeholder="Enter website" class="w-70 text-input large"></input>
+                        <input type="text" placeholder="E.g. google.com" class="w-70 text-input large"> 
                         <div class="input-descriptions">
                             <span class="hidden text-red-600 _error">Input must be a ".com" website</span>
                             <span class="_default">Please provide your website</span>
@@ -381,13 +337,13 @@
                 <!-- ANCHOR Icon left -->
                 <div class="label-input-wrapper">
                     <label for="" class="input-label">Enter website</label>
-                    <fieldset class="text-input-wrapper large">
+                    <div class="text-input-wrapper large">
+                        <input type="text" class="w-70 text-input-icon-left large" placeholder="E.g. google.com">
                         <span class="icon-left">
                             <i class="input-icon feather-search">
                             </i>
                         </span>
-                        <input type="text" class="w-70 text-input-icon-left large" placeholder="Enter website">
-                    </fieldset>
+                    </div>
                     <div class="input-descriptions">
                         <span class="hidden text-red-600 _error">Input must be a ".com" website</span>
                         <span class="_default">
@@ -398,13 +354,13 @@
                 <!-- ANCHOR Icon right -->
                 <div class="label-input-wrapper">
                     <label for="" class="input-label">Enter website</label>
-                    <fieldset class="text-input-wrapper large">
+                    <div class="text-input-wrapper large">
+                        <input type="text" class="text-input large w-70" placeholder="E.g. google.com">
                         <span class="icon-right">
-                            <i class="input-icon feather-sun">
+                            <i class="input-icon feather-globe">
                             </i>
                         </span>
-                        <input type="text" class="text-input large w-70" placeholder="Enter website">
-                    </fieldset>
+                    </div>
                     <div class="input-descriptions">
                         <span class="hidden text-red-600 _error">Input must be a ".com" website</span>
                         <span class="_default">
@@ -415,15 +371,15 @@
                 <!-- ANCHOR Double icon right -->
                 <div class="label-input-wrapper">
                     <label for="" class="input-label">Enter website</label>
-                    <fieldset class="text-input-wrapper large">
+                    <div class="text-input-wrapper large">
+                        <input type="text" class="text-input large w-70" placeholder="E.g. google.com">
                         <span class="icon-right">
-                            <i class="input-icon feather-cloud">
+                            <i class="input-icon feather-type">
                             </i>
-                            <i class="input-icon feather-sun">
+                            <i class="input-icon feather-globe">
                             </i>
                         </span>
-                        <input type="text" class="text-input large w-70" placeholder="Enter website">
-                    </fieldset>
+                    </div>
                     <div class="input-descriptions">
                         <span class="hidden text-red-600 _error">Input must be a ".com" website</span>
                         <span class="_default">
@@ -434,17 +390,17 @@
                 <!-- ANCHOR Icon right left -->
                 <div class="label-input-wrapper">
                     <label for="" class="input-label">Enter website</label>
-                    <fieldset class="text-input-wrapper large">
+                    <div class="text-input-wrapper large">
+                        <input type="text" class="text-input-icon-left large w-70" placeholder="E.g. google.com">
                         <span class="icon-right">
-                            <i class="input-icon feather-cloud">
+                            <i class="input-icon feather-type">
                             </i>
                         </span>
                         <span class="icon-left">
                             <i class="input-icon feather-search">
                             </i>
                         </span>
-                        <input type="text" class="text-input-icon-left large w-70" placeholder="Enter website">
-                    </fieldset>
+                    </div>
                     <div class="input-descriptions">
                         <span class="hidden text-red-600 _error">Input must be a ".com" website</span>
                         <span class="_default">
@@ -459,8 +415,8 @@
                 <!-- ANCHOR No icon -->
                 <div class="label-input-wrapper">
                     <label for="" class="input-label">Enter website</label>
-                    <input type="text" placeholder="Enter website" class="w-70 text-input middle">
-                </input>
+                    <input type="text" placeholder="E.g. google.com" class="w-70 text-input middle">
+                 
                 <div class="input-descriptions">
                     <span class="hidden text-red-600 _error">Input must be a ".com" website</span>
                     <span class="_default">Please provide your website</span>
@@ -469,13 +425,13 @@
                 <!-- ANCHOR Icon left -->
                 <div class="label-input-wrapper">
                     <label for="" class="input-label">Enter website</label>
-                    <fieldset class="text-input-wrapper middle">
+                    <div class="text-input-wrapper middle">
+                        <input type="text" class="w-70 text-input-icon-left middle" placeholder="E.g. google.com">
                         <span class="icon-left">
                             <i class="input-icon feather-search">
                             </i>
                         </span>
-                        <input type="text" class="w-70 text-input-icon-left middle" placeholder="Enter website">
-                    </fieldset>
+                    </div>
                     <div class="input-descriptions">
                         <span class="hidden text-red-600 _error">Input must be a ".com" website</span>
                         <span class="_default">
@@ -486,13 +442,13 @@
                 <!-- ANCHOR Icon right -->
                 <div class="label-input-wrapper">
                     <label for="" class="input-label">Enter website</label>
-                    <fieldset class="text-input-wrapper middle">
+                    <div class="text-input-wrapper middle">
+                        <input type="text" class="text-input middle w-70" placeholder="E.g. google.com">
                         <span class="icon-right">
-                            <i class="input-icon feather-sun">
+                            <i class="input-icon feather-globe">
                             </i>
                         </span>
-                        <input type="text" class="text-input middle w-70" placeholder="Enter website">
-                    </fieldset>
+                    </div>
                     <div class="input-descriptions">
                         <span class="hidden text-red-600 _error">Input must be a ".com" website</span>
                         <span class="_default">
@@ -503,15 +459,15 @@
                 <!-- ANCHOR Double icon right -->
                 <div class="label-input-wrapper">
                     <label for="" class="input-label">Enter website</label>
-                    <fieldset class="text-input-wrapper middle">
+                    <div class="text-input-wrapper middle">
+                        <input type="text" class="text-input middle w-70" placeholder="E.g. google.com">
                         <span class="icon-right">
-                            <i class="input-icon feather-cloud">
+                            <i class="input-icon feather-type">
                             </i>
-                            <i class="input-icon feather-sun">
+                            <i class="input-icon feather-globe">
                             </i>
                         </span>
-                        <input type="text" class="text-input middle w-70" placeholder="Enter website">
-                    </fieldset>
+                    </div>
                     <div class="input-descriptions">
                         <span class="hidden text-red-600 _error">Input must be a ".com" website</span>
                         <span class="_default">
@@ -522,17 +478,17 @@
                 <!-- ANCHOR Icon right left -->
                 <div class="label-input-wrapper">
                     <label for="" class="input-label">Enter website</label>
-                    <fieldset class="text-input-wrapper middle">
+                    <div class="text-input-wrapper middle">
+                        <input type="text" class="text-input-icon-left middle w-70" placeholder="E.g. google.com">
                         <span class="icon-right">
-                            <i class="input-icon feather-cloud">
+                            <i class="input-icon feather-type">
                             </i>
                         </span>
                         <span class="icon-left">
                             <i class="input-icon feather-search">
                             </i>
                         </span>
-                        <input type="text" class="text-input-icon-left middle w-70" placeholder="Enter website">
-                    </fieldset>
+                    </div>
                     <div class="input-descriptions">
                         <span class="hidden text-red-600 _error">Input must be a ".com" website</span>
                         <span class="_default">
@@ -542,120 +498,30 @@
                 </div>
             </div>
             <!-- !SECTION Middle ends -->
-            <!-- SECTION small -->
-            <div class="flex flex-row flex-wrap w-full mx-auto justify-evenly">
-                <!-- ANCHOR No icon -->
-                <div class="label-input-wrapper">
-                    <label for="" class="input-label">Enter website</label>
-                    <input type="text" placeholder="Enter website" class="w-70 text-input small"></input>
-                    <div class="input-descriptions">
-                        <span class="hidden text-red-600 _error">Input must be a ".com" website</span>
-                        <span class="_default">Please provide your website</span>
-                    </div>
-                </div>
-                <!-- ANCHOR Icon left -->
-                <div class="label-input-wrapper">
-                    <label for="" class="input-label">Enter website</label>
-                    <fieldset class="text-input-wrapper small">
-                        <span class="icon-left">
-                            <i class="input-icon feather-search">
-                            </i>
-                        </span>
-                        <input type="text" class="w-70 text-input-icon-left small" placeholder="Enter website">
-                    </fieldset>
-                    <div class="input-descriptions">
-                        <span class="hidden text-red-600 _error">Input must be a ".com" website</span>
-                        <span class="_default">
-                            Please provide your website
-                        </span>
-                    </div>
-                </div>
-                <!-- ANCHOR Icon right -->
-                <div class="label-input-wrapper">
-                    <label for="" class="input-label">Enter website</label>
-                    <fieldset class="text-input-wrapper small">
-                        <span class="icon-right">
-                            <i class="input-icon feather-sun">
-                            </i>
-                        </span>
-                        <input type="text" class="text-input small w-70" placeholder="Enter website">
-                    </fieldset>
-                    <div class="input-descriptions">
-                        <span class="hidden text-red-600 _error">Input must be a ".com" website</span>
-                        <span class="_default">
-                            Please provide your website
-                        </span>
-                    </div>
-                </div>
-                <!-- ANCHOR Double icon right -->
-                <div class="label-input-wrapper">
-                    <label for="" class="input-label">Enter website</label>
-                    <fieldset class="text-input-wrapper small">
-                        <span class="icon-right">
-                            <i class="input-icon feather-cloud">
-                            </i>
-                            <i class="input-icon feather-sun">
-                            </i>
-                        </span>
-                        <input type="text" class="text-input small w-70" placeholder="Enter website">
-                    </fieldset>
-                    <div class="input-descriptions">
-                        <span class="hidden text-red-600 _error">Input must be a ".com" website</span>
-                        <span class="_default">
-                            Please provide your website
-                        </span>
-                    </div>
-                </div>
-                <!-- ANCHOR Icon right left -->
-                <div class="label-input-wrapper">
-                    <label for="" class="input-label">Enter website</label>
-                    <fieldset class="text-input-wrapper small">
-                        <span class="icon-right">
-                            <i class="input-icon feather-cloud">
-                            </i>
-                        </span>
-                        <span class="icon-left">
-                            <i class="input-icon feather-search">
-                            </i>
-                        </span>
-                        <input type="text" class="text-input-icon-left small w-70" placeholder="Enter website">
-                    </fieldset>
-                    <div class="input-descriptions">
-                        <span class="hidden text-red-600 _error">Input must be a ".com" website</span>
-                        <span class="_default">
-                            Please provide your website
-                        </span>
-                    </div>
-                </div>
-            </div>
-            <!-- !SECTION small ends -->
         </div>
 
         <!-- !SECTION With label ends -->
 
     </div>
-
     <script src="../dist/js/popper.js"></script>
     <script src="../dist/js/tippy-bundle.umd.js"></script>
     <script>
+
+        // Initiate all currently existing tooltips
          tippy('[data-tippy-content]',{
                         allowHTML: true,
                     });
-        // ANCHOR if parent <fieldset> is disabled or readonly, set the child <input> to have the same attribute 
 
-        function bubbleReadonly() {
-            var disabledForm = $("fieldset:disabled").find("input");
-            $(disabledForm).prop("disabled", true);
-            var readonlyForm = $("fieldset[readonly]").find("input");
-            $(readonlyForm).prop("readonly", true);
-        }
+        // Define all dynamically placed icons
+        // "clear" icon has the clearInput() function attached by default
+        // All icons have their tooltip attributes attached by default
 
         const clearIcon =
             "<i onClick=clearInput() class='cursor-pointer _custom-icon icon-gray input-icon feather-delete' data-tippy-placement='auto' data-tippy-content='Clear'" +
             ">" + "<" + "/i" + ">"
 
         const validIcon =
-            "<i class='cursor-pointer _custom-icon input-icon feather-check icon-success' data-tippy-placement='auto' data-tippy-content='Valid'" +
+            "<i class='_custom-icon input-icon feather-check icon-success' data-tippy-placement='auto' data-tippy-content='Valid'" +
             ">" + "<" + "/i" + ">"
 
         const errorIcon =
@@ -666,17 +532,19 @@
             "<i class='cursor-pointer _readonly-icon input-icon icon-noninteractive feather-eye' data-tippy-placement='auto' data-tippy-content='This filed cannot be edited'" +
             ">" + "<" + "/i" + ">"
 
-        $(document).ready(bubbleReadonly());
+        // At page load, set the read-only icon for all input fields that are set to read-only
+
         $(document).ready(setGlobalReadyOnlyIcons());
 
-        // ANCHOR global variables for form type (nest) and the parent <fieldset> (forminput)
+        // global variables for form type (nest) and the parent of input field (divWrapper), validity of the input, and the existance of a label element. These variables mutuate every time an input is changed and are used across all functions.
+
         var nest;
-        var forminput;
+        var divWrapper;
         var valid;
-        var tippyInstances = [];
         var hasLabel;
 
-        // ANCHOR find the form type and validate the input everytime an input is provided to any of the text inputs on the page
+        // find the form type, validate the input, set its icons based on the validation, and set the description text based on the validation and input type everytime an input is provided to any of the text inputs on the page
+
         $('input[type="text"]').on('input', function() {
             inputNest($(this));
             validate($(this));
@@ -684,153 +552,169 @@
             setDescription($(this));
         });
 
-        // ANCHOR find the form type based on some <input> element
+        // find the form type based on some input element. The argument for this function is the jQuery object of the input element itself.
         function inputNest(input) {
-            // find the parent <inputfield>
-            forminput = input.parents(".text-input-wrapper");
+            // find the parent wrapper of the input field
+            divWrapper = input.parents(".text-input-wrapper");
+            // If the input element has a parent called label-input-wrapper then it must mean that it has a label
             if (input.parents(".label-input-wrapper").length !== 0){
                 hasLabel = true;
             } else {
                 hasLabel = false;
             }
-            // does the .icon-right element have 2 or more elements?
-            if (forminput.find(".icon-right").children().length >= 2) {
+            // Now we find the kind of input field we have
+            // Does the icon-right element inside of the wrapper have 2 or more elements? If yes, the input is of the kind "double icon right"
+            if (divWrapper.find(".icon-right").children().length >= 2) {
                 nest = "double icon right";
-                // do both .icon-right and .icon-left have any children? 
-            } else if (forminput.find(".icon-right").children().length != 0 && forminput.find(".icon-left").children()
+            // Do both .icon-right and .icon-left have any children? If yes, the input is of the kind "icon left right". This condition can also simply check for the existance of the icon-* wrappers without counting the children so you could include empty ones and add icons to them based on read-only attributes and validation results
+            } else if (divWrapper.find(".icon-right").children().length != 0 && divWrapper.find(".icon-left").children()
                 .length != 0) {
                 nest = "icon left right"
-                    // does the .icon-left element have a child while .icon-right has none?
-            } else if (input.parent(".text-input-wrapper").find(".icon-right").children().length == 0 && forminput.find(
+            // Does the .icon-left element have a child while .icon-right has none? If yes, the input is of the kind "icon left"
+            } else if (input.parent(".text-input-wrapper").find(".icon-right").children().length == 0 && divWrapper.find(
                     ".icon-left").children().length == 1) {
                 nest = "icon left"
-                    // does the .icon-right element have a child while .icon-left has none?
-            } else if (input.parent(".text-input-wrapper").find(".icon-right").children().length == 1 && forminput.find(
+            // does the .icon-right element have a child while .icon-left has none? If yes, the input is of the kind "icon right"
+            } else if (input.parent(".text-input-wrapper").find(".icon-right").children().length == 1 && divWrapper.find(
                     ".icon-left").children().length == 0) {
                 nest = "icon right"
-                    // if nothing is true, the <input> must have no icon
+            // if nothing is true, the input element must have no icon
             } else {
                 nest = "no icon";
             };
         };
 
-        // ANCHOR Validate the input and set classes
+        // Validate the input and set validation classes
         function validate(input) {
 
-            // set regex and define the test string as the value of the <input> field that is passed to the function
+            // set regex and define the test string as the value of the input field that is passed to the function
             const regex = /(\.com)/gm;
             const str = input.val();
 
             if (str == "") {
                 // if the <input> is empty, remove .error
-                // forminput is for cases where <forminput> exists as a parent
-                // input is the <input> element and exists for cases where there is no nesting (i.e. no icon input fields)
-                forminput.removeClass("error");
+                // divWrapper is for cases where .text-input-wrapper exists as a parent (i.e. input has an icon element)
+                // input is the input element and exists for cases where there is no nesting (i.e. no icon input fields)
+                // we don't need nested ifs because we're removing a class that does not exist for one of these cases
+                divWrapper.removeClass("error");
                 input.removeClass("error");
+                // an empty input is not invalid so we want the subsequent functions to know that (so for instance we can show the default description text)
                 valid = false;
             } else if (nest == "no icon" && regex.test(str) == true) {
-                // if the input field is of the type "no icon" and the input is valid, then remove .error from the <input> element itself, which is the element being interacted with and passed to this function
+                // if the input field is of the type "no icon" and the input is valid, then remove .error from the input element itself, which is the element being interacted with and passed to this function
                 input.removeClass("error");
                 valid = true;
             } else if (nest == "no icon" && regex.test(str) == false) {
-                // if the input field is of the type "no icon" and the input is not valid, then add .error to the <input> element itself, which is the element being interacted with and passed to this function
+                // if the input field is of the type "no icon" and the input is not valid, then add .error to the input element itself, which is the element being interacted with and passed to this function
                 input.addClass("error");
                 valid = false;
             } else if (regex.test(str) == true) {
-                // if the input field is of any other kind than "no icon" and the input is valid, then remove .error from the <forminput> element, which is determined by the validate() function
-                forminput.removeClass("error");
+                // if the input field is of any other kind than "no icon" and the input is valid, then remove .error from the divWrapper element (i.e. .text-input-wrapper), which is determined by the inputNest() function
+                divWrapper.removeClass("error");
                 valid = true;
             } else if (regex.test(str) == false) {
-                // if the input field is of any other kind than "no icon" and the input is not valid, then add .error to the <forminput> element, which is determined by the validate() function
-                forminput.addClass("error");
+                // if the input field is of any other kind than "no icon" and the input is not valid, then add .error to the divWrapper element, which is determined by the inputNest() function
+                divWrapper.addClass("error");
                 valid = false;
             }
         };
 
-        // ANCHOR set read-only icons
+        // Set read-only icons for every read-only input and hide the descriptions wrapper
 
         function setGlobalReadyOnlyIcons() {
-            readonlyInputs = $("fieldset[readonly]");
-            readonlyIconRightWrapper = $(readonlyInputs).find(".icon-right");
+            // Find all read-only inputs
+            readonlyInputs = $(".text-input-wrapper").find("input[readonly]");
+            // If there is a lebel wrapper, hide the descriptions wrapper inside of it
+            if (readonlyInputs.parents(".label-input-wrapper").find(".input-descriptions").length == 1){
+                readonlyInputs.parents(".label-input-wrapper").find(".input-descriptions").css("display","none")
+            }
+            // Find the icon-right wrapper
+            readonlyIconRightWrapper = $(readonlyInputs).parents(".text-input-wrapper").find(".icon-right");
+            // Hide all exisiting icons
             $(readonlyIconRightWrapper).children("i").addClass("hidden");
+            // Add in the pre-made read-only icon
             $(readOnlyIcon).appendTo(readonlyIconRightWrapper);
+            // Initialize all tooltips again, which initializes the tooltip for this newly added element
             tippy('[data-tippy-content]',{
                         allowHTML: true,
                     });
-            // tippy('._readonly-icon');
         }
+
+
+        // When an element with class _toggle is clicked, toggle the input field that is eitheir its direct sibiling or inside of its sibiling. Since out toggle button is placed inside of the label wrapper, it doesn't matter if our input has a label or not
 
         $('._toggle').click(function() {
 
+            // We need to know if we're removing the read-only attribute or setting it so we need to check for the initial state and store it in this variable
             var isReadonly;
+
+            // For input elements that have an icon, our sibiling is not the input field. So we need to find the input field and store it with this variable
             var innerInput;
 
-            if ($(this).siblings('fieldset').length == 1) {
-                innerInput = $(this).siblings('fieldset').find('input');
+            // If the sibiling of our button is an input wrapper (i.e. our input has an icon), then our read-only attribute target is a child of our sibiling. If not, our target is the sibiling itself (i.e. the sibiling has no icon)
+            if ($(this).siblings('.text-input-wrapper').length == 1) {
+                innerInput = $(this).siblings('.text-input-wrapper').find('input');
             } else {
                 innerInput = $(this).siblings('input');
             }
 
-            //
-
-            if ($(this).siblings('fieldset').length == 1 && $(this).siblings('fieldset').is("[readonly]")) {
+            // Find the target input element and check its initial read-only state. Then pass it to the inputNest function to find the type of input it is
+            if ($(this).siblings('.text-input-wrapper').length == 1 && $(this).siblings('.text-input-wrapper').find('input').is("[readonly]")) {
                 isReadonly = true
                 inputNest($(innerInput));
 
-            } else if ($(this).siblings('fieldset').length == 1 && $(this).siblings('fieldset').find('input')
-                .is("[readonly]")) {
-                isReadonly = true
-                inputNest($(innerInput));
- 
-            } else if ($(this).siblings('fieldset').is("[readonly]") && $(this).siblings('fieldset').find(
-                    'input').is("[readonly]")) {
-                isReadonly = true
-                inputNest($(innerInput));
- 
-            } else if ($(this).siblings('fieldset').length == 1) {
+            // Opposite of the above condition (i.e. target is not currently read-only)
+            } else if ($(this).siblings('.text-input-wrapper').length == 1 && !$(this).siblings('.text-input-wrapper').find('input').is("[readonly]")) {
                 isReadonly = false
                 inputNest($(innerInput));
- 
+
+            // First condition but for inputs that have no icon (i.e. have no parent called .text-input-wrapper)
             } else if ($(this).siblings('input').length == 1 && $(this).siblings('input').is("[readonly]")) {
+                console.log("no icon and input is read only");
                 isReadonly = true
                 inputNest($(innerInput));
-   
-            } else if ($(this).siblings('input').length == 1) {
+
+            // Opposite of the above condition
+            } else if ($(this).siblings('input').length == 1 && !$(this).siblings('input').is("[readonly]")) {
+                console.log("no icon and input is NOT read only");
                 isReadonly = false
                 inputNest($(innerInput));
    
             }
 
+            // Since we call inputNest for all the above checks, we now know the input type of our toggle target
+
+            // If "no icon" and initially read-only, set the target input's icons back to normal and remove the read-only attribute 
             if (nest == "no icon" && isReadonly == true) {
                 setThisReadOnlyIcons($(this).siblings('input'));
                 $(this).siblings('input').removeAttr("readonly");
 
+            // If "no icon" and initially not read-only, set the target input's icons to read-only and add the read-only attribute
             } else if (nest == "no icon" && isReadonly == false) {
 
                 setThisReadOnlyIcons($(this).siblings('input'));
                 $(this).siblings('input').attr("readonly", true);
-            
+
+            // Continue the above checks for all other input types
             } else if (nest == "icon left" && isReadonly == false){
 
-                setThisReadOnlyIcons($(this).siblings('fieldset').find('input'));
-                $(this).siblings('fieldset').find('input').attr("readonly", true);
+                setThisReadOnlyIcons($(this).siblings('.text-input-wrapper').find('input'));
+                $(this).siblings('.text-input-wrapper').find('input').attr("readonly", true);
 
             } else if (nest == "icon left" && isReadonly == true){
 
-                setThisReadOnlyIcons($(this).siblings('fieldset').find('input'));
-                $(this).siblings('fieldset').removeAttr("readonly");
-                $(this).siblings('fieldset').find('input').removeAttr("readonly");
+                setThisReadOnlyIcons($(this).siblings('.text-input-wrapper').find('input'));
+                $(this).siblings('.text-input-wrapper').find('input').removeAttr("readonly");
 
             } else if (nest !== "no icon" && isReadonly == true) {
 
-                $(this).siblings('fieldset').removeAttr("readonly");
-                $(this).siblings('fieldset').find('input').removeAttr("readonly");
-                setThisReadOnlyIcons($(this).siblings('fieldset').find('input'));
+                $(this).siblings('.text-input-wrapper').find('input').removeAttr("readonly");
+                setThisReadOnlyIcons($(this).siblings('.text-input-wrapper').find('input'));
 
             } else if (nest !== "no icon" && isReadonly == false) {
 
-                $(this).siblings('fieldset').find('input').attr("readonly", true);
-                setThisReadOnlyIcons($(this).siblings('fieldset').find('input'));
+                $(this).siblings('.text-input-wrapper').find('input').attr("readonly", true);
+                setThisReadOnlyIcons($(this).siblings('.text-input-wrapper').find('input'));
 
             } else {
 
@@ -838,77 +722,87 @@
 
             }
 
+            // After the input's read-only attribute is set and its icons are adjusted, adjust its description
             setDescription($(innerInput));
-            bubbleReadonly();
 
         });
 
 
+        // We use this function to set the read-only attribute of a given text input. The argument for this function is the input element itself and not its wrapper
+
         function setThisReadOnlyIcons(input) {
             if ($(input).parents(".text-input-wrapper").length == 1) {
+                // Find all the required information about the target input
                 var thisInput = $(input).parents(".text-input-wrapper").find("input");
                 var readonly = $(input).parents(".text-input-wrapper").find("input").is('[readonly]');
                 var hasIconRight = $(input).parents(".text-input-wrapper").find(".icon-right").length;
                 var hasIconLeft = $(input).parents(".text-input-wrapper").find(".icon-left").length;
+
+                // If it's not read-only and has an icon-right element
                 if (readonly == false && hasIconRight == 1) {
-                    // remove readonly
+                    // Remove the read-only icons
                     var iconRightWrapper = $(input).parents(".text-input-wrapper").find(".icon-right");
 
                     inputNest($(thisInput));
+                    // We want to validate on toggle so that we can bring set the icons accurately since this function hides every other icon (i.e. icons for valid and invalid inputs)
                     validate($(thisInput));
 
+                    // If the input is empty
                     if ($(thisInput).val() == "") {
+                        // Remove all custom icons 
                         $(iconRightWrapper).find("._custom-icon").remove();
+                        // Remove all dynamic icons
                         $(iconRightWrapper).find("._added-dynamically").remove();
+                        // Remove the read-only icon
                         $(iconRightWrapper).find("._readonly-icon").remove();
+                        // Show all remaining icons (i.e. all the icons that were there in the DOM to begin with)
                         $(iconRightWrapper).find("i").removeClass("hidden");
                     } else if (valid == true) {
                         $(iconRightWrapper).find("._custom-icon").remove();
                         $(iconRightWrapper).find("._added-dynamically").remove();
                         $(iconRightWrapper).find("._readonly-icon").remove();
+                        // If it's valid, add the clear and valid icons
                         $(validIcon).appendTo($(iconRightWrapper));
                         $(clearIcon).appendTo($(iconRightWrapper));
                     } else if (valid == false) {
                         $(iconRightWrapper).find("._custom-icon").remove();
                         $(iconRightWrapper).find("._added-dynamically").remove();
                         $(iconRightWrapper).find("._readonly-icon").remove();
+                        // If it's invalid, add the error icon (note that it has the class _added-dynamically)
                         $(errorIcon).appendTo($(iconRightWrapper));
                     }
 
+                    // We may have just added a dynamic icon (i.e. error icon). So we find it and add tooltip attributes to it
                     var newIcon = $(iconRightWrapper).find("._added-dynamically");
 
                     newIcon.attr("data-tippy-placement", "auto");
                     newIcon.attr("data-tippy-content", "Input is invalid<br>Click to clear")
 
+                    // We initate all tooltips on the page again to make sure this new icon has a tooltip
                     tippy('[data-tippy-content]',{
                         allowHTML: true,
                     });
-
-                    //tippy('._added-dynamically', {
-                    //    allowHTML: true,
-                    // });
-                    // tippy('._custom-icon');
-                
                 
                 }
+
+                // If the input has no icon-right element, we want to set a tooltip for the input element itself
+
                 else if (hasIconLeft == 1 && hasIconRight == 0){
 
                     if (readonly == true) {
-                    // remove tooltip
+                    // If its already read-only, we find the tooltip attached to it and destory them
                     iconLeftTooltip = document.querySelectorAll('[icon-left-tooltip]');
                     iconLeftTooltip.forEach(node => {
                     if (node._tippy){
                         node._tippy.destroy();
                     }});
 
-                    // $(input).removeAttr("data-tippy-placement data-tippy-content icon-left-tooltip");
 
                     } else if (readonly == false) {
                         
-                    // add tooltip
+                    // If it's initially not read-only, we add the tooltip
+                    // We set a new attribute so its easier to later destroy these tooltips
                     input.attr("icon-left-tooltip", true);
-                    // input.attr("data-tippy-placement", "auto");
-                    // input.attr("data-tippy-content", "You can't change this input");
                     tippy('[icon-left-tooltip]',{
                         content: "You can't change this input",
                         placement: "auto"
@@ -916,9 +810,10 @@
 
                     }
 
+                // If the element has no wrapper at all
                 } else {
-                    // add readonly
 
+                    // add readonly
                     inputNest($(thisInput));
                     validate($(thisInput));
 
@@ -935,10 +830,6 @@
                     tippy('[data-tippy-content]',{
                         allowHTML: true,
                     });
-
-                    // tippy('._readonly-icon', {
-                    //     allowHTML: true,
-                    // });
                 }
             } else {
                 var readonly = $(input).is('[readonly]');
@@ -954,8 +845,6 @@
                 } else if (readonly == false) {
                     // add tooltip.
                     input.attr("no-icon-tooltip", true);
-                    // input.attr("data-tippy-placement", "auto");
-                    // input.attr("data-tippy-content", "You can't change this input");
                     tippy('[no-icon-tooltip]',{
                         content: "You can't change this input",
                         placement: "auto"
@@ -964,14 +853,14 @@
             }
         }
 
-        // ANCHOR Set icons based on form state
+        // Set icons based on form state
 
         function setIcon(input) {
 
-            if (nest !== "no icon" && nest !== "icon left" && $(forminput).hasClass("error") && $(forminput).find("._added-dynamically").length == 0) {
+            if (nest !== "no icon" && nest !== "icon left" && $(divWrapper).hasClass("error") && $(divWrapper).find("._added-dynamically").length == 0) {
 
 
-                var iconRightWrapper = $(forminput).find(".icon-right");
+                var iconRightWrapper = $(divWrapper).find(".icon-right");
                 $(iconRightWrapper).find("._clear-icon").remove();
                 $(iconRightWrapper).find("i").addClass("hidden");
 
@@ -986,9 +875,9 @@
                 //     allowHTML: true,
                 // });
 
-            } else if (nest !== "no icon" && nest !== "icon left" && $(forminput).hasClass("error") && $(forminput).find("._added-dynamically").length !== 0) {
+            } else if (nest !== "no icon" && nest !== "icon left" && $(divWrapper).hasClass("error") && $(divWrapper).find("._added-dynamically").length !== 0) {
 
-                var iconRightWrapper = $(forminput).find(".icon-right");
+                var iconRightWrapper = $(divWrapper).find(".icon-right");
                 $(iconRightWrapper).find("._added-dynamically").remove();
                 $(iconRightWrapper).find("._custom-icon").remove();
                 $(errorIcon).appendTo(iconRightWrapper);
@@ -1000,7 +889,7 @@
 
             } else if (nest !== "no icon" && nest !== "icon left" && valid == true) {
 
-                var iconRightWrapper = $(forminput).find(".icon-right");
+                var iconRightWrapper = $(divWrapper).find(".icon-right");
                 $(iconRightWrapper).find("i").addClass("hidden");
                 $(validIcon).appendTo(iconRightWrapper);
                 $(clearIcon).appendTo(iconRightWrapper);
@@ -1009,9 +898,9 @@
                 //    allowHTML: true,
                 // });
 
-            } else if (nest !== "no icon" && nest !== "icon left" && $(forminput).not(".error")) {
+            } else if (nest !== "no icon" && nest !== "icon left" && $(divWrapper).not(".error")) {
 
-                var iconRightWrapper = $(forminput).find(".icon-right");
+                var iconRightWrapper = $(divWrapper).find(".icon-right");
 
                 var customIcons = $(iconRightWrapper).find("._custom-icon");
                 var dynamicIcon = $(iconRightWrapper).find("._added-dynamically");
@@ -1029,6 +918,7 @@
                     });
         }
 
+        // Set description text based on validation result
         function setDescription(input) {
             value = input.val();
             labelWrapper = input.parents(".label-input-wrapper");
@@ -1036,22 +926,23 @@
             error = descriptions.find("._error");
             main = descriptions.find("._default");
             if (value == ''){
-                descriptions.removeClass("!hidden");
+                descriptions.css("display","flex");
                 error.addClass("hidden");
                 main.removeClass("hidden");
             } else if (valid == true && hasLabel == true){
-                descriptions.addClass("!hidden");
+                descriptions.css("display","none");
             } else if (valid == false && hasLabel == true) {
-                descriptions.removeClass("!hidden");
+                descriptions.css("display","flex");
                 error.removeClass("hidden");
                 main.addClass("hidden");
             }
             
-            if (input.is("[readonly]") || forminput.is("[readonly]")){
-                descriptions.addClass("!hidden");
+            if (input.is("[readonly]") || divWrapper.is("[readonly]")){
+                descriptions.css("display","none");
             }
         }
 
+        // Bring back the original icons and remove all other icons
         function removeDynamicIcons(input) {
             var iconRightWrapper = $(input).find(".icon-right");
 
@@ -1064,15 +955,16 @@
             $(iconRightWrapper).find("i").removeClass("hidden");
         }
 
-        // ANCHOR Clear the input field
+        // Clear the input field
         function clearInput() {
-            // since clearable inputs have an icon, they must be wrapped in a <forminput> with the class .text-input-wrapper
-            // find the parent <forminput> and remove the error class. Then find the child <input> and set its value to an empty string
-            var thisforminput = $(event.target).parents(".text-input-wrapper");
-            $(thisforminput).removeClass("error");
-            $(thisforminput).find("input").val('');
-            removeDynamicIcons($(thisforminput));
-            field = $(thisforminput).find("input")
+            // since clearable inputs have an icon, they must be wrapped in a divWrapper with the class .text-input-wrapper
+            // find the parent divWrapper and remove the error class. Then find the child input element and set its value to an empty string
+            // then remove all extra icons and set the descripiton to default
+            var thisdivWrapper = $(event.target).parents(".text-input-wrapper");
+            $(thisdivWrapper).removeClass("error");
+            $(thisdivWrapper).find("input").val('');
+            removeDynamicIcons($(thisdivWrapper));
+            field = $(thisdivWrapper).find("input")
             setDescription($(field));
         };
     </script>

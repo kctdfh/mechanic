@@ -85,20 +85,20 @@
         </div>
         <div class="self-center h-8 justify-self-end">
           <div class="flex flex-row justify-end h-full space-x-3">
-            <fieldset class="text-input-wrapper middle">
+            <div class="text-input-wrapper middle">
               <span class="icon-left">
                   <i class="input-icon feather-search">
                   </i>
               </span>
               <input type="text" class="w-50 text-input-icon-left middle" placeholder="Part ID">
-            </fieldset>
+            </div>
             <button class="icon-btn middle secondary feather-search"></button>
-            <div class=" divider-v h-14"></div>
+            <div class="divider-v middle"></div>
             <button class="icon-btn middle secondary feather-help-circle">
             </button>
-            <div class=" divider-v h-14"></div>
+            <div class="divider-v middle"></div>
             <button data-tippy-placement="auto" data-tippy-content="Open drawer" class="_open-drawer icon-btn middle secondary feather-book-open"></button>
-            <div class=" divider-v h-14"></div>
+            <div class="divider-v middle"></div>
             <button class="icon-btn middle secondary feather-message-square"></button>
           </div>
         </div>
@@ -108,27 +108,27 @@
           <p class="self-center flex-shrink-0 px-6 py-4 text-lg">Page Name</p>
           <div class="flex justify-start space-x-4">
             <div id="tab-1" class="tab-btn-wrapper group active">
-              <div class="flex flex-row space-x-2">
+              <div class="tab-title">
                 <button class="tab-btn">Tab Active</button>
               </div>
               <div class="tab-border">
               </div>
             </div>
             <div id="tab-2" class="tab-btn-wrapper group">
-              <div class="flex flex-row space-x-2">
+              <div class="tab-title">
                 <button class="tab-btn">Tab 2</button>
               </div>
               <div class="tab-border">
               </div>
             </div>
             <div id="tab-3" class="tab-btn-wrapper group">
-              <div class="flex flex-row space-x-2">
+              <div class="tab-title">
                 <button class="tab-btn">Tab 3</button>
               </div>
               <div class="tab-border">
               </div>
             </div>
-            <button data-tippy-placement="auto" data-tippy-content="More Tabs" class="my-auto btn-large-ghost-icon feather-more-horizontal"></button>
+            <button data-tippy-placement="auto" data-tippy-content="More Tabs" class="my-auto icon-btn large ghost feather-more-horizontal"></button>
           </div>
         </div>
         <div class="flex flex-row h-8 px-6 my-auto space-x-4">
@@ -143,15 +143,15 @@
               <option value="5">Option 5</option>
             </select>
           </div>
-          <div class=" divider-v h-14"></div>
-          <fieldset class="text-input-wrapper middle">
+          <div class="divider-v middle"></div>
+          <div class="text-input-wrapper middle">
             <span class="icon-left">
                 <i class="input-icon feather-search">
                 </i>
             </span>
             <input type="text" class="w-50 text-input-icon-left middle" placeholder="Search">
-        </fieldset>
-          <div class=" divider-v h-14"></div>
+        </div>
+          <div class="divider-v middle"></div>
           <button class="btn">Button</button>
         </div>
       </div>
@@ -160,7 +160,7 @@
         <div class="flex flex-row h-full">
           <div class="flex justify-start space-x-6">
             <div id="tab-1" class="tab-btn-wrapper group">
-              <div class="flex flex-row space-x-2">
+              <div class="tab-title">
                 <button class="tab-btn">First Step</button>
               </div>
               <div class="tab-border">
@@ -168,7 +168,7 @@
             </div>
             <i class="my-auto text-lg text-gray-300 feather-chevron-right"></i>
             <div id="tab-2" class="tab-btn-wrapper group active">
-              <div class="flex flex-row space-x-2">
+              <div class="tab-title">
                 <button class="tab-btn">Second Step</button>
               </div>
               <div class="tab-border">
@@ -176,7 +176,7 @@
             </div>
             <i class="my-auto text-lg text-gray-300 feather-chevron-right"></i>
             <div id="tab-3" class="tab-btn-wrapper group">
-              <div class="flex flex-row space-x-2">
+              <div class="tab-title">
                 <button class="tab-btn" disabled>Third Step</button>
               </div>
               <div class="tab-border">
@@ -191,7 +191,7 @@
       </div>
     </div>
     <!-- ANCHOR Content wrapper -->
-    <div id="content" class="fixed w-full p-6 overflow-scroll border-l border-gray-100 scrollbar-regular bottom-16">
+    <div id="content" class="fixed w-full p-6 overflow-scroll border-l border-gray-100 bg-gray-25 scrollbar-regular bottom-16">
       <p>Mollit aliquip nisi sint adipisicing non enim sit proident pariatur. Anim nostrud commodo irure Lorem
         exercitation occaecat. Quis dolore sit velit esse aliquip aute.
         </br>
@@ -304,9 +304,9 @@
       <!-- ANCHOR Buttons Wrapper -->
       <div id="footer-buttons" class="flex flex-row justify-end h-full space-x-4">
         <button data-tippy-placement="auto" data-tippy-content="This button says edit" class="btn">Edit</button>
-        <div class="h-16 divider-v"></div>
+        <div class="divider-v middle"></div>
         <button data-tippy-placement="auto" data-tippy-content="Some button" class="btn">Cancel</button>
-        <div class="h-16 divider-v"></div>
+        <div class="divider-v middle"></div>
         <button data-a11y-dialog-show="modal" class="btn middle primary">Apply</button>
       </div>
     </div>
@@ -328,13 +328,13 @@
         <div class="flex flex-row h-full">
           <div class="flex justify-start space-x-6">
             <div id="tab-1" class="tab-btn-wrapper group active">
-              <div class="flex flex-row space-x-2">
+              <div class="tab-title">
                 <button class="tab-btn">User Manual</button>
               </div>
               <div class="tab-border"></div>
             </div>
             <div id="tab-2" class="tab-btn-wrapper group">
-              <div class="flex flex-row space-x-2">
+              <div class="tab-title">
                 <button class="tab-btn">Company Policy</button>
               </div>
               <div class="tab-border"></div>
